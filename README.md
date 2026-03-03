@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # seoyoung
 
 
@@ -91,3 +92,110 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+=======
+# 🐾 반려동물 통합 지식그래프 대시보드
+
+> 14개 공공 데이터셋 기반 반려동물 지식그래프 연구 대시보드  
+> React + FastAPI + PostgreSQL 풀스택
+
+---
+
+## 📦 버전 정보 (중요!)
+
+| 구분 | 기술 | 버전 |
+|------|------|------|
+| **Runtime** | Node.js | `20.x LTS` |
+| **Runtime** | Python | `3.11.x` |
+| **Frontend** | React | `18.3.1` |
+| **Frontend** | Vite | `5.4.x` |
+| **Frontend** | Tailwind CSS | `3.4.x` |
+| **Frontend** | React Router DOM | `6.x` |
+| **Frontend** | @tanstack/react-query | `5.x` |
+| **Frontend** | Axios | `1.7.x` |
+| **Frontend** | D3.js | `7.9.x` |
+| **Backend** | FastAPI | `0.115.x` |
+| **Backend** | Uvicorn | `0.30.x` |
+| **Backend** | SQLAlchemy | `2.0.x` |
+| **Backend** | Alembic | `1.13.x` |
+| **Backend** | asyncpg | `0.29.x` |
+| **Backend** | pyproj | `3.6.x` |
+| **Backend** | Pydantic | `2.7.x` |
+| **Database** | PostgreSQL | `16.x` |
+| **Container** | Docker | `25.x` |
+| **Container** | Docker Compose | `v2.x` |
+
+---
+
+## 🚀 빠른 시작
+
+### 1. 사전 요구사항 설치
+```bash
+# Node.js 20 LTS
+# https://nodejs.org 에서 다운로드
+
+# Python 3.11
+# https://python.org 에서 다운로드
+
+# Docker Desktop
+# https://docker.com 에서 다운로드
+```
+
+### 2. 레포 클론
+```bash
+git clone https://gitlab.com/YOUR_ID/petgraph.git
+cd petgraph
+```
+
+### 3. PostgreSQL 실행 (Docker)
+```bash
+docker-compose up -d db
+```
+
+### 4. 백엔드 실행
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate          # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env              # 환경변수 설정
+uvicorn app.main:app --reload --port 8000
+```
+
+### 5. 프론트엔드 실행
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 6. 접속
+- **프론트엔드:** http://localhost:5173
+- **API 서버:** http://localhost:8000
+- **API 문서(Swagger):** http://localhost:8000/docs
+
+---
+
+## 📁 프로젝트 구조
+```
+petgraph/
+├── backend/
+│   ├── app/
+│   │   ├── main.py           ← FastAPI 진입점
+│   │   ├── database.py       ← PostgreSQL 연결
+│   │   ├── models/           ← SQLAlchemy ORM
+│   │   ├── schemas/          ← Pydantic 응답 스키마
+│   │   ├── routers/          ← API 엔드포인트 (폴더 → API화)
+│   │   └── services/         ← 비즈니스 로직
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   │   ├── api/              ← Axios 클라이언트
+│   │   ├── pages/            ← 4개 페이지
+│   │   ├── components/       ← 재사용 컴포넌트
+│   │   └── hooks/            ← React Query 훅
+│   └── package.json
+├── db/
+│   └── init.sql              ← 테이블 초기화
+└── docker-compose.yml
+```
+>>>>>>> e3acda0 (Initial commit for petgraph)
