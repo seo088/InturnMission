@@ -1,24 +1,13 @@
-version: "3.9"
-
 services:
   db:
-    image: postgres:16-alpine
+    image: postgres:15
     container_name: petgraph_db
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: petgraph
-      POSTGRES_USER: petgraph_user
-      POSTGRES_PASSWORD: petgraph_pass
+    restart: always
     ports:
-      - "5432:5432"
+      - "5435:5432"
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: petdb
     volumes:
-      - pgdata:/var/lib/postgresql/data
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U petgraph_user -d petgraph"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-volumes:
-  pgdata:
+      - ./postgres_data:/var/lib/postgresql/data
