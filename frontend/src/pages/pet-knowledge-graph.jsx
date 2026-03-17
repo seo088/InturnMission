@@ -214,6 +214,7 @@ const navItems = [
   { id: "knowledge", icon: "◈", label: "지식그래프" },
   { id: "mapping", icon: "⊕", label: "매핑테이블" },
   { id: "poster", icon: "◻", label: "포스터" },
+  { id: "Index", icon: "◫", label: "흐름도" }
 ];
 
 const providerStats = [
@@ -371,6 +372,7 @@ export default function App() {
           {page === "knowledge" && <KnowledgePage datasets={datasets} />}
           {page === "mapping" && <MappingPage datasets={datasets} />}
           {page === "poster" && <PosterPage datasets={datasets} />}
+          {page === "Index" && <IndexPage datasets={datasets} />}
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { path } from 'd3'
 
 const NAV = [
   { path: '/',         label: '대시보드',   icon: '📊', end: true  },
@@ -7,6 +8,7 @@ const NAV = [
   { path: '/mapping',  label: '매핑테이블', icon: '🔗', end: false },
   { path: '/kg',       label: '지식그래프', icon: '🕸️', end: false },
   { path: '/poster',   label: '포스터',     icon: '📋', end: false },
+  {path: '/IndexPage',   label: '흐름도',     icon: '📈', end: false }
 ]
 
 const PILLS = [

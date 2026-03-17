@@ -5,6 +5,7 @@ import Datasets from './pages/Datasets'
 import KnowledgeGraph from './pages/KnowledgeGraph'
 import Mapping from './pages/Mapping'
 import Poster from './pages/Poster'
+import IndexPage from './pages/IndexPage'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/kg"       element={<KnowledgeGraph />} />
             <Route path="/mapping"  element={<Mapping />} />
             <Route path="/poster"   element={<Poster />} />
+            <Route path="/IndexPage"   element={<IndexPage />} />
             <Route path="*"         element={<Navigate to="/" replace />} />
           </Routes>
         </main>
