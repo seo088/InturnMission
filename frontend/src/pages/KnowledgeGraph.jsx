@@ -1,655 +1,795 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
-import * as d3 from 'd3'
+import { useState, useEffect, useRef, useCallback } from "react";
 
-// ════════════════════════════════════════════════════════════════
-//  전체 KG 노드 & 엣지 (시각화 전용 — 백엔드 독립)
-// ════════════════════════════════════════════════════════════════
-const KG_NODES = [
-  // 시설 도메인
-  { id:'hospital',   label:'동물병원',        icon:'🏥', color:'#0d9488', domain:'시설',     r:32 },
-  { id:'pharmacy',   label:'동물약국',        icon:'💊', color:'#0284c7', domain:'시설',     r:26 },
-  { id:'grooming',   label:'동물미용업',      icon:'✂️', color:'#7c3aed', domain:'시설',     r:24 },
-  { id:'boarding',   label:'위탁관리업',      icon:'🏨', color:'#d97706', domain:'시설',     r:24 },
-  { id:'cremation',  label:'동물장묘업',      icon:'🌿', color:'#94a3b8', domain:'시설',     r:22 },
-  { id:'restarea',   label:'휴게소 시설',     icon:'🛑', color:'#16a34a', domain:'시설',     r:22 },
-  { id:'friendly',   label:'동반가능 시설',   icon:'📍', color:'#2563eb', domain:'시설',     r:26 },
-  // 동물 도메인
-  { id:'registered', label:'등록동물',        icon:'🪪', color:'#e11d48', domain:'동물',     r:30 },
-  { id:'rescue',     label:'구조동물',        icon:'🐾', color:'#ea580c', domain:'동물',     r:28 },
-  { id:'lost',       label:'분실동물',        icon:'❓', color:'#f43f5e', domain:'동물',     r:26 },
-  // 보호 도메인
-  { id:'shelter',    label:'동물보호센터',    icon:'🏠', color:'#7c3aed', domain:'보호',     r:30 },
-  // 의료 도메인
-  { id:'symptom',    label:'증상',            icon:'🧬', color:'#0891b2', domain:'의료',     r:26 },
-  { id:'disease',    label:'질병',            icon:'🦠', color:'#6366f1', domain:'의료',     r:28 },
-  { id:'pathogen',   label:'병원체',          icon:'🔬', color:'#dc2626', domain:'의료',     r:22 },
-  // 여행 도메인
-  { id:'tour',       label:'반려동물 여행',   icon:'🗺️', color:'#d97706', domain:'여행',     r:28 },
-  // 공통
-  { id:'region',     label:'행정구역',        icon:'📌', color:'#64748b', domain:'공통',     r:28 },
-  { id:'owner',      label:'반려인(보호자)',  icon:'👤', color:'#059669', domain:'공통',     r:24 },
-  { id:'species',    label:'동물 종(種)',     icon:'🐕', color:'#92400e', domain:'공통',     r:24 },
-]
+// ─── 전체 116건 질병 데이터 (CSV: 동물질병정보2015_2.csv) ─────────────────────
+const ALL_DISEASES = [
+  {id:"d28",nm:"돼지단독",eng:"Swine erysipelas",animal:"돼지",cause:"세균"},
+  {id:"d29",nm:"돼지로타바이러스감염증",eng:"Porcine rotavirus infection",animal:"돼지",cause:"바이러스"},
+  {id:"d30",nm:"돼지생식기호흡기증후군",eng:"PRRS",animal:"돼지",cause:"바이러스"},
+  {id:"d31",nm:"돼지수포병",eng:"Swine vesicular disease",animal:"돼지",cause:"기타"},
+  {id:"d32",nm:"돼지써코바이러스감염증",eng:"PCV-2 infection",animal:"돼지",cause:"바이러스"},
+  {id:"d33",nm:"돼지유행성설사병",eng:"Porcine epidemic diarrhea",animal:"돼지",cause:"바이러스"},
+  {id:"d34",nm:"돼지적리",eng:"Swine dysentery",animal:"돼지",cause:"세균"},
+  {id:"d35",nm:"돼지열병",eng:"Classical swine fever",animal:"돼지",cause:"바이러스"},
+  {id:"d36",nm:"돼지파보바이러스감염증",eng:"Porcine parvovirus infection",animal:"돼지",cause:"기타"},
+  {id:"d37",nm:"돼지호흡기코로나바이러스감염증",eng:"Porcine respiratory coronaviral",animal:"돼지",cause:"바이러스"},
+  {id:"d38",nm:"흉막폐렴",eng:"Pleuropneumonia of pigs",animal:"돼지",cause:"세균"},
+  {id:"d39",nm:"럼피스킨병",eng:"Lumpy skin disease",animal:"소",cause:"기타"},
+  {id:"d40",nm:"레오바이러스감염증",eng:"Reovirus infection",animal:"소/닭/돼지",cause:"기타"},
+  {id:"d41",nm:"렙토스피라병",eng:"Leptospirosis",animal:"소",cause:"세균"},
+  {id:"d42",nm:"리스테리아병",eng:"Listeriosis",animal:"개/소/닭",cause:"세균"},
+  {id:"d43",nm:"리프트계곡열",eng:"Rift valley fever",animal:"소/면양",cause:"기타"},
+  {id:"d44",nm:"마렉병",eng:"Marek's disease",animal:"닭",cause:"기타"},
+  {id:"d45",nm:"닭마이코플라즈마병",eng:"Avian mycoplasmosis",animal:"닭",cause:"기타"},
+  {id:"d46",nm:"마이코플라즈마폐렴",eng:"Mycoplasmal pneumonia",animal:"소/돼지",cause:"세균"},
+  {id:"d47",nm:"말바이러스성동맥염",eng:"Equine viral arteritis",animal:"말",cause:"바이러스"},
+  {id:"d48",nm:"말비저",eng:"Glanders",animal:"말",cause:"기타"},
+  {id:"d49",nm:"말선역",eng:"Strangles",animal:"말",cause:"기타"},
+  {id:"d50",nm:"말전염성빈혈",eng:"Equine infectious anemia",animal:"말",cause:"기타"},
+  {id:"d51",nm:"밍크바이러스성장염",eng:"Mink viral enteritis",animal:"밍크",cause:"기타"},
+  {id:"d52",nm:"밍크알류샨병",eng:"Aleutian disease in mink",animal:"밍크",cause:"기타"},
+  {id:"d53",nm:"보툴리즘",eng:"Clostridium botulinum",animal:"소/돼지",cause:"세균"},
+  {id:"d54",nm:"봉입체성간염",eng:"Inclusion body hepatitis",animal:"닭",cause:"기타"},
+  {id:"d55",nm:"브루셀라병",eng:"Brucellosis",animal:"소/개/돼지",cause:"세균"},
+  {id:"d56",nm:"부저병",eng:"American foulbrood disease",animal:"꿀벌",cause:"기타"},
+  {id:"d57",nm:"블루텅",eng:"Bluetongue",animal:"소/면양",cause:"바이러스"},
+  {id:"d58",nm:"사슴만성소모성질병",eng:"Chronic wasting disease",animal:"사슴",cause:"기타"},
+  {id:"d59",nm:"살모넬라균증",eng:"Salmonellosis",animal:"소/돼지",cause:"세균"},
+  {id:"d60",nm:"선모충증",eng:"Trichinosis",animal:"돼지",cause:"기생충"},
+  {id:"d61",nm:"소결핵병",eng:"Tuberculosis",animal:"소/개/고양이",cause:"세균"},
+  {id:"d62",nm:"소로타바이러스감염증",eng:"Bovine rotavirus infection",animal:"소",cause:"바이러스"},
+  {id:"d63",nm:"소바베시아병",eng:"Babesiosis",animal:"소",cause:"기생충"},
+  {id:"d64",nm:"소바이러스성설사",eng:"Bovine viral diarrhea",animal:"소",cause:"기타"},
+  {id:"d65",nm:"소백혈병",eng:"Bovine leukemia",animal:"소",cause:"바이러스"},
+  {id:"d66",nm:"소아데노바이러스감염증",eng:"Adenovirus infection",animal:"소",cause:"기타"},
+  {id:"d67",nm:"소유행열",eng:"Bovine ephemeral fever",animal:"소",cause:"기타"},
+  {id:"d68",nm:"소전염성비기관염",eng:"IBR",animal:"소",cause:"기타"},
+  {id:"d69",nm:"소츄잔병",eng:"Chuzan disease",animal:"소",cause:"기타"},
+  {id:"d70",nm:"소캄필로박터증",eng:"Genital Campylobacteriosis",animal:"소",cause:"기생충"},
+  {id:"d71",nm:"소콕시듐증",eng:"Coccidiosis (bovine)",animal:"소",cause:"기타"},
+  {id:"d73",nm:"소RS바이러스병",eng:"Bovine RSV infection",animal:"소",cause:"기타"},
+  {id:"d74",nm:"수포성구내염",eng:"Vesicular stomatitis",animal:"소/돼지",cause:"바이러스"},
+  {id:"d75",nm:"스피로헤타증",eng:"Spirochetosis",animal:"닭",cause:"바이러스"},
+  {id:"d76",nm:"소아까바네병",eng:"Akabane disease",animal:"소",cause:"기타"},
+  {id:"d77",nm:"아나플라즈마병",eng:"Anaplasmasis",animal:"소",cause:"기생충"},
+  {id:"d78",nm:"아이노바이러스감염증",eng:"Aino virus infection",animal:"소",cause:"바이러스"},
+  {id:"d79",nm:"아프리카돼지열병",eng:"African swine fever",animal:"돼지",cause:"바이러스"},
+  {id:"d80",nm:"아프리카마역",eng:"African horse sickness",animal:"말",cause:"기타"},
+  {id:"d81",nm:"에드워드병",eng:"Edwardsiellosis",animal:"어류",cause:"기타"},
+  {id:"d82",nm:"에로모나스증",eng:"Aeromonas infection",animal:"어류",cause:"기타"},
+  {id:"d83",nm:"에페리스로조아병",eng:"Eperythrozoonosis",animal:"소/돼지",cause:"기타"},
+  {id:"d84",nm:"연쇄상구균감염증",eng:"Streptococcosis",animal:"돼지",cause:"세균"},
+  {id:"d85",nm:"오리바이러스성간염",eng:"Duck hepatitis",animal:"오리",cause:"바이러스"},
+  {id:"d86",nm:"오리패혈증",eng:"Remerella infection",animal:"오리",cause:"기타"},
+  {id:"d87",nm:"오제스키병",eng:"Aujeszky's disease",animal:"돼지",cause:"기타"},
+  {id:"d88",nm:"요네병",eng:"Johne's disease",animal:"소/돼지",cause:"기타"},
+  {id:"d89",nm:"우역",eng:"Rinderpest",animal:"소",cause:"바이러스"},
+  {id:"d90",nm:"우폐역",eng:"CBPP",animal:"소",cause:"기타"},
+  {id:"d91",nm:"웨스트나일열",eng:"West nile fever",animal:"개/고양이/소",cause:"기타"},
+  {id:"d92",nm:"위축성비염",eng:"Atrophic rhinitis",animal:"돼지",cause:"세균"},
+  {id:"d93",nm:"유방염",eng:"Mastitis",animal:"소",cause:"기타"},
+  {id:"d94",nm:"이바라기병",eng:"Ibaraki disease",animal:"소",cause:"바이러스"},
+  {id:"d95",nm:"돼지일본뇌염",eng:"Japanese B Encephalitis",animal:"돼지",cause:"바이러스"},
+  {id:"d96",nm:"장독혈증",eng:"Enterotoxemia",animal:"소/돼지/면양",cause:"세균"},
+  {id:"d97",nm:"전염성기관지염",eng:"Infectious bronchitis",animal:"닭",cause:"기타"},
+  {id:"d98",nm:"전염성비염",eng:"Snuffles",animal:"토끼",cause:"세균"},
+  {id:"d99",nm:"돼지전염성위장염",eng:"TGE",animal:"돼지",cause:"기타"},
+  {id:"d100",nm:"전염성후두기관염",eng:"Infectious laryngotracheitis",animal:"조류",cause:"기타"},
+  {id:"d101",nm:"전염성F낭병",eng:"Infectious bursal disease",animal:"닭",cause:"기타"},
+  {id:"d102",nm:"닭백혈병",eng:"Lymphoid Leukosis",animal:"닭",cause:"바이러스"},
+  {id:"d103",nm:"저병원성조류인플루엔자",eng:"Low-path avian influenza",animal:"조류",cause:"기타"},
+  {id:"d104",nm:"지간부란",eng:"Foot Rot",animal:"소",cause:"세균"},
+  {id:"d105",nm:"추백리",eng:"Pullorum disease",animal:"닭",cause:"기타"},
+  {id:"d106",nm:"칸디다증",eng:"Candidiasis",animal:"닭",cause:"곰팡이"},
+  {id:"d107",nm:"큐열",eng:"Q fever",animal:"소/개/고양이",cause:"세균"},
+  {id:"d109",nm:"크립토스포리디움증",eng:"Cryptosporidiosis",animal:"개/고양이/소",cause:"기타"},
+  {id:"d110",nm:"클라미디아병",eng:"Chlamydiosis",animal:"소/조류/돼지",cause:"세균"},
+  {id:"d112",nm:"탄저",eng:"Anthrax",animal:"소/돼지",cause:"세균"},
+  {id:"d113",nm:"토끼바이러스성출혈병",eng:"Viral haemorrhagic fever",animal:"토끼",cause:"기타"},
+  {id:"d115",nm:"개코로나바이러스감염증",eng:"Canine coronavirus infection",animal:"개",cause:"바이러스"},
+  {id:"d116",nm:"소부제병",eng:"Foot rot (bovine)",animal:"소",cause:"세균"},
+  {id:"d117",nm:"파스튜렐라폐렴",eng:"Pasteurella Pneumonia",animal:"돼지",cause:"세균"},
+  {id:"d118",nm:"스크래피",eng:"Scrapie",animal:"면양",cause:"기타"},
+  {id:"d119",nm:"류코사이토준병",eng:"Leucocytozoonosis",animal:"닭/오리",cause:"기생충"},
+  {id:"d120",nm:"소해면상뇌증",eng:"BSE",animal:"소",cause:"기타"},
+  {id:"d121",nm:"타이레리아",eng:"Theilerosis",animal:"소",cause:"기생충"},
+  {id:"d1",nm:"가금티푸스",eng:"Fowl typhoid",animal:"닭",cause:"세균"},
+  {id:"d2",nm:"가성우역",eng:"PPR",animal:"소/면양",cause:"바이러스"},
+  {id:"d3",nm:"가금콜레라",eng:"Fowl cholera",animal:"닭/오리",cause:"세균"},
+  {id:"d4",nm:"간질증",eng:"Fascioliasis",animal:"면양",cause:"기생충"},
+  {id:"d5",nm:"개디스템퍼",eng:"Canine distemper",animal:"개",cause:"바이러스"},
+  {id:"d6",nm:"개보데텔라폐렴",eng:"Pneumonic bordetellosis",animal:"개",cause:"세균"},
+  {id:"d7",nm:"개선충증",eng:"Mange",animal:"개/돼지",cause:"기생충"},
+  {id:"d8",nm:"개파보바이러스감염증",eng:"Canine parvovirus infection",animal:"개",cause:"바이러스"},
+  {id:"d9",nm:"계두",eng:"Fowl pox",animal:"닭",cause:"기타"},
+  {id:"d11",nm:"곰팡이성폐렴",eng:"Aspergillosis",animal:"닭",cause:"곰팡이"},
+  {id:"d12",nm:"광견병",eng:"Rabies",animal:"개/고양이/소",cause:"바이러스"},
+  {id:"d13",nm:"구제역",eng:"Foot and mouth disease",animal:"소/돼지/면양",cause:"바이러스"},
+  {id:"d14",nm:"글래서씨병",eng:"Glasser's disease",animal:"돼지",cause:"세균"},
+  {id:"d15",nm:"기종저",eng:"Blackleg",animal:"소/면양",cause:"기타"},
+  {id:"d16",nm:"꿀벌백묵병",eng:"Chalkbrood disease",animal:"꿀벌",cause:"곰팡이"},
+  {id:"d17",nm:"낭미충증",eng:"Cysticercosis",animal:"돼지",cause:"기타"},
+  {id:"d18",nm:"네오스포라병",eng:"Neosporosis",animal:"소/개",cause:"기생충"},
+  {id:"d19",nm:"노제마병",eng:"Nosema disease",animal:"꿀벌",cause:"기타"},
+  {id:"d20",nm:"뇌척수염",eng:"Avian encephalomyelitis",animal:"닭",cause:"바이러스"},
+  {id:"d21",nm:"뉴캣슬병",eng:"Newcastle disease",animal:"닭",cause:"기타"},
+  {id:"d22",nm:"니파바이러스감염증",eng:"Nipahvirus infection",animal:"개/고양이/돼지",cause:"기타"},
+  {id:"d23",nm:"닭세망내피증",eng:"Reticuloendotheliosis",animal:"닭/오리",cause:"바이러스"},
+  {id:"d24",nm:"닭콕시듐증",eng:"Coccidiosis (poultry)",animal:"닭",cause:"기타"},
+  {id:"d25",nm:"대장균증",eng:"Colibacillosis",animal:"소/돼지",cause:"세균"},
+  {id:"d26",nm:"돼지게타바이러스감염증",eng:"Porcine getahvirus disease",animal:"돼지",cause:"바이러스"},
+  {id:"d27",nm:"돼지뇌심근염",eng:"Encephalomyocarditis",animal:"돼지",cause:"바이러스"},
+];
 
-const KG_EDGES = [
-  // 시설 ↔ 지역
-  { s:'hospital',  t:'region',     p:'ex:locatedIn',           w:2 },
-  { s:'pharmacy',  t:'region',     p:'ex:locatedIn',           w:1.5 },
-  { s:'grooming',  t:'region',     p:'ex:locatedIn',           w:1.5 },
-  { s:'boarding',  t:'region',     p:'ex:locatedIn',           w:1.5 },
-  { s:'cremation', t:'region',     p:'ex:locatedIn',           w:1 },
-  { s:'shelter',   t:'region',     p:'ex:locatedIn',           w:2 },
-  { s:'friendly',  t:'region',     p:'ex:locatedIn',           w:1.5 },
-  { s:'restarea',  t:'region',     p:'ex:locatedIn',           w:1 },
-  { s:'tour',      t:'region',     p:'ex:locatedIn',           w:1.5 },
-  // 동물 등록 체계
-  { s:'registered',t:'owner',      p:'schema:owns',            w:2.5 },
-  { s:'registered',t:'species',    p:'ex:hasSpecies',          w:2 },
-  { s:'lost',      t:'registered', p:'owl:sameAs',             w:3 },
-  { s:'rescue',    t:'registered', p:'owl:sameAs',             w:3 },
-  { s:'lost',      t:'owner',      p:'ex:reportedBy',          w:2 },
-  // 보호 관계
-  { s:'shelter',   t:'rescue',     p:'schema:containedInPlace',w:2.5 },
-  { s:'rescue',    t:'shelter',    p:'ex:protectedBy',         w:2 },
-  { s:'rescue',    t:'species',    p:'ex:hasSpecies',          w:1.5 },
-  // 의료 관계
-  { s:'rescue',    t:'symptom',    p:'ex:hasSymptom',          w:2 },
-  { s:'symptom',   t:'disease',    p:'ex:indicatesDisease',    w:2.5 },
-  { s:'disease',   t:'pathogen',   p:'ex:causedBy',            w:2 },
-  { s:'disease',   t:'species',    p:'ex:infectsAnimal',       w:2 },
-  // 병원 ↔ 의료
-  { s:'hospital',  t:'disease',    p:'ex:treats',              w:2 },
-  { s:'hospital',  t:'species',    p:'ex:specializedIn',       w:1.5 },
-  // 근접 관계
-  { s:'hospital',  t:'friendly',   p:'ex:nearBy',              w:1.5 },
-  { s:'shelter',   t:'hospital',   p:'ex:nearestHospital',     w:2 },
-  { s:'tour',      t:'hospital',   p:'ex:nearBy',              w:1.5 },
-  { s:'restarea',  t:'tour',       p:'ex:onRoute',             w:1 },
-  // 보호자
-  { s:'owner',     t:'registered', p:'ex:registers',           w:2 },
-  { s:'owner',     t:'rescue',     p:'ex:adopts',              w:1.5 },
-  // 여행
-  { s:'tour',      t:'friendly',   p:'ex:includes',            w:1.5 },
-  // 인수공통
-  { s:'disease',   t:'owner',      p:'ex:zoonoticRiskTo',      w:1.5 },
-]
+// ─── API 소스 노드 ────────────────────────────────────────────────────────────
+const API_NODES = [
+  {id:"api1",label:"동물병원 조회서비스",provider:"행정안전부",apiType:"facility"},
+  {id:"api2",label:"동물약국 조회서비스",provider:"행정안전부",apiType:"facility"},
+  {id:"api3",label:"동물미용업 조회서비스",provider:"행정안전부",apiType:"facility"},
+  {id:"api4",label:"동물위탁관리업 조회서비스",provider:"행정안전부",apiType:"facility"},
+  {id:"api5",label:"동물장묘업 조회서비스",provider:"행정안전부",apiType:"facility"},
+  {id:"api6",label:"반려동물동반문화시설",provider:"한국문화정보원",apiType:"place"},
+  {id:"api7",label:"반려동물동반여행서비스",provider:"한국관광공사",apiType:"place"},
+  {id:"api8",label:"휴게소반려동물편의시설",provider:"한국도로공사",apiType:"place"},
+  {id:"api9",label:"구조동물 조회서비스",provider:"농림축산검역본부",apiType:"animal"},
+  {id:"api10",label:"분실동물 조회서비스",provider:"농림축산검역본부",apiType:"animal"},
+  {id:"api11",label:"동물보호센터 정보조회",provider:"농림축산식품부",apiType:"animal"},
+  {id:"api12",label:"동물질병정보",provider:"농림축산검역본부",apiType:"medical"},
+  {id:"api13",label:"동물질병 증상분류",provider:"KISTI",apiType:"medical"},
+  {id:"api14",label:"입양정보 서비스",provider:"공공데이터포털",apiType:"animal"},
+];
 
-const DOMAIN_COLOR = {
-  '시설': '#0d9488', '동물': '#e11d48', '보호': '#7c3aed',
-  '의료': '#6366f1', '여행': '#d97706', '공통': '#64748b',
-}
+// ─── 증상 분류 (KISTI) ───────────────────────────────────────────────────────
+const SYMPTOM_CATS = [
+  {id:"sym1",label:"소화기계 증상"},{id:"sym2",label:"호흡기계 증상"},
+  {id:"sym3",label:"피부계 증상"}, {id:"sym4",label:"신경계 증상"},
+  {id:"sym5",label:"근골격계 증상"},{id:"sym6",label:"생식기계 증상"},
+  {id:"sym7",label:"혈액·면역계 증상"},{id:"sym8",label:"안과계 증상"},
+];
 
-// ════════════════════════════════════════════════════════════════
-//  D3 그래프 캔버스 (줌/패닝, 툴팁, 노드 크기 가변)
-// ════════════════════════════════════════════════════════════════
-function GraphCanvas({ highlight }) {
-  const ref = useRef(null)
-  const simRef = useRef(null)
+// ─── 동물 종 노드 ─────────────────────────────────────────────────────────────
+const ANIMAL_NODES = [
+  {id:"an1",label:"개 (Canis lupus familiaris)"},
+  {id:"an2",label:"고양이 (Felis catus)"},
+  {id:"an3",label:"소 (Bos taurus)"},
+  {id:"an4",nm:"돼지",label:"돼지 (Sus scrofa)"},
+  {id:"an5",label:"닭 (Gallus gallus)"},
+  {id:"an6",label:"오리 / 조류"},
+  {id:"an7",label:"말 (Equus caballus)"},
+  {id:"an8",label:"기타 (어류·밍크·꿀벌·면양)"},
+];
 
+// ─── 원인 분류 노드 ───────────────────────────────────────────────────────────
+const CAUSE_NODES = [
+  {id:"cv",label:"바이러스 (Virus)",   color:"#dc2626"},
+  {id:"cb",label:"세균 (Bacteria)",    color:"#ea580c"},
+  {id:"cp",label:"기생충 (Parasite)",  color:"#16a34a"},
+  {id:"cf",label:"곰팡이 (Fungi)",     color:"#7c3aed"},
+  {id:"co",label:"기타 (Other)",       color:"#64748b"},
+];
+const CAUSE_ID = {"바이러스":"cv","세균":"cb","기생충":"cp","곰팡이":"cf","기타":"co"};
+
+const animalKey = (a) => {
+  if (a.includes("개")) return "an1";
+  if (a.includes("고양이")) return "an2";
+  if (a.includes("소")) return "an3";
+  if (a.includes("돼지")) return "an4";
+  if (a.includes("닭")) return "an5";
+  if (a.includes("오리")||a.includes("조류")) return "an6";
+  if (a.includes("말")) return "an7";
+  return "an8";
+};
+
+// ─── 색상 팔레트 (라이트 테마) ────────────────────────────────────────────────
+const C = {
+  bg:        "#f8fafc",
+  panel:     "#ffffff",
+  border:    "#e2e8f0",
+  root:      "#0f172a",
+  eFac:      "#0369a1",
+  eMed:      "#be123c",
+  eAni:      "#15803d",
+  eReg:      "#6d28d9",
+  apiFac:    "#0284c7",
+  apiMed:    "#e11d48",
+  apiAni:    "#16a34a",
+  apiPl:     "#7c3aed",
+  symColor:  "#b45309",
+  aniColor:  "#0f766e",
+  dVirus:    "#dc2626",
+  dBact:     "#ea580c",
+  dPara:     "#16a34a",
+  dFungi:    "#7c3aed",
+  dOther:    "#475569",
+  edgeNorm:  "rgba(100,116,139,0.15)",
+  edgeHigh:  "rgba(14,165,233,0.7)",
+  edgeDim:   "rgba(100,116,139,0.04)",
+  txt:       "#0f172a",
+  txts:      "#334155",
+  txtm:      "#64748b",
+};
+const CAUSE_CLR = (c) => ({바이러스:C.dVirus,세균:C.dBact,기생충:C.dPara,곰팡이:C.dFungi}[c]||C.dOther);
+const API_CLR   = (t) => ({facility:C.apiFac,medical:C.apiMed,animal:C.apiAni,place:C.apiPl}[t]||C.txtm);
+
+export default function KnowledgeGraphPage() {
+  const canvasRef   = useRef(null);
+  const animRef     = useRef(null);
+  const nodesRef    = useRef([]);
+  const edgesRef    = useRef([]);
+  const mouseRef    = useRef({drag:null,pan:false});
+  const transformRef= useRef({x:0,y:0,scale:0.72});
+  const initRef     = useRef({x:0,y:0,scale:0.72});
+  const frameRef    = useRef(0);
+  const connRef     = useRef(new Set());
+
+  const [hoverId,   setHoverId]   = useState(null);
+  const [selected,  setSelected]  = useState(null);
+  const [stats,     setStats]     = useState({nodes:0,edges:0});
+  const [filterMode,setFilterMode]= useState("all");
+
+  // ── Connected set 계산 ─────────────────────────────────────────────────────
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const W = el.clientWidth || 900, H = 640
+    if (!hoverId) { connRef.current = new Set(); return; }
+    const s = new Set([hoverId]);
+    edgesRef.current.forEach(e => {
+      if (e.s===hoverId) s.add(e.t);
+      if (e.t===hoverId) s.add(e.s);
+    });
+    connRef.current = s;
+  }, [hoverId]);
 
-    d3.select(el).selectAll('*').remove()
+  // ── Build graph ────────────────────────────────────────────────────────────
+  const buildGraph = useCallback((W, H) => {
+    const cx=W/2, cy=H/2;
+    const nodes=[], edges=[];
+    const push = n => nodes.push(n);
+    const link = (s,t,w=0.12) => edges.push({s,t,w});
 
-    const svg = d3.select(el).append('svg')
-      .attr('width', W).attr('height', H)
-      .style('background', 'var(--bg)')
+    // ① Root
+    push({id:"root",x:cx,y:cy,vx:0,vy:0,r:34,label:"ex:PetGraph",
+      sublabel:"반려동물 지식그래프",color:C.root,type:"root",fixed:true});
 
-    // zoom
-    const g = svg.append('g')
-    svg.call(
-      d3.zoom().scaleExtent([0.3, 3]).on('zoom', e => g.attr('transform', e.transform))
-    )
+    // ② 4 Entity 허브
+    const ENTS = [
+      {id:"e_fac",label:"ex:Facility",sub:"시설 정보",color:C.eFac,  a:-Math.PI/2},
+      {id:"e_med",label:"ex:Medical", sub:"의료 정보",color:C.eMed,  a:0},
+      {id:"e_ani",label:"ex:Animal",  sub:"동물 개체",color:C.eAni,  a:Math.PI/2},
+      {id:"e_reg",label:"ex:Region",  sub:"지역 정보",color:C.eReg,  a:Math.PI},
+    ];
+    ENTS.forEach(e => {
+      const R=155;
+      push({...e,x:cx+Math.cos(e.a)*R,y:cy+Math.sin(e.a)*R,vx:0,vy:0,r:26,type:"entity",
+        fx:cx+Math.cos(e.a)*R,fy:cy+Math.sin(e.a)*R});
+      link("root",e.id,0.28);
+    });
 
-    // arrow markers per color
-    const defs = svg.append('defs')
-    const domains = [...new Set(KG_NODES.map(n => n.domain))]
-    domains.forEach(d => {
-      const col = DOMAIN_COLOR[d] || '#94a3b8'
-      defs.append('marker')
-        .attr('id', `arrow-${d}`)
-        .attr('viewBox', '0 -5 10 10').attr('refX', 28).attr('refY', 0)
-        .attr('markerWidth', 5).attr('markerHeight', 5).attr('orient', 'auto')
-        .append('path').attr('d', 'M0,-5L10,0L0,5').attr('fill', col).attr('opacity', 0.5)
-    })
+    // ③ 원인 분류 노드 (under e_med)
+    CAUSE_NODES.forEach((c,i) => {
+      const angle = 0 + (i-2)*0.45;
+      const R = 290;
+      push({id:c.id,x:cx+Math.cos(angle)*R,y:cy+Math.sin(angle)*R+40,
+        vx:0,vy:0,r:20,label:c.label,color:c.color,type:"cause"});
+      link("e_med",c.id,0.15);
+    });
 
-    const simNodes = KG_NODES.map(d => ({ ...d }))
-    const byId = Object.fromEntries(simNodes.map(d => [d.id, d]))
-    const simLinks = KG_EDGES
-      .map(e => ({ ...e, source: byId[e.s], target: byId[e.t] }))
-      .filter(e => e.source && e.target)
+    // ④ 증상 분류 (KISTI)
+    SYMPTOM_CATS.forEach((s,i) => {
+      const angle=(i/SYMPTOM_CATS.length)*Math.PI*2+0.6;
+      const R=310+(i%2)*22;
+      push({id:s.id,x:cx+Math.cos(angle)*R,y:cy+Math.sin(angle)*R,
+        vx:0,vy:0,r:15,label:s.label,color:C.symColor,type:"symptom"});
+      link("e_med",s.id,0.1);
+    });
 
-    // simulation
-    const sim = d3.forceSimulation(simNodes)
-      .force('link', d3.forceLink(simLinks).distance(d => 110 + (d.source.r || 24) + (d.target.r || 24)).strength(0.45))
-      .force('charge', d3.forceManyBody().strength(-420))
-      .force('center', d3.forceCenter(W / 2, H / 2))
-      .force('collision', d3.forceCollide(d => (d.r || 24) + 14))
-      .force('x', d3.forceX(W / 2).strength(0.04))
-      .force('y', d3.forceY(H / 2).strength(0.04))
-    simRef.current = sim
+    // ⑤ 동물 종 노드
+    ANIMAL_NODES.forEach((a,i) => {
+      const angle=Math.PI/2+(i/ANIMAL_NODES.length)*Math.PI*2*0.7-Math.PI*0.35;
+      const R=285+(i%2)*22;
+      push({id:a.id,x:cx+Math.cos(angle)*R,y:cy+Math.sin(angle)*R,
+        vx:0,vy:0,r:17,label:a.label,color:C.aniColor,type:"animal"});
+      link("e_ani",a.id,0.12);
+    });
 
-    // edges
-    const link = g.append('g').selectAll('g').data(simLinks).join('g')
+    // ⑥ API 소스 노드
+    const grp={facility:[],place:[],animal:[],medical:[]};
+    API_NODES.forEach(a=>grp[a.apiType].push(a));
+    const etgt={facility:"e_fac",place:"e_reg",animal:"e_ani",medical:"e_med"};
+    const ebase={facility:-Math.PI/2,place:Math.PI,animal:Math.PI/2+0.1,medical:0.1};
 
-    const linkLine = link.append('line')
-      .attr('stroke', d => DOMAIN_COLOR[d.source.domain] || '#cbd5e1')
-      .attr('stroke-width', d => d.w || 1.5)
-      .attr('stroke-opacity', 0.35)
-      .attr('marker-end', d => `url(#arrow-${d.source.domain})`)
+    Object.entries(grp).forEach(([type,apis])=>{
+      apis.forEach((a,i)=>{
+        const spread=0.6,base=ebase[type];
+        const angle=base+(i-(apis.length-1)/2)*(spread/Math.max(apis.length-1,1));
+        const R=380+(i%3)*22;
+        push({id:a.id,x:cx+Math.cos(angle)*R,y:cy+Math.sin(angle)*R,
+          vx:0,vy:0,r:16,label:a.label,sublabel:a.provider,
+          color:API_CLR(type),type:"api",apiType:type});
+        link(etgt[type],a.id,0.1);
+      });
+    });
 
-    const linkLabel = link.append('text')
-      .attr('font-size', '8px')
-      .attr('fill', '#94a3b8')
-      .attr('text-anchor', 'middle')
-      .style('font-family', "'JetBrains Mono',monospace")
-      .style('pointer-events', 'none')
-      .text(d => d.p.replace('ex:', '').replace('schema:', '').replace('owl:', ''))
+    // ⑦ 질병 노드 — 116건 전체
+    ALL_DISEASES.forEach((d,i)=>{
+      const angle=(i/ALL_DISEASES.length)*Math.PI*2;
+      const R=500+(i%6)*16;
+      push({id:d.id,x:cx+Math.cos(angle)*R,y:cy+Math.sin(angle)*R,
+        vx:0,vy:0,r:10,label:d.nm,sublabel:d.eng,
+        animal:d.animal,cause:d.cause,color:CAUSE_CLR(d.cause),type:"disease"});
+      const cn=CAUSE_ID[d.cause];
+      if(cn) link(cn,d.id,0.07);
+      link(animalKey(d.animal),d.id,0.04);
+      link("api12",d.id,0.03);
+    });
 
-    // nodes
-    const node = g.append('g').selectAll('g').data(simNodes).join('g')
-      .style('cursor', 'pointer')
-      .call(d3.drag()
-        .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y })
-        .on('drag',  (e, d) => { d.fx = e.x; d.fy = e.y })
-        .on('end',   (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null })
-      )
+    nodesRef.current=nodes;
+    edgesRef.current=edges;
+    setStats({nodes:nodes.length,edges:edges.length});
 
-    // glow filter
-    const filter = defs.append('filter').attr('id', 'glow')
-    filter.append('feGaussianBlur').attr('stdDeviation', '3').attr('result', 'coloredBlur')
-    const feMerge = filter.append('feMerge')
-    feMerge.append('feMergeNode').attr('in', 'coloredBlur')
-    feMerge.append('feMergeNode').attr('in', 'SourceGraphic')
+    // 초기 transform 저장
+    const init={x:0,y:0,scale:0.72};
+    transformRef.current={...init};
+    initRef.current={...init};
+    frameRef.current=0;
+  }, []);
 
-    // outer ring
-    node.append('circle')
-      .attr('r', d => (d.r || 24) + 5)
-      .attr('fill', 'none')
-      .attr('stroke', d => d.color)
-      .attr('stroke-width', 1)
-      .attr('stroke-opacity', 0.2)
+  // ── Physics ────────────────────────────────────────────────────────────────
+  const simulate = useCallback(()=>{
+    const ns=nodesRef.current,es=edgesRef.current;
+    const map={};ns.forEach(n=>map[n.id]=n);
+    const REPEL=20000, DAMP=0.86;
 
-    // main circle
-    node.append('circle')
-      .attr('r', d => d.r || 24)
-      .attr('fill', d => d.color + '1a')
-      .attr('stroke', d => d.color)
-      .attr('stroke-width', 2)
+    for(let i=0;i<ns.length;i++){
+      for(let j=i+1;j<ns.length;j++){
+        const a=ns[i],b=ns[j];
+        if(a.fixed&&b.fixed)continue;
+        const dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy+1;
+        const dist=Math.sqrt(d2);
+        const f=REPEL/d2;
+        const fx=dx/dist*f,fy=dy/dist*f;
+        if(!a.fixed){a.vx-=fx;a.vy-=fy;}
+        if(!b.fixed){b.vx+=fx;b.vy+=fy;}
+      }
+    }
+    es.forEach(e=>{
+      const a=map[e.s],b=map[e.t];if(!a||!b)return;
+      const dx=b.x-a.x,dy=b.y-a.y,dist=Math.sqrt(dx*dx+dy*dy)+1;
+      const tgt=(a.r+b.r)*4.6;
+      const f=(dist-tgt)*(e.w||0.1);
+      const fx=dx/dist*f,fy=dy/dist*f;
+      if(!a.fixed){a.vx+=fx;a.vy+=fy;}
+      if(!b.fixed){b.vx-=fx;b.vy-=fy;}
+    });
+    const W=canvasRef.current?.width||1200,H=canvasRef.current?.height||700;
+    ns.forEach(n=>{
+      if(n.fixed)return;
+      n.vx+=(W/2-n.x)*0.0015;n.vy+=(H/2-n.y)*0.0015;
+      n.vx*=DAMP;n.vy*=DAMP;n.x+=n.vx;n.y+=n.vy;
+    });
+  },[]);
 
-    node.append('text')
-      .attr('y', -3)
-      .attr('text-anchor', 'middle')
-      .attr('font-size', d => `${Math.round((d.r || 24) * 0.65)}px`)
-      .style('pointer-events', 'none')
-      .text(d => d.icon)
+  // ── Render ─────────────────────────────────────────────────────────────────
+  const render = useCallback(()=>{
+    const canvas=canvasRef.current;if(!canvas)return;
+    const ctx=canvas.getContext("2d");
+    const {x:tx,y:ty,scale}=transformRef.current;
+    const W=canvas.width,H=canvas.height;
+    const hid=hoverId;
+    const conn=connRef.current;
+    const hasHov=hid!==null;
 
-    node.append('text')
-      .attr('y', d => (d.r || 24) + 14)
-      .attr('text-anchor', 'middle')
-      .attr('font-size', '9.5px')
-      .attr('fill', 'var(--text2)')
-      .attr('font-weight', '700')
-      .style('font-family', "'Noto Sans KR',sans-serif")
-      .style('pointer-events', 'none')
-      .text(d => d.label)
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle=C.bg;ctx.fillRect(0,0,W,H);
 
-    // domain badge
-    node.append('text')
-      .attr('y', d => -(d.r || 24) - 5)
-      .attr('text-anchor', 'middle')
-      .attr('font-size', '7.5px')
-      .attr('fill', d => d.color)
-      .attr('font-weight', '700')
-      .style('font-family', "'JetBrains Mono',monospace")
-      .style('pointer-events', 'none')
-      .text(d => d.domain)
+    // dot grid (canvas space, not world space)
+    ctx.fillStyle="rgba(148,163,184,0.22)";
+    const step=36;
+    for(let gx=0;gx<W;gx+=step)for(let gy=0;gy<H;gy+=step){
+      ctx.beginPath();ctx.arc(gx,gy,1,0,Math.PI*2);ctx.fill();
+    }
 
-    // hover interaction
-    node.on('mouseover', function(e, d) {
-      d3.select(this).select('circle:nth-child(2)')
-        .attr('fill', d.color + '40')
-        .attr('stroke-width', 3)
-        .attr('filter', 'url(#glow)')
+    ctx.save();
+    ctx.translate(tx,ty);ctx.scale(scale,scale);
+    const map={};nodesRef.current.forEach(n=>map[n.id]=n);
 
-      // highlight connected edges
-      linkLine
-        .attr('stroke-opacity', l =>
-          l.source.id === d.id || l.target.id === d.id ? 0.9 : 0.08)
-        .attr('stroke-width', l =>
-          l.source.id === d.id || l.target.id === d.id ? (l.w || 1.5) + 1 : l.w || 1.5)
+    // ── Edges ──
+    edgesRef.current.forEach(e=>{
+      const a=map[e.s],b=map[e.t];if(!a||!b)return;
+      const show=filterMode==="all"
+        ||(filterMode==="disease"&&(a.type==="disease"||b.type==="disease"))
+        ||(filterMode==="api"   &&(a.type==="api"    ||b.type==="api"))
+        ||(filterMode==="cause" &&(a.type==="cause"  ||b.type==="cause"))
+        ||(filterMode==="animal"&&(a.type==="animal" ||b.type==="animal"));
+      if(!show)return;
 
-      linkLabel
-        .attr('fill', l =>
-          l.source.id === d.id || l.target.id === d.id ? DOMAIN_COLOR[l.source.domain] : 'transparent')
-    })
-    .on('mouseout', function(e, d) {
-      d3.select(this).select('circle:nth-child(2)')
-        .attr('fill', d.color + '1a')
-        .attr('stroke-width', 2)
-        .attr('filter', null)
-      linkLine.attr('stroke-opacity', 0.35).attr('stroke-width', d => d.w || 1.5)
-      linkLabel.attr('fill', '#94a3b8')
-    })
+      const isHigh=hasHov&&conn.has(a.id)&&conn.has(b.id);
+      const isDim =hasHov&&!isHigh;
 
-    sim.on('tick', () => {
-      linkLine
-        .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-        .attr('x2', d => d.target.x).attr('y2', d => d.target.y)
-      linkLabel
-        .attr('x', d => (d.source.x + d.target.x) / 2)
-        .attr('y', d => (d.source.y + d.target.y) / 2 - 4)
-      node.attr('transform', d => `translate(${d.x},${d.y})`)
-    })
+      ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+      if(isHigh){ctx.strokeStyle=C.edgeHigh;ctx.lineWidth=2;}
+      else if(isDim){ctx.strokeStyle=C.edgeDim;ctx.lineWidth=0.5;}
+      else{ctx.strokeStyle=C.edgeNorm;ctx.lineWidth=0.8;}
+      ctx.stroke();
+    });
 
-    return () => sim.stop()
-  }, [])
+    // ── Nodes ──
+    nodesRef.current.forEach(n=>{
+      const show=filterMode==="all"
+        ||(filterMode==="disease"&&["disease","cause","entity","root"].includes(n.type))
+        ||(filterMode==="api"   &&["api","entity","root"].includes(n.type))
+        ||(filterMode==="cause" &&["cause","disease","entity","root"].includes(n.type))
+        ||(filterMode==="animal"&&["animal","entity","root"].includes(n.type));
+      if(!show)return;
+
+      const isHov=n.id===hid;
+      const isSel=selected?.id===n.id;
+      const isDim=hasHov&&!conn.has(n.id);
+      const r=n.r*(isHov?1.22:1);
+
+      ctx.save();
+      ctx.globalAlpha=isDim?0.14:1;
+
+      // Fill
+      ctx.beginPath();ctx.arc(n.x,n.y,r,0,Math.PI*2);
+      if(n.type==="root"){
+        ctx.fillStyle=C.root;
+      } else if(n.type==="entity"){
+        ctx.fillStyle=n.color+"18";
+      } else {
+        ctx.fillStyle="#ffffff";
+      }
+      ctx.fill();
+
+      // Stroke
+      ctx.strokeStyle=(isHov||isSel)?n.color:(n.color+(n.type==="disease"?"66":"88"));
+      ctx.lineWidth=(isHov||isSel)?2:1;
+      ctx.stroke();
+
+      // Color indicator dot (non-root non-entity)
+      if(!["root","entity"].includes(n.type)){
+        ctx.beginPath();ctx.arc(n.x,n.y,r*0.32,0,Math.PI*2);
+        ctx.fillStyle=n.color;ctx.fill();
+      }
+
+      // Labels
+      ctx.globalAlpha=isDim?0.15:1;
+      ctx.textAlign="center";
+
+      if(n.type==="root"){
+        ctx.font="bold 12px 'SF Mono',monospace";
+        ctx.fillStyle="#fff";
+        ctx.fillText(n.label,n.x,n.y+4);
+        ctx.font="9px system-ui,sans-serif";
+        ctx.fillStyle="rgba(255,255,255,0.65)";
+        ctx.fillText(n.sublabel,n.x,n.y+r+12);
+
+      } else if(n.type==="entity"){
+        ctx.font="bold 10px 'SF Mono',monospace";
+        ctx.fillStyle=n.color;
+        ctx.fillText(n.label,n.x,n.y+3);
+        ctx.font="9px system-ui,sans-serif";
+        ctx.fillStyle=C.txtm;
+        ctx.fillText(n.sub,n.x,n.y+r+12);
+
+      } else if(n.type==="cause"){
+        ctx.font="bold 9.5px system-ui,sans-serif";
+        ctx.fillStyle=n.color;
+        ctx.fillText(n.label,n.x,n.y+r+12);
+
+      } else if(n.type==="api"){
+        const vis=(isHov||isSel)?1:0.8;
+        ctx.globalAlpha=isDim?0.15:vis;
+        ctx.font="9px system-ui,sans-serif";
+        ctx.fillStyle=C.txts;
+        const lbl=n.label.length>12?n.label.slice(0,12)+"…":n.label;
+        ctx.fillText(lbl,n.x,n.y+r+12);
+        if(isHov||isSel){
+          ctx.font="8px system-ui,sans-serif";
+          ctx.fillStyle=C.txtm;
+          ctx.fillText(n.sublabel,n.x,n.y+r+22);
+        }
+
+      } else if(n.type==="animal"){
+        ctx.font="9px system-ui,sans-serif";
+        ctx.fillStyle=C.txts;
+        const short=n.label.split(" ")[0];
+        ctx.fillText(short,n.x,n.y+r+12);
+
+      } else if(n.type==="symptom"){
+        if(isHov||isSel){
+          ctx.font="9px system-ui,sans-serif";
+          ctx.fillStyle=C.txts;
+          ctx.fillText(n.label,n.x,n.y+r+12);
+        }
+
+      } else if(n.type==="disease"){
+        if(isHov||isSel){
+          // label above
+          ctx.font="bold 10px system-ui,sans-serif";
+          ctx.fillStyle=n.color;
+          ctx.fillText(n.label,n.x,n.y-r-6);
+          ctx.font="8px 'SF Mono',monospace";
+          ctx.fillStyle=C.txtm;
+          const eng=n.sublabel||"";
+          ctx.fillText(eng.length>26?eng.slice(0,26)+"…":eng,n.x,n.y-r-17);
+          ctx.font="9px system-ui,sans-serif";
+          ctx.fillStyle=C.txts;
+          ctx.fillText(n.animal+" · "+n.cause,n.x,n.y+r+12);
+        } else {
+          // always show short label when visible
+          ctx.globalAlpha=isDim?0.1:0.6;
+          ctx.font="8px system-ui,sans-serif";
+          ctx.fillStyle=n.color;
+          ctx.fillText(n.label.length>7?n.label.slice(0,7)+"…":n.label,n.x,n.y+r+10);
+        }
+      }
+      ctx.restore();
+    });
+
+    ctx.restore();
+  },[hoverId,selected,filterMode]);
+
+  // ── Animation loop ─────────────────────────────────────────────────────────
+  useEffect(()=>{
+    const loop=()=>{
+      if(frameRef.current<380){simulate();frameRef.current++;}
+      render();
+      animRef.current=requestAnimationFrame(loop);
+    };
+    animRef.current=requestAnimationFrame(loop);
+    return ()=>cancelAnimationFrame(animRef.current);
+  },[simulate,render]);
+
+  // ── Canvas resize ──────────────────────────────────────────────────────────
+  useEffect(()=>{
+    const canvas=canvasRef.current;if(!canvas)return;
+    const resize=()=>{
+      canvas.width=canvas.parentElement.clientWidth;
+      canvas.height=canvas.parentElement.clientHeight;
+      buildGraph(canvas.width,canvas.height);
+    };
+    resize();
+    window.addEventListener("resize",resize);
+    return ()=>window.removeEventListener("resize",resize);
+  },[buildGraph]);
+
+  // ── Mouse ──────────────────────────────────────────────────────────────────
+  const toWorld=useCallback((ex,ey)=>{
+    const {x:tx,y:ty,scale}=transformRef.current;
+    return {wx:(ex-tx)/scale,wy:(ey-ty)/scale};
+  },[]);
+  const findNode=useCallback((wx,wy)=>
+    nodesRef.current.find(n=>{const dx=n.x-wx,dy=n.y-wy;return Math.sqrt(dx*dx+dy*dy)<=n.r+4;})
+  ,[]);
+
+  const onMouseMove=useCallback(e=>{
+    const rect=canvasRef.current.getBoundingClientRect();
+    const {wx,wy}=toWorld(e.clientX-rect.left,e.clientY-rect.top);
+    const node=findNode(wx,wy);
+    setHoverId(node?.id||null);
+    canvasRef.current.style.cursor=node?"pointer":mouseRef.current.pan?"grabbing":"grab";
+    if(mouseRef.current.drag){
+      const n=mouseRef.current.drag;
+      const {scale}=transformRef.current;
+      n.x+=e.movementX/scale;n.y+=e.movementY/scale;
+    } else if(mouseRef.current.pan){
+      transformRef.current.x+=e.movementX;
+      transformRef.current.y+=e.movementY;
+    }
+  },[toWorld,findNode]);
+
+  const onMouseDown=useCallback(e=>{
+    const rect=canvasRef.current.getBoundingClientRect();
+    const {wx,wy}=toWorld(e.clientX-rect.left,e.clientY-rect.top);
+    const node=findNode(wx,wy);
+    if(node){mouseRef.current.drag=node;node.fixed=true;}
+    else{mouseRef.current.pan=true;}
+  },[toWorld,findNode]);
+
+  const onMouseUp=useCallback(e=>{
+    const rect=canvasRef.current.getBoundingClientRect();
+    const {wx,wy}=toWorld(e.clientX-rect.left,e.clientY-rect.top);
+    const node=findNode(wx,wy);
+    if(mouseRef.current.drag===node&&node)
+      setSelected(prev=>prev?.id===node.id?null:node);
+    if(mouseRef.current.drag)mouseRef.current.drag.fixed=false;
+    mouseRef.current.drag=null;mouseRef.current.pan=false;
+  },[toWorld,findNode]);
+
+  const onWheel=useCallback(e=>{
+    e.preventDefault();
+    const rect=canvasRef.current.getBoundingClientRect();
+    const mx=e.clientX-rect.left,my=e.clientY-rect.top;
+    const {x:tx,y:ty,scale}=transformRef.current;
+    const f=e.deltaY>0?0.9:1.1;
+    const ns=Math.max(0.2,Math.min(4,scale*f));
+    transformRef.current.x=mx-(mx-tx)/scale*ns;
+    transformRef.current.y=my-(my-ty)/scale*ns;
+    transformRef.current.scale=ns;
+  },[]);
+
+  const resetView=useCallback(()=>{
+    transformRef.current={...initRef.current};
+    setSelected(null);
+  },[]);
+
+  const LEGEND=[
+    {color:C.root,  label:"ex:PetGraph (루트 노드)"},
+    {color:C.eFac,  label:"ex:Facility (시설 정보)"},
+    {color:C.eMed,  label:"ex:Medical (의료 정보)"},
+    {color:C.eAni,  label:"ex:Animal (동물 개체)"},
+    {color:C.eReg,  label:"ex:Region (지역 정보)"},
+    {color:C.apiFac,label:"API — 행정안전부"},
+    {color:C.apiMed,label:"API — 질병/증상"},
+    {color:C.apiAni,label:"API — 동물보호"},
+    {color:C.apiPl, label:"API — 관광/문화"},
+    {color:C.dVirus,label:"질병 — 바이러스성 (28건)"},
+    {color:C.dBact, label:"질병 — 세균성 (25건)"},
+    {color:C.dPara, label:"질병 — 기생충성 (9건)"},
+    {color:C.dFungi,label:"질병 — 곰팡이성 (3건)"},
+    {color:C.dOther,label:"질병 — 기타 (50건+)"},
+  ];
+
+  const FILTERS=[
+    {id:"all",    label:"전체 보기"},
+    {id:"disease",label:"질병 116건"},
+    {id:"cause",  label:"원인 분류"},
+    {id:"api",    label:"API 소스"},
+    {id:"animal", label:"동물 종"},
+  ];
+
+  const btnStyle=(active)=>({
+    padding:"5px 11px",fontSize:11,fontFamily:"system-ui,sans-serif",
+    borderRadius:5,cursor:"pointer",transition:"all 0.15s",
+    background:active?"#0f172a":"#ffffff",
+    color:active?"#ffffff":"#475569",
+    border:`1px solid ${active?"#0f172a":"#e2e8f0"}`,
+    boxShadow:active?"none":"0 1px 2px rgba(0,0,0,0.04)",
+  });
 
   return (
-    <div ref={ref} style={{ width: '100%', height: 640, borderRadius: 12, overflow: 'hidden' }} />
-  )
-}
+    <div style={{width:"100%",height:"100vh",background:C.bg,display:"flex",
+      flexDirection:"column",fontFamily:"system-ui,-apple-system,sans-serif"}}>
 
-// ════════════════════════════════════════════════════════════════
-//  탭 데이터
-// ════════════════════════════════════════════════════════════════
-const CLASSES = [
-  { domain:'시설',    color:'#0d9488', icon:'🏥', cls:'ex:AnimalHospital',    uri:'ex:facility/hospital/{MNG_NO}',    label:'동물병원',
-    superClass:'schema:LocalBusiness',
-    props:['schema:name','schema:telephone','schema:streetAddress','geo:lat','geo:long','schema:additionalProperty','dcterms:created'],
-    constraints:['SALS_STTS_CD=01 (영업중만)','좌표계 EPSG:5174 → WGS84 변환 필수'] },
-  { domain:'시설',    color:'#0284c7', icon:'💊', cls:'ex:AnimalPharmacy',     uri:'ex:facility/pharmacy/{MNG_NO}',    label:'동물약국',
-    superClass:'schema:Pharmacy',
-    props:['schema:name','schema:telephone','schema:streetAddress','geo:lat','geo:long'],
-    constraints:['SALS_STTS_CD=01','좌표계 EPSG:5174 → WGS84'] },
-  { domain:'시설',    color:'#7c3aed', icon:'✂️', cls:'ex:PetGrooming',        uri:'ex:facility/grooming/{MNG_NO}',    label:'동물미용업',
-    superClass:'schema:HealthAndBeautyBusiness',
-    props:['schema:name','schema:streetAddress','schema:floorSize','schema:serviceType'],
-    constraints:['주소 비식별 처리 주의'] },
-  { domain:'시설',    color:'#d97706', icon:'🏨', cls:'ex:PetBoarding',        uri:'ex:facility/boarding/{MNG_NO}',    label:'동물위탁관리업',
-    superClass:'schema:LodgingBusiness',
-    props:['schema:name','schema:serviceType','schema:streetAddress','schema:floorSize'],
-    constraints:['DTL_TASK_SE_NM으로 SubClass 분기','LCTN_AREA로 대형견 수용 추론'] },
-  { domain:'시설',    color:'#94a3b8', icon:'🌿', cls:'ex:PetCremation',       uri:'ex:facility/cremation/{MNG_NO}',   label:'동물장묘업',
-    superClass:'schema:FuneralService',
-    props:['schema:name','schema:streetAddress','geo:lat','geo:long'],
-    constraints:['희소 데이터 — 지역 접근성 분석 중심'] },
-  { domain:'시설',    color:'#16a34a', icon:'🛑', cls:'ex:RestAreaPlayground', uri:'ex:facility/restarea/{slug}',      label:'휴게소 편의시설',
-    superClass:'schema:CivicStructure',
-    props:['schema:name','schema:amenityFeature','schema:openingHours','dcterms:created'],
-    constraints:['좌표 없음 → 카카오 Geocoding API 보완 필요'] },
-  { domain:'시설',    color:'#2563eb', icon:'📍', cls:'ex:PetFriendlyPlace',   uri:'ex:facility/friendly/{id}',        label:'반려동물 동반가능 시설',
-    superClass:'schema:TouristAttraction',
-    props:['schema:name','schema:additionalType','geo:lat','geo:long','schema:telephone'],
-    constraints:['한국문화정보원 7만건 — 배치 업로드 전략'] },
-  { domain:'동물',    color:'#e11d48', icon:'🪪', cls:'ex:RegisteredAnimal',   uri:'ex:animal/registered/{dogRegNo}',  label:'등록동물',
-    superClass:'schema:Animal',
-    props:['schema:identifier','schema:name','skos:Concept','schema:gender','schema:birthDate'],
-    constraints:['dogRegNo + rfidCd 이중 식별자 관리'] },
-  { domain:'동물',    color:'#ea580c', icon:'🐾', cls:'ex:AbandonedAnimal',    uri:'ex:animal/rescue/{desertionNo}',   label:'구조동물',
-    superClass:'ex:RegisteredAnimal',
-    props:['schema:identifier','schema:location','schema:additionalProperty','schema:image','schema:dateCreated'],
-    constraints:['owl:sameAs로 등록동물·분실동물과 연결','코드 마스터 테이블 선행 구축'] },
-  { domain:'동물',    color:'#f43f5e', icon:'❓', cls:'ex:LostAnimal',          uri:'ex:animal/lost/{rfidCd}',          label:'분실동물',
-    superClass:'ex:RegisteredAnimal',
-    props:['schema:identifier','schema:location','schema:dateCreated','schema:telephone'],
-    constraints:['rfidCd로 구조동물과 owl:sameAs 연결'] },
-  { domain:'보호',    color:'#7c3aed', icon:'🏠', cls:'ex:AnimalShelter',      uri:'ex:facility/shelter/{careRegNo}',  label:'동물보호센터',
-    superClass:'schema:Organization',
-    props:['schema:name','geo:lat','geo:long','schema:numberOfEmployees','schema:amenityFeature'],
-    constraints:['careRegNo로 구조동물 API JOIN 핵심'] },
-  { domain:'의료',    color:'#0891b2', icon:'🧬', cls:'ex:Symptom',            uri:'ex:medical/symptom/{code}',        label:'증상',
-    superClass:'skos:Concept',
-    props:['skos:prefLabel','skos:altLabel','skos:broader','skos:notation','skos:inScheme'],
-    constraints:['KISTI 증상 분류 체계 — SNOMED-CT Vet 연계 가능'] },
-  { domain:'의료',    color:'#6366f1', icon:'🦠', cls:'ex:Disease',             uri:'ex:medical/disease/{DISS_NO}',    label:'질병',
-    superClass:'skos:Concept',
-    props:['skos:prefLabel','skos:altLabel','skos:Concept','schema:additionalProperty'],
-    constraints:['CAUSE_CMMN_CL → Pathogen 노드로 분기'] },
-  { domain:'의료',    color:'#dc2626', icon:'🔬', cls:'ex:Pathogen',            uri:'ex:medical/pathogen/{id}',         label:'병원체',
-    superClass:'skos:Concept',
-    props:['skos:prefLabel','ex:pathogenType'],
-    constraints:['바이러스/세균/기생충/곰팡이 분류'] },
-  { domain:'여행',    color:'#d97706', icon:'🗺️', cls:'ex:PetTourSpot',        uri:'ex:tour/content/{contentId}',      label:'반려동물 여행지',
-    superClass:'schema:TouristAttraction',
-    props:['schema:name','schema:amenityFeature','geo:lat','geo:long','schema:additionalProperty','schema:telephone'],
-    constraints:['2단계 수집 — 목록→contentId→상세','WGS84 직접 사용 가능'] },
-  { domain:'공통',    color:'#64748b', icon:'📌', cls:'ex:AdministrativeRegion',uri:'ex:region/{sido}/{sigungu}',       label:'행정구역',
-    superClass:'schema:AdministrativeArea',
-    props:['schema:name','schema:containsPlace'],
-    constraints:['모든 시설·동물·여행지의 상위 공간 노드'] },
-  { domain:'공통',    color:'#059669', icon:'👤', cls:'ex:PetOwner',            uri:'ex:owner/{id}',                    label:'반려인',
-    superClass:'foaf:Person',
-    props:['foaf:name','schema:telephone','ex:owns'],
-    constraints:['개인정보 비식별 처리 — 집계 단위로만 활용'] },
-  { domain:'공통',    color:'#92400e', icon:'🐕', cls:'ex:AnimalSpecies',       uri:'ex:species/{upKindCd}',            label:'동물 종(種)',
-    superClass:'skos:Concept',
-    props:['skos:prefLabel','skos:altLabel','ex:upKindCd'],
-    constraints:['개/고양이/기타 3단계 분류 → 세분화 가능'] },
-]
+      {/* ─── 헤더 ─── */}
+      <div style={{padding:"10px 20px",display:"flex",alignItems:"center",
+        justifyContent:"space-between",background:C.panel,
+        borderBottom:`1px solid ${C.border}`,
+        boxShadow:"0 1px 3px rgba(0,0,0,0.06)",flexShrink:0}}>
+        <div>
+          <div style={{fontSize:16,fontWeight:700,color:C.txt}}>
+            Pet-Graph
+            <span style={{color:"#94a3b8",fontWeight:400,margin:"0 6px"}}>/</span>
+            <span style={{color:C.eFac}}>지식그래프 시각화</span>
+          </div>
+          <div style={{fontSize:11,color:C.txtm,marginTop:1}}>
+            총 {stats.nodes}개 노드 · {stats.edges}개 엣지 · 질병 116건 · API 14개 · Hover 시 연결 강조
+          </div>
+        </div>
 
-const RELATIONS = [
-  // 공간
-  { subj:'ex:AnimalHospital',     pred:'ex:locatedIn',             obj:'ex:AdministrativeRegion', type:'공간',   desc:'병원의 행정구역 포함 관계' },
-  { subj:'ex:AnimalHospital',     pred:'ex:nearBy',                obj:'ex:AnimalHospital',       type:'공간',   desc:'반경 1km 내 인접 병원' },
-  { subj:'ex:AnimalShelter',      pred:'ex:nearestHospital',       obj:'ex:AnimalHospital',       type:'공간',   desc:'보호센터 → 인근 응급 병원' },
-  { subj:'ex:PetTourSpot',        pred:'ex:nearBy',                obj:'ex:AnimalHospital',       type:'공간',   desc:'여행지 인근 병원 (안전 점수)' },
-  // 동물 개체 연결
-  { subj:'ex:LostAnimal',         pred:'owl:sameAs',               obj:'ex:RegisteredAnimal',     type:'개체',   desc:'RFID로 분실↔등록 동일 개체' },
-  { subj:'ex:AbandonedAnimal',    pred:'owl:sameAs',               obj:'ex:RegisteredAnimal',     type:'개체',   desc:'RFID로 구조↔등록 동일 개체' },
-  { subj:'ex:AbandonedAnimal',    pred:'owl:sameAs',               obj:'ex:LostAnimal',           type:'개체',   desc:'분실→구조 개체 매핑' },
-  { subj:'ex:RegisteredAnimal',   pred:'ex:hasSpecies',            obj:'ex:AnimalSpecies',        type:'개체',   desc:'등록 동물의 축종/품종' },
-  // 보호
-  { subj:'ex:AnimalShelter',      pred:'schema:containedInPlace',  obj:'ex:AbandonedAnimal',      type:'보호',   desc:'보호센터가 구조동물을 보호' },
-  { subj:'ex:PetOwner',           pred:'ex:adopts',                obj:'ex:AbandonedAnimal',      type:'보호',   desc:'보호자의 입양 관계' },
-  { subj:'ex:PetOwner',           pred:'ex:registers',             obj:'ex:RegisteredAnimal',     type:'보호',   desc:'보호자의 반려동물 등록' },
-  // 의료
-  { subj:'ex:AbandonedAnimal',    pred:'ex:hasSymptom',            obj:'ex:Symptom',              type:'의료',   desc:'구조동물 증상 연결' },
-  { subj:'ex:Symptom',            pred:'ex:indicatesDisease',      obj:'ex:Disease',              type:'의료',   desc:'증상 → 질병 추론 (핵심)' },
-  { subj:'ex:Disease',            pred:'ex:causedBy',              obj:'ex:Pathogen',             type:'의료',   desc:'질병의 원인 병원체' },
-  { subj:'ex:Disease',            pred:'ex:infectsAnimal',         obj:'ex:AnimalSpecies',        type:'의료',   desc:'감염 동물 종' },
-  { subj:'ex:AnimalHospital',     pred:'ex:treats',                obj:'ex:Disease',              type:'의료',   desc:'병원의 진료 질병 범위' },
-  { subj:'ex:Disease',            pred:'ex:zoonoticRiskTo',        obj:'ex:PetOwner',             type:'의료',   desc:'인수공통전염병 → 보호자 경보' },
-  // 여행
-  { subj:'ex:PetTourSpot',        pred:'ex:includes',              obj:'ex:PetFriendlyPlace',     type:'여행',   desc:'여행지 내 동반가능 시설' },
-  { subj:'ex:RestAreaPlayground', pred:'ex:onRoute',               obj:'ex:PetTourSpot',          type:'여행',   desc:'이동 경로 휴게소 거점' },
-]
-
-const TRIPLES = [
-  { title:'동물병원 — 좌표 + 행정구역 연결', turtle:
-`@prefix ex:     <http://example.org/> .
-@prefix schema: <https://schema.org/> .
-@prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-
-ex:facility/hospital/366000001020260001
-    a schema:LocalBusiness, ex:AnimalHospital ;
-    schema:name          "늘푸른동물병원" ;
-    schema:telephone     "042-731-5850" ;
-    schema:streetAddress "대전광역시 서구 계룡로550" ;
-    geo:lat  "36.3178"^^xsd:float ;
-    geo:long "127.3941"^^xsd:float ;
-    schema:additionalProperty "영업" ;
-    ex:locatedIn ex:region/대전광역시/서구 .` },
-  { title:'질병-증상-병원체 3단 연결', turtle:
-`@prefix ex:   <http://example.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-
-ex:medical/disease/1
-    a ex:Disease ;
-    skos:prefLabel "개디스템퍼"@ko ;
-    skos:altLabel  "Canine Distemper"@en ;
-    ex:infectsAnimal ex:species/DOG ;
-    ex:causedBy ex:medical/pathogen/paramyxovirus .
-
-ex:medical/symptom/DH10.56
-    a ex:Symptom ;
-    skos:prefLabel "바이러스성 결막염"@ko ;
-    skos:broader   ex:medical/symptomCat/안과질환 ;
-    ex:indicatesDisease ex:medical/disease/1 .
-
-ex:medical/pathogen/paramyxovirus
-    a ex:Pathogen ;
-    skos:prefLabel "파라믹소바이러스"@ko ;
-    ex:pathogenType "바이러스" .` },
-  { title:'구조동물 → 등록동물 owl:sameAs 연결', turtle:
-`@prefix ex:     <http://example.org/> .
-@prefix schema: <https://schema.org/> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-
-ex:animal/rescue/202404001234
-    a ex:AbandonedAnimal ;
-    schema:identifier "202404001234" ;
-    schema:location   "서울시 마포구 망원동" ;
-    ex:processState   "보호중" ;
-    ex:hasSpecies     ex:species/믹스견 ;
-    schema:containedInPlace ex:facility/shelter/411310201900001 ;
-    owl:sameAs ex:animal/registered/410123456789012 ;
-    owl:sameAs ex:animal/lost/202403005678 .` },
-  { title:'인수공통전염병 — 보호자 경보 트리플', turtle:
-`@prefix ex:   <http://example.org/> .
-@prefix schema: <https://schema.org/> .
-
-# 광견병: 사람에게도 감염 가능
-ex:medical/disease/rabies
-    a ex:Disease ;
-    ex:infectsAnimal ex:species/DOG, ex:species/CAT ;
-    ex:zoonoticRiskTo ex:owner/ALL ;
-    ex:causedBy ex:medical/pathogen/rabiesVirus .
-
-# 해당 동물이 보호 중인 센터의 모든 보호자에게 경보 전파 가능
-ex:facility/shelter/411310201900001
-    ex:hasZoonoticAlert ex:medical/disease/rabies .` },
-]
-
-const INFERENCE = [
-  { icon:'🩺', title:'증상 → 전문 병원 추천',     desc:'ex:Symptom → ex:indicatesDisease → ex:Disease → ex:AnimalHospital[treats] + geo:nearBy 결합. 증상 입력 시 반경 5km 전문 병원 순위 반환.' },
-  { icon:'🏠', title:'입양 적합 보호자 매칭',      desc:'ex:AbandonedAnimal의 ex:hasSpecies + 분실 지역 geo 좌표와 ex:PetOwner의 선호 종·거주 지역을 SPARQL로 매칭하여 입양 후보 추천.' },
-  { icon:'🗺️', title:'반려동물 여행 안전 점수',   desc:'이동 경로상 ex:PetTourSpot마다 ex:nearBy → ex:AnimalHospital 접근성 계산. 응급 병원 없는 구간 경고 표시.' },
-  { icon:'⚠️', title:'인수공통전염병 경보 전파',  desc:'ex:Disease[zoonoticRiskTo] 감지 시 해당 보호센터의 모든 보호자(ex:PetOwner)에게 체인 경보. SPARQL CONSTRUCT로 자동 전파.' },
-  { icon:'📊', title:'지역 의료 인프라 분석',      desc:'ex:AdministrativeRegion 기준으로 병원·약국 밀도와 구조동물 수를 집계. 취약 지역 식별 후 보호센터 신설 제안.' },
-  { icon:'🔗', title:'중복 시설 엔티티 해상도',    desc:'ex:PetFriendlyPlace와 ex:PetTourSpot 간 schema:name + geo 거리 10m 이내 시 owl:sameAs로 병합. 7만건 대규모 De-duplication.' },
-]
-
-const NAMESPACES = [
-  { prefix:'ex:',      uri:'http://example.org/',                       usage:'프로젝트 전용 엔티티 URI' },
-  { prefix:'schema:',  uri:'https://schema.org/',                       usage:'시설·동물·연락처·좌표 표준 속성' },
-  { prefix:'skos:',    uri:'http://www.w3.org/2004/02/skos/core#',      usage:'증상·질병·종 분류 계층 (broader/narrower)' },
-  { prefix:'owl:',     uri:'http://www.w3.org/2002/07/owl#',            usage:'sameAs — RFID 기반 개체 동일성' },
-  { prefix:'dcterms:', uri:'http://purl.org/dc/terms/',                 usage:'날짜·출처·발행기관 메타데이터' },
-  { prefix:'foaf:',    uri:'http://xmlns.com/foaf/0.1/',                usage:'보호자(PetOwner) 인적 정보' },
-  { prefix:'geo:',     uri:'http://www.w3.org/2003/01/geo/wgs84_pos#', usage:'WGS84 위경도 (lat, long)' },
-  { prefix:'vcard:',   uri:'http://www.w3.org/2006/vcard/ns#',         usage:'주소·전화번호 구조화' },
-  { prefix:'xsd:',     uri:'http://www.w3.org/2001/XMLSchema#',        usage:'데이터 타입 (float, date, string)' },
-  { prefix:'koah:',    uri:'http://example.org/ontology/animalHospital#', usage:'동물병원 도메인 온톨로지 확장' },
-  { prefix:'koad:',    uri:'http://example.org/ontology/animalDisease#',  usage:'동물질병 도메인 온톨로지 확장' },
-]
-
-const TABS = ['시각화 그래프', '클래스 구조', '관계(Relation)', '트리플 패턴', '추론 시나리오', '네임스페이스']
-
-function SectionLabel({ label }) {
-  return (
-    <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:12 }}>
-      <span style={{ fontSize:9.5, fontWeight:700, textTransform:'uppercase', letterSpacing:'1.5px', color:'var(--muted)', fontFamily:"'JetBrains Mono',monospace", whiteSpace:'nowrap' }}>{label}</span>
-      <div style={{ flex:1, height:1, background:'var(--border)' }} />
-    </div>
-  )
-}
-
-export default function KnowledgeGraph() {
-  const [tab, setTab] = useState(0)
-  const [filterDomain, setFilterDomain] = useState('전체')
-  const [filterRelType, setFilterRelType] = useState('전체')
-
-  const domains = [...new Set(CLASSES.map(c => c.domain))]
-  const relTypes = [...new Set(RELATIONS.map(r => r.type))]
-
-  const filteredClasses = filterDomain === '전체' ? CLASSES : CLASSES.filter(c => c.domain === filterDomain)
-  const filteredRelations = filterRelType === '전체' ? RELATIONS : RELATIONS.filter(r => r.type === filterRelType)
-
-  return (
-    <div>
-      <div style={{ marginBottom:18 }}>
-        <h1 style={{ fontSize:17, fontWeight:900, marginBottom:4 }}>🕸️ 지식그래프 스키마</h1>
-        <p style={{ fontSize:12, color:'var(--muted)' }}>
-          18개 클래스 · 19개 관계 · 6개 추론 시나리오 · 11개 네임스페이스
-        </p>
+        <div style={{display:"flex",gap:6,alignItems:"center",flexWrap:"wrap"}}>
+          {FILTERS.map(f=>(
+            <button key={f.id} onClick={()=>setFilterMode(f.id)}
+              style={btnStyle(filterMode===f.id)}>{f.label}</button>
+          ))}
+          <div style={{width:1,height:20,background:C.border,margin:"0 2px"}}/>
+          {/* ─── 홈 버튼 ─── */}
+          <button onClick={resetView} title="초기 화면으로 돌아가기"
+            style={{...btnStyle(false),display:"flex",alignItems:"center",gap:4}}>
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2L2 7h2v6h4v-4h4v4h2V7l-6-5z" fill="#475569"/>
+            </svg>
+            초기화면
+          </button>
+        </div>
       </div>
 
-      {/* 탭 바 */}
-      <div style={{ display:'flex', gap:5, marginBottom:20, flexWrap:'wrap' }}>
-        {TABS.map((t, i) => (
-          <button key={i} onClick={() => setTab(i)} style={{
-            padding:'7px 15px', borderRadius:8, fontSize:12.5, cursor:'pointer', transition:'all .15s',
-            fontWeight: tab===i ? 700 : 500,
-            background: tab===i ? 'var(--teal-lt)' : 'var(--bg2)',
-            color: tab===i ? 'var(--teal)' : 'var(--muted)',
-            border: `1px solid ${tab===i ? '#b2f5ea' : 'var(--border)'}`,
-          }}>{t}</button>
-        ))}
+      <div style={{flex:1,display:"flex",overflow:"hidden"}}>
+        {/* ─── Canvas ─── */}
+        <div style={{flex:1,position:"relative",overflow:"hidden"}}>
+          <canvas ref={canvasRef}
+            style={{display:"block",width:"100%",height:"100%"}}
+            onMouseMove={onMouseMove}
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+            onWheel={onWheel}
+            onMouseLeave={()=>{mouseRef.current.pan=false;mouseRef.current.drag=null;}}
+          />
+          <div style={{position:"absolute",bottom:12,left:14,fontSize:10,color:C.txtm,
+            background:"rgba(255,255,255,0.88)",backdropFilter:"blur(4px)",
+            padding:"4px 9px",borderRadius:4,border:`1px solid ${C.border}`}}>
+            스크롤: 줌 · 빈 공간 드래그: 이동 · 노드 드래그: 배치 · Hover: 연결 강조 · 클릭: 상세 선택
+          </div>
+        </div>
+
+        {/* ─── 사이드 패널 ─── */}
+        <div style={{width:232,background:C.panel,borderLeft:`1px solid ${C.border}`,
+          display:"flex",flexDirection:"column",overflow:"hidden",flexShrink:0}}>
+
+          {/* 선택 노드 */}
+          <div style={{padding:13,borderBottom:`1px solid #f1f5f9`,minHeight:112}}>
+            {selected ? (
+              <>
+                <div style={{fontSize:9,color:C.txtm,letterSpacing:1.2,
+                  marginBottom:7,textTransform:"uppercase"}}>Selected Node</div>
+                <div style={{display:"flex",alignItems:"flex-start",gap:7,marginBottom:5}}>
+                  <div style={{width:9,height:9,borderRadius:"50%",background:selected.color,
+                    flexShrink:0,marginTop:3}}/>
+                  <div style={{fontSize:12,fontWeight:600,color:C.txt,lineHeight:1.4,
+                    wordBreak:"break-all",fontFamily:"'SF Mono',monospace"}}>
+                    {selected.label}
+                  </div>
+                </div>
+                {selected.sublabel&&(
+                  <div style={{fontSize:9,color:C.txtm,fontFamily:"monospace",
+                    marginBottom:4,wordBreak:"break-all",lineHeight:1.4}}>
+                    {selected.sublabel}
+                  </div>
+                )}
+                {selected.animal&&(
+                  <div style={{fontSize:10,color:"#0369a1",marginBottom:2}}>동물: {selected.animal}</div>
+                )}
+                {selected.cause&&(
+                  <div style={{fontSize:10,color:CAUSE_CLR(selected.cause),marginBottom:2}}>
+                    원인: {selected.cause}
+                  </div>
+                )}
+                {selected.sublabel&&selected.provider&&(
+                  <div style={{fontSize:10,color:C.txtm}}>출처: {selected.provider}</div>
+                )}
+                <div style={{fontSize:9,color:"#cbd5e1",marginTop:5,
+                  textTransform:"uppercase",letterSpacing:0.5}}>
+                  rdf:type · {selected.type}
+                </div>
+                <button onClick={()=>setSelected(null)}
+                  style={{marginTop:6,fontSize:10,color:C.txtm,background:"none",
+                    border:"none",cursor:"pointer",padding:0,textDecoration:"underline"}}>
+                  선택 해제
+                </button>
+              </>
+            ):(
+              <div style={{fontSize:11,color:"#cbd5e1",paddingTop:18,textAlign:"center",
+                lineHeight:1.6}}>
+                노드를 클릭하면<br/>상세 정보가 표시됩니다
+              </div>
+            )}
+          </div>
+
+          {/* 범례 */}
+          <div style={{padding:13,flex:1,overflowY:"auto"}}>
+            <div style={{fontSize:9,color:C.txtm,letterSpacing:1.2,
+              marginBottom:9,textTransform:"uppercase"}}>Legend</div>
+            {LEGEND.map(l=>(
+              <div key={l.label} style={{display:"flex",alignItems:"center",
+                gap:6,marginBottom:5}}>
+                <div style={{width:8,height:8,borderRadius:"50%",
+                  background:l.color,flexShrink:0}}/>
+                <span style={{fontSize:9.5,color:C.txtm,lineHeight:1.3}}>{l.label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* 통계 */}
+          <div style={{padding:13,borderTop:`1px solid #f1f5f9`}}>
+            <div style={{fontSize:9,color:C.txtm,letterSpacing:1.2,
+              marginBottom:7,textTransform:"uppercase"}}>Stats</div>
+            {[
+              {label:"전체 노드",  value:stats.nodes},
+              {label:"전체 엣지",  value:stats.edges},
+              {label:"질병 레코드",value:116},
+              {label:"API 소스",   value:14},
+              {label:"동물 종",   value:8},
+              {label:"증상 분류", value:8},
+              {label:"원인 분류", value:5},
+            ].map(s=>(
+              <div key={s.label} style={{display:"flex",justifyContent:"space-between",
+                marginBottom:4}}>
+                <span style={{fontSize:10,color:C.txtm}}>{s.label}</span>
+                <span style={{fontSize:10,color:C.txt,fontWeight:600,
+                  fontFamily:"monospace"}}>{s.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-
-      {/* ── Tab 0: 시각화 ── */}
-      {tab === 0 && (
-        <div>
-          <div style={{ borderRadius:14, overflow:'hidden', background:'var(--bg2)', border:'1px solid var(--border)' }}>
-            <div style={{ padding:'12px 18px', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'center', justifyContent:'space-between' }}>
-              <span style={{ fontSize:11, fontWeight:700, textTransform:'uppercase', letterSpacing:'0.8px', color:'var(--muted)' }}>
-                ● 전체 연결맵 — 18 클래스 · 33 관계 · 드래그+줌 가능
-              </span>
-              <div style={{ display:'flex', gap:8 }}>
-                {Object.entries(DOMAIN_COLOR).map(([d,c]) => (
-                  <div key={d} style={{ display:'flex', alignItems:'center', gap:4, fontSize:10 }}>
-                    <div style={{ width:8, height:8, borderRadius:'50%', background:c }} />
-                    <span style={{ color:'var(--muted)' }}>{d}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <GraphCanvas />
-          </div>
-          <div style={{ marginTop:12, fontSize:11, color:'var(--muted)', textAlign:'center' }}>
-            노드 위에 마우스를 올리면 연결된 관계만 강조됩니다 · 스크롤로 줌 · 빈 공간 드래그로 이동
-          </div>
-        </div>
-      )}
-
-      {/* ── Tab 1: 클래스 구조 ── */}
-      {tab === 1 && (
-        <div>
-          <div style={{ display:'flex', gap:6, marginBottom:16, flexWrap:'wrap' }}>
-            {['전체', ...domains].map(d => (
-              <button key={d} onClick={() => setFilterDomain(d)} style={{
-                padding:'5px 12px', borderRadius:7, fontSize:11.5, cursor:'pointer',
-                fontWeight: filterDomain===d ? 700 : 500,
-                background: filterDomain===d ? (DOMAIN_COLOR[d]||'var(--teal)') + '18' : 'var(--bg2)',
-                color: filterDomain===d ? (DOMAIN_COLOR[d]||'var(--teal)') : 'var(--muted)',
-                border: `1px solid ${filterDomain===d ? (DOMAIN_COLOR[d]||'var(--teal)')+'55' : 'var(--border)'}`,
-              }}>{d} {d !== '전체' && `(${CLASSES.filter(c=>c.domain===d).length})`}</button>
-            ))}
-          </div>
-          <div style={{ display:'grid', gap:14, gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))' }}>
-            {filteredClasses.map((c, i) => (
-              <div key={i} style={{ borderRadius:12, padding:'16px', background:'var(--bg2)', border:`1px solid ${c.color}33`, borderLeft:`4px solid ${c.color}` }}>
-                <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:10 }}>
-                  <span style={{ fontSize:20 }}>{c.icon}</span>
-                  <div style={{ minWidth:0 }}>
-                    <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, fontWeight:700, color:c.color }}>{c.cls}</div>
-                    <div style={{ fontSize:10, color:'var(--muted)', marginTop:1 }}>↑ {c.superClass}</div>
-                  </div>
-                </div>
-                <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:10, color:'var(--yellow)', background:'var(--bg3)', borderRadius:5, padding:'4px 8px', marginBottom:10 }}>{c.uri}</div>
-                <div style={{ display:'flex', flexWrap:'wrap', gap:4, marginBottom:10 }}>
-                  {c.props.map(p => (
-                    <span key={p} style={{ fontSize:9, fontFamily:"'JetBrains Mono',monospace", padding:'2px 6px', borderRadius:4, background:c.color+'12', color:c.color, border:`1px solid ${c.color}33` }}>{p}</span>
-                  ))}
-                </div>
-                {c.constraints.map((ct, j) => (
-                  <div key={j} style={{ fontSize:10.5, color:'var(--orange)', display:'flex', gap:5, marginTop:4 }}>
-                    <span style={{ flexShrink:0 }}>⚠</span><span>{ct}</span>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* ── Tab 2: 관계 ── */}
-      {tab === 2 && (
-        <div>
-          <div style={{ display:'flex', gap:6, marginBottom:14, flexWrap:'wrap' }}>
-            {['전체', ...relTypes].map(t => (
-              <button key={t} onClick={() => setFilterRelType(t)} style={{
-                padding:'5px 12px', borderRadius:7, fontSize:11.5, cursor:'pointer',
-                fontWeight: filterRelType===t ? 700 : 500,
-                background: filterRelType===t ? 'var(--teal-lt)' : 'var(--bg2)',
-                color: filterRelType===t ? 'var(--teal)' : 'var(--muted)',
-                border: `1px solid ${filterRelType===t ? '#b2f5ea' : 'var(--border)'}`,
-              }}>{t} {t !== '전체' && `(${RELATIONS.filter(r=>r.type===t).length})`}</button>
-            ))}
-          </div>
-          <div style={{ borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
-            <table style={{ width:'100%', borderCollapse:'collapse', fontSize:12 }}>
-              <thead>
-                <tr style={{ background:'var(--bg3)' }}>
-                  {['유형','주어 (Subject)','Predicate','목적어 (Object)','의미'].map(h => (
-                    <th key={h} style={{ padding:'9px 14px', textAlign:'left', fontSize:10, fontWeight:700, textTransform:'uppercase', color:'var(--muted)', borderBottom:'1px solid var(--border)', letterSpacing:'0.5px' }}>{h}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {filteredRelations.map((r, i) => (
-                  <tr key={i} style={{ borderBottom:'1px solid var(--border)' }}
-                    onMouseEnter={e => e.currentTarget.style.background = 'var(--bg3)'}
-                    onMouseLeave={e => e.currentTarget.style.background = ''}>
-                    <td style={{ padding:'8px 14px' }}>
-                      <span style={{ fontSize:10, fontWeight:700, padding:'2px 7px', borderRadius:5, background:'var(--bg3)', color:'var(--muted)', border:'1px solid var(--border)', whiteSpace:'nowrap' }}>{r.type}</span>
-                    </td>
-                    <td style={{ padding:'8px 14px', fontFamily:"'JetBrains Mono',monospace", color:'var(--teal)', fontSize:11 }}>{r.subj}</td>
-                    <td style={{ padding:'8px 14px', fontFamily:"'JetBrains Mono',monospace", color:'#7c3aed', fontWeight:700, fontSize:11 }}>{r.pred}</td>
-                    <td style={{ padding:'8px 14px', fontFamily:"'JetBrains Mono',monospace", color:'var(--blue)', fontSize:11 }}>{r.obj}</td>
-                    <td style={{ padding:'8px 14px', color:'var(--text2)', fontSize:12 }}>{r.desc}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {/* ── Tab 3: 트리플 패턴 ── */}
-      {tab === 3 && (
-        <div style={{ display:'flex', flexDirection:'column', gap:18 }}>
-          {TRIPLES.map((t, i) => (
-            <div key={i} style={{ borderRadius:12, overflow:'hidden', border:'1px solid var(--border)', background:'var(--bg2)' }}>
-              <div style={{ padding:'10px 16px', borderBottom:'1px solid var(--border)', fontSize:12, fontWeight:700, color:'var(--text2)', background:'var(--bg3)' }}>{t.title}</div>
-              <pre style={{ padding:'16px', fontFamily:"'JetBrains Mono',monospace", fontSize:11.5, lineHeight:1.85, color:'var(--text)', overflowX:'auto', margin:0, background:'#fafcff' }}>{t.turtle}</pre>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* ── Tab 4: 추론 시나리오 ── */}
-      {tab === 4 && (
-        <div style={{ display:'grid', gap:14, gridTemplateColumns:'repeat(auto-fill,minmax(320px,1fr))' }}>
-          {INFERENCE.map((s, i) => (
-            <div key={i} style={{ borderRadius:12, padding:'20px', background:'var(--bg2)', border:'1px solid var(--border)' }}>
-              <div style={{ fontSize:28, marginBottom:10 }}>{s.icon}</div>
-              <div style={{ fontSize:14, fontWeight:800, marginBottom:8 }}>{s.title}</div>
-              <div style={{ fontSize:12.5, color:'var(--text2)', lineHeight:1.8 }}>{s.desc}</div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* ── Tab 5: 네임스페이스 ── */}
-      {tab === 5 && (
-        <div style={{ borderRadius:12, overflow:'hidden', border:'1px solid var(--border)' }}>
-          <table style={{ width:'100%', borderCollapse:'collapse', fontSize:12 }}>
-            <thead>
-              <tr style={{ background:'var(--bg3)' }}>
-                {['Prefix','URI','용도'].map(h => (
-                  <th key={h} style={{ padding:'10px 14px', textAlign:'left', fontSize:10, fontWeight:700, textTransform:'uppercase', color:'var(--muted)', borderBottom:'1px solid var(--border)', letterSpacing:'0.5px' }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {NAMESPACES.map((n, i) => (
-                <tr key={i} style={{ borderBottom:'1px solid var(--border)' }}
-                  onMouseEnter={e => e.currentTarget.style.background = 'var(--bg3)'}
-                  onMouseLeave={e => e.currentTarget.style.background = ''}>
-                  <td style={{ padding:'8px 14px', fontFamily:"'JetBrains Mono',monospace", color:'var(--teal)', fontWeight:700, fontSize:12 }}>{n.prefix}</td>
-                  <td style={{ padding:'8px 14px', fontFamily:"'JetBrains Mono',monospace", color:'var(--muted)', fontSize:11 }}>{n.uri}</td>
-                  <td style={{ padding:'8px 14px', color:'var(--text2)' }}>{n.usage}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
     </div>
-  )
+  );
 }
