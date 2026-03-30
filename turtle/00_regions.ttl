@@ -1,0 +1,1297 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/region/서울특별시_양천구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "양천구" ;
+  ex:regionKey "서울특별시_양천구" .
+<http://animalloo.kr/ontology/region/서울특별시_서초구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "서초구" ;
+  ex:regionKey "서울특별시_서초구" .
+<http://animalloo.kr/ontology/region/경기도_김포시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "김포시" ;
+  ex:regionKey "경기도_김포시" .
+<http://animalloo.kr/ontology/region/경기도_화성시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "화성시" ;
+  ex:regionKey "경기도_화성시" .
+<http://animalloo.kr/ontology/region/대전광역시_서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대전광역시" ;
+  ex:sigunguName "서구" ;
+  ex:regionKey "대전광역시_서구" .
+<http://animalloo.kr/ontology/region/경기도_성남시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "성남시" ;
+  ex:regionKey "경기도_성남시" .
+<http://animalloo.kr/ontology/region/경기도_안양시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "안양시" ;
+  ex:regionKey "경기도_안양시" .
+<http://animalloo.kr/ontology/region/경상남도_통영시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "통영시" ;
+  ex:regionKey "경상남도_통영시" .
+<http://animalloo.kr/ontology/region/인천광역시_서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "서구" ;
+  ex:regionKey "인천광역시_서구" .
+<http://animalloo.kr/ontology/region/경기도_과천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "과천시" ;
+  ex:regionKey "경기도_과천시" .
+<http://animalloo.kr/ontology/region/전라남도_무안군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "무안군" ;
+  ex:regionKey "전라남도_무안군" .
+<http://animalloo.kr/ontology/region/대구광역시_중구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "중구" ;
+  ex:regionKey "대구광역시_중구" .
+<http://animalloo.kr/ontology/region/경기도_남양주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "남양주시" ;
+  ex:regionKey "경기도_남양주시" .
+<http://animalloo.kr/ontology/region/서울특별시_동대문구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "동대문구" ;
+  ex:regionKey "서울특별시_동대문구" .
+<http://animalloo.kr/ontology/region/서울특별시_중랑구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "중랑구" ;
+  ex:regionKey "서울특별시_중랑구" .
+<http://animalloo.kr/ontology/region/서울특별시_성북구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "성북구" ;
+  ex:regionKey "서울특별시_성북구" .
+<http://animalloo.kr/ontology/region/서울특별시_강북구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "강북구" ;
+  ex:regionKey "서울특별시_강북구" .
+<http://animalloo.kr/ontology/region/서울특별시_도봉구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "도봉구" ;
+  ex:regionKey "서울특별시_도봉구" .
+<http://animalloo.kr/ontology/region/서울특별시_노원구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "노원구" ;
+  ex:regionKey "서울특별시_노원구" .
+<http://animalloo.kr/ontology/region/서울특별시_은평구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "은평구" ;
+  ex:regionKey "서울특별시_은평구" .
+<http://animalloo.kr/ontology/region/서울특별시_종로구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "종로구" ;
+  ex:regionKey "서울특별시_종로구" .
+<http://animalloo.kr/ontology/region/서울특별시_중구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "중구" ;
+  ex:regionKey "서울특별시_중구" .
+<http://animalloo.kr/ontology/region/서울특별시_용산구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "용산구" ;
+  ex:regionKey "서울특별시_용산구" .
+<http://animalloo.kr/ontology/region/서울특별시_성동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "성동구" ;
+  ex:regionKey "서울특별시_성동구" .
+<http://animalloo.kr/ontology/region/서울특별시_광진구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "광진구" ;
+  ex:regionKey "서울특별시_광진구" .
+<http://animalloo.kr/ontology/region/경기도_광주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "광주시" ;
+  ex:regionKey "경기도_광주시" .
+<http://animalloo.kr/ontology/region/충청북도_증평군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "증평군" ;
+  ex:regionKey "충청북도_증평군" .
+<http://animalloo.kr/ontology/region/충청남도_계룡시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "계룡시" ;
+  ex:regionKey "충청남도_계룡시" .
+<http://animalloo.kr/ontology/region/경기도_양주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "양주시" ;
+  ex:regionKey "경기도_양주시" .
+<http://animalloo.kr/ontology/region/경기도_포천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "포천시" ;
+  ex:regionKey "경기도_포천시" .
+<http://animalloo.kr/ontology/region/경상남도_창원시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "창원시" ;
+  ex:regionKey "경상남도_창원시" .
+<http://animalloo.kr/ontology/region/경상남도_양산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "양산시" ;
+  ex:regionKey "경상남도_양산시" .
+<http://animalloo.kr/ontology/region/경상남도_의령군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "의령군" ;
+  ex:regionKey "경상남도_의령군" .
+<http://animalloo.kr/ontology/region/경상남도_함안군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "함안군" ;
+  ex:regionKey "경상남도_함안군" .
+<http://animalloo.kr/ontology/region/경상남도_창녕군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "창녕군" ;
+  ex:regionKey "경상남도_창녕군" .
+<http://animalloo.kr/ontology/region/경상남도_고성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "고성군" ;
+  ex:regionKey "경상남도_고성군" .
+<http://animalloo.kr/ontology/region/경상남도_남해군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "남해군" ;
+  ex:regionKey "경상남도_남해군" .
+<http://animalloo.kr/ontology/region/경상남도_하동군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "하동군" ;
+  ex:regionKey "경상남도_하동군" .
+<http://animalloo.kr/ontology/region/경상남도_산청군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "산청군" ;
+  ex:regionKey "경상남도_산청군" .
+<http://animalloo.kr/ontology/region/경상남도_함양군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "함양군" ;
+  ex:regionKey "경상남도_함양군" .
+<http://animalloo.kr/ontology/region/경상남도_거창군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "거창군" ;
+  ex:regionKey "경상남도_거창군" .
+<http://animalloo.kr/ontology/region/경상남도_합천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "합천군" ;
+  ex:regionKey "경상남도_합천군" .
+<http://animalloo.kr/ontology/region/부산광역시_사상구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "사상구" ;
+  ex:regionKey "부산광역시_사상구" .
+<http://animalloo.kr/ontology/region/서울특별시_송파구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "송파구" ;
+  ex:regionKey "서울특별시_송파구" .
+<http://animalloo.kr/ontology/region/경기도_파주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "파주시" ;
+  ex:regionKey "경기도_파주시" .
+<http://animalloo.kr/ontology/region/경기도_수원시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "수원시" ;
+  ex:regionKey "경기도_수원시" .
+<http://animalloo.kr/ontology/region/경기도_의정부시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "의정부시" ;
+  ex:regionKey "경기도_의정부시" .
+<http://animalloo.kr/ontology/region/울산광역시_동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "울산광역시" ;
+  ex:sigunguName "동구" ;
+  ex:regionKey "울산광역시_동구" .
+<http://animalloo.kr/ontology/region/울산광역시_북구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "울산광역시" ;
+  ex:sigunguName "북구" ;
+  ex:regionKey "울산광역시_북구" .
+<http://animalloo.kr/ontology/region/울산광역시_울주군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "울산광역시" ;
+  ex:sigunguName "울주군" ;
+  ex:regionKey "울산광역시_울주군" .
+<http://animalloo.kr/ontology/region/경상북도_예천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "예천군" ;
+  ex:regionKey "경상북도_예천군" .
+<http://animalloo.kr/ontology/region/경상북도_봉화군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "봉화군" ;
+  ex:regionKey "경상북도_봉화군" .
+<http://animalloo.kr/ontology/region/경상북도_울진군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "울진군" ;
+  ex:regionKey "경상북도_울진군" .
+<http://animalloo.kr/ontology/region/경상북도_울릉군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "울릉군" ;
+  ex:regionKey "경상북도_울릉군" .
+<http://animalloo.kr/ontology/region/경상남도_진주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "진주시" ;
+  ex:regionKey "경상남도_진주시" .
+<http://animalloo.kr/ontology/region/경상남도_사천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "사천시" ;
+  ex:regionKey "경상남도_사천시" .
+<http://animalloo.kr/ontology/region/경상남도_김해시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "김해시" ;
+  ex:regionKey "경상남도_김해시" .
+<http://animalloo.kr/ontology/region/경상남도_밀양시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "밀양시" ;
+  ex:regionKey "경상남도_밀양시" .
+<http://animalloo.kr/ontology/region/경상남도_거제시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "거제시" ;
+  ex:regionKey "경상남도_거제시" .
+<http://animalloo.kr/ontology/region/경상북도_영천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "영천시" ;
+  ex:regionKey "경상북도_영천시" .
+<http://animalloo.kr/ontology/region/경상북도_상주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "상주시" ;
+  ex:regionKey "경상북도_상주시" .
+<http://animalloo.kr/ontology/region/경상북도_문경시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "문경시" ;
+  ex:regionKey "경상북도_문경시" .
+<http://animalloo.kr/ontology/region/경상북도_경산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "경산시" ;
+  ex:regionKey "경상북도_경산시" .
+<http://animalloo.kr/ontology/region/대구광역시_군위군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "군위군" ;
+  ex:regionKey "대구광역시_군위군" .
+<http://animalloo.kr/ontology/region/경상북도_의성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "의성군" ;
+  ex:regionKey "경상북도_의성군" .
+<http://animalloo.kr/ontology/region/경상북도_청송군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "청송군" ;
+  ex:regionKey "경상북도_청송군" .
+<http://animalloo.kr/ontology/region/경상북도_영양군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "영양군" ;
+  ex:regionKey "경상북도_영양군" .
+<http://animalloo.kr/ontology/region/경상북도_영덕군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "영덕군" ;
+  ex:regionKey "경상북도_영덕군" .
+<http://animalloo.kr/ontology/region/경상북도_청도군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "청도군" ;
+  ex:regionKey "경상북도_청도군" .
+<http://animalloo.kr/ontology/region/경상북도_고령군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "고령군" ;
+  ex:regionKey "경상북도_고령군" .
+<http://animalloo.kr/ontology/region/경상북도_성주군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "성주군" ;
+  ex:regionKey "경상북도_성주군" .
+<http://animalloo.kr/ontology/region/경상북도_칠곡군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "칠곡군" ;
+  ex:regionKey "경상북도_칠곡군" .
+<http://animalloo.kr/ontology/region/서울특별시_강서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "강서구" ;
+  ex:regionKey "서울특별시_강서구" .
+<http://animalloo.kr/ontology/region/서울특별시_구로구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "구로구" ;
+  ex:regionKey "서울특별시_구로구" .
+<http://animalloo.kr/ontology/region/서울특별시_금천구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "금천구" ;
+  ex:regionKey "서울특별시_금천구" .
+<http://animalloo.kr/ontology/region/서울특별시_영등포구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "영등포구" ;
+  ex:regionKey "서울특별시_영등포구" .
+<http://animalloo.kr/ontology/region/서울특별시_동작구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "동작구" ;
+  ex:regionKey "서울특별시_동작구" .
+<http://animalloo.kr/ontology/region/서울특별시_관악구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "관악구" ;
+  ex:regionKey "서울특별시_관악구" .
+<http://animalloo.kr/ontology/region/서울특별시_서대문구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "서대문구" ;
+  ex:regionKey "서울특별시_서대문구" .
+<http://animalloo.kr/ontology/region/서울특별시_마포구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "마포구" ;
+  ex:regionKey "서울특별시_마포구" .
+<http://animalloo.kr/ontology/region/전라남도_진도군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "진도군" ;
+  ex:regionKey "전라남도_진도군" .
+<http://animalloo.kr/ontology/region/전라남도_신안군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "신안군" ;
+  ex:regionKey "전라남도_신안군" .
+<http://animalloo.kr/ontology/region/경상북도_포항시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "포항시" ;
+  ex:regionKey "경상북도_포항시" .
+<http://animalloo.kr/ontology/region/경상북도_경주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "경주시" ;
+  ex:regionKey "경상북도_경주시" .
+<http://animalloo.kr/ontology/region/경상북도_김천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "김천시" ;
+  ex:regionKey "경상북도_김천시" .
+<http://animalloo.kr/ontology/region/경상북도_안동시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "안동시" ;
+  ex:regionKey "경상북도_안동시" .
+<http://animalloo.kr/ontology/region/경상북도_구미시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "구미시" ;
+  ex:regionKey "경상북도_구미시" .
+<http://animalloo.kr/ontology/region/경상북도_영주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상북도" ;
+  ex:sigunguName "영주시" ;
+  ex:regionKey "경상북도_영주시" .
+<http://animalloo.kr/ontology/region/전라남도_나주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "나주시" ;
+  ex:regionKey "전라남도_나주시" .
+<http://animalloo.kr/ontology/region/전라남도_광양시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "광양시" ;
+  ex:regionKey "전라남도_광양시" .
+<http://animalloo.kr/ontology/region/전라남도_담양군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "담양군" ;
+  ex:regionKey "전라남도_담양군" .
+<http://animalloo.kr/ontology/region/전라남도_곡성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "곡성군" ;
+  ex:regionKey "전라남도_곡성군" .
+<http://animalloo.kr/ontology/region/전라남도_구례군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "구례군" ;
+  ex:regionKey "전라남도_구례군" .
+<http://animalloo.kr/ontology/region/전라남도_고흥군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "고흥군" ;
+  ex:regionKey "전라남도_고흥군" .
+<http://animalloo.kr/ontology/region/전라남도_보성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "보성군" ;
+  ex:regionKey "전라남도_보성군" .
+<http://animalloo.kr/ontology/region/전라남도_화순군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "화순군" ;
+  ex:regionKey "전라남도_화순군" .
+<http://animalloo.kr/ontology/region/전라남도_장흥군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "장흥군" ;
+  ex:regionKey "전라남도_장흥군" .
+<http://animalloo.kr/ontology/region/전라남도_강진군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "강진군" ;
+  ex:regionKey "전라남도_강진군" .
+<http://animalloo.kr/ontology/region/전라남도_해남군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "해남군" ;
+  ex:regionKey "전라남도_해남군" .
+<http://animalloo.kr/ontology/region/전라남도_영암군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "영암군" ;
+  ex:regionKey "전라남도_영암군" .
+<http://animalloo.kr/ontology/region/전라남도_함평군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "함평군" ;
+  ex:regionKey "전라남도_함평군" .
+<http://animalloo.kr/ontology/region/전라남도_영광군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "영광군" ;
+  ex:regionKey "전라남도_영광군" .
+<http://animalloo.kr/ontology/region/전라남도_장성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "장성군" ;
+  ex:regionKey "전라남도_장성군" .
+<http://animalloo.kr/ontology/region/전라남도_완도군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "완도군" ;
+  ex:regionKey "전라남도_완도군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_전주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "전주시" ;
+  ex:regionKey "전북특별자치도_전주시" .
+<http://animalloo.kr/ontology/region/전북특별자치도_군산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "군산시" ;
+  ex:regionKey "전북특별자치도_군산시" .
+<http://animalloo.kr/ontology/region/충청북도_충주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "충주시" ;
+  ex:regionKey "충청북도_충주시" .
+<http://animalloo.kr/ontology/region/충청북도_제천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "제천시" ;
+  ex:regionKey "충청북도_제천시" .
+<http://animalloo.kr/ontology/region/충청북도_보은군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "보은군" ;
+  ex:regionKey "충청북도_보은군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_익산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "익산시" ;
+  ex:regionKey "전북특별자치도_익산시" .
+<http://animalloo.kr/ontology/region/충청북도_옥천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "옥천군" ;
+  ex:regionKey "충청북도_옥천군" .
+<http://animalloo.kr/ontology/region/충청북도_영동군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "영동군" ;
+  ex:regionKey "충청북도_영동군" .
+<http://animalloo.kr/ontology/region/충청북도_진천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "진천군" ;
+  ex:regionKey "충청북도_진천군" .
+<http://animalloo.kr/ontology/region/충청북도_괴산군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "괴산군" ;
+  ex:regionKey "충청북도_괴산군" .
+<http://animalloo.kr/ontology/region/충청북도_음성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "음성군" ;
+  ex:regionKey "충청북도_음성군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_정읍시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "정읍시" ;
+  ex:regionKey "전북특별자치도_정읍시" .
+<http://animalloo.kr/ontology/region/충청북도_단양군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "단양군" ;
+  ex:regionKey "충청북도_단양군" .
+<http://animalloo.kr/ontology/region/충청남도_천안시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "천안시" ;
+  ex:regionKey "충청남도_천안시" .
+<http://animalloo.kr/ontology/region/전북특별자치도_남원시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "남원시" ;
+  ex:regionKey "전북특별자치도_남원시" .
+<http://animalloo.kr/ontology/region/전북특별자치도_김제시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "김제시" ;
+  ex:regionKey "전북특별자치도_김제시" .
+<http://animalloo.kr/ontology/region/전북특별자치도_완주군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "완주군" ;
+  ex:regionKey "전북특별자치도_완주군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_진안군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "진안군" ;
+  ex:regionKey "전북특별자치도_진안군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_무주군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "무주군" ;
+  ex:regionKey "전북특별자치도_무주군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_장수군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "장수군" ;
+  ex:regionKey "전북특별자치도_장수군" .
+<http://animalloo.kr/ontology/region/충청남도_공주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "공주시" ;
+  ex:regionKey "충청남도_공주시" .
+<http://animalloo.kr/ontology/region/전북특별자치도_임실군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "임실군" ;
+  ex:regionKey "전북특별자치도_임실군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_순창군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "순창군" ;
+  ex:regionKey "전북특별자치도_순창군" .
+<http://animalloo.kr/ontology/region/전북특별자치도_고창군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "고창군" ;
+  ex:regionKey "전북특별자치도_고창군" .
+<http://animalloo.kr/ontology/region/충청남도_보령시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "보령시" ;
+  ex:regionKey "충청남도_보령시" .
+<http://animalloo.kr/ontology/region/전북특별자치도_부안군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전북특별자치도" ;
+  ex:sigunguName "부안군" ;
+  ex:regionKey "전북특별자치도_부안군" .
+<http://animalloo.kr/ontology/region/충청남도_아산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "아산시" ;
+  ex:regionKey "충청남도_아산시" .
+<http://animalloo.kr/ontology/region/전라남도_목포시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "목포시" ;
+  ex:regionKey "전라남도_목포시" .
+<http://animalloo.kr/ontology/region/전라남도_여수시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "여수시" ;
+  ex:regionKey "전라남도_여수시" .
+<http://animalloo.kr/ontology/region/충청남도_서산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "서산시" ;
+  ex:regionKey "충청남도_서산시" .
+<http://animalloo.kr/ontology/region/전라남도_순천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라남도" ;
+  ex:sigunguName "순천시" ;
+  ex:regionKey "전라남도_순천시" .
+<http://animalloo.kr/ontology/region/충청남도_논산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "논산시" ;
+  ex:regionKey "충청남도_논산시" .
+<http://animalloo.kr/ontology/region/충청남도_금산군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "금산군" ;
+  ex:regionKey "충청남도_금산군" .
+<http://animalloo.kr/ontology/region/충청남도_부여군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "부여군" ;
+  ex:regionKey "충청남도_부여군" .
+<http://animalloo.kr/ontology/region/충청남도_서천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "서천군" ;
+  ex:regionKey "충청남도_서천군" .
+<http://animalloo.kr/ontology/region/충청남도_청양군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "청양군" ;
+  ex:regionKey "충청남도_청양군" .
+<http://animalloo.kr/ontology/region/충청남도_홍성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "홍성군" ;
+  ex:regionKey "충청남도_홍성군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_홍천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "홍천군" ;
+  ex:regionKey "강원특별자치도_홍천군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_횡성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "횡성군" ;
+  ex:regionKey "강원특별자치도_횡성군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_영월군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "영월군" ;
+  ex:regionKey "강원특별자치도_영월군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_평창군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "평창군" ;
+  ex:regionKey "강원특별자치도_평창군" .
+<http://animalloo.kr/ontology/region/충청남도_예산군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "예산군" ;
+  ex:regionKey "충청남도_예산군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_정선군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "정선군" ;
+  ex:regionKey "강원특별자치도_정선군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_철원군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "철원군" ;
+  ex:regionKey "강원특별자치도_철원군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_화천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "화천군" ;
+  ex:regionKey "강원특별자치도_화천군" .
+<http://animalloo.kr/ontology/region/충청남도_태안군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "태안군" ;
+  ex:regionKey "충청남도_태안군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_양구군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "양구군" ;
+  ex:regionKey "강원특별자치도_양구군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_인제군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "인제군" ;
+  ex:regionKey "강원특별자치도_인제군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_고성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "고성군" ;
+  ex:regionKey "강원특별자치도_고성군" .
+<http://animalloo.kr/ontology/region/강원특별자치도_양양군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "양양군" ;
+  ex:regionKey "강원특별자치도_양양군" .
+<http://animalloo.kr/ontology/region/충청남도_당진시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청남도" ;
+  ex:sigunguName "당진시" ;
+  ex:regionKey "충청남도_당진시" .
+<http://animalloo.kr/ontology/region/세종특별자치시_조치원읍>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "조치원읍" ;
+  ex:regionKey "세종특별자치시_조치원읍" .
+<http://animalloo.kr/ontology/region/세종특별자치시_연서면>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "연서면" ;
+  ex:regionKey "세종특별자치시_연서면" .
+<http://animalloo.kr/ontology/region/세종특별자치시_금남면>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "금남면" ;
+  ex:regionKey "세종특별자치시_금남면" .
+<http://animalloo.kr/ontology/region/세종특별자치시_한누리대로>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "한누리대로" ;
+  ex:regionKey "세종특별자치시_한누리대로" .
+<http://animalloo.kr/ontology/region/세종특별자치시_장군면>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "장군면" ;
+  ex:regionKey "세종특별자치시_장군면" .
+<http://animalloo.kr/ontology/region/세종특별자치시_집현북로>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "집현북로" ;
+  ex:regionKey "세종특별자치시_집현북로" .
+<http://animalloo.kr/ontology/region/세종특별자치시_해밀3로>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "해밀3로" ;
+  ex:regionKey "세종특별자치시_해밀3로" .
+<http://animalloo.kr/ontology/region/경기도_여주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "여주시" ;
+  ex:regionKey "경기도_여주시" .
+<http://animalloo.kr/ontology/region/충청북도_청주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "충청북도" ;
+  ex:sigunguName "청주시" ;
+  ex:regionKey "충청북도_청주시" .
+<http://animalloo.kr/ontology/region/제주특별자치도_제주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "제주특별자치도" ;
+  ex:sigunguName "제주시" ;
+  ex:regionKey "제주특별자치도_제주시" .
+<http://animalloo.kr/ontology/region/광주광역시_서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "광주광역시" ;
+  ex:sigunguName "서구" ;
+  ex:regionKey "광주광역시_서구" .
+<http://animalloo.kr/ontology/region/제주특별자치도_서귀포시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "제주특별자치도" ;
+  ex:sigunguName "서귀포시" ;
+  ex:regionKey "제주특별자치도_서귀포시" .
+<http://animalloo.kr/ontology/region/대구광역시_수성구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "수성구" ;
+  ex:regionKey "대구광역시_수성구" .
+<http://animalloo.kr/ontology/region/대구광역시_달서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "달서구" ;
+  ex:regionKey "대구광역시_달서구" .
+<http://animalloo.kr/ontology/region/광주광역시_동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "광주광역시" ;
+  ex:sigunguName "동구" ;
+  ex:regionKey "광주광역시_동구" .
+<http://animalloo.kr/ontology/region/서울특별시_강남구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "강남구" ;
+  ex:regionKey "서울특별시_강남구" .
+<http://animalloo.kr/ontology/region/부산광역시_동래구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "동래구" ;
+  ex:regionKey "부산광역시_동래구" .
+<http://animalloo.kr/ontology/region/부산광역시_남구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "남구" ;
+  ex:regionKey "부산광역시_남구" .
+<http://animalloo.kr/ontology/region/부산광역시_북구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "북구" ;
+  ex:regionKey "부산광역시_북구" .
+<http://animalloo.kr/ontology/region/대구광역시_달성군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "달성군" ;
+  ex:regionKey "대구광역시_달성군" .
+<http://animalloo.kr/ontology/region/광주광역시_남구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "광주광역시" ;
+  ex:sigunguName "남구" ;
+  ex:regionKey "광주광역시_남구" .
+<http://animalloo.kr/ontology/region/광주광역시_북구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "광주광역시" ;
+  ex:sigunguName "북구" ;
+  ex:regionKey "광주광역시_북구" .
+<http://animalloo.kr/ontology/region/부산광역시_해운대구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "해운대구" ;
+  ex:regionKey "부산광역시_해운대구" .
+<http://animalloo.kr/ontology/region/인천광역시_중구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "중구" ;
+  ex:regionKey "인천광역시_중구" .
+<http://animalloo.kr/ontology/region/인천광역시_동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "동구" ;
+  ex:regionKey "인천광역시_동구" .
+<http://animalloo.kr/ontology/region/인천광역시_미추홀구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "미추홀구" ;
+  ex:regionKey "인천광역시_미추홀구" .
+<http://animalloo.kr/ontology/region/광주광역시_광산구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "광주광역시" ;
+  ex:sigunguName "광산구" ;
+  ex:regionKey "광주광역시_광산구" .
+<http://animalloo.kr/ontology/region/부산광역시_사하구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "사하구" ;
+  ex:regionKey "부산광역시_사하구" .
+<http://animalloo.kr/ontology/region/인천광역시_연수구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "연수구" ;
+  ex:regionKey "인천광역시_연수구" .
+<http://animalloo.kr/ontology/region/대전광역시_동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대전광역시" ;
+  ex:sigunguName "동구" ;
+  ex:regionKey "대전광역시_동구" .
+<http://animalloo.kr/ontology/region/부산광역시_금정구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "금정구" ;
+  ex:regionKey "부산광역시_금정구" .
+<http://animalloo.kr/ontology/region/대전광역시_중구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대전광역시" ;
+  ex:sigunguName "중구" ;
+  ex:regionKey "대전광역시_중구" .
+<http://animalloo.kr/ontology/region/부산광역시_강서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "강서구" ;
+  ex:regionKey "부산광역시_강서구" .
+<http://animalloo.kr/ontology/region/부산광역시_연제구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "연제구" ;
+  ex:regionKey "부산광역시_연제구" .
+<http://animalloo.kr/ontology/region/인천광역시_남동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "남동구" ;
+  ex:regionKey "인천광역시_남동구" .
+<http://animalloo.kr/ontology/region/부산광역시_수영구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "수영구" ;
+  ex:regionKey "부산광역시_수영구" .
+<http://animalloo.kr/ontology/region/대전광역시_유성구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대전광역시" ;
+  ex:sigunguName "유성구" ;
+  ex:regionKey "대전광역시_유성구" .
+<http://animalloo.kr/ontology/region/인천광역시_부평구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "부평구" ;
+  ex:regionKey "인천광역시_부평구" .
+<http://animalloo.kr/ontology/region/서울특별시_강동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "서울특별시" ;
+  ex:sigunguName "강동구" ;
+  ex:regionKey "서울특별시_강동구" .
+<http://animalloo.kr/ontology/region/부산광역시_기장군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "기장군" ;
+  ex:regionKey "부산광역시_기장군" .
+<http://animalloo.kr/ontology/region/대전광역시_대덕구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대전광역시" ;
+  ex:sigunguName "대덕구" ;
+  ex:regionKey "대전광역시_대덕구" .
+<http://animalloo.kr/ontology/region/대구광역시_동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "동구" ;
+  ex:regionKey "대구광역시_동구" .
+<http://animalloo.kr/ontology/region/인천광역시_계양구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "계양구" ;
+  ex:regionKey "인천광역시_계양구" .
+<http://animalloo.kr/ontology/region/울산광역시_중구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "울산광역시" ;
+  ex:sigunguName "중구" ;
+  ex:regionKey "울산광역시_중구" .
+<http://animalloo.kr/ontology/region/울산광역시_남구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "울산광역시" ;
+  ex:sigunguName "남구" ;
+  ex:regionKey "울산광역시_남구" .
+<http://animalloo.kr/ontology/region/대구광역시_서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "서구" ;
+  ex:regionKey "대구광역시_서구" .
+<http://animalloo.kr/ontology/region/부산광역시_중구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "중구" ;
+  ex:regionKey "부산광역시_중구" .
+<http://animalloo.kr/ontology/region/부산광역시_서구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "서구" ;
+  ex:regionKey "부산광역시_서구" .
+<http://animalloo.kr/ontology/region/부산광역시_동구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "동구" ;
+  ex:regionKey "부산광역시_동구" .
+<http://animalloo.kr/ontology/region/부산광역시_영도구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "영도구" ;
+  ex:regionKey "부산광역시_영도구" .
+<http://animalloo.kr/ontology/region/부산광역시_부산진구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "부산광역시" ;
+  ex:sigunguName "부산진구" ;
+  ex:regionKey "부산광역시_부산진구" .
+<http://animalloo.kr/ontology/region/대구광역시_남구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "남구" ;
+  ex:regionKey "대구광역시_남구" .
+<http://animalloo.kr/ontology/region/대구광역시_북구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "대구광역시" ;
+  ex:sigunguName "북구" ;
+  ex:regionKey "대구광역시_북구" .
+<http://animalloo.kr/ontology/region/인천광역시_강화군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "강화군" ;
+  ex:regionKey "인천광역시_강화군" .
+<http://animalloo.kr/ontology/region/경기도_용인시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "용인시" ;
+  ex:regionKey "경기도_용인시" .
+<http://animalloo.kr/ontology/region/경기도_고양시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "고양시" ;
+  ex:regionKey "경기도_고양시" .
+<http://animalloo.kr/ontology/region/경기도_이천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "이천시" ;
+  ex:regionKey "경기도_이천시" .
+<http://animalloo.kr/ontology/region/경기도_부천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "부천시" ;
+  ex:regionKey "경기도_부천시" .
+<http://animalloo.kr/ontology/region/경기도_구리시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "구리시" ;
+  ex:regionKey "경기도_구리시" .
+<http://animalloo.kr/ontology/region/경기도_안성시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "안성시" ;
+  ex:regionKey "경기도_안성시" .
+<http://animalloo.kr/ontology/region/강원특별자치도_속초시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "속초시" ;
+  ex:regionKey "강원특별자치도_속초시" .
+<http://animalloo.kr/ontology/region/강원특별자치도_삼척시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "삼척시" ;
+  ex:regionKey "강원특별자치도_삼척시" .
+<http://animalloo.kr/ontology/region/경기도_연천군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "연천군" ;
+  ex:regionKey "경기도_연천군" .
+<http://animalloo.kr/ontology/region/경기도_가평군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "가평군" ;
+  ex:regionKey "경기도_가평군" .
+<http://animalloo.kr/ontology/region/경기도_광명시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "광명시" ;
+  ex:regionKey "경기도_광명시" .
+<http://animalloo.kr/ontology/region/경기도_오산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "오산시" ;
+  ex:regionKey "경기도_오산시" .
+<http://animalloo.kr/ontology/region/경기도_시흥시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "시흥시" ;
+  ex:regionKey "경기도_시흥시" .
+<http://animalloo.kr/ontology/region/경기도_양평군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "양평군" ;
+  ex:regionKey "경기도_양평군" .
+<http://animalloo.kr/ontology/region/경기도_평택시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "평택시" ;
+  ex:regionKey "경기도_평택시" .
+<http://animalloo.kr/ontology/region/경기도_군포시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "군포시" ;
+  ex:regionKey "경기도_군포시" .
+<http://animalloo.kr/ontology/region/강원특별자치도_원주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "원주시" ;
+  ex:regionKey "강원특별자치도_원주시" .
+<http://animalloo.kr/ontology/region/강원특별자치도_강릉시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "강릉시" ;
+  ex:regionKey "강원특별자치도_강릉시" .
+<http://animalloo.kr/ontology/region/경기도_동두천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "동두천시" ;
+  ex:regionKey "경기도_동두천시" .
+<http://animalloo.kr/ontology/region/경기도_의왕시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "의왕시" ;
+  ex:regionKey "경기도_의왕시" .
+<http://animalloo.kr/ontology/region/경기도_하남시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "하남시" ;
+  ex:regionKey "경기도_하남시" .
+<http://animalloo.kr/ontology/region/강원특별자치도_춘천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "춘천시" ;
+  ex:regionKey "강원특별자치도_춘천시" .
+<http://animalloo.kr/ontology/region/경기도_안산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "안산시" ;
+  ex:regionKey "경기도_안산시" .
+<http://animalloo.kr/ontology/region/강원특별자치도_동해시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "동해시" ;
+  ex:regionKey "강원특별자치도_동해시" .
+<http://animalloo.kr/ontology/region/강원특별자치도_태백시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원특별자치도" ;
+  ex:sigunguName "태백시" ;
+  ex:regionKey "강원특별자치도_태백시" .
+<http://animalloo.kr/ontology/region/세종특별자치시_부강면>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "부강면" ;
+  ex:regionKey "세종특별자치시_부강면" .
+<http://animalloo.kr/ontology/region/인천광역시_옹진군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "인천광역시" ;
+  ex:sigunguName "옹진군" ;
+  ex:regionKey "인천광역시_옹진군" .
+<http://animalloo.kr/ontology/region/세종특별자치시_전의면>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "전의면" ;
+  ex:regionKey "세종특별자치시_전의면" .
+<http://animalloo.kr/ontology/region/세종특별자치시_나성북로>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "세종특별자치시" ;
+  ex:sigunguName "나성북로" ;
+  ex:regionKey "세종특별자치시_나성북로" .
+<http://animalloo.kr/ontology/region/전라북도_순창군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "순창군" ;
+  ex:regionKey "전라북도_순창군" .
+<http://animalloo.kr/ontology/region/전라북도_고창군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "고창군" ;
+  ex:regionKey "전라북도_고창군" .
+<http://animalloo.kr/ontology/region/전라북도_전주시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "전주시" ;
+  ex:regionKey "전라북도_전주시" .
+<http://animalloo.kr/ontology/region/전라북도_임실군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "임실군" ;
+  ex:regionKey "전라북도_임실군" .
+<http://animalloo.kr/ontology/region/전라북도_장수군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "장수군" ;
+  ex:regionKey "전라북도_장수군" .
+<http://animalloo.kr/ontology/region/전라북도_김제시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "김제시" ;
+  ex:regionKey "전라북도_김제시" .
+<http://animalloo.kr/ontology/region/경기도_고양시_덕양구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "고양시 덕양구" ;
+  ex:regionKey "경기도_고양시 덕양구" .
+<http://animalloo.kr/ontology/region/경기도_안양시_만안구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "안양시 만안구" ;
+  ex:regionKey "경기도_안양시 만안구" .
+<http://animalloo.kr/ontology/region/경기도_수원시_팔달구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "수원시 팔달구" ;
+  ex:regionKey "경기도_수원시 팔달구" .
+<http://animalloo.kr/ontology/region/전라북도_전주시_완산구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "전주시 완산구" ;
+  ex:regionKey "전라북도_전주시 완산구" .
+<http://animalloo.kr/ontology/region/강원도_평창군>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원도" ;
+  ex:sigunguName "평창군" ;
+  ex:regionKey "강원도_평창군" .
+<http://animalloo.kr/ontology/region/경상남도_창원시_마산합포구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경상남도" ;
+  ex:sigunguName "창원시 마산합포구" ;
+  ex:regionKey "경상남도_창원시 마산합포구" .
+<http://animalloo.kr/ontology/region/전라북도_전주시_덕진구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "전주시 덕진구" ;
+  ex:regionKey "전라북도_전주시 덕진구" .
+<http://animalloo.kr/ontology/region/경기도_성남시_중원구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "성남시 중원구" ;
+  ex:regionKey "경기도_성남시 중원구" .
+<http://animalloo.kr/ontology/region/경기도_수원시_권선구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "수원시 권선구" ;
+  ex:regionKey "경기도_수원시 권선구" .
+<http://animalloo.kr/ontology/region/강원도_춘천시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "강원도" ;
+  ex:sigunguName "춘천시" ;
+  ex:regionKey "강원도_춘천시" .
+<http://animalloo.kr/ontology/region/경기도_수원시_장안구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "수원시 장안구" ;
+  ex:regionKey "경기도_수원시 장안구" .
+<http://animalloo.kr/ontology/region/경기도_용인시_기흥구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "용인시 기흥구" ;
+  ex:regionKey "경기도_용인시 기흥구" .
+<http://animalloo.kr/ontology/region/경기도_용인시_수지구>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "경기도" ;
+  ex:sigunguName "용인시 수지구" ;
+  ex:regionKey "경기도_용인시 수지구" .
+<http://animalloo.kr/ontology/region/전라북도_군산시>
+  a ex:Region, schema:AdministrativeArea ;
+  ex:sidoName "전라북도" ;
+  ex:sigunguName "군산시" ;
+  ex:regionKey "전라북도_군산시" .

@@ -1,0 +1,731 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/facility/cremation/470100003820140001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "펫바라기" ;
+  schema:address "전북특별자치도 남원시 보절면 파동신동길 161-29" ;
+  ex:latitude 35.415490 ;
+  ex:longitude 127.398400 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_남원시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/472100003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "해피펫" ;
+  schema:address "전북특별자치도 완주군 이서면 팥죽이로 205-7" ;
+  schema:telephone "063-242-2114" ;
+  ex:latitude 35.898340 ;
+  ex:longitude 127.119700 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_완주군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/472100003820200002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "전주 하늘" ;
+  schema:address "전북특별자치도 완주군 소양면 전진로 1630, 현대오일뱅크" ;
+  ex:latitude 35.856200 ;
+  ex:longitude 127.323210 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_완주군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/476100003820210001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "오수 펫 추모공원" ;
+  schema:address "전북특별자치도 임실군 오수면 춘향로 1554-95, 오수펫추모공원" ;
+  schema:telephone "063-643-0486" ;
+  ex:latitude 35.538630 ;
+  ex:longitude 127.348716 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_임실군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/480000003820220001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "해늘마루" ;
+  schema:address "전라남도 목포시 고하대로 1140-17(대양동)" ;
+  schema:telephone "061-273-4000" ;
+  ex:latitude 34.840298 ;
+  ex:longitude 126.402746 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_목포시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/481000003820210001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "전남반려동물장례식장푸른솔" ;
+  schema:address "전라남도 여수시 율촌면 조화길 31" ;
+  schema:telephone "15667112" ;
+  ex:latitude 34.865572 ;
+  ex:longitude 127.589845 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_여수시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/482000003820240001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "순천 반려동물장례식장 하늘별" ;
+  schema:address "전라남도 순천시 별량면 송산길 259, 펫하늘별" ;
+  ex:latitude 34.885509 ;
+  ex:longitude 127.376796 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_순천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/482000003820250001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "전남순천1004반려동물장례식장" ;
+  schema:address "전라남도 순천시 서면 순천로 260-1, 동물화장시설" ;
+  ex:latitude 34.952000 ;
+  ex:longitude 127.511250 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_순천시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/483000003820250001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "별다만 광주전남" ;
+  schema:address "전라남도 나주시 다도면 다도로 857" ;
+  schema:telephone "061-337-1230" ;
+  ex:latitude 35.017020 ;
+  ex:longitude 126.756900 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_나주시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/483000003820250002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "주식회사 퍼스트펫" ;
+  schema:address "전라남도 나주시 다시면 영산로 4952" ;
+  schema:telephone "061-337-0991" ;
+  ex:latitude 35.019593 ;
+  ex:longitude 126.678334 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_나주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/496000003820210001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "타임투반려동물 장례식장" ;
+  schema:address "전라남도 함평군 학교면 학교월봉길 217" ;
+  ex:latitude 35.099830 ;
+  ex:longitude 126.545300 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_함평군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/506000003820230001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "경북반려동물장례식장" ;
+  schema:address "경상북도 김천시 봉산면 영남대로 353" ;
+  ex:latitude 36.126810 ;
+  ex:longitude 128.132690 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_김천시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/508000003820220001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)모모리아" ;
+  schema:address "경상북도 구미시 옥성면 이곡3길 69" ;
+  ex:latitude 36.316473 ;
+  ex:longitude 128.273841 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/512000003820220001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)젠틀펫" ;
+  schema:address "경상북도 문경시 문경읍 문경대로 2430" ;
+  ex:latitude 36.742322 ;
+  ex:longitude 128.082047 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_문경시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/513000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "아이들랜드" ;
+  schema:address "경상북도 경산시 와촌면 불굴사길 82" ;
+  schema:telephone "15226979" ;
+  ex:latitude 35.841400 ;
+  ex:longitude 128.758550 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_경산시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/513000003820240001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)젠틀펫" ;
+  schema:address "경상북도 경산시 한의대로 124 (점촌동)" ;
+  ex:latitude 35.808102 ;
+  ex:longitude 128.777245 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_경산시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/514100003820240001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "리틀포즈 반려동물 장례식장" ;
+  schema:address "대구광역시 군위군 부계면 부흥로 118" ;
+  ex:latitude 36.231820 ;
+  ex:longitude 128.566930 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_군위군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/519000003820150001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "하얀민들레" ;
+  schema:address "경상북도 청도군 화양읍 남성현로 852" ;
+  ex:latitude 35.654730 ;
+  ex:longitude 128.726950 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_청도군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/521000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "강아지 펫 헤븐" ;
+  schema:address "경상북도 성주군 선남면 관용로 427" ;
+  ex:latitude 35.918190 ;
+  ex:longitude 128.288150 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_성주군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/522000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "스윗드림 펫" ;
+  schema:address "경상북도 칠곡군 가산면 다부거문1길 51-68" ;
+  schema:telephone "054-974-2220" ;
+  ex:latitude 36.034360 ;
+  ex:longitude 128.400230 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_칠곡군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/535000003820180001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "주식회사 아이헤븐" ;
+  schema:address "경상남도 김해시 생림면 생림대로928번길 10-5" ;
+  schema:telephone "15775474" ;
+  ex:latitude 35.340675 ;
+  ex:longitude 128.848185 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_김해시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/535000003820180002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물장례식장 김해점" ;
+  schema:address "경상남도 김해시 한림면 안하로 102" ;
+  schema:telephone "18118044" ;
+  ex:latitude 35.308739 ;
+  ex:longitude 128.824669 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_김해시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/535000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "별이되다" ;
+  schema:address "경상남도 김해시 생림면 나전로137번길 31" ;
+  ex:latitude 35.298029 ;
+  ex:longitude 128.873296 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_김해시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/535000003820190002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "펫로스 케어" ;
+  schema:address "경상남도 김해시 상동면 묵방로109번길 3" ;
+  ex:latitude 35.299160 ;
+  ex:longitude 128.911571 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_김해시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/538000003820160001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "메리온" ;
+  schema:address "경상남도 양산시 상북면 오룡길 152" ;
+  schema:telephone "055-374-6503" ;
+  ex:latitude 35.345310 ;
+  ex:longitude 129.051090 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_양산시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/538000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)펫노블레스" ;
+  schema:address "경상남도 양산시 상북면 공원로3길 19-91" ;
+  schema:telephone "055-374-4400" ;
+  ex:latitude 35.345310 ;
+  ex:longitude 129.051090 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_양산시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/540000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "한별 리멤버파크" ;
+  schema:address "경상남도 함안군 법수면 이묵골로 135-3" ;
+  schema:telephone "055-582-0042" ;
+  ex:latitude 35.335924 ;
+  ex:longitude 128.355765 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_함안군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/542000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "주식회사 하늘소풍" ;
+  schema:address "경상남도 고성군 회화면 봉오로 145-21" ;
+  ex:latitude 35.079534 ;
+  ex:longitude 128.394653 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_고성군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/553000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물장례식장 화성2호점" ;
+  schema:address "경기도 화성시 만세구 서신면 안벼슬길102번길 165" ;
+  ex:latitude 37.193310 ;
+  ex:longitude 126.991590 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/553000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물장례식장 화성1호점" ;
+  schema:address "경기도 화성시 만세구 팔탄면 독곡길 24-42" ;
+  ex:latitude 37.175031 ;
+  ex:longitude 126.894607 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/553000003820190003>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "21그램 반려동물장례식장 화성점" ;
+  schema:address "경기도 화성시 효행구 비봉면 양노남길 108" ;
+  schema:telephone "02-1688-1240" ;
+  ex:latitude 37.219318 ;
+  ex:longitude 126.868577 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/553000003820210001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "스토리펫" ;
+  schema:address "경기도 화성시 효행구 정남면 서봉로851번길 83" ;
+  schema:telephone "031-353-5579" ;
+  ex:latitude 37.193310 ;
+  ex:longitude 126.991590 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/554000003820080001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "21그램 반려동물장례식장" ;
+  schema:address "경기도 광주시 매자리길 185-35 (매산동)" ;
+  schema:telephone "02-401-3384" ;
+  ex:latitude 37.399520 ;
+  ex:longitude 127.276400 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/554000003820140001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "러브펫 반려동물장례식장" ;
+  schema:address "경기도 광주시 초월읍 현산로361번길 12" ;
+  schema:telephone "031-796-4341" ;
+  ex:latitude 37.416778 ;
+  ex:longitude 127.284519 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/554000003820150001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물 장례식장 경기광주점" ;
+  schema:address "경기도 광주시 초월읍 산수로 409-11" ;
+  ex:latitude 37.397182 ;
+  ex:longitude 127.309883 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/554000003820160001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "펫포레스트 반려동물장례식장 경기광주점" ;
+  schema:address "경기도 광주시 문형동 오포안로 77" ;
+  ex:latitude 37.399520 ;
+  ex:longitude 127.276400 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/554000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)해피엔딩" ;
+  schema:address "경기도 광주시 초월읍 지월로100번길 18" ;
+  ex:latitude 37.399520 ;
+  ex:longitude 127.276400 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/554000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "백꽃사랑하이빛" ;
+  schema:address "경기도 광주시 곤지암읍 신만로 305" ;
+  ex:latitude 37.399520 ;
+  ex:longitude 127.276400 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/554000003820230001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "하늘강아지 반려동물 장례식장" ;
+  schema:address "경기도 광주시 초월읍 선장동길 31-3" ;
+  ex:latitude 37.388895 ;
+  ex:longitude 127.318287 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/559000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물장례식장 양주점" ;
+  schema:address "경기도 양주시 광적면 부흥로 145" ;
+  schema:telephone "031-878-7779" ;
+  ex:latitude 37.809212 ;
+  ex:longitude 126.921554 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/560000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "스타펫" ;
+  schema:address "경기도 포천시 내촌면 진금로 34" ;
+  ex:latitude 37.885070 ;
+  ex:longitude 127.196920 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_포천시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/567000003820230001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "한별 반려동물 장례식장" ;
+  schema:address "경상남도 창원시 진해구 진해대로 2507, 주식회사어울림 (용원동)" ;
+  ex:latitude 35.212440 ;
+  ex:longitude 128.642820 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_창원시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/569000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물 장례식장 세종점" ;
+  schema:address "세종특별자치시 부강면 시목부강로 620" ;
+  ex:latitude 36.520039 ;
+  ex:longitude 127.377879 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/세종특별자치시_부강면> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/569000003820210001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "21그램 반려동물장례식장 세종점" ;
+  schema:address "세종특별자치시 장군면 정동길 76" ;
+  schema:telephone "02-1688-1240" ;
+  ex:latitude 36.499650 ;
+  ex:longitude 127.210310 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/세종특별자치시_장군면> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/570000003820260001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "반려마루 추모관" ;
+  schema:address "경기도 여주시 명품로 355 (상거동)" ;
+  schema:telephone "031-8030-4482" ;
+  ex:latitude 37.237617 ;
+  ex:longitude 127.614806 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_여주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/571000003820150001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "러블리엔젤" ;
+  schema:address "충청북도 청주시 서원구 남이면 구미1길 37-47" ;
+  schema:telephone "043-264-2666" ;
+  ex:latitude 36.566819 ;
+  ex:longitude 127.382807 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_청주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/571000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "주식회사 21그램그룹" ;
+  schema:address "충청북도 청주시 상당구 남일면 신송서원길 120-30" ;
+  schema:telephone "16881240" ;
+  ex:latitude 36.565458 ;
+  ex:longitude 127.481900 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_청주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/651000003820250001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "어름비 반려동물 장례식장" ;
+  schema:address "제주특별자치도 제주시 애월읍 어음13길 16, 14호" ;
+  schema:telephone "064-799-7766" ;
+  ex:latitude 33.400474 ;
+  ex:longitude 126.344662 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/제주특별자치도_제주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/313000003820240001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "㈜펫문" ;
+  schema:address "서울특별시 마포구 성지5길 19, 3층 (합정동)" ;
+  schema:telephone "02-322-1004" ;
+  ex:latitude 37.546246 ;
+  ex:longitude 126.913976 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/340000003820140001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "파트라슈" ;
+  schema:address "부산광역시 기장군 장안읍 기장대로 1561-68" ;
+  schema:telephone "051-723-2201" ;
+  ex:latitude 35.329764 ;
+  ex:longitude 129.243409 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_기장군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/340000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "아이별" ;
+  schema:address "부산광역시 기장군 장안읍 기룡길 11-33" ;
+  schema:telephone "051-727-4499" ;
+  ex:latitude 35.284070 ;
+  ex:longitude 129.205300 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_기장군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/340000003820210001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "센트럴파크(주)" ;
+  schema:address "부산광역시 기장군 일광읍 차양길 175" ;
+  schema:telephone "051-728-5411" ;
+  ex:latitude 35.294407 ;
+  ex:longitude 129.248513 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_기장군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/347000003820140001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)동물사랑 대구러브펫" ;
+  schema:address "대구광역시 달서구 문화회관9길 71 (장동)" ;
+  schema:telephone "053-593-4900" ;
+  ex:latitude 35.835920 ;
+  ex:longitude 128.534090 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_달서구> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/356000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "어게인" ;
+  schema:address "인천광역시 서구 원당대로262번길 40, (주)어게인 (오류동)" ;
+  ex:latitude 37.585735 ;
+  ex:longitude 126.627505 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/356000003820200002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)더포에버" ;
+  schema:address "인천광역시 서구 설원로 79 (대곡동)" ;
+  schema:telephone "031-713-5002" ;
+  ex:latitude 37.625815 ;
+  ex:longitude 126.674557 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/356000003820250001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "아이드림펫" ;
+  schema:address "인천광역시 서구 원당대로246번길 15 (오류동)" ;
+  ex:latitude 37.587105 ;
+  ex:longitude 126.628041 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/363000003820160001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주) 하늘펫" ;
+  schema:address "광주광역시 광산구 평동매화길 34 (지죽동)" ;
+  schema:telephone "062-946-2626" ;
+  ex:latitude 35.140747 ;
+  ex:longitude 126.759674 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_광산구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/363000003820250001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)하늘정원" ;
+  schema:address "광주광역시 광산구 체암로 1685-2 (양동)" ;
+  schema:telephone "062-714-2979" ;
+  ex:latitude 35.150239 ;
+  ex:longitude 126.656290 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_광산구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/364000003820240001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)반려동물 장례지원단" ;
+  schema:address "대전광역시 동구 모암로 128-6 (이사동)" ;
+  ex:latitude 36.294329 ;
+  ex:longitude 127.444903 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/373000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "이별공간" ;
+  schema:address "울산광역시 울주군 삼동면 삼동로 140" ;
+  ex:latitude 35.498474 ;
+  ex:longitude 129.105832 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/393000003820220001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "주식회사 펫콤" ;
+  schema:address "경기도 안산시 단원구 엠티브이1로 159, 동신엔지니어링 (목내동)" ;
+  ex:latitude 37.295308 ;
+  ex:longitude 126.773389 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/393000003820240001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "펫콤 안산점" ;
+  schema:address "경기도 안산시 상록구 서당길 10 (양상동)" ;
+  schema:telephone "18335158" ;
+  ex:latitude 37.354870 ;
+  ex:longitude 126.846625 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/393000003820240002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "펫브릿지" ;
+  schema:address "경기도 안산시 단원구 산단로 232, 신안산비즈스타복합지식산업센터 7층 710호 (원시동)" ;
+  schema:telephone "16702818" ;
+  ex:latitude 37.316152 ;
+  ex:longitude 126.790459 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/394000003820150001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)펫바라기" ;
+  schema:address "경기도 고양시 일산동구 은마길63번길 25-2 (설문동)" ;
+  schema:telephone "031-976-3179" ;
+  ex:latitude 37.713694 ;
+  ex:longitude 126.805868 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_고양시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/399000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "몽몽이엠파크 반려동물장례식장" ;
+  schema:address "경기도 남양주시 화도읍 모꼬지로17번길 136" ;
+  schema:telephone "18111336" ;
+  ex:latitude 37.650840 ;
+  ex:longitude 127.202070 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_남양주시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/399000003820230001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "21그램 반려동물 장례식장 남양주점" ;
+  schema:address "경기도 남양주시 화도읍 수레로964번길 86" ;
+  schema:telephone "16881240" ;
+  ex:latitude 37.625960 ;
+  ex:longitude 127.290281 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_남양주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/399000003820240001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "펫포레스트 반려동물장례식장 남양주점" ;
+  schema:address "경기도 남양주시 와부읍 수레로 699, 지하1층" ;
+  ex:latitude 37.619681 ;
+  ex:longitude 127.276467 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_남양주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/405000003820190001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "리멤버반려동물장례식장" ;
+  schema:address "경기도 용인시 처인구 남사읍 원암로 535" ;
+  ex:latitude 37.107374 ;
+  ex:longitude 127.172144 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_용인시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/464100003820220001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "전주 반려동물장례식장 아리움" ;
+  schema:address "전북특별자치도 전주시 완산구 콩쥐팥쥐로 1705-44(효자동3가)" ;
+  schema:telephone "063-223-7942" ;
+  ex:latitude 35.825012 ;
+  ex:longitude 127.085908 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_전주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/467100003820210001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "서래안 펫타운" ;
+  schema:address "전북특별자치도 군산시 서래안1길 11, 2층 (경암동)" ;
+  ex:latitude 35.981879 ;
+  ex:longitude 126.725131 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_군산시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/405000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물장례식장 용인점" ;
+  schema:address "경기도 용인시 처인구 양지읍 중부대로2670번길 16-19" ;
+  ex:latitude 37.284890 ;
+  ex:longitude 127.139280 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_용인시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/407000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "주식회사 아리아펫" ;
+  schema:address "경기도 이천시 마장면 이장로 329-2" ;
+  schema:telephone "031-635-2266" ;
+  ex:latitude 37.279499 ;
+  ex:longitude 127.390513 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_이천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/409000003820080002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "엔젤스톤" ;
+  schema:address "경기도 김포시 하성면 하성로 720" ;
+  schema:telephone "031-981-0271" ;
+  ex:latitude 37.736423 ;
+  ex:longitude 126.629873 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_김포시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/409000003820080003>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "펫포레스트 반려동물장례식장 김포점" ;
+  schema:address "경기도 김포시 통진읍 고정로 308" ;
+  ex:latitude 37.645590 ;
+  ex:longitude 126.659770 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_김포시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/409000003820170001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "포포즈 반려동물장례식장 김포점" ;
+  schema:address "경기도 김포시 월곶면 애기봉로 262" ;
+  schema:telephone "15882888" ;
+  ex:latitude 37.730204 ;
+  ex:longitude 126.575622 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_김포시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/417000003820230001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "ROYHILLS" ;
+  schema:address "경기도 양평군 양동면 양동금곡4길 10" ;
+  schema:telephone "18552004" ;
+  ex:latitude 37.500920 ;
+  ex:longitude 127.496650 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양평군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/419000003820220001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "주식회사 패투헤븐" ;
+  schema:address "강원특별자치도 원주시 소초면 현촌길 90-3, 나동" ;
+  schema:telephone "033-745-4211" ;
+  ex:latitude 37.425766 ;
+  ex:longitude 127.996132 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_원주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/420000003820180001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "강릉펫사랑(장례식장)" ;
+  schema:address "강원특별자치도 강릉시 사천면 구라미길 376" ;
+  ex:latitude 37.775050 ;
+  ex:longitude 128.886750 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_강릉시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/440000003820120001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "굿바이펫" ;
+  schema:address "충청북도 제천시 봉양읍 장평로 95" ;
+  schema:telephone "043-642-1537" ;
+  ex:latitude 37.133320 ;
+  ex:longitude 128.206750 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_제천시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/443000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "대전 이별공간" ;
+  schema:address "충청북도 옥천군 이원면 이원로 47, 음식점" ;
+  ex:latitude 36.182929 ;
+  ex:longitude 127.628459 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_옥천군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/facility/cremation/444000003820200001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "스마일 어게인" ;
+  schema:address "충청북도 영동군 추풍령면 작동1길 81" ;
+  schema:telephone "15449262" ;
+  ex:latitude 36.174350 ;
+  ex:longitude 127.777210 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_영동군> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/565000003820140001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "21그램 반려동물 장례식장 천안아산점" ;
+  schema:address "충청남도 천안시 동남구 광풍로 1668 (구룡동)" ;
+  ex:latitude 36.818090 ;
+  ex:longitude 127.149930 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_천안시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/450000003820140001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "(주)좋은친구들" ;
+  schema:address "충청남도 공주시 우성면 보흥2길 36-61" ;
+  ex:latitude 36.471620 ;
+  ex:longitude 127.118130 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_공주시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/454000003820180002>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "리멤버파크" ;
+  schema:address "충청남도 논산시 연산면 계백로 2172-13" ;
+  schema:telephone "041-735-1700" ;
+  ex:latitude 36.189040 ;
+  ex:longitude 127.098220 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_논산시> ;
+  ex:coord_status "centroid_fallback" .
+<http://animalloo.kr/ontology/facility/cremation/461000003820130001>
+  a ex:AnimalCremation, schema:FuneralService ;
+  schema:name "예산 위드엔젤" ;
+  schema:telephone "041-332-8787" ;
+  ex:latitude 36.698335 ;
+  ex:longitude 126.917125 ;
+  ex:coord_status "ok" .

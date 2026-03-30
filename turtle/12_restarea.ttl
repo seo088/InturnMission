@@ -1,0 +1,207 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/facility/restarea/0_용인_강릉_>
+  a ex:RestArea ;
+  schema:name "용인(강릉)" ;
+  ex:petPlayground true ;
+  ex:latitude 37.251500 ;
+  ex:longitude 127.194200 ;
+  schema:openingHours "08:00~20:00" ;
+  ex:establishedYear 2018 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_용인시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/1_덕평>
+  a ex:RestArea ;
+  schema:name "덕평" ;
+  ex:petPlayground true ;
+  ex:latitude 37.308000 ;
+  ex:longitude 127.405000 ;
+  schema:openingHours "10:00~19:00(동절기 18시까지)" ;
+  ex:establishedYear 2013 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_이천시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/2_충주_양평_>
+  a ex:RestArea ;
+  schema:name "충주(양평)" ;
+  ex:petPlayground true ;
+  ex:latitude 37.006000 ;
+  ex:longitude 127.891000 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2017 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_충주시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/3_단양팔경_부산_>
+  a ex:RestArea ;
+  schema:name "단양팔경(부산)" ;
+  ex:petPlayground true ;
+  ex:latitude 36.988800 ;
+  ex:longitude 128.364200 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2019 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_단양군> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/4_금왕_제천_>
+  a ex:RestArea ;
+  schema:name "금왕(제천)" ;
+  ex:petPlayground true ;
+  ex:latitude 36.962900 ;
+  ex:longitude 127.599300 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2019 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_음성군> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/5_화서_영덕_>
+  a ex:RestArea ;
+  schema:name "화서(영덕)" ;
+  ex:petPlayground true ;
+  ex:latitude 37.015200 ;
+  ex:longitude 127.022800 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2019 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/6_죽암_서울_>
+  a ex:RestArea ;
+  schema:name "죽암(서울)" ;
+  ex:petPlayground true ;
+  ex:latitude 36.973800 ;
+  ex:longitude 126.952300 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2013 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_당진시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/7_서산_목포_>
+  a ex:RestArea ;
+  schema:name "서산(목포)" ;
+  ex:petPlayground true ;
+  ex:latitude 36.774700 ;
+  ex:longitude 126.495700 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2016 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_서산시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/8_군산_서울_>
+  a ex:RestArea ;
+  schema:name "군산(서울)" ;
+  ex:petPlayground true ;
+  ex:latitude 35.988700 ;
+  ex:longitude 126.701200 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2016 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_군산시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/9_오수_완주_>
+  a ex:RestArea ;
+  schema:name "오수(완주)" ;
+  ex:petPlayground true ;
+  ex:latitude 35.588000 ;
+  ex:longitude 127.361000 ;
+  schema:openingHours "08:00~20:00(동절기 18시까지)" ;
+  ex:establishedYear 2017 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_임실군> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/10_진주_부산_>
+  a ex:RestArea ;
+  schema:name "진주(부산)" ;
+  ex:petPlayground true ;
+  ex:latitude 35.198000 ;
+  ex:longitude 128.091000 ;
+  schema:openingHours "10시~21시(동절기 18시까지)" ;
+  ex:establishedYear 2016 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_진주시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/11_신탄진_서울_>
+  a ex:RestArea ;
+  schema:name "신탄진(서울)" ;
+  ex:petPlayground true ;
+  ex:latitude 36.468000 ;
+  ex:longitude 127.384000 ;
+  schema:openingHours "09:00~18:00(동절기 17시까지)" ;
+  ex:establishedYear 2019 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_대덕구> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/12_매송_목포_>
+  a ex:RestArea ;
+  schema:name "매송(목포)" ;
+  ex:petPlayground true ;
+  ex:latitude 37.206000 ;
+  ex:longitude 126.833000 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2018 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/13_매송_서울_>
+  a ex:RestArea ;
+  schema:name "매송(서울)" ;
+  ex:petPlayground true ;
+  ex:latitude 37.208000 ;
+  ex:longitude 126.835000 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2018 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/14_마장>
+  a ex:RestArea ;
+  schema:name "마장" ;
+  ex:petPlayground true ;
+  ex:latitude 37.546000 ;
+  ex:longitude 127.135000 ;
+  schema:openingHours "08:00~20:00" ;
+  ex:establishedYear 2023 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_이천시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/15_언양_서울_>
+  a ex:RestArea ;
+  schema:name "언양(서울)" ;
+  ex:petPlayground true ;
+  ex:latitude 35.566300 ;
+  ex:longitude 129.084400 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2023 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/16_천안삼거리_서울_>
+  a ex:RestArea ;
+  schema:name "천안삼거리(서울)" ;
+  ex:petPlayground true ;
+  ex:latitude 36.818000 ;
+  ex:longitude 127.152000 ;
+  schema:openingHours "08:30~20:30" ;
+  ex:establishedYear 2024 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_천안시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/17_남한강>
+  a ex:RestArea ;
+  schema:name "남한강" ;
+  ex:petPlayground true ;
+  ex:latitude 37.469000 ;
+  ex:longitude 127.699000 ;
+  schema:openingHours "24시간" ;
+  ex:establishedYear 2024 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_여주시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/18_남한강>
+  a ex:RestArea ;
+  schema:name "남한강" ;
+  ex:petPlayground true ;
+  ex:latitude 37.469000 ;
+  ex:longitude 127.699000 ;
+  schema:openingHours "10:00~18:00" ;
+  ex:establishedYear 2024 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_여주시> ;
+  ex:facilityType "놀이터" .
+<http://animalloo.kr/ontology/facility/restarea/19_추풍령_부산_>
+  a ex:RestArea ;
+  schema:name "추풍령(부산)" ;
+  ex:petPlayground true ;
+  ex:latitude 36.222100 ;
+  ex:longitude 127.844000 ;
+  schema:openingHours "09:00~18:00" ;
+  ex:establishedYear 2024 ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_영동군> ;
+  ex:facilityType "놀이터" .

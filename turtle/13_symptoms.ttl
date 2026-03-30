@@ -1,0 +1,2635 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/medical/symptomCategory/a>
+  a ex:SymptomCategory ;
+  ex:categoryKR "청각기관 증상" ;
+  ex:categoryEN "Acoustic" .
+<http://animalloo.kr/ontology/medical/symptomCategory/b>
+  a ex:SymptomCategory ;
+  ex:categoryKR "심혈관계 증상" ;
+  ex:categoryEN "Cardiovascular" .
+<http://animalloo.kr/ontology/medical/symptomCategory/c>
+  a ex:SymptomCategory ;
+  ex:categoryKR "소화기계" ;
+  ex:categoryEN "Digestive" .
+<http://animalloo.kr/ontology/medical/symptomCategory/d>
+  a ex:SymptomCategory ;
+  ex:categoryKR "안과 증상" ;
+  ex:categoryEN "Ophthalmology" .
+<http://animalloo.kr/ontology/medical/symptomCategory/e>
+  a ex:SymptomCategory ;
+  ex:categoryKR "전신종합 증상" ;
+  ex:categoryEN "General" .
+<http://animalloo.kr/ontology/medical/symptomCategory/f>
+  a ex:SymptomCategory ;
+  ex:categoryKR "근골격계" ;
+  ex:categoryEN "Musculoskeletal" .
+<http://animalloo.kr/ontology/medical/symptomCategory/g>
+  a ex:SymptomCategory ;
+  ex:categoryKR "신경계 증상" ;
+  ex:categoryEN "Nervous" .
+<http://animalloo.kr/ontology/medical/symptomCategory/h>
+  a ex:SymptomCategory ;
+  ex:categoryKR "통증 증상" ;
+  ex:categoryEN "Pain" .
+<http://animalloo.kr/ontology/medical/symptomCategory/i>
+  a ex:SymptomCategory ;
+  ex:categoryKR "호흡기계 증상" ;
+  ex:categoryEN "Respiratory" .
+<http://animalloo.kr/ontology/medical/symptomCategory/j>
+  a ex:SymptomCategory ;
+  ex:categoryKR "피부/외피계 증상" ;
+  ex:categoryEN "Integumentary" .
+<http://animalloo.kr/ontology/medical/symptomCategory/k>
+  a ex:SymptomCategory ;
+  ex:categoryKR "생식기계 증상" ;
+  ex:categoryEN "Reproductive" .
+<http://animalloo.kr/ontology/medical/symptomCategory/l>
+  a ex:SymptomCategory ;
+  ex:categoryKR "비뇨기계 증상" ;
+  ex:categoryEN "Urinary" .
+<http://animalloo.kr/ontology/medical/symptom/a001>
+  a ex:Symptom ;
+  ex:symptomCode "a001" ;
+  ex:symptomNameKR "난청, 귀머거리" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/a> .
+<http://animalloo.kr/ontology/medical/symptom/a002>
+  a ex:Symptom ;
+  ex:symptomCode "a002" ;
+  ex:symptomNameKR "이음향반사" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/a> .
+<http://animalloo.kr/ontology/medical/symptom/a003>
+  a ex:Symptom ;
+  ex:symptomCode "a003" ;
+  ex:symptomNameKR "귀의 화농성, 점액성 분비물, 과도한 이구(귀밥), 악취" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/a> .
+<http://animalloo.kr/ontology/medical/symptom/a004>
+  a ex:Symptom ;
+  ex:symptomCode "a004" ;
+  ex:symptomNameKR "귀의 진드기, 응애, 기생충" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/a> .
+<http://animalloo.kr/ontology/medical/symptom/a005>
+  a ex:Symptom ;
+  ex:symptomCode "a005" ;
+  ex:symptomNameKR "귀를 긁음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/a> .
+<http://animalloo.kr/ontology/medical/symptom/b001>
+  a ex:Symptom ;
+  ex:symptomCode "b001" ;
+  ex:symptomNameKR "빈맥, 빠른 맥박, 높은 심박수" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b002>
+  a ex:Symptom ;
+  ex:symptomCode "b002" ;
+  ex:symptomNameKR "동성 부정맥" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b003>
+  a ex:Symptom ;
+  ex:symptomCode "b003" ;
+  ex:symptomNameKR "동 정지" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b004>
+  a ex:Symptom ;
+  ex:symptomCode "b004" ;
+  ex:symptomNameKR "동 빈맥" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b005>
+  a ex:Symptom ;
+  ex:symptomCode "b005" ;
+  ex:symptomNameKR "유주 심박조율기, 향도잡이" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b006>
+  a ex:Symptom ;
+  ex:symptomCode "b006" ;
+  ex:symptomNameKR "심방 조기 박동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b007>
+  a ex:Symptom ;
+  ex:symptomCode "b007" ;
+  ex:symptomNameKR "심방 조동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b008>
+  a ex:Symptom ;
+  ex:symptomCode "b008" ;
+  ex:symptomNameKR "심방 세동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b009>
+  a ex:Symptom ;
+  ex:symptomCode "b009" ;
+  ex:symptomNameKR "심방 빈맥" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b010>
+  a ex:Symptom ;
+  ex:symptomCode "b010" ;
+  ex:symptomNameKR "심실 기외 수축, 다발성 혹은 단발성" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b011>
+  a ex:Symptom ;
+  ex:symptomCode "b011" ;
+  ex:symptomNameKR "심실성 빈맥, 다발성 혹은 단발성" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b012>
+  a ex:Symptom ;
+  ex:symptomCode "b012" ;
+  ex:symptomNameKR "심실 세동, 조동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b013>
+  a ex:Symptom ;
+  ex:symptomCode "b013" ;
+  ex:symptomNameKR "심실 이탈 박동, 심실 보충 수축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b014>
+  a ex:Symptom ;
+  ex:symptomCode "b014" ;
+  ex:symptomNameKR "부정맥, 불규칙한 심박수, 맥박" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b015>
+  a ex:Symptom ;
+  ex:symptomCode "b015" ;
+  ex:symptomNameKR "서맥, 느린 심박동, 맥박" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b016>
+  a ex:Symptom ;
+  ex:symptomCode "b016" ;
+  ex:symptomNameKR "1도 방실 심 차단" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b017>
+  a ex:Symptom ;
+  ex:symptomCode "b017" ;
+  ex:symptomNameKR "2도 방실 심 차단" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b018>
+  a ex:Symptom ;
+  ex:symptomCode "b018" ;
+  ex:symptomNameKR "3도 방실 심 완전차단" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b019>
+  a ex:Symptom ;
+  ex:symptomCode "b019" ;
+  ex:symptomNameKR "각차단, 왼쪽, 오른쪽 혹은 양쪽" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b020>
+  a ex:Symptom ;
+  ex:symptomCode "b020" ;
+  ex:symptomNameKR "이상심음, 심외 잡음, 진전음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b021>
+  a ex:Symptom ;
+  ex:symptomCode "b021" ;
+  ex:symptomNameKR "약맥, 소맥" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b022>
+  a ex:Symptom ;
+  ex:symptomCode "b022" ;
+  ex:symptomNameKR "경정맥 박동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b023>
+  a ex:Symptom ;
+  ex:symptomCode "b023" ;
+  ex:symptomNameKR "분마율동, 분마성 리듬" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b024>
+  a ex:Symptom ;
+  ex:symptomCode "b024" ;
+  ex:symptomNameKR "말초정맥확장, 경정맥확장" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b025>
+  a ex:Symptom ;
+  ex:symptomCode "b025" ;
+  ex:symptomNameKR "모세혈관 재충만 시간 지연" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b026>
+  a ex:Symptom ;
+  ex:symptomCode "b026" ;
+  ex:symptomNameKR "심낭음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b027>
+  a ex:Symptom ;
+  ex:symptomCode "b027" ;
+  ex:symptomNameKR "맥박 강도 증가" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b028>
+  a ex:Symptom ;
+  ex:symptomCode "b028" ;
+  ex:symptomNameKR "맥박 결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b029>
+  a ex:Symptom ;
+  ex:symptomCode "b029" ;
+  ex:symptomNameKR "심전도 전압 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b030>
+  a ex:Symptom ;
+  ex:symptomCode "b030" ;
+  ex:symptomNameKR "심전도의 진폭이 줄어듦, 감소된 전압" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b031>
+  a ex:Symptom ;
+  ex:symptomCode "b031" ;
+  ex:symptomNameKR "P파 결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b032>
+  a ex:Symptom ;
+  ex:symptomCode "b032" ;
+  ex:symptomNameKR "심방확장, 좌심,우심 혹은 양쪽의" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b033>
+  a ex:Symptom ;
+  ex:symptomCode "b033" ;
+  ex:symptomNameKR "심실확장, 좌심,우심 혹은 양쪽의" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b034>
+  a ex:Symptom ;
+  ex:symptomCode "b034" ;
+  ex:symptomNameKR "심음의 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b035>
+  a ex:Symptom ;
+  ex:symptomCode "b035" ;
+  ex:symptomNameKR "심잡음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b036>
+  a ex:Symptom ;
+  ex:symptomCode "b036" ;
+  ex:symptomNameKR "수축기 클릭" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/b037>
+  a ex:Symptom ;
+  ex:symptomCode "b037" ;
+  ex:symptomNameKR "명치(전흉부)부위 진전" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/symptom/c001>
+  a ex:Symptom ;
+  ex:symptomCode "c001" ;
+  ex:symptomNameKR "분변내 기생충" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c002>
+  a ex:Symptom ;
+  ex:symptomCode "c002" ;
+  ex:symptomNameKR "다식증, 다식증, 과도한 식욕" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c003>
+  a ex:Symptom ;
+  ex:symptomCode "c003" ;
+  ex:symptomNameKR "식욕부진, 식욕감소, 식욕절폐" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c004>
+  a ex:Symptom ;
+  ex:symptomCode "c004" ;
+  ex:symptomNameKR "이식증, 이기증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c005>
+  a ex:Symptom ;
+  ex:symptomCode "c005" ;
+  ex:symptomNameKR "저작곤란, 잘 씹지 못함" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c006>
+  a ex:Symptom ;
+  ex:symptomCode "c006" ;
+  ex:symptomNameKR "부리개폐 불능, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c007>
+  a ex:Symptom ;
+  ex:symptomCode "c007" ;
+  ex:symptomNameKR "개구장애, 개구곤란, 턱과 입을 열고 닫지못함" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c008>
+  a ex:Symptom ;
+  ex:symptomCode "c008" ;
+  ex:symptomNameKR "턱의 기형, 하악단소증, 상악전돌증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c009>
+  a ex:Symptom ;
+  ex:symptomCode "c009" ;
+  ex:symptomNameKR "구개열, 구순열" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c010>
+  a ex:Symptom ;
+  ex:symptomCode "c010" ;
+  ex:symptomNameKR "부리의 기형, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c011>
+  a ex:Symptom ;
+  ex:symptomCode "c011" ;
+  ex:symptomNameKR "부리의 종창, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c012>
+  a ex:Symptom ;
+  ex:symptomCode "c012" ;
+  ex:symptomNameKR "금이간 부리, 깨진 부리, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c013>
+  a ex:Symptom ;
+  ex:symptomCode "c013" ;
+  ex:symptomNameKR "부리의 비정상적인 색깔, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c014>
+  a ex:Symptom ;
+  ex:symptomCode "c014" ;
+  ex:symptomNameKR "구강점막의 건조" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c015>
+  a ex:Symptom ;
+  ex:symptomCode "c015" ;
+  ex:symptomNameKR "구강점막의 울혈, 홍반, 발적" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c016>
+  a ex:Symptom ;
+  ex:symptomCode "c016" ;
+  ex:symptomNameKR "구강점막의궤양, 수포, 플라크(반), 농포, 미란, 열창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c017>
+  a ex:Symptom ;
+  ex:symptomCode "c017" ;
+  ex:symptomNameKR "과도한 유연, 침흘림, 타액분비과다, 입에거품" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c018>
+  a ex:Symptom ;
+  ex:symptomCode "c018" ;
+  ex:symptomNameKR "흔들거리는 치아, 풍치" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c019>
+  a ex:Symptom ;
+  ex:symptomCode "c019" ;
+  ex:symptomNameKR "광잉치아" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c020>
+  a ex:Symptom ;
+  ex:symptomCode "c020" ;
+  ex:symptomNameKR "치아의 수가 줄어듦, 치아의 결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c021>
+  a ex:Symptom ;
+  ex:symptomCode "c021" ;
+  ex:symptomNameKR "유치잔존" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c022>
+  a ex:Symptom ;
+  ex:symptomCode "c022" ;
+  ex:symptomNameKR "과도한 또는 불규칙한 치아 마모" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c023>
+  a ex:Symptom ;
+  ex:symptomCode "c023" ;
+  ex:symptomNameKR "치아의 교합부전" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c024>
+  a ex:Symptom ;
+  ex:symptomCode "c024" ;
+  ex:symptomNameKR "비정상적인 치아의 색깔" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c025>
+  a ex:Symptom ;
+  ex:symptomCode "c025" ;
+  ex:symptomNameKR "움푹패인 치아, 치아 우식증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c026>
+  a ex:Symptom ;
+  ex:symptomCode "c026" ;
+  ex:symptomNameKR "이갈이, 알치(軌齒), 이빨을 가는것" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c027>
+  a ex:Symptom ;
+  ex:symptomCode "c027" ;
+  ex:symptomNameKR "금이간 치아, 치아파열" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c028>
+  a ex:Symptom ;
+  ex:symptomCode "c028" ;
+  ex:symptomNameKR "혀의 무력증, 부전마비, 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c029>
+  a ex:Symptom ;
+  ex:symptomCode "c029" ;
+  ex:symptomNameKR "혀의 궤양, 수포, 미란, 궤양, 물집, 열상, 열창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c030>
+  a ex:Symptom ;
+  ex:symptomCode "c030" ;
+  ex:symptomNameKR "혀의 돌출, 혀를 내밀고 있는것" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c031>
+  a ex:Symptom ;
+  ex:symptomCode "c031" ;
+  ex:symptomNameKR "인두의 홍반, 발적" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c032>
+  a ex:Symptom ;
+  ex:symptomCode "c032" ;
+  ex:symptomNameKR "인두의 궤양, 수포, 미란, 구진" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c033>
+  a ex:Symptom ;
+  ex:symptomCode "c033" ;
+  ex:symptomNameKR "연하곤란, 연하장애" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c034>
+  a ex:Symptom ;
+  ex:symptomCode "c034" ;
+  ex:symptomNameKR "식도폐쇄" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c035>
+  a ex:Symptom ;
+  ex:symptomCode "c035" ;
+  ex:symptomNameKR "연하빈도 증가, 연하증가" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c036>
+  a ex:Symptom ;
+  ex:symptomCode "c036" ;
+  ex:symptomNameKR "구토, 역류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c037>
+  a ex:Symptom ;
+  ex:symptomCode "c037" ;
+  ex:symptomNameKR "토혈증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c038>
+  a ex:Symptom ;
+  ex:symptomCode "c038" ;
+  ex:symptomNameKR "구역질, 구토" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c039>
+  a ex:Symptom ;
+  ex:symptomCode "c039" ;
+  ex:symptomNameKR "1위운동성의 횟수와 강도 증가" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c040>
+  a ex:Symptom ;
+  ex:symptomCode "c040" ;
+  ex:symptomNameKR "1위의 저운동성, 위무력증, 위운동성의 횟수와 강도 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c041>
+  a ex:Symptom ;
+  ex:symptomCode "c041" ;
+  ex:symptomNameKR "복부팽만" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c042>
+  a ex:Symptom ;
+  ex:symptomCode "c042" ;
+  ex:symptomNameKR "복수" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c043>
+  a ex:Symptom ;
+  ex:symptomCode "c043" ;
+  ex:symptomNameKR "고창증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c044>
+  a ex:Symptom ;
+  ex:symptomCode "c044" ;
+  ex:symptomNameKR "좌측의 핑사운드, 가스가 차있는 내장 청진" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c045>
+  a ex:Symptom ;
+  ex:symptomCode "c045" ;
+  ex:symptomNameKR "우측의 핑사운드, 가스가 차있는 내장 청진" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c046>
+  a ex:Symptom ;
+  ex:symptomCode "c046" ;
+  ex:symptomNameKR "양쪽의 핑사운드, 복부양쪽에 가스 차있는 내장" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c047>
+  a ex:Symptom ;
+  ex:symptomCode "c047" ;
+  ex:symptomNameKR "복명의 증가" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c048>
+  a ex:Symptom ;
+  ex:symptomCode "c048" ;
+  ex:symptomNameKR "복명의 감소, 장폐색증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c049>
+  a ex:Symptom ;
+  ex:symptomCode "c049" ;
+  ex:symptomNameKR "배변량 감소, 변비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c050>
+  a ex:Symptom ;
+  ex:symptomCode "c050" ;
+  ex:symptomNameKR "설사" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c051>
+  a ex:Symptom ;
+  ex:symptomCode "c051" ;
+  ex:symptomNameKR "조류에서 비정상적인 분변의 색깔, 흰색, 녹색, 황색 분변" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c052>
+  a ex:Symptom ;
+  ex:symptomCode "c052" ;
+  ex:symptomNameKR "지방변증, 지방변" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c053>
+  a ex:Symptom ;
+  ex:symptomCode "c053" ;
+  ex:symptomNameKR "어두운 색깔의 분변" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c054>
+  a ex:Symptom ;
+  ex:symptomCode "c054" ;
+  ex:symptomNameKR "점액변, 점액양분변" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c055>
+  a ex:Symptom ;
+  ex:symptomCode "c055" ;
+  ex:symptomNameKR "혈변, 분변내에 잠혈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c056>
+  a ex:Symptom ;
+  ex:symptomCode "c056" ;
+  ex:symptomNameKR "혈변, 혈변배설" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c057>
+  a ex:Symptom ;
+  ex:symptomCode "c057" ;
+  ex:symptomNameKR "변의 비정상적인 냄새, 악취" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c058>
+  a ex:Symptom ;
+  ex:symptomCode "c058" ;
+  ex:symptomNameKR "분실금" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c059>
+  a ex:Symptom ;
+  ex:symptomCode "c059" ;
+  ex:symptomNameKR "고창, 방귀, 팽만" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c060>
+  a ex:Symptom ;
+  ex:symptomCode "c060" ;
+  ex:symptomNameKR "항문,직장 협착" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c061>
+  a ex:Symptom ;
+  ex:symptomCode "c061" ;
+  ex:symptomNameKR "간 비장 종대, 비장종대, 간종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c062>
+  a ex:Symptom ;
+  ex:symptomCode "c062" ;
+  ex:symptomNameKR "직장탈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c063>
+  a ex:Symptom ;
+  ex:symptomCode "c063" ;
+  ex:symptomNameKR "확장된 장의 촉진" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/c064>
+  a ex:Symptom ;
+  ex:symptomCode "c064" ;
+  ex:symptomNameKR "모이주머니가가 비어있음, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/symptom/d001>
+  a ex:Symptom ;
+  ex:symptomCode "d001" ;
+  ex:symptomNameKR "실명, 시력상실" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d002>
+  a ex:Symptom ;
+  ex:symptomCode "d002" ;
+  ex:symptomNameKR "위협반사반응에 무반응 또는 감소, 실명은 아님" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d003>
+  a ex:Symptom ;
+  ex:symptomCode "d003" ;
+  ex:symptomNameKR "눈의 화농성 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d004>
+  a ex:Symptom ;
+  ex:symptomCode "d004" ;
+  ex:symptomNameKR "사시, 사팔뜨기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d005>
+  a ex:Symptom ;
+  ex:symptomCode "d005" ;
+  ex:symptomNameKR "안구진탕" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d006>
+  a ex:Symptom ;
+  ex:symptomCode "d006" ;
+  ex:symptomNameKR "안검내번, 눈꺼풀 속말림" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d007>
+  a ex:Symptom ;
+  ex:symptomCode "d007" ;
+  ex:symptomNameKR "안검외번, 눈꺼풀 겉말림" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d008>
+  a ex:Symptom ;
+  ex:symptomCode "d008" ;
+  ex:symptomNameKR "안검하수" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d009>
+  a ex:Symptom ;
+  ex:symptomCode "d009" ;
+  ex:symptomNameKR "제3안검 탈출, 순막의 돌출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d010>
+  a ex:Symptom ;
+  ex:symptomCode "d010" ;
+  ex:symptomNameKR "속눈썹 비정상적" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d011>
+  a ex:Symptom ;
+  ex:symptomCode "d011" ;
+  ex:symptomNameKR "결막부종, 결막 공막의 부종" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d012>
+  a ex:Symptom ;
+  ex:symptomCode "d012" ;
+  ex:symptomNameKR "결막, 공막의 발적" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d013>
+  a ex:Symptom ;
+  ex:symptomCode "d013" ;
+  ex:symptomNameKR "결막, 공막의 충혈, 비정상적인 혈관" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d014>
+  a ex:Symptom ;
+  ex:symptomCode "d014" ;
+  ex:symptomNameKR "결막, 공막의 열상, 열창, 손상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d015>
+  a ex:Symptom ;
+  ex:symptomCode "d015" ;
+  ex:symptomNameKR "결막, 공막의 구진" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d016>
+  a ex:Symptom ;
+  ex:symptomCode "d016" ;
+  ex:symptomNameKR "각막의 종창, 종괴, 결절" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d017>
+  a ex:Symptom ;
+  ex:symptomCode "d017" ;
+  ex:symptomNameKR "각막의 부종, 각막 혼탁" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d018>
+  a ex:Symptom ;
+  ex:symptomCode "d018" ;
+  ex:symptomNameKR "각막의 비정상적인 색소침착" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d019>
+  a ex:Symptom ;
+  ex:symptomCode "d019" ;
+  ex:symptomNameKR "각막혈관신생, 판누스" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d020>
+  a ex:Symptom ;
+  ex:symptomCode "d020" ;
+  ex:symptomNameKR "각막의 궤양, 미란" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d021>
+  a ex:Symptom ;
+  ex:symptomCode "d021" ;
+  ex:symptomNameKR "각막손상, 각막의 열상, 열창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d022>
+  a ex:Symptom ;
+  ex:symptomCode "d022" ;
+  ex:symptomNameKR "눈물흘림, 유루, 장액성 안구 분비물, 젖은눈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d023>
+  a ex:Symptom ;
+  ex:symptomCode "d023" ;
+  ex:symptomNameKR "눈물의 감소, 안구건조증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d024>
+  a ex:Symptom ;
+  ex:symptomCode "d024" ;
+  ex:symptomNameKR "순막샘의 종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d025>
+  a ex:Symptom ;
+  ex:symptomCode "d025" ;
+  ex:symptomNameKR "비루관의 폐쇄" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d026>
+  a ex:Symptom ;
+  ex:symptomCode "d026" ;
+  ex:symptomNameKR "안구돌출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d027>
+  a ex:Symptom ;
+  ex:symptomCode "d027" ;
+  ex:symptomNameKR "안구함몰" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d028>
+  a ex:Symptom ;
+  ex:symptomCode "d028" ;
+  ex:symptomNameKR "백내장, 수정체 혼탁" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d029>
+  a ex:Symptom ;
+  ex:symptomCode "d029" ;
+  ex:symptomNameKR "수정체 이탈, 변위" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d030>
+  a ex:Symptom ;
+  ex:symptomCode "d030" ;
+  ex:symptomNameKR "망막혈관 크기 비정상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d031>
+  a ex:Symptom ;
+  ex:symptomCode "d031" ;
+  ex:symptomNameKR "망막출혈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d032>
+  a ex:Symptom ;
+  ex:symptomCode "d032" ;
+  ex:symptomNameKR "망막반사 비정상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d033>
+  a ex:Symptom ;
+  ex:symptomCode "d033" ;
+  ex:symptomNameKR "망막 박리" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d034>
+  a ex:Symptom ;
+  ex:symptomCode "d034" ;
+  ex:symptomNameKR "망막의 비정상적 색소침착" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d035>
+  a ex:Symptom ;
+  ex:symptomCode "d035" ;
+  ex:symptomNameKR "망막주름, 융기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d036>
+  a ex:Symptom ;
+  ex:symptomCode "d036" ;
+  ex:symptomNameKR "축동, 동공축소, 동공 수축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d037>
+  a ex:Symptom ;
+  ex:symptomCode "d037" ;
+  ex:symptomNameKR "산동, 확장된 동공" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d038>
+  a ex:Symptom ;
+  ex:symptomCode "d038" ;
+  ex:symptomNameKR "동공 형태 비정상, 홍채의 결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d039>
+  a ex:Symptom ;
+  ex:symptomCode "d039" ;
+  ex:symptomNameKR "전방축농, 안구전방의 지질이나 섬유소 축적" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d040>
+  a ex:Symptom ;
+  ex:symptomCode "d040" ;
+  ex:symptomNameKR "유착증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d041>
+  a ex:Symptom ;
+  ex:symptomCode "d041" ;
+  ex:symptomNameKR "홍채의 비정상적인 색소침착" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d042>
+  a ex:Symptom ;
+  ex:symptomCode "d042" ;
+  ex:symptomNameKR "동공의 빛에대한 비정상적인 반응" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d043>
+  a ex:Symptom ;
+  ex:symptomCode "d043" ;
+  ex:symptomNameKR "전방출혈, 안구전방에 혈액" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d044>
+  a ex:Symptom ;
+  ex:symptomCode "d044" ;
+  ex:symptomNameKR "눈의 외부 또는 내부 기생충" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d045>
+  a ex:Symptom ;
+  ex:symptomCode "d045" ;
+  ex:symptomNameKR "동공부동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d046>
+  a ex:Symptom ;
+  ex:symptomCode "d046" ;
+  ex:symptomNameKR "신경 위축, 크기감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d047>
+  a ex:Symptom ;
+  ex:symptomCode "d047" ;
+  ex:symptomNameKR "시신경 유두부종, 크기 증가" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d048>
+  a ex:Symptom ;
+  ex:symptomCode "d048" ;
+  ex:symptomNameKR "신경 출혈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d049>
+  a ex:Symptom ;
+  ex:symptomCode "d049" ;
+  ex:symptomNameKR "눈부심, 수명" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d050>
+  a ex:Symptom ;
+  ex:symptomCode "d050" ;
+  ex:symptomNameKR "안검연축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d051>
+  a ex:Symptom ;
+  ex:symptomCode "d051" ;
+  ex:symptomNameKR "소안구증, 작은 안구증, 각막,안구의 위축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d052>
+  a ex:Symptom ;
+  ex:symptomCode "d052" ;
+  ex:symptomNameKR "대안구증, 커진안구, 녹내장" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/d053>
+  a ex:Symptom ;
+  ex:symptomCode "d053" ;
+  ex:symptomNameKR "유리체의 혼탁 또는 침전물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/symptom/e001>
+  a ex:Symptom ;
+  ex:symptomCode "e001" ;
+  ex:symptomNameKR "진전, 전율, 떨림" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e002>
+  a ex:Symptom ;
+  ex:symptomCode "e002" ;
+  ex:symptomNameKR "불안감, 안절부절, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e003>
+  a ex:Symptom ;
+  ex:symptomCode "e003" ;
+  ex:symptomNameKR "발열, 고열, 고체온" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e004>
+  a ex:Symptom ;
+  ex:symptomCode "e004" ;
+  ex:symptomNameKR "저체온증, 낮은체온" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e005>
+  a ex:Symptom ;
+  ex:symptomCode "e005" ;
+  ex:symptomNameKR "운동기피, 쉽게 지침" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e006>
+  a ex:Symptom ;
+  ex:symptomCode "e006" ;
+  ex:symptomNameKR "탈수" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e007>
+  a ex:Symptom ;
+  ex:symptomCode "e007" ;
+  ex:symptomNameKR "다한증, 과도한 발한, 땀 흘림" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e008>
+  a ex:Symptom ;
+  ex:symptomCode "e008" ;
+  ex:symptomNameKR "다음, 과도한 체액의 소모, 지나친 갈증, 목마름" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e009>
+  a ex:Symptom ;
+  ex:symptomCode "e009" ;
+  ex:symptomNameKR "갈증 감소, 무갈증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e010>
+  a ex:Symptom ;
+  ex:symptomCode "e010" ;
+  ex:symptomNameKR "발한 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e011>
+  a ex:Symptom ;
+  ex:symptomCode "e011" ;
+  ex:symptomNameKR "성장의 정체, 성장이 지연, 발육이 멈춤" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e012>
+  a ex:Symptom ;
+  ex:symptomCode "e012" ;
+  ex:symptomNameKR "비만, 체중과다, 과체중" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e013>
+  a ex:Symptom ;
+  ex:symptomCode "e013" ;
+  ex:symptomNameKR "체중미달, 수척, 건강상태 불량, 증체율 불량" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e014>
+  a ex:Symptom ;
+  ex:symptomCode "e014" ;
+  ex:symptomNameKR "체중감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e015>
+  a ex:Symptom ;
+  ex:symptomCode "e015" ;
+  ex:symptomNameKR "음경, 음경꺼풀(포피), 고환, 음낭의 종대, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e016>
+  a ex:Symptom ;
+  ex:symptomCode "e016" ;
+  ex:symptomNameKR "칠면조에서 전두돌기의 종창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e017>
+  a ex:Symptom ;
+  ex:symptomCode "e017" ;
+  ex:symptomNameKR "머리, 얼굴, 귀, 턱, 코의 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e018>
+  a ex:Symptom ;
+  ex:symptomCode "e018" ;
+  ex:symptomNameKR "텅빈 복강 촉진" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e019>
+  a ex:Symptom ;
+  ex:symptomCode "e019" ;
+  ex:symptomNameKR "안와, 안와주위, 눈주위, 결막 부종, 안구 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e020>
+  a ex:Symptom ;
+  ex:symptomCode "e020" ;
+  ex:symptomNameKR "구강, 혀의 종창, 입안의 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e021>
+  a ex:Symptom ;
+  ex:symptomCode "e021" ;
+  ex:symptomNameKR "목이 부어오름, 경부의 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e022>
+  a ex:Symptom ;
+  ex:symptomCode "e022" ;
+  ex:symptomNameKR "인두, 기관, 후두의 종창, 인두, 후두, 기관의 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e023>
+  a ex:Symptom ;
+  ex:symptomCode "e023" ;
+  ex:symptomNameKR "흉부 종창, 종괴, 흉부, 가슴, 늑골, 흉골" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e024>
+  a ex:Symptom ;
+  ex:symptomCode "e024" ;
+  ex:symptomNameKR "등쪽이 부어오름, 등부위에 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e025>
+  a ex:Symptom ;
+  ex:symptomCode "e025" ;
+  ex:symptomNameKR "벼슬, 고기수염(육수) 퇴축, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e026>
+  a ex:Symptom ;
+  ex:symptomCode "e026" ;
+  ex:symptomNameKR "벼슬, 고기수염(육수)의 종창, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e027>
+  a ex:Symptom ;
+  ex:symptomCode "e027" ;
+  ex:symptomNameKR "복강 외부 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e028>
+  a ex:Symptom ;
+  ex:symptomCode "e028" ;
+  ex:symptomNameKR "복강내부 종괴, 종창. 복부의 유착" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e029>
+  a ex:Symptom ;
+  ex:symptomCode "e029" ;
+  ex:symptomNameKR "날개의 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e030>
+  a ex:Symptom ;
+  ex:symptomCode "e030" ;
+  ex:symptomNameKR "총배설강의 종창, 종괴, 탈출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e031>
+  a ex:Symptom ;
+  ex:symptomCode "e031" ;
+  ex:symptomNameKR "꼬리의 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e032>
+  a ex:Symptom ;
+  ex:symptomCode "e032" ;
+  ex:symptomNameKR "외음부, 음핵의 종대, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e033>
+  a ex:Symptom ;
+  ex:symptomCode "e033" ;
+  ex:symptomNameKR "질 종창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e034>
+  a ex:Symptom ;
+  ex:symptomCode "e034" ;
+  ex:symptomNameKR "자궁경부의 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e035>
+  a ex:Symptom ;
+  ex:symptomCode "e035" ;
+  ex:symptomNameKR "자궁종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e036>
+  a ex:Symptom ;
+  ex:symptomCode "e036" ;
+  ex:symptomNameKR "난소의 종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e037>
+  a ex:Symptom ;
+  ex:symptomCode "e037" ;
+  ex:symptomNameKR "난관의 종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e038>
+  a ex:Symptom ;
+  ex:symptomCode "e038" ;
+  ex:symptomNameKR "유선의 종대, 유방의 비대, 여성형 유방" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e039>
+  a ex:Symptom ;
+  ex:symptomCode "e039" ;
+  ex:symptomNameKR "항문직장부위 종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e040>
+  a ex:Symptom ;
+  ex:symptomCode "e040" ;
+  ex:symptomNameKR "골반 혹은 회음부의 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e041>
+  a ex:Symptom ;
+  ex:symptomCode "e041" ;
+  ex:symptomNameKR "림프절 종대, 림프절 병증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e042>
+  a ex:Symptom ;
+  ex:symptomCode "e042" ;
+  ex:symptomNameKR "피부 또는 피하의 종창, 종괴, 결절, 덩어리" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e043>
+  a ex:Symptom ;
+  ex:symptomCode "e043" ;
+  ex:symptomNameKR "다리, 발 종창, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e044>
+  a ex:Symptom ;
+  ex:symptomCode "e044" ;
+  ex:symptomNameKR "앞다리(전지) 종창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e045>
+  a ex:Symptom ;
+  ex:symptomCode "e045" ;
+  ex:symptomNameKR "앞발 종창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e046>
+  a ex:Symptom ;
+  ex:symptomCode "e046" ;
+  ex:symptomNameKR "뒷다리(후지) 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e047>
+  a ex:Symptom ;
+  ex:symptomCode "e047" ;
+  ex:symptomNameKR "뒷발 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e048>
+  a ex:Symptom ;
+  ex:symptomCode "e048" ;
+  ex:symptomNameKR "안구 종창, 눈 내부 종창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e049>
+  a ex:Symptom ;
+  ex:symptomCode "e049" ;
+  ex:symptomNameKR "전립선 비대, 종창, 종괴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e050>
+  a ex:Symptom ;
+  ex:symptomCode "e050" ;
+  ex:symptomNameKR "급사, 돌연사" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e051>
+  a ex:Symptom ;
+  ex:symptomCode "e051" ;
+  ex:symptomNameKR "계군에서 폐사율 증가" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e052>
+  a ex:Symptom ;
+  ex:symptomCode "e052" ;
+  ex:symptomNameKR "코눈물관(비루관)의 과잉 개방" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e053>
+  a ex:Symptom ;
+  ex:symptomCode "e053" ;
+  ex:symptomNameKR "과잉유두, 부유두" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e054>
+  a ex:Symptom ;
+  ex:symptomCode "e054" ;
+  ex:symptomNameKR "머리, 얼굴, 턱, 혀 위축, 수척, 야윔" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e055>
+  a ex:Symptom ;
+  ex:symptomCode "e055" ;
+  ex:symptomNameKR "목, 흉부 위축, 수척, 야윔" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e056>
+  a ex:Symptom ;
+  ex:symptomCode "e056" ;
+  ex:symptomNameKR "등부위 위축, 수척" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e057>
+  a ex:Symptom ;
+  ex:symptomCode "e057" ;
+  ex:symptomNameKR "골반위축, 둔부위축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e058>
+  a ex:Symptom ;
+  ex:symptomCode "e058" ;
+  ex:symptomNameKR "앞다리(전지) 위축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e059>
+  a ex:Symptom ;
+  ex:symptomCode "e059" ;
+  ex:symptomNameKR "뒷다리(후지) 위축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e060>
+  a ex:Symptom ;
+  ex:symptomCode "e060" ;
+  ex:symptomNameKR "목의 경직, 확장" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e061>
+  a ex:Symptom ;
+  ex:symptomCode "e061" ;
+  ex:symptomNameKR "앞다리 파행, 경직, 절름발이" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e062>
+  a ex:Symptom ;
+  ex:symptomCode "e062" ;
+  ex:symptomNameKR "뒷다리 파행, 경직, 절름발이" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e063>
+  a ex:Symptom ;
+  ex:symptomCode "e063" ;
+  ex:symptomNameKR "전신파행, 경직, 절름발이" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e064>
+  a ex:Symptom ;
+  ex:symptomCode "e064" ;
+  ex:symptomNameKR "파행, 경직, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e065>
+  a ex:Symptom ;
+  ex:symptomCode "e065" ;
+  ex:symptomNameKR "목 무력증, 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e066>
+  a ex:Symptom ;
+  ex:symptomCode "e066" ;
+  ex:symptomNameKR "앞다리(전지) 무력증, 전지 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e067>
+  a ex:Symptom ;
+  ex:symptomCode "e067" ;
+  ex:symptomNameKR "뒷다리(후지) 무력, 후지마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e068>
+  a ex:Symptom ;
+  ex:symptomCode "e068" ;
+  ex:symptomNameKR "꼬리 무력, 마비, 천골미골부위의 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e069>
+  a ex:Symptom ;
+  ex:symptomCode "e069" ;
+  ex:symptomNameKR "머리, 얼굴, 귀, 턱 무력, 처짐, 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e070>
+  a ex:Symptom ;
+  ex:symptomCode "e070" ;
+  ex:symptomNameKR "전신무력, 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e071>
+  a ex:Symptom ;
+  ex:symptomCode "e071" ;
+  ex:symptomNameKR "사지마비, 무력" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e072>
+  a ex:Symptom ;
+  ex:symptomCode "e072" ;
+  ex:symptomNameKR "부전마비, 무력, 양쪽 뒷다리(후지) 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e073>
+  a ex:Symptom ;
+  ex:symptomCode "e073" ;
+  ex:symptomNameKR "편측 부전마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e074>
+  a ex:Symptom ;
+  ex:symptomCode "e074" ;
+  ex:symptomNameKR "다리무력, 마비" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e075>
+  a ex:Symptom ;
+  ex:symptomCode "e075" ;
+  ex:symptomNameKR "날개무력, 마비, 처짐" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e076>
+  a ex:Symptom ;
+  ex:symptomCode "e076" ;
+  ex:symptomNameKR "기립불능, 쇠약" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e077>
+  a ex:Symptom ;
+  ex:symptomCode "e077" ;
+  ex:symptomNameKR "토끼처럼 뜀" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e078>
+  a ex:Symptom ;
+  ex:symptomCode "e078" ;
+  ex:symptomNameKR "운동조정곤란(거리측정의 이상), 측정과대증(운동범위 과대증), 측정과소증(운동범위과소증)" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e079>
+  a ex:Symptom ;
+  ex:symptomCode "e079" ;
+  ex:symptomNameKR "운동실조, 협조불능, 절뚝거림, 전도" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e080>
+  a ex:Symptom ;
+  ex:symptomCode "e080" ;
+  ex:symptomNameKR "이동거부" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e081>
+  a ex:Symptom ;
+  ex:symptomCode "e081" ;
+  ex:symptomNameKR "횃대에서 움직이려하지 않음, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e082>
+  a ex:Symptom ;
+  ex:symptomCode "e082" ;
+  ex:symptomNameKR "비정상적 위치선정, 지관절후방결절형성" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e083>
+  a ex:Symptom ;
+  ex:symptomCode "e083" ;
+  ex:symptomNameKR "사경, 목이 비틀어짐" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e084>
+  a ex:Symptom ;
+  ex:symptomCode "e084" ;
+  ex:symptomNameKR "후궁반장" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e085>
+  a ex:Symptom ;
+  ex:symptomCode "e085" ;
+  ex:symptomNameKR "척추후만증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e086>
+  a ex:Symptom ;
+  ex:symptomCode "e086" ;
+  ex:symptomNameKR "척추전만증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e087>
+  a ex:Symptom ;
+  ex:symptomCode "e087" ;
+  ex:symptomNameKR "척추측만증, 척주옆굽이증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e088>
+  a ex:Symptom ;
+  ex:symptomCode "e088" ;
+  ex:symptomNameKR "머리, 얼굴, 목의 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e089>
+  a ex:Symptom ;
+  ex:symptomCode "e089" ;
+  ex:symptomNameKR "눈꺼풀 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e090>
+  a ex:Symptom ;
+  ex:symptomCode "e090" ;
+  ex:symptomNameKR "각막 또는 안구 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e091>
+  a ex:Symptom ;
+  ex:symptomCode "e091" ;
+  ex:symptomNameKR "흉부 또는 복부 이물, 흉강, 늑골, 복강" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e092>
+  a ex:Symptom ;
+  ex:symptomCode "e092" ;
+  ex:symptomNameKR "골반 또는 회음부 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e093>
+  a ex:Symptom ;
+  ex:symptomCode "e093" ;
+  ex:symptomNameKR "앞다리(전지) 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e094>
+  a ex:Symptom ;
+  ex:symptomCode "e094" ;
+  ex:symptomNameKR "뒷다리(후지) 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e095>
+  a ex:Symptom ;
+  ex:symptomCode "e095" ;
+  ex:symptomNameKR "다리, 발의 이물, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e096>
+  a ex:Symptom ;
+  ex:symptomCode "e096" ;
+  ex:symptomNameKR "귀의 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e097>
+  a ex:Symptom ;
+  ex:symptomCode "e097" ;
+  ex:symptomNameKR "손톱, 발톱, 발굽, 갈퀴의 이물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e098>
+  a ex:Symptom ;
+  ex:symptomCode "e098" ;
+  ex:symptomNameKR "출혈, 응고부전" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e099>
+  a ex:Symptom ;
+  ex:symptomCode "e099" ;
+  ex:symptomNameKR "이급후증, 배변곤란" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e100>
+  a ex:Symptom ;
+  ex:symptomCode "e100" ;
+  ex:symptomNameKR "황달" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e101>
+  a ex:Symptom ;
+  ex:symptomCode "e101" ;
+  ex:symptomNameKR "청색증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e102>
+  a ex:Symptom ;
+  ex:symptomCode "e102" ;
+  ex:symptomNameKR "피부, 점막의 창백, 빈혈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e103>
+  a ex:Symptom ;
+  ex:symptomCode "e103" ;
+  ex:symptomNameKR "점상 또는 반상출혈, 타박상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e104>
+  a ex:Symptom ;
+  ex:symptomCode "e104" ;
+  ex:symptomNameKR "벼슬, 고기수염(육수) 창백, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/e105>
+  a ex:Symptom ;
+  ex:symptomCode "e105" ;
+  ex:symptomNameKR "점막의 갈색조" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/symptom/f001>
+  a ex:Symptom ;
+  ex:symptomCode "f001" ;
+  ex:symptomNameKR "날개 구축(拘縮), 만곡" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f002>
+  a ex:Symptom ;
+  ex:symptomCode "f002" ;
+  ex:symptomNameKR "뒷다리(후지) 구축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f003>
+  a ex:Symptom ;
+  ex:symptomCode "f003" ;
+  ex:symptomNameKR "뒷다리(후지) 경련" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f004>
+  a ex:Symptom ;
+  ex:symptomCode "f004" ;
+  ex:symptomNameKR "사지, 다리, 발 구축, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f005>
+  a ex:Symptom ;
+  ex:symptomCode "f005" ;
+  ex:symptomNameKR "사지, 다리, 발 경련, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f006>
+  a ex:Symptom ;
+  ex:symptomCode "f006" ;
+  ex:symptomNameKR "뒷다리(후지)관절 이완, 탈구" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f007>
+  a ex:Symptom ;
+  ex:symptomCode "f007" ;
+  ex:symptomNameKR "뒷다리 및 골반부, 염발음. 후지마찰음, 골반" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f008>
+  a ex:Symptom ;
+  ex:symptomCode "f008" ;
+  ex:symptomNameKR "사지, 다리, 발 이완 또는 탈구, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f009>
+  a ex:Symptom ;
+  ex:symptomCode "f009" ;
+  ex:symptomNameKR "뒷다리뼈 노출, 후지골 노출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f010>
+  a ex:Symptom ;
+  ex:symptomCode "f010" ;
+  ex:symptomNameKR "탈구, 뒷다리 비관절부의 비정상적 운동성" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f011>
+  a ex:Symptom ;
+  ex:symptomCode "f011" ;
+  ex:symptomNameKR "발가락 구축, 굽은 발가락, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f012>
+  a ex:Symptom ;
+  ex:symptomCode "f012" ;
+  ex:symptomNameKR "뒷다리관절 운동성 감소, 뒷다리관절 만곡" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f013>
+  a ex:Symptom ;
+  ex:symptomCode "f013" ;
+  ex:symptomNameKR "앞다리 구축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f014>
+  a ex:Symptom ;
+  ex:symptomCode "f014" ;
+  ex:symptomNameKR "앞다리 경련, 근경련" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f015>
+  a ex:Symptom ;
+  ex:symptomCode "f015" ;
+  ex:symptomNameKR "조류에서 사지, 다리, 발 뼈노출, 골노출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f016>
+  a ex:Symptom ;
+  ex:symptomCode "f016" ;
+  ex:symptomNameKR "날개뼈 노출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f017>
+  a ex:Symptom ;
+  ex:symptomCode "f017" ;
+  ex:symptomNameKR "앞다리 관절 이완, 탈구" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f018>
+  a ex:Symptom ;
+  ex:symptomCode "f018" ;
+  ex:symptomNameKR "앞다리 염발음, 앞다리 마찰음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f019>
+  a ex:Symptom ;
+  ex:symptomCode "f019" ;
+  ex:symptomNameKR "앞다리뼈 노출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f020>
+  a ex:Symptom ;
+  ex:symptomCode "f020" ;
+  ex:symptomNameKR "탈구, 앞다리 비관절부의 비정상적 운동성" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f021>
+  a ex:Symptom ;
+  ex:symptomCode "f021" ;
+  ex:symptomNameKR "관절강직증, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f022>
+  a ex:Symptom ;
+  ex:symptomCode "f022" ;
+  ex:symptomNameKR "앞다리 관절의 운동성 감소, 앞다리관절만곡증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f023>
+  a ex:Symptom ;
+  ex:symptomCode "f023" ;
+  ex:symptomNameKR "머리, 얼굴의 편위, 만곡" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f024>
+  a ex:Symptom ;
+  ex:symptomCode "f024" ;
+  ex:symptomNameKR "머리, 얼굴, 목의 경련, 근경련" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f025>
+  a ex:Symptom ;
+  ex:symptomCode "f025" ;
+  ex:symptomNameKR "머리 또는 목관절의 이완, 탈구" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f026>
+  a ex:Symptom ;
+  ex:symptomCode "f026" ;
+  ex:symptomNameKR "머리, 목의 염발음, 마찰음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f027>
+  a ex:Symptom ;
+  ex:symptomCode "f027" ;
+  ex:symptomNameKR "머리, 목관절의 운동성 감소, 결여" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f028>
+  a ex:Symptom ;
+  ex:symptomCode "f028" ;
+  ex:symptomNameKR "머리, 얼굴 뼈노출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f029>
+  a ex:Symptom ;
+  ex:symptomCode "f029" ;
+  ex:symptomNameKR "등쪽 경련, 근경련" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f030>
+  a ex:Symptom ;
+  ex:symptomCode "f030" ;
+  ex:symptomNameKR "등, 흉부 염발음, 가슴 늑골부 마찰음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f031>
+  a ex:Symptom ;
+  ex:symptomCode "f031" ;
+  ex:symptomNameKR "흉골, 가슴, 흉부의 기형" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f032>
+  a ex:Symptom ;
+  ex:symptomCode "f032" ;
+  ex:symptomNameKR "등, 흉부, 가슴, 늑골의 뼈 노출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f033>
+  a ex:Symptom ;
+  ex:symptomCode "f033" ;
+  ex:symptomNameKR "등부위 관절부 운동성 감소, 결여" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f034>
+  a ex:Symptom ;
+  ex:symptomCode "f034" ;
+  ex:symptomNameKR "비정상적 뒷다리 만곡, 경사, 편위" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f035>
+  a ex:Symptom ;
+  ex:symptomCode "f035" ;
+  ex:symptomNameKR "뒷다리(후지) 상대적 단축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f036>
+  a ex:Symptom ;
+  ex:symptomCode "f036" ;
+  ex:symptomNameKR "다리 단축, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f037>
+  a ex:Symptom ;
+  ex:symptomCode "f037" ;
+  ex:symptomNameKR "비정상적 다리 만곡, 경사, 편위, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f038>
+  a ex:Symptom ;
+  ex:symptomCode "f038" ;
+  ex:symptomNameKR "비정상적 앞다리 만곡, 경사, 편위" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/f039>
+  a ex:Symptom ;
+  ex:symptomCode "f039" ;
+  ex:symptomNameKR "앞다리(전지) 상대적 단축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/symptom/g001>
+  a ex:Symptom ;
+  ex:symptomCode "g001" ;
+  ex:symptomNameKR "진전" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g002>
+  a ex:Symptom ;
+  ex:symptomCode "g002" ;
+  ex:symptomNameKR "혼수, 혼미" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g003>
+  a ex:Symptom ;
+  ex:symptomCode "g003" ;
+  ex:symptomNameKR "방향 감각 상실, 기억력 소실" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g004>
+  a ex:Symptom ;
+  ex:symptomCode "g004" ;
+  ex:symptomNameKR "머리를 기울임, 두부경사" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g005>
+  a ex:Symptom ;
+  ex:symptomCode "g005" ;
+  ex:symptomNameKR "선회운동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g006>
+  a ex:Symptom ;
+  ex:symptomCode "g006" ;
+  ex:symptomNameKR "머리 박치기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g007>
+  a ex:Symptom ;
+  ex:symptomCode "g007" ;
+  ex:symptomNameKR "보행중 앞으로 넘어지기, 목적없이 배회" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g008>
+  a ex:Symptom ;
+  ex:symptomCode "g008" ;
+  ex:symptomNameKR "계속 소리 지르기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g009>
+  a ex:Symptom ;
+  ex:symptomCode "g009" ;
+  ex:symptomNameKR "지각과민, 예민함, 과다운동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g010>
+  a ex:Symptom ;
+  ex:symptomCode "g010" ;
+  ex:symptomNameKR "비정상적, 공격적 행동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g011>
+  a ex:Symptom ;
+  ex:symptomCode "g011" ;
+  ex:symptomNameKR "무기력, 침울, 졸림, 생기없는, 불안" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g012>
+  a ex:Symptom ;
+  ex:symptomCode "g012" ;
+  ex:symptomNameKR "흥분, 헛소리, 광분" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g013>
+  a ex:Symptom ;
+  ex:symptomCode "g013" ;
+  ex:symptomNameKR "발작, 실신, 경련, 간질발작, 허탈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g014>
+  a ex:Symptom ;
+  ex:symptomCode "g014" ;
+  ex:symptomNameKR "강직성 경련, 테타니" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g015>
+  a ex:Symptom ;
+  ex:symptomCode "g015" ;
+  ex:symptomNameKR "머리 흔들기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g016>
+  a ex:Symptom ;
+  ex:symptomCode "g016" ;
+  ex:symptomNameKR "수면과다 또는 수면감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g017>
+  a ex:Symptom ;
+  ex:symptomCode "g017" ;
+  ex:symptomNameKR "머리, 얼굴, 목, 혀 지각감퇴, 무감각증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g018>
+  a ex:Symptom ;
+  ex:symptomCode "g018" ;
+  ex:symptomNameKR "흉부 또는 복부 지각감퇴" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g019>
+  a ex:Symptom ;
+  ex:symptomCode "g019" ;
+  ex:symptomNameKR "등쪽 지각감퇴, 무감각증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g020>
+  a ex:Symptom ;
+  ex:symptomCode "g020" ;
+  ex:symptomNameKR "꼬리, 항문 지각감퇴, 회음부, 항문 무감각증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g021>
+  a ex:Symptom ;
+  ex:symptomCode "g021" ;
+  ex:symptomNameKR "앞다리(전지) 지각감퇴, 앞다리(전지) 무감각증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g022>
+  a ex:Symptom ;
+  ex:symptomCode "g022" ;
+  ex:symptomNameKR "뒷다리(후지) 지각감퇴, 뒷다리(후지) 무감각증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g023>
+  a ex:Symptom ;
+  ex:symptomCode "g023" ;
+  ex:symptomNameKR "근육긴장저하" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g024>
+  a ex:Symptom ;
+  ex:symptomCode "g024" ;
+  ex:symptomNameKR "근육 과잉 긴장, 근긴장증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g025>
+  a ex:Symptom ;
+  ex:symptomCode "g025" ;
+  ex:symptomNameKR "뒷다리(후지) 비정상 반사 증가나 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g026>
+  a ex:Symptom ;
+  ex:symptomCode "g026" ;
+  ex:symptomNameKR "앞다리(전지) 비정상 반사 증가나 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g027>
+  a ex:Symptom ;
+  ex:symptomCode "g027" ;
+  ex:symptomNameKR "항문, 회음부, 꼬리 비정상 반사 증가나 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/g028>
+  a ex:Symptom ;
+  ex:symptomCode "g028" ;
+  ex:symptomNameKR "근육 조직층 비정상 반사 증가나 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/symptom/h001>
+  a ex:Symptom ;
+  ex:symptomCode "h001" ;
+  ex:symptomNameKR "통증, 동통 머리, 얼굴, 턱, 귀" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h002>
+  a ex:Symptom ;
+  ex:symptomCode "h002" ;
+  ex:symptomNameKR "눈의 통증, 안통" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h003>
+  a ex:Symptom ;
+  ex:symptomCode "h003" ;
+  ex:symptomNameKR "구강 통증, 구강점막 및 혀의 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h004>
+  a ex:Symptom ;
+  ex:symptomCode "h004" ;
+  ex:symptomNameKR "목, 경부, 목구멍 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h005>
+  a ex:Symptom ;
+  ex:symptomCode "h005" ;
+  ex:symptomNameKR "인두, 후두, 기관의 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h006>
+  a ex:Symptom ;
+  ex:symptomCode "h006" ;
+  ex:symptomNameKR "요통, 허리 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h007>
+  a ex:Symptom ;
+  ex:symptomCode "h007" ;
+  ex:symptomNameKR "꼬리, 항문, 회음부 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h008>
+  a ex:Symptom ;
+  ex:symptomCode "h008" ;
+  ex:symptomNameKR "외측의 복압증가에 따른 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h009>
+  a ex:Symptom ;
+  ex:symptomCode "h009" ;
+  ex:symptomNameKR "산통, 복통" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h010>
+  a ex:Symptom ;
+  ex:symptomCode "h010" ;
+  ex:symptomNameKR "배꼽 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h011>
+  a ex:Symptom ;
+  ex:symptomCode "h011" ;
+  ex:symptomNameKR "유방, 흉부, 늑골, 흉골의 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h012>
+  a ex:Symptom ;
+  ex:symptomCode "h012" ;
+  ex:symptomNameKR "촉진시 신장, 요관의 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h013>
+  a ex:Symptom ;
+  ex:symptomCode "h013" ;
+  ex:symptomNameKR "외음부, 질의 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h014>
+  a ex:Symptom ;
+  ex:symptomCode "h014" ;
+  ex:symptomNameKR "배설강 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h015>
+  a ex:Symptom ;
+  ex:symptomCode "h015" ;
+  ex:symptomNameKR "유선, 유방 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h016>
+  a ex:Symptom ;
+  ex:symptomCode "h016" ;
+  ex:symptomNameKR "음경 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h017>
+  a ex:Symptom ;
+  ex:symptomCode "h017" ;
+  ex:symptomNameKR "음낭 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h018>
+  a ex:Symptom ;
+  ex:symptomCode "h018" ;
+  ex:symptomNameKR "고환 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h019>
+  a ex:Symptom ;
+  ex:symptomCode "h019" ;
+  ex:symptomNameKR "포피 통증, 음경꺼풀 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h020>
+  a ex:Symptom ;
+  ex:symptomCode "h020" ;
+  ex:symptomNameKR "정낭 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h021>
+  a ex:Symptom ;
+  ex:symptomCode "h021" ;
+  ex:symptomNameKR "전립선 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h022>
+  a ex:Symptom ;
+  ex:symptomCode "h022" ;
+  ex:symptomNameKR "피부 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h023>
+  a ex:Symptom ;
+  ex:symptomCode "h023" ;
+  ex:symptomNameKR "골반, 둔부 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h024>
+  a ex:Symptom ;
+  ex:symptomCode "h024" ;
+  ex:symptomNameKR "앞다리(전지) 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h025>
+  a ex:Symptom ;
+  ex:symptomCode "h025" ;
+  ex:symptomNameKR "앞발 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h026>
+  a ex:Symptom ;
+  ex:symptomCode "h026" ;
+  ex:symptomNameKR "뒷다리(후지) 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h027>
+  a ex:Symptom ;
+  ex:symptomCode "h027" ;
+  ex:symptomNameKR "뒷발 통증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/h028>
+  a ex:Symptom ;
+  ex:symptomCode "h028" ;
+  ex:symptomNameKR "사지, 다리, 발 통증, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/symptom/i001>
+  a ex:Symptom ;
+  ex:symptomCode "i001" ;
+  ex:symptomNameKR "비강점막의 궤양, 수포, 미란, 열상, 열창, 구진, 농포" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i002>
+  a ex:Symptom ;
+  ex:symptomCode "i002" ;
+  ex:symptomNameKR "비출혈, 코피" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i003>
+  a ex:Symptom ;
+  ex:symptomCode "i003" ;
+  ex:symptomNameKR "화농성 비강 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i004>
+  a ex:Symptom ;
+  ex:symptomCode "i004" ;
+  ex:symptomNameKR "점액성, 장액성, 수양성 비강 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i005>
+  a ex:Symptom ;
+  ex:symptomCode "i005" ;
+  ex:symptomNameKR "비도내 섭취물(음식물)" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i006>
+  a ex:Symptom ;
+  ex:symptomCode "i006" ;
+  ex:symptomNameKR "호흡시 비정상적인 냄새, 구강의 악취" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i007>
+  a ex:Symptom ;
+  ex:symptomCode "i007" ;
+  ex:symptomNameKR "부비동 타진시 둔탁함" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i008>
+  a ex:Symptom ;
+  ex:symptomCode "i008" ;
+  ex:symptomNameKR "호흡곤란, 개구호흡, 그르렁거림, 가쁜호흡" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i009>
+  a ex:Symptom ;
+  ex:symptomCode "i009" ;
+  ex:symptomNameKR "호흡수 증가, 다호흡, 빠른호흡(빈호흡), 과호흡" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i010>
+  a ex:Symptom ;
+  ex:symptomCode "i010" ;
+  ex:symptomNameKR "호흡수 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i011>
+  a ex:Symptom ;
+  ex:symptomCode "i011" ;
+  ex:symptomNameKR "재채기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i012>
+  a ex:Symptom ;
+  ex:symptomCode "i012" ;
+  ex:symptomNameKR "기침" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i013>
+  a ex:Symptom ;
+  ex:symptomCode "i013" ;
+  ex:symptomNameKR "기침시 객혈" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i014>
+  a ex:Symptom ;
+  ex:symptomCode "i014" ;
+  ex:symptomNameKR "상부기도에서의 비정상 호흡음, 공기흐름폐쇄, 코고는 소리" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i015>
+  a ex:Symptom ;
+  ex:symptomCode "i015" ;
+  ex:symptomNameKR "비정상적인 폐, 흉강의 소리, 수포음, 약설음, 씨근거리는 소리, 마찰음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i016>
+  a ex:Symptom ;
+  ex:symptomCode "i016" ;
+  ex:symptomNameKR "감소된, 약한 폐음, 호흡음 결여" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i017>
+  a ex:Symptom ;
+  ex:symptomCode "i017" ;
+  ex:symptomNameKR "목소리 변성" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i018>
+  a ex:Symptom ;
+  ex:symptomCode "i018" ;
+  ex:symptomNameKR "허스키한 지저귐, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i019>
+  a ex:Symptom ;
+  ex:symptomCode "i019" ;
+  ex:symptomNameKR "흉부, 흉강 타진시 확장된 폐" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i020>
+  a ex:Symptom ;
+  ex:symptomCode "i020" ;
+  ex:symptomNameKR "흉부,흉강 타진시 둔탁한 부위" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/i021>
+  a ex:Symptom ;
+  ex:symptomCode "i021" ;
+  ex:symptomNameKR "흉부,흉강 타진시 핑사운드" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/symptom/j001>
+  a ex:Symptom ;
+  ex:symptomCode "j001" ;
+  ex:symptomNameKR "피부결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j002>
+  a ex:Symptom ;
+  ex:symptomCode "j002" ;
+  ex:symptomNameKR "피부 색소 침착 과잉" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j003>
+  a ex:Symptom ;
+  ex:symptomCode "j003" ;
+  ex:symptomNameKR "피부저색소침착, 백반증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j004>
+  a ex:Symptom ;
+  ex:symptomCode "j004" ;
+  ex:symptomNameKR "피부의 화농성 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j005>
+  a ex:Symptom ;
+  ex:symptomCode "j005" ;
+  ex:symptomNameKR "피부의 악취" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j006>
+  a ex:Symptom ;
+  ex:symptomCode "j006" ;
+  ex:symptomNameKR "피부홍반, 염증, 발적" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j007>
+  a ex:Symptom ;
+  ex:symptomCode "j007" ;
+  ex:symptomNameKR "피부의 소양감, 가려움" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j008>
+  a ex:Symptom ;
+  ex:symptomCode "j008" ;
+  ex:symptomNameKR "모낭의 종대, 조류" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j009>
+  a ex:Symptom ;
+  ex:symptomCode "j009" ;
+  ex:symptomNameKR "피부 구진" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j010>
+  a ex:Symptom ;
+  ex:symptomCode "j010" ;
+  ex:symptomNameKR "피부 농포" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j011>
+  a ex:Symptom ;
+  ex:symptomCode "j011" ;
+  ex:symptomNameKR "피부 수포, 소수포, 물집" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j012>
+  a ex:Symptom ;
+  ex:symptomCode "j012" ;
+  ex:symptomNameKR "피부 플라크(반)" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j013>
+  a ex:Symptom ;
+  ex:symptomCode "j013" ;
+  ex:symptomNameKR "피부 팽진, 두드러기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j014>
+  a ex:Symptom ;
+  ex:symptomCode "j014" ;
+  ex:symptomNameKR "피부 부종" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j015>
+  a ex:Symptom ;
+  ex:symptomCode "j015" ;
+  ex:symptomNameKR "피하 염발음, 피하기종" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j016>
+  a ex:Symptom ;
+  ex:symptomCode "j016" ;
+  ex:symptomNameKR "피부 누관, 동" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j017>
+  a ex:Symptom ;
+  ex:symptomCode "j017" ;
+  ex:symptomNameKR "피부의 열상, 열창, 교상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j018>
+  a ex:Symptom ;
+  ex:symptomCode "j018" ;
+  ex:symptomNameKR "피부의 궤양, 미란, 찰과상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j019>
+  a ex:Symptom ;
+  ex:symptomCode "j019" ;
+  ex:symptomNameKR "피부, 근육의 압흔, 눌림, 함요" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j020>
+  a ex:Symptom ;
+  ex:symptomCode "j020" ;
+  ex:symptomNameKR "피부, 털의 건조" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j021>
+  a ex:Symptom ;
+  ex:symptomCode "j021" ;
+  ex:symptomNameKR "지루성 피부, 털, 깃털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j022>
+  a ex:Symptom ;
+  ex:symptomCode "j022" ;
+  ex:symptomNameKR "피부 인설, 비듬" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j023>
+  a ex:Symptom ;
+  ex:symptomCode "j023" ;
+  ex:symptomNameKR "피부의 가피, 딱지" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j024>
+  a ex:Symptom ;
+  ex:symptomCode "j024" ;
+  ex:symptomNameKR "피부 괴사, 딱지, 괴저" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j025>
+  a ex:Symptom ;
+  ex:symptomCode "j025" ;
+  ex:symptomNameKR "피부 반흔" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j026>
+  a ex:Symptom ;
+  ex:symptomCode "j026" ;
+  ex:symptomNameKR "피부의 열감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j027>
+  a ex:Symptom ;
+  ex:symptomCode "j027" ;
+  ex:symptomNameKR "피부의 냉감, 차가운 귀, 사지의 냉감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j028>
+  a ex:Symptom ;
+  ex:symptomCode "j028" ;
+  ex:symptomNameKR "과각화증, 두꺼운 피부" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j029>
+  a ex:Symptom ;
+  ex:symptomCode "j029" ;
+  ex:symptomNameKR "얇은 피부, 위축" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j030>
+  a ex:Symptom ;
+  ex:symptomCode "j030" ;
+  ex:symptomNameKR "주름진 피부" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j031>
+  a ex:Symptom ;
+  ex:symptomCode "j031" ;
+  ex:symptomNameKR "과신전, 과탄력성 피부" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j032>
+  a ex:Symptom ;
+  ex:symptomCode "j032" ;
+  ex:symptomNameKR "축축한 피부, 털, 깃털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j033>
+  a ex:Symptom ;
+  ex:symptomCode "j033" ;
+  ex:symptomNameKR "피부 균열, 열구" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j034>
+  a ex:Symptom ;
+  ex:symptomCode "j034" ;
+  ex:symptomNameKR "갈라진 발톱, 갈퀴, 발굽, 깨지기 쉬운 발톱" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j035>
+  a ex:Symptom ;
+  ex:symptomCode "j035" ;
+  ex:symptomNameKR "발톱, 갈퀴, 발굽의 과도한 성장" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j036>
+  a ex:Symptom ;
+  ex:symptomCode "j036" ;
+  ex:symptomNameKR "발톱, 갈퀴, 발굽의 농양, 궤양" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j037>
+  a ex:Symptom ;
+  ex:symptomCode "j037" ;
+  ex:symptomNameKR "발톱, 갈퀴, 발굽의 짓무름, 박리" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j038>
+  a ex:Symptom ;
+  ex:symptomCode "j038" ;
+  ex:symptomNameKR "갈퀴, 발굽의 박리" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j039>
+  a ex:Symptom ;
+  ex:symptomCode "j039" ;
+  ex:symptomNameKR "합지증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j040>
+  a ex:Symptom ;
+  ex:symptomCode "j040" ;
+  ex:symptomNameKR "다지증, 발가락결손증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j041>
+  a ex:Symptom ;
+  ex:symptomCode "j041" ;
+  ex:symptomNameKR "발톱, 갈퀴, 발굽의 성장 장애" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j042>
+  a ex:Symptom ;
+  ex:symptomCode "j042" ;
+  ex:symptomNameKR "발톱, 갈퀴, 발굽의 열감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j043>
+  a ex:Symptom ;
+  ex:symptomCode "j043" ;
+  ex:symptomNameKR "발톱, 갈퀴, 발굽의 냉감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j044>
+  a ex:Symptom ;
+  ex:symptomCode "j044" ;
+  ex:symptomNameKR "탈모, 쉽게 빠지는 털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j045>
+  a ex:Symptom ;
+  ex:symptomCode "j045" ;
+  ex:symptomNameKR "깃털이 빠짐, 성긴 깃털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j046>
+  a ex:Symptom ;
+  ex:symptomCode "j046" ;
+  ex:symptomNameKR "깃털의 오물, 항문의 깃털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j047>
+  a ex:Symptom ;
+  ex:symptomCode "j047" ;
+  ex:symptomNameKR "깃털을 세움" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j048>
+  a ex:Symptom ;
+  ex:symptomCode "j048" ;
+  ex:symptomNameKR "조류에서 항문의 오물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j049>
+  a ex:Symptom ;
+  ex:symptomCode "j049" ;
+  ex:symptomNameKR "꺽이거나 손상된 깃털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j050>
+  a ex:Symptom ;
+  ex:symptomCode "j050" ;
+  ex:symptomNameKR "광택이 없고 더러운 털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j051>
+  a ex:Symptom ;
+  ex:symptomCode "j051" ;
+  ex:symptomNameKR "과도한 털의 색소침착, 전신성 혹은 국소성" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j052>
+  a ex:Symptom ;
+  ex:symptomCode "j052" ;
+  ex:symptomNameKR "털의 색소침착 감소, 전신성 혹은 국소성, 백모증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j053>
+  a ex:Symptom ;
+  ex:symptomCode "j053" ;
+  ex:symptomNameKR "다모증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j054>
+  a ex:Symptom ;
+  ex:symptomCode "j054" ;
+  ex:symptomNameKR "거친 피모, 곤두선 털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j055>
+  a ex:Symptom ;
+  ex:symptomCode "j055" ;
+  ex:symptomNameKR "지나치게 곧은 털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j056>
+  a ex:Symptom ;
+  ex:symptomCode "j056" ;
+  ex:symptomNameKR "지나치게 곱슬거리는 털" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/j057>
+  a ex:Symptom ;
+  ex:symptomCode "j057" ;
+  ex:symptomNameKR "피부, 털, 깃털에 기생충" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/symptom/k001>
+  a ex:Symptom ;
+  ex:symptomCode "k001" ;
+  ex:symptomNameKR "발정휴지기, 발정주기 결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k002>
+  a ex:Symptom ;
+  ex:symptomCode "k002" ;
+  ex:symptomNameKR "길거나 짧은 비정상적인 발정주기, 불규칙적인 발정사이기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k003>
+  a ex:Symptom ;
+  ex:symptomCode "k003" ;
+  ex:symptomNameKR "비정상적인 발정기간" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k004>
+  a ex:Symptom ;
+  ex:symptomCode "k004" ;
+  ex:symptomNameKR "외음부 궤양, 수포, 미란, 열창, 열상, 구진, 농포" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k005>
+  a ex:Symptom ;
+  ex:symptomCode "k005" ;
+  ex:symptomNameKR "외음부, 질의 점액성 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k006>
+  a ex:Symptom ;
+  ex:symptomCode "k006" ;
+  ex:symptomNameKR "외음부, 질의 화농성 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k007>
+  a ex:Symptom ;
+  ex:symptomCode "k007" ;
+  ex:symptomNameKR "외음부, 질의 악취나는 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k008>
+  a ex:Symptom ;
+  ex:symptomCode "k008" ;
+  ex:symptomNameKR "질, 자궁경부의 궤양, 수포, 열창, 구진, 농포" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k009>
+  a ex:Symptom ;
+  ex:symptomCode "k009" ;
+  ex:symptomNameKR "질, 외음부의 괴사" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k010>
+  a ex:Symptom ;
+  ex:symptomCode "k010" ;
+  ex:symptomNameKR "질탈, 질외번" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k011>
+  a ex:Symptom ;
+  ex:symptomCode "k011" ;
+  ex:symptomNameKR "자궁, 자궁경부의 화농성, 점액성 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k012>
+  a ex:Symptom ;
+  ex:symptomCode "k012" ;
+  ex:symptomNameKR "자궁, 난소의 결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k013>
+  a ex:Symptom ;
+  ex:symptomCode "k013" ;
+  ex:symptomNameKR "자궁 종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k014>
+  a ex:Symptom ;
+  ex:symptomCode "k014" ;
+  ex:symptomNameKR "자궁, 자궁경부의 크기 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k015>
+  a ex:Symptom ;
+  ex:symptomCode "k015" ;
+  ex:symptomNameKR "자궁내 액체" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k016>
+  a ex:Symptom ;
+  ex:symptomCode "k016" ;
+  ex:symptomNameKR "자궁, 난소, 자궁경부의 유착" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k017>
+  a ex:Symptom ;
+  ex:symptomCode "k017" ;
+  ex:symptomNameKR "미이라, 태자 미이라화" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k018>
+  a ex:Symptom ;
+  ex:symptomCode "k018" ;
+  ex:symptomNameKR "자궁탈, 자궁경부탈출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k019>
+  a ex:Symptom ;
+  ex:symptomCode "k019" ;
+  ex:symptomNameKR "자궁, 질, 자궁경부의 염발음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k020>
+  a ex:Symptom ;
+  ex:symptomCode "k020" ;
+  ex:symptomNameKR "종대된, 단단한 난소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k021>
+  a ex:Symptom ;
+  ex:symptomCode "k021" ;
+  ex:symptomNameKR "종대된, 말랑말랑한 난소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k022>
+  a ex:Symptom ;
+  ex:symptomCode "k022" ;
+  ex:symptomNameKR "작아진 난소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k023>
+  a ex:Symptom ;
+  ex:symptomCode "k023" ;
+  ex:symptomNameKR "암컷의 불임증, 리핏 브리더" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k024>
+  a ex:Symptom ;
+  ex:symptomCode "k024" ;
+  ex:symptomNameKR "한배 새끼 수가 적음, 산자수가 적음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k025>
+  a ex:Symptom ;
+  ex:symptomCode "k025" ;
+  ex:symptomNameKR "난산" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k026>
+  a ex:Symptom ;
+  ex:symptomCode "k026" ;
+  ex:symptomNameKR "유산, 사산, 허약한 새끼" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k027>
+  a ex:Symptom ;
+  ex:symptomCode "k027" ;
+  ex:symptomNameKR "태반, 태자막 잔존" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k028>
+  a ex:Symptom ;
+  ex:symptomCode "k028" ;
+  ex:symptomNameKR "임신기간 연장" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k029>
+  a ex:Symptom ;
+  ex:symptomCode "k029" ;
+  ex:symptomNameKR "유선, 유방의 부종" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k030>
+  a ex:Symptom ;
+  ex:symptomCode "k030" ;
+  ex:symptomNameKR "유두의 손상, 열상, 열창" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k031>
+  a ex:Symptom ;
+  ex:symptomCode "k031" ;
+  ex:symptomNameKR "유방염, 비정상유" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k032>
+  a ex:Symptom ;
+  ex:symptomCode "k032" ;
+  ex:symptomNameKR "혈액성 우유, 적색유, 갈색유" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k033>
+  a ex:Symptom ;
+  ex:symptomCode "k033" ;
+  ex:symptomNameKR "유즙분비과다" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k034>
+  a ex:Symptom ;
+  ex:symptomCode "k034" ;
+  ex:symptomNameKR "유선, 유방의 냉감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k035>
+  a ex:Symptom ;
+  ex:symptomCode "k035" ;
+  ex:symptomNameKR "유선, 유방의 열감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k036>
+  a ex:Symptom ;
+  ex:symptomCode "k036" ;
+  ex:symptomNameKR "유선, 유방의 종기(짓무름)" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k037>
+  a ex:Symptom ;
+  ex:symptomCode "k037" ;
+  ex:symptomNameKR "유즙분비 정지" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k038>
+  a ex:Symptom ;
+  ex:symptomCode "k038" ;
+  ex:symptomNameKR "딱딱한 유선, 유방" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k039>
+  a ex:Symptom ;
+  ex:symptomCode "k039" ;
+  ex:symptomNameKR "무유증, 유즙생산감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k040>
+  a ex:Symptom ;
+  ex:symptomCode "k040" ;
+  ex:symptomNameKR "산란율 저하" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k041>
+  a ex:Symptom ;
+  ex:symptomCode "k041" ;
+  ex:symptomNameKR "수컷 불임" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k042>
+  a ex:Symptom ;
+  ex:symptomCode "k042" ;
+  ex:symptomNameKR "성욕, 발기 부전" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k043>
+  a ex:Symptom ;
+  ex:symptomCode "k043" ;
+  ex:symptomNameKR "혈정액증, 적색정액" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k044>
+  a ex:Symptom ;
+  ex:symptomCode "k044" ;
+  ex:symptomNameKR "음경, 포피에 구진, 농포, 수포, 궤양" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k045>
+  a ex:Symptom ;
+  ex:symptomCode "k045" ;
+  ex:symptomNameKR "음경의 열상, 열창 손상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k046>
+  a ex:Symptom ;
+  ex:symptomCode "k046" ;
+  ex:symptomNameKR "음낭, 고환의 열창, 열상, 손상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k047>
+  a ex:Symptom ;
+  ex:symptomCode "k047" ;
+  ex:symptomNameKR "포피의 열상, 열창, 손상" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k048>
+  a ex:Symptom ;
+  ex:symptomCode "k048" ;
+  ex:symptomNameKR "음경, 포피의 화농성 분비물" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k049>
+  a ex:Symptom ;
+  ex:symptomCode "k049" ;
+  ex:symptomNameKR "포피탈출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k050>
+  a ex:Symptom ;
+  ex:symptomCode "k050" ;
+  ex:symptomNameKR "음경 편위" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k051>
+  a ex:Symptom ;
+  ex:symptomCode "k051" ;
+  ex:symptomNameKR "포경" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k052>
+  a ex:Symptom ;
+  ex:symptomCode "k052" ;
+  ex:symptomNameKR "음경강직, 감돈포경, 발기 지속" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k053>
+  a ex:Symptom ;
+  ex:symptomCode "k053" ;
+  ex:symptomNameKR "음낭, 고환의 비정상적인 크기" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k054>
+  a ex:Symptom ;
+  ex:symptomCode "k054" ;
+  ex:symptomNameKR "고환, 부고환의 결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k055>
+  a ex:Symptom ;
+  ex:symptomCode "k055" ;
+  ex:symptomNameKR "고화, 부고환의 촉진시 열감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k056>
+  a ex:Symptom ;
+  ex:symptomCode "k056" ;
+  ex:symptomNameKR "포피 촉진시 열감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k057>
+  a ex:Symptom ;
+  ex:symptomCode "k057" ;
+  ex:symptomNameKR "음경 촉진시 열감" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k058>
+  a ex:Symptom ;
+  ex:symptomCode "k058" ;
+  ex:symptomNameKR "연난각, 박난각, 계란 껍질이 얇음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k059>
+  a ex:Symptom ;
+  ex:symptomCode "k059" ;
+  ex:symptomNameKR "난각결손" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k060>
+  a ex:Symptom ;
+  ex:symptomCode "k060" ;
+  ex:symptomNameKR "흐물흐물한 난황, 얇은 난백" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/k061>
+  a ex:Symptom ;
+  ex:symptomCode "k061" ;
+  ex:symptomNameKR "부화율 감소" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/symptom/l001>
+  a ex:Symptom ;
+  ex:symptomCode "l001" ;
+  ex:symptomNameKR "혈뇨" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l002>
+  a ex:Symptom ;
+  ex:symptomCode "l002" ;
+  ex:symptomNameKR "적색뇨, 갈색뇨" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l003>
+  a ex:Symptom ;
+  ex:symptomCode "l003" ;
+  ex:symptomNameKR "단백뇨" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l004>
+  a ex:Symptom ;
+  ex:symptomCode "l004" ;
+  ex:symptomNameKR "혈색소뇨, 근색소뇨" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l005>
+  a ex:Symptom ;
+  ex:symptomCode "l005" ;
+  ex:symptomNameKR "빈뇨" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l006>
+  a ex:Symptom ;
+  ex:symptomCode "l006" ;
+  ex:symptomNameKR "거품섞인 오줌, 기뇨" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l007>
+  a ex:Symptom ;
+  ex:symptomCode "l007" ;
+  ex:symptomNameKR "당뇨" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l008>
+  a ex:Symptom ;
+  ex:symptomCode "l008" ;
+  ex:symptomNameKR "배뇨곤란" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l009>
+  a ex:Symptom ;
+  ex:symptomCode "l009" ;
+  ex:symptomNameKR "요실금" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l010>
+  a ex:Symptom ;
+  ex:symptomCode "l010" ;
+  ex:symptomNameKR "다뇨증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l011>
+  a ex:Symptom ;
+  ex:symptomCode "l011" ;
+  ex:symptomNameKR "핍뇨, 무뇨증" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l012>
+  a ex:Symptom ;
+  ex:symptomCode "l012" ;
+  ex:symptomNameKR "촉진가능한 결석, 종창, 종괴, 방광" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l013>
+  a ex:Symptom ;
+  ex:symptomCode "l013" ;
+  ex:symptomNameKR "방광 염발음" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l014>
+  a ex:Symptom ;
+  ex:symptomCode "l014" ;
+  ex:symptomNameKR "종대, 확장된 방광" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l015>
+  a ex:Symptom ;
+  ex:symptomCode "l015" ;
+  ex:symptomNameKR "방광탈출" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l016>
+  a ex:Symptom ;
+  ex:symptomCode "l016" ;
+  ex:symptomNameKR "신장 종대, 촉진시" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l017>
+  a ex:Symptom ;
+  ex:symptomCode "l017" ;
+  ex:symptomNameKR "작은 신장, 촉진시" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/symptom/l018>
+  a ex:Symptom ;
+  ex:symptomCode "l018" ;
+  ex:symptomNameKR "요관 종대" ;
+  ex:belongsTo <http://animalloo.kr/ontology/medical/symptomCategory/l> .

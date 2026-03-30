@@ -1,0 +1,344 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/medical/symptomCategory/a>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/ophthalmology> ;
+  ex:deptHint "청각기관 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/b>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/internal> ;
+  ex:deptHint "심혈관계 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/c>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/internal> ;
+  ex:deptHint "소화기계" .
+<http://animalloo.kr/ontology/medical/symptomCategory/d>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/ophthalmology> ;
+  ex:deptHint "안과 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/e>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/internal> ;
+  ex:deptHint "전신종합 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/f>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/surgery> ;
+  ex:deptHint "근골격계" .
+<http://animalloo.kr/ontology/medical/symptomCategory/g>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/internal> ;
+  ex:deptHint "신경계 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/h>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/surgery> ;
+  ex:deptHint "통증 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/i>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/internal> ;
+  ex:deptHint "호흡기계 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/j>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/dermatology> ;
+  ex:deptHint "피부/외피계 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/k>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/surgery> ;
+  ex:deptHint "생식기계 증상" .
+<http://animalloo.kr/ontology/medical/symptomCategory/l>
+  ex:mapsTo <http://animalloo.kr/ontology/medical/department/internal> ;
+  ex:deptHint "비뇨기계 증상" .
+<http://animalloo.kr/ontology/medical/symptom/g001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/42> .
+<http://animalloo.kr/ontology/medical/disease/42>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g001> .
+<http://animalloo.kr/ontology/medical/symptom/g002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/42> .
+<http://animalloo.kr/ontology/medical/disease/42>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g002> .
+<http://animalloo.kr/ontology/medical/symptom/e001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/42> .
+<http://animalloo.kr/ontology/medical/disease/42>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e001> .
+<http://animalloo.kr/ontology/medical/symptom/k001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/55> .
+<http://animalloo.kr/ontology/medical/disease/55>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/k001> .
+<http://animalloo.kr/ontology/medical/symptom/k002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/55> .
+<http://animalloo.kr/ontology/medical/disease/55>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/k002> .
+<http://animalloo.kr/ontology/medical/symptom/e001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/55> .
+<http://animalloo.kr/ontology/medical/disease/55>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e001> .
+<http://animalloo.kr/ontology/medical/symptom/e002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/55> .
+<http://animalloo.kr/ontology/medical/disease/55>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e002> .
+<http://animalloo.kr/ontology/medical/symptom/i012>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/61> .
+<http://animalloo.kr/ontology/medical/disease/61>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i012> .
+<http://animalloo.kr/ontology/medical/symptom/i008>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/61> .
+<http://animalloo.kr/ontology/medical/disease/61>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i008> .
+<http://animalloo.kr/ontology/medical/symptom/e001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/61> .
+<http://animalloo.kr/ontology/medical/disease/61>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e001> .
+<http://animalloo.kr/ontology/medical/symptom/e002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/61> .
+<http://animalloo.kr/ontology/medical/disease/61>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e002> .
+<http://animalloo.kr/ontology/medical/symptom/g001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/91> .
+<http://animalloo.kr/ontology/medical/disease/91>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g001> .
+<http://animalloo.kr/ontology/medical/symptom/g002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/91> .
+<http://animalloo.kr/ontology/medical/disease/91>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g002> .
+<http://animalloo.kr/ontology/medical/symptom/e001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/91> .
+<http://animalloo.kr/ontology/medical/disease/91>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e001> .
+<http://animalloo.kr/ontology/medical/symptom/e002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/91> .
+<http://animalloo.kr/ontology/medical/disease/91>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e002> .
+<http://animalloo.kr/ontology/medical/symptom/e001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/107> .
+<http://animalloo.kr/ontology/medical/disease/107>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e001> .
+<http://animalloo.kr/ontology/medical/symptom/e002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/107> .
+<http://animalloo.kr/ontology/medical/disease/107>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/e002> .
+<http://animalloo.kr/ontology/medical/symptom/i008>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/107> .
+<http://animalloo.kr/ontology/medical/disease/107>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i008> .
+<http://animalloo.kr/ontology/medical/symptom/i009>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/107> .
+<http://animalloo.kr/ontology/medical/disease/107>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i009> .
+<http://animalloo.kr/ontology/medical/symptom/c050>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/109> .
+<http://animalloo.kr/ontology/medical/disease/109>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c050> .
+<http://animalloo.kr/ontology/medical/symptom/c003>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/109> .
+<http://animalloo.kr/ontology/medical/disease/109>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c003> .
+<http://animalloo.kr/ontology/medical/symptom/c038>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/109> .
+<http://animalloo.kr/ontology/medical/disease/109>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c038> .
+<http://animalloo.kr/ontology/medical/symptom/c036>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/115> .
+<http://animalloo.kr/ontology/medical/disease/115>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c036> .
+<http://animalloo.kr/ontology/medical/symptom/c038>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/115> .
+<http://animalloo.kr/ontology/medical/disease/115>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c038> .
+<http://animalloo.kr/ontology/medical/symptom/c003>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/115> .
+<http://animalloo.kr/ontology/medical/disease/115>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c003> .
+<http://animalloo.kr/ontology/medical/symptom/c050>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/115> .
+<http://animalloo.kr/ontology/medical/disease/115>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c050> .
+<http://animalloo.kr/ontology/medical/symptom/i012>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/5> .
+<http://animalloo.kr/ontology/medical/disease/5>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i012> .
+<http://animalloo.kr/ontology/medical/symptom/i008>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/5> .
+<http://animalloo.kr/ontology/medical/disease/5>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i008> .
+<http://animalloo.kr/ontology/medical/symptom/i009>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/5> .
+<http://animalloo.kr/ontology/medical/disease/5>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i009> .
+<http://animalloo.kr/ontology/medical/symptom/g001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/5> .
+<http://animalloo.kr/ontology/medical/disease/5>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g001> .
+<http://animalloo.kr/ontology/medical/symptom/g002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/5> .
+<http://animalloo.kr/ontology/medical/disease/5>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g002> .
+<http://animalloo.kr/ontology/medical/symptom/c003>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/5> .
+<http://animalloo.kr/ontology/medical/disease/5>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c003> .
+<http://animalloo.kr/ontology/medical/symptom/i012>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/6> .
+<http://animalloo.kr/ontology/medical/disease/6>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i012> .
+<http://animalloo.kr/ontology/medical/symptom/i011>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/6> .
+<http://animalloo.kr/ontology/medical/disease/6>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i011> .
+<http://animalloo.kr/ontology/medical/symptom/i008>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/6> .
+<http://animalloo.kr/ontology/medical/disease/6>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i008> .
+<http://animalloo.kr/ontology/medical/symptom/i009>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/6> .
+<http://animalloo.kr/ontology/medical/disease/6>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i009> .
+<http://animalloo.kr/ontology/medical/symptom/i004>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/6> .
+<http://animalloo.kr/ontology/medical/disease/6>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i004> .
+<http://animalloo.kr/ontology/medical/symptom/c036>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/8> .
+<http://animalloo.kr/ontology/medical/disease/8>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c036> .
+<http://animalloo.kr/ontology/medical/symptom/c038>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/8> .
+<http://animalloo.kr/ontology/medical/disease/8>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c038> .
+<http://animalloo.kr/ontology/medical/symptom/c003>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/8> .
+<http://animalloo.kr/ontology/medical/disease/8>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c003> .
+<http://animalloo.kr/ontology/medical/symptom/c050>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/8> .
+<http://animalloo.kr/ontology/medical/disease/8>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c050> .
+<http://animalloo.kr/ontology/medical/symptom/c055>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/8> .
+<http://animalloo.kr/ontology/medical/disease/8>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c055> .
+<http://animalloo.kr/ontology/medical/symptom/c056>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/8> .
+<http://animalloo.kr/ontology/medical/disease/8>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/c056> .
+<http://animalloo.kr/ontology/medical/symptom/g001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/12> .
+<http://animalloo.kr/ontology/medical/disease/12>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g001> .
+<http://animalloo.kr/ontology/medical/symptom/g002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/12> .
+<http://animalloo.kr/ontology/medical/disease/12>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g002> .
+<http://animalloo.kr/ontology/medical/symptom/g003>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/12> .
+<http://animalloo.kr/ontology/medical/disease/12>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g003> .
+<http://animalloo.kr/ontology/medical/symptom/g023>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/12> .
+<http://animalloo.kr/ontology/medical/disease/12>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g023> .
+<http://animalloo.kr/ontology/medical/symptom/g024>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/12> .
+<http://animalloo.kr/ontology/medical/disease/12>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g024> .
+<http://animalloo.kr/ontology/medical/symptom/g001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/18> .
+<http://animalloo.kr/ontology/medical/disease/18>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g001> .
+<http://animalloo.kr/ontology/medical/symptom/g002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/18> .
+<http://animalloo.kr/ontology/medical/disease/18>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g002> .
+<http://animalloo.kr/ontology/medical/symptom/g023>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/18> .
+<http://animalloo.kr/ontology/medical/disease/18>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g023> .
+<http://animalloo.kr/ontology/medical/symptom/g024>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/18> .
+<http://animalloo.kr/ontology/medical/disease/18>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g024> .
+<http://animalloo.kr/ontology/medical/symptom/f003>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/18> .
+<http://animalloo.kr/ontology/medical/disease/18>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/f003> .
+<http://animalloo.kr/ontology/medical/symptom/f004>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/18> .
+<http://animalloo.kr/ontology/medical/disease/18>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/f004> .
+<http://animalloo.kr/ontology/medical/symptom/g001>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/22> .
+<http://animalloo.kr/ontology/medical/disease/22>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g001> .
+<http://animalloo.kr/ontology/medical/symptom/g002>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/22> .
+<http://animalloo.kr/ontology/medical/disease/22>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/g002> .
+<http://animalloo.kr/ontology/medical/symptom/i008>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/22> .
+<http://animalloo.kr/ontology/medical/disease/22>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i008> .
+<http://animalloo.kr/ontology/medical/symptom/i012>
+  ex:indicatesDisease <http://animalloo.kr/ontology/medical/disease/22> .
+<http://animalloo.kr/ontology/medical/disease/22>
+  ex:hasSymptom <http://animalloo.kr/ontology/medical/symptom/i012> .
+<http://animalloo.kr/ontology/medical/disease/42>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/55>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/61>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/91>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/107>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/109>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/115>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/5>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/6>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/8>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/12>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/18>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/disease/22>
+  ex:treatedByDept <http://animalloo.kr/ontology/medical/department/internal> .
+<http://animalloo.kr/ontology/medical/department/ophthalmology>
+  ex:handledBy ex:AnimalHospital .
+
+<http://animalloo.kr/ontology/medical/department/surgery>
+  ex:handledBy ex:AnimalHospital .
+
+<http://animalloo.kr/ontology/medical/department/internal>
+  ex:handledBy ex:AnimalHospital .
+
+<http://animalloo.kr/ontology/medical/department/dermatology>
+  ex:handledBy ex:AnimalHospital .
+
+<http://animalloo.kr/ontology/medical/department/dentistry>
+  ex:handledBy ex:AnimalHospital .
+
+<http://animalloo.kr/ontology/medical/department/ophthalmology>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/a> .
+<http://animalloo.kr/ontology/medical/department/ophthalmology>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/d> .
+<http://animalloo.kr/ontology/medical/department/surgery>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/f> .
+<http://animalloo.kr/ontology/medical/department/surgery>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/h> .
+<http://animalloo.kr/ontology/medical/department/surgery>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/k> .
+<http://animalloo.kr/ontology/medical/department/internal>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/b> .
+<http://animalloo.kr/ontology/medical/department/internal>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/department/internal>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/e> .
+<http://animalloo.kr/ontology/medical/department/internal>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/g> .
+<http://animalloo.kr/ontology/medical/department/internal>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/i> .
+<http://animalloo.kr/ontology/medical/department/internal>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/l> .
+<http://animalloo.kr/ontology/medical/department/dermatology>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/j> .
+<http://animalloo.kr/ontology/medical/department/dentistry>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/c> .
+<http://animalloo.kr/ontology/medical/department/dentistry>
+  ex:treatsSympCategory <http://animalloo.kr/ontology/medical/symptomCategory/e> .

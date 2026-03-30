@@ -1,0 +1,4573 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/facility/shelter/327346201500001>
+  a ex:AnimalShelter ;
+  schema:name "(사)대구수의사회" ;
+  schema:address "대구광역시 북구 호국로 229 (서변동) 6층" ;
+  schema:telephone "053-764-3708" ;
+  ex:latitude 35.922276 ;
+  ex:longitude 128.599040 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_북구> ;
+  ex:careRegNo "327346201500001" .
+<http://animalloo.kr/ontology/facility/shelter/348535202400001>
+  a ex:AnimalShelter ;
+  schema:name "(사)동물보호관리협회" ;
+  schema:address "부산광역시 강서구 가락대로1283번길 25-2 (봉림동) " ;
+  schema:telephone "051-971-6208" ;
+  ex:latitude 35.178925 ;
+  ex:longitude 128.899750 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 김해시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "348535202400001" .
+<http://animalloo.kr/ontology/facility/shelter/326338201300001>
+  a ex:AnimalShelter ;
+  schema:name "(사)동부동물보호협회" ;
+  schema:address "부산광역시 해운대구 송정2로13번길 46 (송정동) " ;
+  schema:telephone "051-701-7599" ;
+  ex:latitude 35.194817 ;
+  ex:longitude 129.206310 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "부산광역시 수영구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_해운대구> ;
+  ex:careRegNo "326338201300001" .
+<http://animalloo.kr/ontology/facility/shelter/326331201100001>
+  a ex:AnimalShelter ;
+  schema:name "(사)동부동물보호협회" ;
+  schema:address "부산광역시 해운대구 송정2로13번길 46 (송정동) " ;
+  schema:telephone "051-701-7599" ;
+  ex:latitude 35.181606 ;
+  ex:longitude 129.198460 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "부산광역시 남구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_해운대구> ;
+  ex:careRegNo "326331201100001" .
+<http://animalloo.kr/ontology/facility/shelter/326330202400001>
+  a ex:AnimalShelter ;
+  schema:name "(사)동부동물보호협회" ;
+  schema:address "부산광역시 해운대구 송정2로13번길 46 (송정동) " ;
+  schema:telephone "051-701-7599" ;
+  ex:latitude 35.194817 ;
+  ex:longitude 129.206310 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "부산광역시 동래구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_해운대구> ;
+  ex:careRegNo "326330202400001" .
+<http://animalloo.kr/ontology/facility/shelter/347502201600001>
+  a ex:AnimalShelter ;
+  schema:name "(사)영일동물플러스" ;
+  schema:address "경상북도 포항시 북구 흥해읍 덕장길 224 (흥해읍) " ;
+  schema:telephone "054-262-8295" ;
+  ex:latitude 36.145683 ;
+  ex:longitude 129.332630 ;
+  ex:savesAnimalType "개+고양이+야생동물" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "경상북도 포항시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_포항시> ;
+  ex:careRegNo "347502201600001" .
+<http://animalloo.kr/ontology/facility/shelter/327348201700003>
+  a ex:AnimalShelter ;
+  schema:name "119동물병원" ;
+  schema:address "대구광역시 달성군 다사읍 달구벌대로 893 (다사읍, 대실요양병원 장례식장) 다사읍 관할" ;
+  schema:telephone "053-585-1195" ;
+  ex:latitude 35.857166 ;
+  ex:longitude 128.466540 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 달성군" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "18:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_달성군> ;
+  ex:careRegNo "327348201700003" .
+<http://animalloo.kr/ontology/facility/shelter/311303202500006>
+  a ex:AnimalShelter ;
+  schema:name "24시센트럴동물메디컬" ;
+  schema:address "서울특별시 성동구 고산자로 207 (행당동) " ;
+  schema:telephone "02-3395-7975" ;
+  ex:latitude 37.558690 ;
+  ex:longitude 127.033710 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 13 ;
+  ex:orgName "서울특별시 성동구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_성동구> ;
+  ex:careRegNo "311303202500006" .
+<http://animalloo.kr/ontology/facility/shelter/341386200900001>
+  a ex:AnimalShelter ;
+  schema:name "24시아이동물메디컬" ;
+  schema:address "경기도 부천시 오정구 소사로 779 (원종동) 201호" ;
+  schema:telephone "032-677-5262" ;
+  ex:latitude 37.525660 ;
+  ex:longitude 126.804565 ;
+  ex:savesAnimalType "개+고양이+등" ;
+  ex:vetPersonCnt 7 ;
+  ex:orgName "경기도 부천시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_부천시> ;
+  ex:careRegNo "341386200900001" .
+<http://animalloo.kr/ontology/facility/shelter/347522202600002>
+  a ex:AnimalShelter ;
+  schema:name "25세 동물병원" ;
+  schema:address "경상북도 칠곡군 왜관읍 석전로7길 1  " ;
+  schema:telephone "054-974-0975" ;
+  ex:latitude 36.000850 ;
+  ex:longitude 128.408580 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 칠곡군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_칠곡군> ;
+  ex:careRegNo "347522202600002" .
+<http://animalloo.kr/ontology/facility/shelter/350652202600002>
+  a ex:AnimalShelter ;
+  schema:name "AVC반려동물메디컬" ;
+  schema:address "제주특별자치도 서귀포시 하효로 58 (하효동) " ;
+  schema:telephone "064-732-4788" ;
+  ex:latitude 33.266632 ;
+  ex:longitude 126.619550 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "제주특별자치도 서귀포시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/제주특별자치도_서귀포시> ;
+  ex:careRegNo "350652202600002" .
+<http://animalloo.kr/ontology/facility/shelter/311324201600004>
+  a ex:AnimalShelter ;
+  schema:name "GD동물병원" ;
+  schema:address "서울특별시 강동구 상일로 13 (상일동) 1~2층 GD동물병원" ;
+  schema:telephone "02-429-8822" ;
+  ex:latitude 37.548244 ;
+  ex:longitude 127.173120 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 강동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_강동구> ;
+  ex:careRegNo "311324201600004" .
+<http://animalloo.kr/ontology/facility/shelter/341386201800001>
+  a ex:AnimalShelter ;
+  schema:name "가나동물병원" ;
+  schema:address "경기도 부천시 소사구 경인로 72 (송내동) " ;
+  schema:telephone "032-665-0075" ;
+  ex:latitude 37.483550 ;
+  ex:longitude 126.763180 ;
+  ex:savesAnimalType "개+고양이+등" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 부천시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_부천시> ;
+  ex:careRegNo "341386201800001" .
+<http://animalloo.kr/ontology/facility/shelter/343557202300001>
+  a ex:AnimalShelter ;
+  schema:name "가정견훈련소" ;
+  schema:address "충청북도 증평군 도안면 입장길 239  " ;
+  ex:latitude 36.846962 ;
+  ex:longitude 127.608220 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청북도 증평군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_증평군> ;
+  ex:careRegNo "343557202300001" .
+<http://animalloo.kr/ontology/facility/shelter/328356201000001>
+  a ex:AnimalShelter ;
+  schema:name "가정동물병원" ;
+  schema:address "인천광역시 서구 가정로 346 (가정동) " ;
+  schema:telephone "032-575-0833" ;
+  ex:latitude 37.515670 ;
+  ex:longitude 126.673040 ;
+  ex:savesAnimalType "개+고양이+기타반려동물" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "인천광역시 서구" ;
+  ex:weekdayOpenTime "10:30" ;
+  ex:weekdayCloseTime "20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_서구> ;
+  ex:careRegNo "328356201000001" .
+<http://animalloo.kr/ontology/facility/shelter/341416200900001>
+  a ex:AnimalShelter ;
+  schema:name "가평군유기동물보호소" ;
+  schema:address "경기도 가평군 가평읍 아랫마장길 59 (가평읍, 농업기술센터) 가평 유기동물 보호소(10:00~18:00)" ;
+  schema:telephone "031-580-4794" ;
+  ex:latitude 37.845997 ;
+  ex:longitude 127.498700 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 가평군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_가평군> ;
+  ex:careRegNo "341416200900001" .
+<http://animalloo.kr/ontology/facility/shelter/331370201800001>
+  a ex:AnimalShelter ;
+  schema:name "강남동물병원" ;
+  schema:address "울산광역시 남구 돋질로 232 (달동) 1층" ;
+  schema:telephone "052-271-0075" ;
+  ex:latitude 35.542603 ;
+  ex:longitude 129.330470 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "울산광역시 남구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_남구> ;
+  ex:careRegNo "331370201800001" .
+<http://animalloo.kr/ontology/facility/shelter/311324201600001>
+  a ex:AnimalShelter ;
+  schema:name "강동구청 반려동물팀 " ;
+  schema:address "서울특별시 강동구 성내로 25 (성내동, 강동구청) 강동구청 " ;
+  schema:telephone "02-3425-6015" ;
+  ex:latitude 37.523876 ;
+  ex:longitude 127.130280 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 강동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_강동구> ;
+  ex:careRegNo "311324201600001" .
+<http://animalloo.kr/ontology/facility/shelter/311324201700002>
+  a ex:AnimalShelter ;
+  schema:name "강동리본센터(reborn)" ;
+  schema:address "서울특별시 강동구 양재대로81길 73 (성내동) " ;
+  schema:telephone "070-4163-7350" ;
+  ex:latitude 37.523876 ;
+  ex:longitude 127.130280 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 강동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_강동구> ;
+  ex:careRegNo "311324201700002" .
+<http://animalloo.kr/ontology/facility/shelter/342420201500001>
+  a ex:AnimalShelter ;
+  schema:name "강릉시 동물사랑센터" ;
+  schema:address "강원도 강릉시 성산면 내맬길 172  " ;
+  schema:telephone "033-641-7515" ;
+  ex:latitude 37.698875 ;
+  ex:longitude 128.829270 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "강원특별자치도 강릉시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342420201500001" .
+<http://animalloo.kr/ontology/facility/shelter/346492201300001>
+  a ex:AnimalShelter ;
+  schema:name "강진군 유기견 보호소" ;
+  schema:address "전라남도 강진군 강진읍 초지길 109-62 (강진읍, 강진군상하수도사업소) " ;
+  schema:telephone "061-430-3237" ;
+  ex:latitude 34.624813 ;
+  ex:longitude 126.777400 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 강진군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_강진군> ;
+  ex:careRegNo "346492201300001" .
+<http://animalloo.kr/ontology/facility/shelter/328357202400001>
+  a ex:AnimalShelter ;
+  schema:name "강화군 동물보호센터" ;
+  schema:address "인천광역시 강화군 강화읍 강화대로 254-1  " ;
+  ex:latitude 37.741173 ;
+  ex:longitude 126.501220 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "인천광역시 강화군" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_강화군> ;
+  ex:careRegNo "328357202400001" .
+<http://animalloo.kr/ontology/facility/shelter/348537200900002>
+  a ex:AnimalShelter ;
+  schema:name "거제시동물보호센터" ;
+  schema:address "경상남도 거제시 사등면 두동로1길 107  거제시동물보호센터" ;
+  schema:telephone "055-639-6368" ;
+  ex:latitude 34.883755 ;
+  ex:longitude 128.573680 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 거제시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_거제시> ;
+  ex:careRegNo "348537200900002" .
+<http://animalloo.kr/ontology/facility/shelter/348547202500001>
+  a ex:AnimalShelter ;
+  schema:name "거창군 동물보호소" ;
+  schema:address "경상남도 거창군 거창읍 가실길 203  " ;
+  ex:latitude 0.000000 ;
+  ex:longitude 0.000000 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 거창군" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_거창군> ;
+  ex:careRegNo "348547202500001" .
+<http://animalloo.kr/ontology/facility/shelter/328350202100001>
+  a ex:AnimalShelter ;
+  schema:name "경동동물병원" ;
+  schema:address "인천광역시 중구 개항로 68 (경동) 경동동물병원" ;
+  schema:telephone "032-765-9988" ;
+  ex:latitude 37.471954 ;
+  ex:longitude 126.629944 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_중구> ;
+  ex:careRegNo "328350202100001" .
+<http://animalloo.kr/ontology/facility/shelter/328351200900001>
+  a ex:AnimalShelter ;
+  schema:name "경동동물병원" ;
+  schema:address "인천광역시 중구 개항로 68 (경동) " ;
+  schema:telephone "032-765-9988" ;
+  ex:latitude 37.471960 ;
+  ex:longitude 126.629944 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 미추홀구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_중구> ;
+  ex:careRegNo "328351200900001" .
+<http://animalloo.kr/ontology/facility/shelter/328358202500001>
+  a ex:AnimalShelter ;
+  schema:name "경동동물병원" ;
+  schema:address "인천광역시 중구 개항로 68 (경동) " ;
+  schema:telephone "032-765-9988" ;
+  ex:latitude 37.472370 ;
+  ex:longitude 126.629486 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 옹진군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_중구> ;
+  ex:careRegNo "328358202500001" .
+<http://animalloo.kr/ontology/facility/shelter/328352202500002>
+  a ex:AnimalShelter ;
+  schema:name "경동동물병원" ;
+  schema:address "인천광역시 중구 개항로 68 (경동) 경동동물병원" ;
+  schema:telephone "032-765-9988" ;
+  ex:latitude 37.471960 ;
+  ex:longitude 126.629944 ;
+  ex:savesAnimalType "개+고양이+기타축종" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 연수구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_중구> ;
+  ex:careRegNo "328352202500002" .
+<http://animalloo.kr/ontology/facility/shelter/328349201000001>
+  a ex:AnimalShelter ;
+  schema:name "경동동물병원" ;
+  schema:address "인천광역시 중구 개항로 68 (경동) " ;
+  schema:telephone "032-765-9988" ;
+  ex:latitude 37.471954 ;
+  ex:longitude 126.629944 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 중구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_중구> ;
+  ex:careRegNo "328349201000001" .
+<http://animalloo.kr/ontology/facility/shelter/347513201800003>
+  a ex:AnimalShelter ;
+  schema:name "경산시유기동물보호소" ;
+  schema:address "경상북도 경산시 용성면 사양지길 95 (용성면) " ;
+  ex:latitude 35.778397 ;
+  ex:longitude 128.885070 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 경산시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_경산시> ;
+  ex:careRegNo "347513201800003" .
+<http://animalloo.kr/ontology/facility/shelter/347505201700001>
+  a ex:AnimalShelter ;
+  schema:name "경주동물사랑보호센터" ;
+  schema:address "경상북도 경주시 천북면 천북로 8-4  경주시 동물사랑보호센터" ;
+  ex:latitude 35.892956 ;
+  ex:longitude 129.238420 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 경주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_경주시> ;
+  ex:careRegNo "347505201700001" .
+<http://animalloo.kr/ontology/facility/shelter/347520202000001>
+  a ex:AnimalShelter ;
+  schema:name "고령군 유기견 보호소" ;
+  schema:address "경상북도 고령군 운수면 하법길 37 (운수면) " ;
+  ex:latitude 35.771927 ;
+  ex:longitude 128.300370 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 고령군" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_고령군> ;
+  ex:careRegNo "347520202000001" .
+<http://animalloo.kr/ontology/facility/shelter/348542202000002>
+  a ex:AnimalShelter ;
+  schema:name "고성군 동물가족센터" ;
+  schema:address "경상남도 고성군 고성읍 동해로 123  고성군 동물가족센터" ;
+  schema:telephone "055-670-4346" ;
+  ex:latitude 34.996822 ;
+  ex:longitude 128.325380 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 고성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_고성군> ;
+  ex:careRegNo "348542202000002" .
+<http://animalloo.kr/ontology/facility/shelter/342434202500001>
+  a ex:AnimalShelter ;
+  schema:name "고성군 동물보호센터" ;
+  schema:address "강원특별자치도 고성군 간성읍 진부령로 2768-10  " ;
+  schema:telephone "033-680-3722" ;
+  ex:latitude 38.381950 ;
+  ex:longitude 128.434390 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "강원특별자치도 고성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_고성군> ;
+  ex:careRegNo "342434202500001" .
+<http://animalloo.kr/ontology/facility/shelter/341394201400001>
+  a ex:AnimalShelter ;
+  schema:name "고양시동물보호센터" ;
+  schema:address "경기도 고양시 덕양구 고양대로 1695 (원흥동, 고양시 농업기술센터) 고양시동물보호센터" ;
+  schema:telephone "031-962-3232" ;
+  ex:latitude 37.649643 ;
+  ex:longitude 126.870270 ;
+  ex:savesAnimalType "개+고양이+기타축종" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "경기도 고양시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_고양시> ;
+  ex:careRegNo "341394201400001" .
+<http://animalloo.kr/ontology/facility/shelter/348533202300001>
+  a ex:AnimalShelter ;
+  schema:name "고양이보호분양센터" ;
+  schema:address "경상남도 통영시 한산면 호두1길 351  공공형 고양이 보호분양센터" ;
+  schema:telephone "055-650-6250" ;
+  ex:latitude 34.749905 ;
+  ex:longitude 128.494110 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 통영시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_통영시> ;
+  ex:careRegNo "348533202300001" .
+<http://animalloo.kr/ontology/facility/shelter/346488201700001>
+  a ex:AnimalShelter ;
+  schema:name "고흥군임시보호센터" ;
+  schema:address "전라남도 고흥군 포두면 우주로 607 (포두면, 소매점) " ;
+  ex:latitude 34.570545 ;
+  ex:longitude 127.341010 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 고흥군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_고흥군> ;
+  ex:careRegNo "346488201700001" .
+<http://animalloo.kr/ontology/facility/shelter/346486201600001>
+  a ex:AnimalShelter ;
+  schema:name "곡성군동물보호소" ;
+  schema:address "전라남도 곡성군 곡성읍 군청로 50  보호소 주소 : 전남 곡성군 곡성읍 구원리 888" ;
+  schema:telephone "061-360-8392" ;
+  ex:latitude 35.282030 ;
+  ex:longitude 127.291960 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 곡성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_곡성군> ;
+  ex:careRegNo "346486201600001" .
+<http://animalloo.kr/ontology/facility/shelter/344450202200001>
+  a ex:AnimalShelter ;
+  schema:name "공주시 동물보호센터" ;
+  schema:address "충청남도 공주시 우성면 내산목천길 52-15  " ;
+  schema:telephone "041-840-3495" ;
+  ex:latitude 36.492302 ;
+  ex:longitude 127.100105 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청남도 공주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_공주시> ;
+  ex:careRegNo "344450202200001" .
+<http://animalloo.kr/ontology/facility/shelter/341390202100002>
+  a ex:AnimalShelter ;
+  schema:name "광명반함센터" ;
+  schema:address "경기도 광명시 오리로854번길 10 (철산동) 지하1층" ;
+  schema:telephone "02-2680-5001" ;
+  ex:latitude 37.474370 ;
+  ex:longitude 126.868470 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경기도 광명시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광명시> ;
+  ex:careRegNo "341390202100002" .
+<http://animalloo.kr/ontology/facility/shelter/346484201900001>
+  a ex:AnimalShelter ;
+  schema:name "광양시 임시보호소" ;
+  schema:address "전라남도 광양시 봉강면 인덕로 1169-20 (봉강면) 지곡리 864-24" ;
+  schema:telephone "061-797-3386" ;
+  ex:latitude 34.987904 ;
+  ex:longitude 127.576520 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 광양시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_광양시> ;
+  ex:careRegNo "346484201900001" .
+<http://animalloo.kr/ontology/facility/shelter/341554201300008>
+  a ex:AnimalShelter ;
+  schema:name "광주TNR동물병원송정" ;
+  schema:address "경기도 광주시 경안천로 142 (송정동) 광주TNR동물병원" ;
+  schema:telephone "031-798-7583" ;
+  ex:latitude 37.417343 ;
+  ex:longitude 127.275024 ;
+  ex:savesAnimalType "개+고양이+반려동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 광주시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:careRegNo "341554201300008" .
+<http://animalloo.kr/ontology/facility/shelter/341554201900001>
+  a ex:AnimalShelter ;
+  schema:name "광주TNR동물병원초월" ;
+  schema:address "경기도 광주시 초월읍 현산로385번길 74-12 (초월읍) " ;
+  schema:telephone "031-798-7581" ;
+  ex:latitude 37.415894 ;
+  ex:longitude 127.276160 ;
+  ex:savesAnimalType "개+고양이+반려동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 광주시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:careRegNo "341554201900001" .
+<http://animalloo.kr/ontology/facility/shelter/329362201300001>
+  a ex:AnimalShelter ;
+  schema:name "광주동물보호센터" ;
+  schema:address "광주광역시 북구 본촌마을길 25-1 (본촌동) 광주동물보호센터" ;
+  schema:telephone "062-613-6770" ;
+  ex:latitude 35.222713 ;
+  ex:longitude 126.882150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "광주광역시 북구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:careRegNo "329362201300001" .
+<http://animalloo.kr/ontology/facility/shelter/329363201300001>
+  a ex:AnimalShelter ;
+  schema:name "광주동물보호센터" ;
+  schema:address "광주광역시 북구 본촌마을길 25-1 (본촌동) 광주동물보호센터" ;
+  schema:telephone "062-613-6770" ;
+  ex:latitude 35.222713 ;
+  ex:longitude 126.882150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "광주광역시 광산구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:careRegNo "329363201300001" .
+<http://animalloo.kr/ontology/facility/shelter/329360201300001>
+  a ex:AnimalShelter ;
+  schema:name "광주동물보호센터" ;
+  schema:address "광주광역시 북구 본촌마을길 25-1 (본촌동) 광주동물보호센터" ;
+  schema:telephone "062-613-6770" ;
+  ex:latitude 35.222713 ;
+  ex:longitude 126.882150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "광주광역시 서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:careRegNo "329360201300001" .
+<http://animalloo.kr/ontology/facility/shelter/329359201300001>
+  a ex:AnimalShelter ;
+  schema:name "광주동물보호센터" ;
+  schema:address "광주광역시 북구 본촌마을길 25-1 (본촌동) 광주동물보호센터" ;
+  schema:telephone "062-613-6770" ;
+  ex:latitude 35.222713 ;
+  ex:longitude 126.882150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "광주광역시 동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:careRegNo "329359201300001" .
+<http://animalloo.kr/ontology/facility/shelter/329629202500001>
+  a ex:AnimalShelter ;
+  schema:name "광주동물보호센터" ;
+  schema:address "광주광역시 북구 본촌마을길 25-1 (본촌동) 광주동물보호센터" ;
+  schema:telephone "062-613-6770" ;
+  ex:latitude 35.222713 ;
+  ex:longitude 126.882150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "광주광역시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:careRegNo "329629202500001" .
+<http://animalloo.kr/ontology/facility/shelter/329361201300001>
+  a ex:AnimalShelter ;
+  schema:name "광주동물보호센터" ;
+  schema:address "광주광역시 북구 본촌마을길 25-1 (본촌동) 광주동물보호센터" ;
+  schema:telephone "062-613-6770" ;
+  ex:latitude 35.222713 ;
+  ex:longitude 126.882150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "광주광역시 남구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:careRegNo "329361201300001" .
+<http://animalloo.kr/ontology/facility/shelter/343446201800002>
+  a ex:AnimalShelter ;
+  schema:name "괴산증평동물보호센터" ;
+  schema:address "충청북도 증평군 도안면 입장길 239 (도안면) " ;
+  ex:latitude 36.846966 ;
+  ex:longitude 127.608240 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청북도 괴산군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_증평군> ;
+  ex:careRegNo "343446201800002" .
+<http://animalloo.kr/ontology/facility/shelter/346487201800001>
+  a ex:AnimalShelter ;
+  schema:name "구례군동물보호센터" ;
+  schema:address "전라남도 구례군 용방면 용방로 64-11  " ;
+  schema:telephone "061-781-2022" ;
+  ex:latitude 35.222416 ;
+  ex:longitude 127.458780 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 구례군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_구례군> ;
+  ex:careRegNo "346487201800001" .
+<http://animalloo.kr/ontology/facility/shelter/311316202500001>
+  a ex:AnimalShelter ;
+  schema:name "구로댕냥이네" ;
+  schema:address "서울특별시 구로구 경인로 472 (구로동) 구로댕냥이네" ;
+  schema:telephone "02-2636-7649" ;
+  ex:latitude 37.505543 ;
+  ex:longitude 126.885620 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 구로구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_구로구> ;
+  ex:careRegNo "311316202500001" .
+<http://animalloo.kr/ontology/facility/shelter/341398202300001>
+  a ex:AnimalShelter ;
+  schema:name "구리시 반려돌봄센터" ;
+  schema:address "경기도 구리시 동구릉로136번길 57 (인창동) 2층" ;
+  schema:telephone "031-566-0059" ;
+  ex:latitude 37.613470 ;
+  ex:longitude 127.140540 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경기도 구리시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_구리시> ;
+  ex:careRegNo "341398202300001" .
+<http://animalloo.kr/ontology/facility/shelter/347508202000001>
+  a ex:AnimalShelter ;
+  schema:name "구미시 동물보호센터" ;
+  schema:address "경상북도 구미시 옥성면 선상동로 1358  애니멀 케어 센터" ;
+  schema:telephone "054-471-5718" ;
+  ex:latitude 36.340100 ;
+  ex:longitude 128.278760 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 구미시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:careRegNo "347508202000001" .
+<http://animalloo.kr/ontology/facility/shelter/345467201000001>
+  a ex:AnimalShelter ;
+  schema:name "군산유기동물보호센터" ;
+  schema:address "전북특별자치도 군산시 대야면 보덕안정길 124  " ;
+  schema:telephone "063-451-2975" ;
+  ex:latitude 35.960815 ;
+  ex:longitude 126.816310 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 군산시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_군산시> ;
+  ex:careRegNo "345467201000001" .
+<http://animalloo.kr/ontology/facility/shelter/327514202400001>
+  a ex:AnimalShelter ;
+  schema:name "군위종합동물병원" ;
+  schema:address "대구광역시 군위군 군위읍 군청로 49-18  1층" ;
+  ex:latitude 36.230713 ;
+  ex:longitude 128.566160 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 군위군" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_군위군> ;
+  ex:careRegNo "327514202400001" .
+<http://animalloo.kr/ontology/facility/shelter/327346201800002>
+  a ex:AnimalShelter ;
+  schema:name "금강동물병원" ;
+  schema:address "대구광역시 수성구 동원로 150 (만촌동) 금강동물병원" ;
+  schema:telephone "053-746-7111" ;
+  ex:latitude 35.871670 ;
+  ex:longitude 128.635850 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "18:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:careRegNo "327346201800002" .
+<http://animalloo.kr/ontology/facility/shelter/328353202600003>
+  a ex:AnimalShelter ;
+  schema:name "길동물병원" ;
+  schema:address "인천광역시 남동구 구월로 317 (만수동) " ;
+  schema:telephone "032-467-1275" ;
+  ex:latitude 37.455700 ;
+  ex:longitude 126.725920 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 남동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:careRegNo "328353202600003" .
+<http://animalloo.kr/ontology/facility/shelter/347506201300001>
+  a ex:AnimalShelter ;
+  schema:name "김천시 동물보호센터" ;
+  schema:address "경상북도 김천시 구성면 남김천대로 3296-22  하강리 44(김천시 유기동물보호센터)" ;
+  schema:telephone "054-421-2547" ;
+  ex:latitude 36.080418 ;
+  ex:longitude 128.100650 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 김천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_김천시> ;
+  ex:careRegNo "347506201300001" .
+<http://animalloo.kr/ontology/facility/shelter/346483202100001>
+  a ex:AnimalShelter ;
+  schema:name "나주유기동물보호센터" ;
+  schema:address "전라남도 나주시 산포면 내기3길 71-43 [*미고시] " ;
+  ex:latitude 35.048203 ;
+  ex:longitude 126.781240 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 나주시" ;
+  ex:weekdayOpenTime "08:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_나주시> ;
+  ex:careRegNo "346483202100001" .
+<http://animalloo.kr/ontology/facility/shelter/344457202000001>
+  a ex:AnimalShelter ;
+  schema:name "남부여동물보호소" ;
+  schema:address "충청남도 부여군 임천면 위덕로47번길 36-12  (점리)" ;
+  schema:telephone "041-837-8277" ;
+  ex:latitude 36.215890 ;
+  ex:longitude 126.890920 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "충청남도 부여군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_부여군> ;
+  ex:careRegNo "344457202000001" .
+<http://animalloo.kr/ontology/facility/shelter/311302201000020>
+  a ex:AnimalShelter ;
+  schema:name "남산동물병원" ;
+  schema:address "서울특별시 용산구 후암로 51 (후암동) 1층" ;
+  schema:telephone "02-778-7582" ;
+  ex:latitude 37.550404 ;
+  ex:longitude 126.977070 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 용산구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_용산구> ;
+  ex:careRegNo "311302201000020" .
+<http://animalloo.kr/ontology/facility/shelter/341399202200002>
+  a ex:AnimalShelter ;
+  schema:name "남양주시동물보호센터" ;
+  schema:address "경기도 남양주시 경강로163번길 32-27 (이패동) " ;
+  schema:telephone "031-590-2785" ;
+  ex:latitude 37.608788 ;
+  ex:longitude 127.191536 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 남양주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_남양주시> ;
+  ex:careRegNo "341399202200002" .
+<http://animalloo.kr/ontology/facility/shelter/348543201300001>
+  a ex:AnimalShelter ;
+  schema:name "남해군동물보호센터" ;
+  schema:address "경상남도 남해군 이동면 남해대로 2449  동물보호센터" ;
+  schema:telephone "055-860-3973" ;
+  ex:latitude 34.803540 ;
+  ex:longitude 127.953670 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 남해군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_남해군> ;
+  ex:careRegNo "348543201300001" .
+<http://animalloo.kr/ontology/facility/shelter/311312202400001>
+  a ex:AnimalShelter ;
+  schema:name "내품애센터" ;
+  schema:address "서울특별시 서대문구 모래내로 333 (홍은동) " ;
+  schema:telephone "02-330-3821" ;
+  ex:latitude 37.580410 ;
+  ex:longitude 126.933800 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 서대문구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_서대문구> ;
+  ex:careRegNo "311312202400001" .
+<http://animalloo.kr/ontology/facility/shelter/311310202000004>
+  a ex:AnimalShelter ;
+  schema:name "노원반려동물문화센터" ;
+  schema:address "서울특별시 노원구 수락산로 258 (상계동, 호성빌딩) 1층" ;
+  schema:telephone "02-933-8500" ;
+  ex:latitude 37.671352 ;
+  ex:longitude 127.049980 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 노원구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_노원구> ;
+  ex:careRegNo "311310202000004" .
+<http://animalloo.kr/ontology/facility/shelter/344454202000006>
+  a ex:AnimalShelter ;
+  schema:name "논산시 동물보호센터" ;
+  schema:address "충청남도 논산시 계백로665번길 100 (등화동) 논산시 동물보호센터" ;
+  schema:telephone "041-746-8470" ;
+  ex:latitude 36.185688 ;
+  ex:longitude 127.058530 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 논산시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_논산시> ;
+  ex:careRegNo "344454202000006" .
+<http://animalloo.kr/ontology/facility/shelter/328353202600005>
+  a ex:AnimalShelter ;
+  schema:name "논현동물병원" ;
+  schema:address "인천광역시 남동구 소래역남로16번길 75 (논현동) " ;
+  schema:telephone "032-426-0975" ;
+  ex:latitude 37.399830 ;
+  ex:longitude 126.733020 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 남동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:careRegNo "328353202600005" .
+<http://animalloo.kr/ontology/facility/shelter/328354201700002>
+  a ex:AnimalShelter ;
+  schema:name "늘푸른동물병원" ;
+  schema:address "인천광역시 부평구 후정동로 60 (삼산동) " ;
+  schema:telephone "032-507-0075" ;
+  ex:latitude 37.522710 ;
+  ex:longitude 126.738390 ;
+  ex:savesAnimalType "개+고양이+기타동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 부평구" ;
+  ex:weekdayOpenTime "10:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_부평구> ;
+  ex:careRegNo "328354201700002" .
+<http://animalloo.kr/ontology/facility/shelter/342429201300002>
+  a ex:AnimalShelter ;
+  schema:name "다나동물병원" ;
+  schema:address "강원도 정선군 정선읍 비봉로 46  " ;
+  schema:telephone "033-563-6563" ;
+  ex:latitude 37.381096 ;
+  ex:longitude 128.663150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "강원특별자치도 정선군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:careRegNo "342429201300002" .
+<http://animalloo.kr/ontology/facility/shelter/347522202600001>
+  a ex:AnimalShelter ;
+  schema:name "다솜동물병원" ;
+  schema:address "경상북도 칠곡군 왜관읍 중앙로 136  " ;
+  schema:telephone "054-977-8575" ;
+  ex:latitude 35.993202 ;
+  ex:longitude 128.398830 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 칠곡군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_칠곡군> ;
+  ex:careRegNo "347522202600001" .
+<http://animalloo.kr/ontology/facility/shelter/343448200900001>
+  a ex:AnimalShelter ;
+  schema:name "단양군동물보호센터" ;
+  schema:address "충청북도 단양군 매포읍 단양산업단지1로 201  828번지" ;
+  schema:telephone "043-421-2742" ;
+  ex:latitude 37.012980 ;
+  ex:longitude 128.313750 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청북도 단양군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_단양군> ;
+  ex:careRegNo "343448200900001" .
+<http://animalloo.kr/ontology/facility/shelter/346485201800001>
+  a ex:AnimalShelter ;
+  schema:name "담양군 동물보호센터" ;
+  schema:address "전라남도 담양군 용면 시암골로 280-57 (용면) :용면 두장리 21번지" ;
+  schema:telephone "061-380-2734" ;
+  ex:latitude 35.358566 ;
+  ex:longitude 127.001570 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 담양군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_담양군> ;
+  ex:careRegNo "346485201800001" .
+<http://animalloo.kr/ontology/facility/shelter/344568201700001>
+  a ex:AnimalShelter ;
+  schema:name "당진시동물보호소" ;
+  schema:address "충청남도 당진시 고대면 삼포길 180  " ;
+  schema:telephone "041-356-8210" ;
+  ex:latitude 36.934050 ;
+  ex:longitude 126.596250 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 당진시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_당진시> ;
+  ex:careRegNo "344568201700001" .
+<http://animalloo.kr/ontology/facility/shelter/327348201300001>
+  a ex:AnimalShelter ;
+  schema:name "대구수의사회(달성군)" ;
+  schema:address "대구광역시 북구 호국로 229 (서변동) " ;
+  schema:telephone "053-764-3708" ;
+  ex:latitude 35.922276 ;
+  ex:longitude 128.599040 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "대구광역시 달성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_북구> ;
+  ex:careRegNo "327348201300001" .
+<http://animalloo.kr/ontology/facility/shelter/327343201500004>
+  a ex:AnimalShelter ;
+  schema:name "대구수의사회(아이펫)" ;
+  schema:address "대구광역시 서구 서대구로 64 (평리동) " ;
+  schema:telephone "053-573-1175" ;
+  ex:latitude 35.863823 ;
+  ex:longitude 128.556550 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_서구> ;
+  ex:careRegNo "327343201500004" .
+<http://animalloo.kr/ontology/facility/shelter/327343201900001>
+  a ex:AnimalShelter ;
+  schema:name "대구시수의사회(더펫)" ;
+  schema:address "대구광역시 서구 서대구로 361 (비산동) 2층" ;
+  schema:telephone "053-352-0622" ;
+  ex:latitude 35.889072 ;
+  ex:longitude 128.560730 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_서구> ;
+  ex:careRegNo "327343201900001" .
+<http://animalloo.kr/ontology/facility/shelter/327341201200004>
+  a ex:AnimalShelter ;
+  schema:name "대구시수의사회(동산)" ;
+  schema:address "대구광역시 중구 남성로 서성로 34 (남성로) " ;
+  schema:telephone "053-254-3366" ;
+  ex:latitude 35.867535 ;
+  ex:longitude 128.590440 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 중구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_중구> ;
+  ex:careRegNo "327341201200004" .
+<http://animalloo.kr/ontology/facility/shelter/327341201200001>
+  a ex:AnimalShelter ;
+  schema:name "대구시수의사회(동인)" ;
+  schema:address "대구광역시 중구 동인동4가 국채보상로 724 " ;
+  schema:telephone "070-4466-1575" ;
+  ex:latitude 35.868385 ;
+  ex:longitude 128.609680 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 3 ;
+  ex:orgName "대구광역시 중구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_중구> ;
+  ex:careRegNo "327341201200001" .
+<http://animalloo.kr/ontology/facility/shelter/327343201500003>
+  a ex:AnimalShelter ;
+  schema:name "대구시수의사회(보경)" ;
+  schema:address "대구광역시 서구 달서로 165 (비산동) " ;
+  schema:telephone "053-559-9020" ;
+  ex:latitude 35.877030 ;
+  ex:longitude 128.571000 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_서구> ;
+  ex:careRegNo "327343201500003" .
+<http://animalloo.kr/ontology/facility/shelter/327341201200002>
+  a ex:AnimalShelter ;
+  schema:name "대구시수의사회(삼덕)" ;
+  schema:address "대구광역시 중구 삼덕동1가 달구벌대로 2145 " ;
+  schema:telephone "053-426-1731" ;
+  ex:latitude 35.864857 ;
+  ex:longitude 128.598390 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 중구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_중구> ;
+  ex:careRegNo "327341201200002" .
+<http://animalloo.kr/ontology/facility/shelter/327343201500001>
+  a ex:AnimalShelter ;
+  schema:name "대구시수의사회(삼성)" ;
+  schema:address "대구광역시 서구 서대구로 24 (내당동) " ;
+  schema:telephone "053-556-8575" ;
+  ex:latitude 35.859802 ;
+  ex:longitude 128.557200 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_서구> ;
+  ex:careRegNo "327343201500001" .
+<http://animalloo.kr/ontology/facility/shelter/327343201500005>
+  a ex:AnimalShelter ;
+  schema:name "대구시수의사회(평리)" ;
+  schema:address "대구광역시 서구 서대구로 189 (평리동) 2층" ;
+  schema:telephone "053-552-0075" ;
+  ex:latitude 35.874947 ;
+  ex:longitude 128.554630 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_서구> ;
+  ex:careRegNo "327343201500005" .
+<http://animalloo.kr/ontology/facility/shelter/327342201400001>
+  a ex:AnimalShelter ;
+  schema:name "대구유기동물보호센터" ;
+  schema:address "대구광역시 동구 금강로 151-13 (금강동) " ;
+  schema:telephone "053-964-6258" ;
+  ex:latitude 35.863876 ;
+  ex:longitude 128.735960 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 동구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_동구> ;
+  ex:careRegNo "327342201400001" .
+<http://animalloo.kr/ontology/facility/shelter/327347201400001>
+  a ex:AnimalShelter ;
+  schema:name "대구유기동물보호협회" ;
+  schema:address "대구광역시 동구 금강로 151-13 (금강동) " ;
+  schema:telephone "053-964-6258" ;
+  ex:latitude 35.863876 ;
+  ex:longitude 128.735960 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 달서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_동구> ;
+  ex:careRegNo "327347201400001" .
+<http://animalloo.kr/ontology/facility/shelter/327344201600001>
+  a ex:AnimalShelter ;
+  schema:name "대구유기동물보호협회" ;
+  schema:address "대구광역시 동구 금강로 151-13 (금강동) " ;
+  schema:telephone "053-964-6258" ;
+  ex:latitude 35.863640 ;
+  ex:longitude 128.735630 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 남구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_동구> ;
+  ex:careRegNo "327344201600001" .
+<http://animalloo.kr/ontology/facility/shelter/327345201400001>
+  a ex:AnimalShelter ;
+  schema:name "대구유기동물보호협회" ;
+  schema:address "대구광역시 동구 금강로 151-13 (금강동) " ;
+  schema:telephone "053-964-6258" ;
+  ex:latitude 35.863876 ;
+  ex:longitude 128.735960 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 북구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_동구> ;
+  ex:careRegNo "327345201400001" .
+<http://animalloo.kr/ontology/facility/shelter/330368202000001>
+  a ex:AnimalShelter ;
+  schema:name "대전동물보호센터" ;
+  schema:address "대전광역시 유성구 금남구즉로 1234 (금고동) 대전광역시 동물보호센터" ;
+  schema:telephone "042-270-7239" ;
+  ex:latitude 36.458782 ;
+  ex:longitude 127.382830 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대전광역시 대덕구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_유성구> ;
+  ex:careRegNo "330368202000001" .
+<http://animalloo.kr/ontology/facility/shelter/330367200900001>
+  a ex:AnimalShelter ;
+  schema:name "대전동물보호센터" ;
+  schema:address "대전광역시 유성구 금남구즉로 1234 (금고동) 대전광역시 동물보호센터" ;
+  schema:telephone "042-270-7239" ;
+  ex:latitude 36.458782 ;
+  ex:longitude 127.382830 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대전광역시 유성구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_유성구> ;
+  ex:careRegNo "330367200900001" .
+<http://animalloo.kr/ontology/facility/shelter/330366202000001>
+  a ex:AnimalShelter ;
+  schema:name "대전동물보호센터" ;
+  schema:address "대전광역시 유성구 금남구즉로 1234 (금고동) 대전광역시 동물보호센터" ;
+  schema:telephone "042-270-7239" ;
+  ex:latitude 36.458782 ;
+  ex:longitude 127.382830 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대전광역시 서구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_유성구> ;
+  ex:careRegNo "330366202000001" .
+<http://animalloo.kr/ontology/facility/shelter/330365202000001>
+  a ex:AnimalShelter ;
+  schema:name "대전동물보호센터" ;
+  schema:address "대전광역시 유성구 금남구즉로 1234 (금고동) 대전광역시 동물보호센터" ;
+  schema:telephone "042-270-7239" ;
+  ex:latitude 36.458782 ;
+  ex:longitude 127.382830 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대전광역시 중구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_유성구> ;
+  ex:careRegNo "330365202000001" .
+<http://animalloo.kr/ontology/facility/shelter/330364202000001>
+  a ex:AnimalShelter ;
+  schema:name "대전동물보호센터" ;
+  schema:address "대전광역시 유성구 금남구즉로 1234 (금고동) 대전광역시 동물보호센터" ;
+  schema:telephone "042-270-7239" ;
+  ex:latitude 36.458782 ;
+  ex:longitude 127.382830 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대전광역시 동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_유성구> ;
+  ex:careRegNo "330364202000001" .
+<http://animalloo.kr/ontology/facility/shelter/346482201400002>
+  a ex:AnimalShelter ;
+  schema:name "대한동물사랑협회" ;
+  schema:address "전라남도 순천시 상사면 민속마을길 978 (상사면) ." ;
+  schema:telephone "061-751-7565" ;
+  ex:latitude 34.926930 ;
+  ex:longitude 127.409966 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 순천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_순천시> ;
+  ex:careRegNo "346482201400002" .
+<http://animalloo.kr/ontology/facility/shelter/345478202200001>
+  a ex:AnimalShelter ;
+  schema:name "더나은동물병원" ;
+  schema:address "전라북도 고창군 무장면 신촌농장길 98  " ;
+  schema:telephone "063-560-2629" ;
+  ex:latitude 35.402176 ;
+  ex:longitude 126.556470 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 고창군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_고창군> ;
+  ex:careRegNo "345478202200001" .
+<http://animalloo.kr/ontology/facility/shelter/345464202500001>
+  a ex:AnimalShelter ;
+  schema:name "데이지동물병원" ;
+  schema:address "전북특별자치도 전주시 완산구 용리로 47 (효자동1가) 번지" ;
+  schema:telephone "063-225-7588" ;
+  ex:latitude 35.807710 ;
+  ex:longitude 127.116430 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_전주시> ;
+  ex:careRegNo "345464202500001" .
+<http://animalloo.kr/ontology/facility/shelter/311305202100001>
+  a ex:AnimalShelter ;
+  schema:name "동대문구청" ;
+  schema:address "서울특별시 동대문구 천호대로 145 (용두동) " ;
+  schema:telephone "02-2127-4268" ;
+  ex:latitude 37.578915 ;
+  ex:longitude 127.069700 ;
+  ex:savesAnimalType "고양이+개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 동대문구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_동대문구> ;
+  ex:careRegNo "311305202100001" .
+<http://animalloo.kr/ontology/facility/shelter/311314202600001>
+  a ex:AnimalShelter ;
+  schema:name "동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  (사)한국동물구조관리협회" ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.871440 ;
+  ex:longitude 126.983390 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 양천구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311314202600001" .
+<http://animalloo.kr/ontology/facility/shelter/326329202600001>
+  a ex:AnimalShelter ;
+  schema:name "동물보호관리협회" ;
+  schema:address "부산광역시 강서구 가락대로1283번길 25-2 (봉림동) " ;
+  schema:telephone "051-971-6208" ;
+  ex:latitude 35.178925 ;
+  ex:longitude 128.899750 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "부산광역시 부산진구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326329202600001" .
+<http://animalloo.kr/ontology/facility/shelter/345464201100004>
+  a ex:AnimalShelter ;
+  schema:name "동부동물병원" ;
+  schema:address "전라북도 전주시 완산구 경원동1가 3-10" ;
+  schema:telephone "063-231-2455" ;
+  ex:latitude 35.817005 ;
+  ex:longitude 127.148080 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시> ;
+  ex:careRegNo "345464201100004" .
+<http://animalloo.kr/ontology/facility/shelter/326335201700001>
+  a ex:AnimalShelter ;
+  schema:name "동부동물보호협회" ;
+  schema:address "부산광역시 해운대구 송정2로13번길 46 (송정동) " ;
+  schema:telephone "051-701-7599" ;
+  ex:latitude 35.194810 ;
+  ex:longitude 129.206310 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "부산광역시 금정구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_해운대구> ;
+  ex:careRegNo "326335201700001" .
+<http://animalloo.kr/ontology/facility/shelter/346483202600004>
+  a ex:AnimalShelter ;
+  schema:name "동산동물병원" ;
+  schema:address "전라남도 나주시 상야4길 21 (빛가람동) 존프라자 117호" ;
+  schema:telephone "061-335-9909" ;
+  ex:latitude 35.022038 ;
+  ex:longitude 126.792100 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 나주시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "18:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_나주시> ;
+  ex:careRegNo "346483202600004" .
+<http://animalloo.kr/ontology/facility/shelter/327348201700001>
+  a ex:AnimalShelter ;
+  schema:name "동인동물병원" ;
+  schema:address "대구광역시 중구 동인동4가 국채보상로 724 (동인동4가) 가창면 관할" ;
+  schema:telephone "053-424-4258" ;
+  ex:latitude 35.868385 ;
+  ex:longitude 128.609680 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대구광역시 달성군" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_중구> ;
+  ex:careRegNo "327348201700001" .
+<http://animalloo.kr/ontology/facility/shelter/342421201000001>
+  a ex:AnimalShelter ;
+  schema:name "동해시동물보호센터" ;
+  schema:address "강원도 동해시 대동로 159-13 (송정동, 동해시유기동물보호소) " ;
+  schema:telephone "033-539-8145" ;
+  ex:latitude 37.485115 ;
+  ex:longitude 129.118970 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 동해시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:careRegNo "342421201000001" .
+<http://animalloo.kr/ontology/facility/shelter/327348202300001>
+  a ex:AnimalShelter ;
+  schema:name "동행동물병원" ;
+  schema:address "대구광역시 달서구 진천로 117 (대천동) 117,118 호" ;
+  schema:telephone "053-636-8720" ;
+  ex:latitude 35.818893 ;
+  ex:longitude 128.521240 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 달성군" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_달서구> ;
+  ex:careRegNo "327348202300001" .
+<http://animalloo.kr/ontology/facility/shelter/329359201700003>
+  a ex:AnimalShelter ;
+  schema:name "두손너에게" ;
+  schema:address "광주광역시 북구 지야길 2 (지야동) " ;
+  ex:latitude 35.229958 ;
+  ex:longitude 126.885290 ;
+  ex:savesAnimalType "개+고양이+닭" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "광주광역시 동구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:careRegNo "329359201700003" .
+<http://animalloo.kr/ontology/facility/shelter/311324201600002>
+  a ex:AnimalShelter ;
+  schema:name "둔촌동물병원" ;
+  schema:address "서울특별시 강동구 양재대로 1385 (성내동) 둔촌동물병원" ;
+  schema:telephone "02-474-5100" ;
+  ex:latitude 37.529930 ;
+  ex:longitude 127.136620 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "서울특별시 강동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_강동구> ;
+  ex:careRegNo "311324201600002" .
+<http://animalloo.kr/ontology/facility/shelter/311320202400001>
+  a ex:AnimalShelter ;
+  schema:name "디아크 동물종합병원" ;
+  schema:address "서울특별시 동작구 장승배기로27길 18 (노량진동) 1층" ;
+  schema:telephone "02-816-7582" ;
+  ex:latitude 37.511715 ;
+  ex:longitude 126.939026 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 관악구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_동작구> ;
+  ex:careRegNo "311320202400001" .
+<http://animalloo.kr/ontology/facility/shelter/311319201200001>
+  a ex:AnimalShelter ;
+  schema:name "디아크동물종합병원" ;
+  schema:address "서울특별시 동작구 장승배기로27길 18 (노량진동) " ;
+  schema:telephone "02-816-7582" ;
+  ex:latitude 37.511715 ;
+  ex:longitude 126.939026 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 동작구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_동작구> ;
+  ex:careRegNo "311319201200001" .
+<http://animalloo.kr/ontology/facility/shelter/331370201600002>
+  a ex:AnimalShelter ;
+  schema:name "리틀쥬동물의료원" ;
+  schema:address "울산광역시 남구 봉월로 104 (신정동) " ;
+  schema:telephone "052-268-8884" ;
+  ex:latitude 35.541733 ;
+  ex:longitude 129.306300 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "울산광역시 남구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_남구> ;
+  ex:careRegNo "331370201600002" .
+<http://animalloo.kr/ontology/facility/shelter/345464201700001>
+  a ex:AnimalShelter ;
+  schema:name "링크늘푸른동물병원" ;
+  schema:address "전라북도 전주시 완산구 서원로 225 (중화산동2가) " ;
+  schema:telephone "063-281-0075" ;
+  ex:latitude 35.812750 ;
+  ex:longitude 127.119260 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 3 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "23:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시> ;
+  ex:careRegNo "345464201700001" .
+<http://animalloo.kr/ontology/facility/shelter/348528201000001>
+  a ex:AnimalShelter ;
+  schema:name "마산유기동물보호소" ;
+  schema:address "경상남도 창원시 성산구 공단로474번길 117 (상복동) 동물보호센터" ;
+  schema:telephone "055-225-5701" ;
+  ex:latitude 35.119423 ;
+  ex:longitude 128.468260 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 창원시 마산합포회원구" ;
+  ex:weekdayOpenTime "08:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_창원시> ;
+  ex:careRegNo "348528201000001" .
+<http://animalloo.kr/ontology/facility/shelter/311313202000003>
+  a ex:AnimalShelter ;
+  schema:name "마포구청" ;
+  schema:address "서울특별시 마포구 월드컵로 212 (성산동, 마포구청) 8층 경제진흥과" ;
+  schema:telephone "02-3153-8542" ;
+  ex:latitude 37.566326 ;
+  ex:longitude 126.901490 ;
+  ex:savesAnimalType "개+고양이+토끼+기니피그+페럿+햄스터" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 마포구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:careRegNo "311313202000003" .
+<http://animalloo.kr/ontology/facility/shelter/311313202600002>
+  a ex:AnimalShelter ;
+  schema:name "망원동물종합병원" ;
+  schema:address "서울특별시 마포구 월드컵로 65 (망원동) 1층" ;
+  schema:telephone "02-332-0175" ;
+  ex:latitude 37.554897 ;
+  ex:longitude 126.910835 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 마포구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:careRegNo "311313202600002" .
+<http://animalloo.kr/ontology/facility/shelter/311313202000002>
+  a ex:AnimalShelter ;
+  schema:name "망원동물종합병원" ;
+  schema:address "서울특별시 마포구 월드컵로 65 (망원동) 1층" ;
+  schema:telephone "02-332-0175" ;
+  ex:latitude 37.554897 ;
+  ex:longitude 126.910835 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 마포구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:careRegNo "311313202000002" .
+<http://animalloo.kr/ontology/facility/shelter/311313202600001>
+  a ex:AnimalShelter ;
+  schema:name "망원동물종합병원" ;
+  schema:address "서울특별시 마포구 월드컵로 65 (망원동) 1층" ;
+  schema:telephone "02-332-0175" ;
+  ex:latitude 37.554897 ;
+  ex:longitude 126.910835 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 마포구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:careRegNo "311313202600001" .
+<http://animalloo.kr/ontology/facility/shelter/327346202300001>
+  a ex:AnimalShelter ;
+  schema:name "멘토동물병원" ;
+  schema:address "대구광역시 수성구 용학로 294 (범물동) 2층" ;
+  ex:latitude 35.821556 ;
+  ex:longitude 128.640580 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:careRegNo "327346202300001" .
+<http://animalloo.kr/ontology/facility/shelter/346480201000001>
+  a ex:AnimalShelter ;
+  schema:name "목포시유기동물보호소" ;
+  schema:address "전라남도 무안군 삼향읍 석매길 36  " ;
+  ex:latitude 34.853508 ;
+  ex:longitude 126.430020 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 목포시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_무안군> ;
+  ex:careRegNo "346480201000001" .
+<http://animalloo.kr/ontology/facility/shelter/346495202100001>
+  a ex:AnimalShelter ;
+  schema:name "무안군유기동물보호소" ;
+  schema:address "전라남도 무안군 무안읍 면주길 99  " ;
+  schema:telephone "061-450-4495" ;
+  ex:latitude 35.017838 ;
+  ex:longitude 126.478330 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "전라남도 무안군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_무안군> ;
+  ex:careRegNo "346495202100001" .
+<http://animalloo.kr/ontology/facility/shelter/345474200900001>
+  a ex:AnimalShelter ;
+  schema:name "무주군" ;
+  schema:address "전북특별자치도 무주군 적상면 구억로 110-27  " ;
+  schema:telephone "063-320-2819" ;
+  ex:latitude 35.951366 ;
+  ex:longitude 127.658040 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 무주군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_무주군> ;
+  ex:careRegNo "345474200900001" .
+<http://animalloo.kr/ontology/facility/shelter/348536201800001>
+  a ex:AnimalShelter ;
+  schema:name "밀양시 동물보호센터" ;
+  schema:address "경상남도 밀양시 삼랑진읍 천태로 472 (삼랑진읍) " ;
+  schema:telephone "070-4113-7288" ;
+  ex:latitude 35.407684 ;
+  ex:longitude 128.879780 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 밀양시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_밀양시> ;
+  ex:careRegNo "348536201800001" .
+<http://animalloo.kr/ontology/facility/shelter/345464201100001>
+  a ex:AnimalShelter ;
+  schema:name "박영재동물병원" ;
+  schema:address "전라북도 전주시 완산구 전주천서로 111 (서서학동) " ;
+  schema:telephone "063-284-7774" ;
+  ex:latitude 35.810097 ;
+  ex:longitude 127.149210 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 3 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시> ;
+  ex:careRegNo "345464201100001" .
+<http://animalloo.kr/ontology/facility/shelter/311313201000006>
+  a ex:AnimalShelter ;
+  schema:name "박창석동물병원" ;
+  schema:address "서울특별시 마포구 도화길 42 (도화동) " ;
+  schema:telephone "02-6405-7582" ;
+  ex:latitude 37.541510 ;
+  ex:longitude 126.950350 ;
+  ex:savesAnimalType "개+고양이+토끼+페럿+햄스터+기니피그" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 마포구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:careRegNo "311313201000006" .
+<http://animalloo.kr/ontology/facility/shelter/343571201600001>
+  a ex:AnimalShelter ;
+  schema:name "반려동물보호센터" ;
+  schema:address "충청북도 청주시 흥덕구 강내면 서부로 411-23  청주시 반려동물 보호센터" ;
+  schema:telephone "043-201-2298" ;
+  ex:latitude 36.590233 ;
+  ex:longitude 127.365440 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "충청북도 청주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_청주시> ;
+  ex:careRegNo "343571201600001" .
+<http://animalloo.kr/ontology/facility/shelter/346481200900001>
+  a ex:AnimalShelter ;
+  schema:name "반려동물보호센터" ;
+  schema:address "전라남도 여수시 여수산단로 292-62 (평여동) 반려동물보호센터" ;
+  schema:telephone "061-659-2474" ;
+  ex:latitude 34.787575 ;
+  ex:longitude 127.663040 ;
+  ex:savesAnimalType "개+다친고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 여수시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_여수시> ;
+  ex:careRegNo "346481200900001" .
+<http://animalloo.kr/ontology/facility/shelter/328357200900001>
+  a ex:AnimalShelter ;
+  schema:name "베스트동물병원" ;
+  schema:address "인천광역시 강화군 강화읍 강화대로 217 (강화읍, 린나이보일러) " ;
+  schema:telephone "032-934-9340" ;
+  ex:latitude 37.739690 ;
+  ex:longitude 126.505460 ;
+  ex:savesAnimalType "개+고양이+염소+기타축종" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 강화군" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_강화군> ;
+  ex:careRegNo "328357200900001" .
+<http://animalloo.kr/ontology/facility/shelter/328353202600002>
+  a ex:AnimalShelter ;
+  schema:name "보람동물병원" ;
+  schema:address "인천광역시 남동구 문화서로3번길 7 (구월동) " ;
+  schema:telephone "032-429-1673" ;
+  ex:latitude 37.445970 ;
+  ex:longitude 126.694855 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 남동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:careRegNo "328353202600002" .
+<http://animalloo.kr/ontology/facility/shelter/344451202200002>
+  a ex:AnimalShelter ;
+  schema:name "보령길고양이보호협회" ;
+  schema:address "충청남도 보령시 남대천로 91 (대천동) 상가동 201호" ;
+  ex:latitude 36.345833 ;
+  ex:longitude 126.591400 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청남도 보령시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_보령시> ;
+  ex:careRegNo "344451202200002" .
+<http://animalloo.kr/ontology/facility/shelter/344451201300001>
+  a ex:AnimalShelter ;
+  schema:name "보령시유기동물보호소" ;
+  schema:address "충청남도 보령시 대천방조제로 322 (대천동) 보령시시설관리공단 내 좌측 생태공원2" ;
+  ex:latitude 36.332573 ;
+  ex:longitude 126.588260 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청남도 보령시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_보령시> ;
+  ex:careRegNo "344451201300001" .
+<http://animalloo.kr/ontology/facility/shelter/346489202000001>
+  a ex:AnimalShelter ;
+  schema:name "보성유기동물보호센터" ;
+  schema:address "전라남도 보성군 노동면 노동천동길 221  " ;
+  schema:telephone "061-853-5405" ;
+  ex:latitude 34.829860 ;
+  ex:longitude 127.066730 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 보성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_보성군> ;
+  ex:careRegNo "346489202000001" .
+<http://animalloo.kr/ontology/facility/shelter/347524201400001>
+  a ex:AnimalShelter ;
+  schema:name "봉화군유기동물보호소" ;
+  schema:address "경상북도 봉화군 봉성면 농업인길 24 (봉성면) 봉화군농업기술센터" ;
+  schema:telephone "054-679-6868" ;
+  ex:latitude 36.903760 ;
+  ex:longitude 128.772130 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 봉화군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_봉화군> ;
+  ex:careRegNo "347524201400001" .
+<http://animalloo.kr/ontology/facility/shelter/326336202500001>
+  a ex:AnimalShelter ;
+  schema:name "부산동물보호센터" ;
+  schema:address "부산광역시 강서구 맥도강변길 752-15 (대저2동) " ;
+  schema:telephone "051-832-7119" ;
+  ex:latitude 35.150818 ;
+  ex:longitude 128.939030 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 강서구" ;
+  ex:weekdayOpenTime "13:00" ;
+  ex:weekdayCloseTime "16:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326336202500001" .
+<http://animalloo.kr/ontology/facility/shelter/326339202600001>
+  a ex:AnimalShelter ;
+  schema:name "부산동물보호센터" ;
+  schema:address "부산광역시 강서구 맥도강변길 752-15 (대저2동) " ;
+  schema:telephone "051-832-7119" ;
+  ex:latitude 35.151443 ;
+  ex:longitude 128.939620 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 사상구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326339202600001" .
+<http://animalloo.kr/ontology/facility/shelter/326328202400002>
+  a ex:AnimalShelter ;
+  schema:name "부산동물보호센터" ;
+  schema:address "부산광역시 강서구 맥도강변길 752-15 (대저2동) " ;
+  schema:telephone "051-832-7119" ;
+  ex:latitude 35.151443 ;
+  ex:longitude 128.939640 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 영도구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "16:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326328202400002" .
+<http://animalloo.kr/ontology/facility/shelter/326334202600001>
+  a ex:AnimalShelter ;
+  schema:name "부산동물보호센터" ;
+  schema:address "부산광역시 강서구 맥도강변길 752-15 (대저2동) " ;
+  schema:telephone "051-832-7119" ;
+  ex:latitude 35.177500 ;
+  ex:longitude 128.917020 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 사하구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326334202600001" .
+<http://animalloo.kr/ontology/facility/shelter/326326201000001>
+  a ex:AnimalShelter ;
+  schema:name "부산동물보호센터" ;
+  schema:address "부산광역시 강서구 맥도강변길 752-15 (대저2동) " ;
+  schema:telephone "051-832-7119" ;
+  ex:latitude 35.151443 ;
+  ex:longitude 128.939640 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 서구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326326201000001" .
+<http://animalloo.kr/ontology/facility/shelter/326332201000001>
+  a ex:AnimalShelter ;
+  schema:name "부산동물보호센터" ;
+  schema:address "부산광역시 강서구 맥도강변길 752-15 (대저2동) " ;
+  schema:telephone "051-832-7119" ;
+  ex:latitude 35.151443 ;
+  ex:longitude 128.939620 ;
+  ex:savesAnimalType "개+새끼고양이+다친고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 북구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326332201000001" .
+<http://animalloo.kr/ontology/facility/shelter/326325201300001>
+  a ex:AnimalShelter ;
+  schema:name "부산동물보호센터" ;
+  schema:address "부산광역시 강서구 맥도강변길 752-15 (대저2동) " ;
+  schema:telephone "051-832-7119" ;
+  ex:latitude 35.151443 ;
+  ex:longitude 128.939640 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 중구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_강서구> ;
+  ex:careRegNo "326325201300001" .
+<http://animalloo.kr/ontology/facility/shelter/345479202100001>
+  a ex:AnimalShelter ;
+  schema:name "부안군 동물보호센터" ;
+  schema:address "전북특별자치도 부안군 주산면 주산로 369  부안군 동물보호센터" ;
+  schema:telephone "063-580-4445" ;
+  ex:latitude 35.665768 ;
+  ex:longitude 126.735825 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 3 ;
+  ex:orgName "전북특별자치도 부안군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_부안군> ;
+  ex:careRegNo "345479202100001" .
+<http://animalloo.kr/ontology/facility/shelter/341386201500001>
+  a ex:AnimalShelter ;
+  schema:name "부천시수의사회" ;
+  schema:address "경기도 부천시 원미구 중동로 244 (중동, 상록센트럴타워) 109호 110호 정샘동물병원(중동)" ;
+  schema:telephone "032-323-4999" ;
+  ex:latitude 37.488747 ;
+  ex:longitude 126.765790 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 부천시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_부천시> ;
+  ex:careRegNo "341386201500001" .
+<http://animalloo.kr/ontology/facility/shelter/326340201100001>
+  a ex:AnimalShelter ;
+  schema:name "사단법인 동부" ;
+  schema:address "부산광역시 해운대구 송정2로13번길 46 (송정동) " ;
+  schema:telephone "051-701-7599" ;
+  ex:latitude 35.194810 ;
+  ex:longitude 129.206310 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "부산광역시 기장군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_해운대구> ;
+  ex:careRegNo "326340201100001" .
+<http://animalloo.kr/ontology/facility/shelter/331372202500002>
+  a ex:AnimalShelter ;
+  schema:name "사단법인 포유" ;
+  schema:address "울산광역시 중구 젊음의거리 31 (성남동) 2~3층" ;
+  ex:latitude 35.553715 ;
+  ex:longitude 129.318390 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "울산광역시 북구" ;
+  ex:weekdayOpenTime "17:00" ;
+  ex:weekdayCloseTime "20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_중구> ;
+  ex:careRegNo "331372202500002" .
+<http://animalloo.kr/ontology/facility/shelter/331370200900001>
+  a ex:AnimalShelter ;
+  schema:name "사랑동물병원" ;
+  schema:address "울산광역시 남구 중앙로 165-1 (신정동) " ;
+  schema:telephone "052-273-0075" ;
+  ex:latitude 35.535830 ;
+  ex:longitude 129.313490 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 남구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_남구> ;
+  ex:careRegNo "331370200900001" .
+<http://animalloo.kr/ontology/facility/shelter/345464202400001>
+  a ex:AnimalShelter ;
+  schema:name "사랑플러스동물병원" ;
+  schema:address "전북특별자치도 전주시 덕진구 쪽구름2길 8 (여의동2가) 1층" ;
+  schema:telephone "063-211-0600" ;
+  ex:latitude 35.873573 ;
+  ex:longitude 127.076050 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_전주시> ;
+  ex:careRegNo "345464202400001" .
+<http://animalloo.kr/ontology/facility/shelter/348534202000001>
+  a ex:AnimalShelter ;
+  schema:name "사천시 동물보호센터" ;
+  schema:address "경상남도 사천시 용현면 진삼로 902  사천시유기동물보호소" ;
+  schema:telephone "055-831-3768" ;
+  ex:latitude 35.037525 ;
+  ex:longitude 128.067300 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 사천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_사천시> ;
+  ex:careRegNo "348534202000001" .
+<http://animalloo.kr/ontology/facility/shelter/348545201100002>
+  a ex:AnimalShelter ;
+  schema:name "산청동물보호센터" ;
+  schema:address "경상남도 산청군 산청읍 친환경로 2783-25 (산청읍) " ;
+  ex:latitude 35.426395 ;
+  ex:longitude 127.881270 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "경상남도 산청군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_산청군> ;
+  ex:careRegNo "348545201100002" .
+<http://animalloo.kr/ontology/facility/shelter/331371202400001>
+  a ex:AnimalShelter ;
+  schema:name "산타클라라동물병원" ;
+  schema:address "울산광역시 중구 다운로 1 (다운동) 대왕빌딩 1층" ;
+  schema:telephone "052-244-4296" ;
+  ex:latitude 35.555798 ;
+  ex:longitude 129.275380 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_중구> ;
+  ex:careRegNo "331371202400001" .
+<http://animalloo.kr/ontology/facility/shelter/331370202500001>
+  a ex:AnimalShelter ;
+  schema:name "산타클라라동물병원" ;
+  schema:address "울산광역시 중구 다운로 1 (다운동) 대왕빌딩 1층" ;
+  schema:telephone "052-244-4296" ;
+  ex:latitude 35.555798 ;
+  ex:longitude 129.275380 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 남구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_중구> ;
+  ex:careRegNo "331370202500001" .
+<http://animalloo.kr/ontology/facility/shelter/331372202500001>
+  a ex:AnimalShelter ;
+  schema:name "산타클라라동물병원" ;
+  schema:address "울산광역시 중구 다운로 1 (다운동) 대왕빌딩 1층" ;
+  schema:telephone "052-244-4296" ;
+  ex:latitude 35.555798 ;
+  ex:longitude 129.275380 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "울산광역시 북구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_중구> ;
+  ex:careRegNo "331372202500001" .
+<http://animalloo.kr/ontology/facility/shelter/331369201900001>
+  a ex:AnimalShelter ;
+  schema:name "산타클라라동물병원" ;
+  schema:address "울산광역시 중구 다운로 1 (다운동) " ;
+  schema:telephone "052-244-4296" ;
+  ex:latitude 35.555817 ;
+  ex:longitude 129.275360 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 중구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_중구> ;
+  ex:careRegNo "331369201900001" .
+<http://animalloo.kr/ontology/facility/shelter/328354201700003>
+  a ex:AnimalShelter ;
+  schema:name "삼산종합동물병원" ;
+  schema:address "인천광역시 부평구 체육관로 40 (삼산동) " ;
+  schema:telephone "032-330-0075" ;
+  ex:latitude 37.508240 ;
+  ex:longitude 126.736170 ;
+  ex:savesAnimalType "개+고양이+기타동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 부평구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_부평구> ;
+  ex:careRegNo "328354201700003" .
+<http://animalloo.kr/ontology/facility/shelter/342424201300001>
+  a ex:AnimalShelter ;
+  schema:name "삼척시동물보호센터" ;
+  schema:address "강원도 삼척시 미로면 동안로 86-45  " ;
+  schema:telephone "033-571-2610" ;
+  ex:latitude 37.428772 ;
+  ex:longitude 129.110240 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "강원특별자치도 삼척시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342424201300001" .
+<http://animalloo.kr/ontology/facility/shelter/347511202000001>
+  a ex:AnimalShelter ;
+  schema:name "상주시 동물보호센터" ;
+  schema:address "경상북도 상주시 사벌국면 상풍로 124  " ;
+  ex:latitude 36.343754 ;
+  ex:longitude 128.130750 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상북도 상주시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_상주시> ;
+  ex:careRegNo "347511202000001" .
+<http://animalloo.kr/ontology/facility/shelter/342424202500001>
+  a ex:AnimalShelter ;
+  schema:name "서루동물병원" ;
+  schema:address "강원특별자치도 삼척시 동해대로 4360 (갈천동, 일성 트루엘 시그니처) 상가 108호" ;
+  schema:telephone "033-802-7582" ;
+  ex:latitude 37.461230 ;
+  ex:longitude 129.160230 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "강원특별자치도 삼척시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_삼척시> ;
+  ex:careRegNo "342424202500001" .
+<http://animalloo.kr/ontology/facility/shelter/344453202100003>
+  a ex:AnimalShelter ;
+  schema:name "서산시 동물보호센터" ;
+  schema:address "충청남도 서산시 인지면 무학재1길 99  " ;
+  schema:telephone "041-660-2040" ;
+  ex:latitude 36.720757 ;
+  ex:longitude 126.412650 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 서산시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_서산시> ;
+  ex:careRegNo "344453202100003" .
+<http://animalloo.kr/ontology/facility/shelter/311321201800002>
+  a ex:AnimalShelter ;
+  schema:name "서초동물사랑센터" ;
+  schema:address "서울특별시 서초구 양재천로19길 22 (양재동, 숨빌딩) 서초동물사랑센터" ;
+  schema:telephone "02-6956-7980" ;
+  ex:latitude 37.476370 ;
+  ex:longitude 127.038155 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 서초구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_서초구> ;
+  ex:careRegNo "311321201800002" .
+<http://animalloo.kr/ontology/facility/shelter/311303202500001>
+  a ex:AnimalShelter ;
+  schema:name "성동구청" ;
+  schema:address "서울특별시 성동구 고산자로 270 (행당동) 10층 여성가족과" ;
+  schema:telephone "02-2286-6853" ;
+  ex:latitude 37.563427 ;
+  ex:longitude 127.036910 ;
+  ex:savesAnimalType "반려동물" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "서울특별시 성동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_성동구> ;
+  ex:careRegNo "311303202500001" .
+<http://animalloo.kr/ontology/facility/shelter/347521201900002>
+  a ex:AnimalShelter ;
+  schema:name "성주군동물보호센터" ;
+  schema:address "경상북도 성주군 선남면 선노로 522 (선남면) " ;
+  ex:latitude 35.920765 ;
+  ex:longitude 128.394240 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 성주군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_성주군> ;
+  ex:careRegNo "347521201900002" .
+<http://animalloo.kr/ontology/facility/shelter/328353202600001>
+  a ex:AnimalShelter ;
+  schema:name "세우리동물병원" ;
+  schema:address "인천광역시 남동구 백범로 260 (간석동) " ;
+  schema:telephone "032-463-9066" ;
+  ex:latitude 37.461110 ;
+  ex:longitude 126.720566 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 남동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:careRegNo "328353202600001" .
+<http://animalloo.kr/ontology/facility/shelter/327346202300002>
+  a ex:AnimalShelter ;
+  schema:name "세인트동물병원" ;
+  schema:address "대구광역시 수성구 청호로 484 (만촌동) " ;
+  schema:telephone "053-744-8285" ;
+  ex:latitude 35.857838 ;
+  ex:longitude 128.645050 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:careRegNo "327346202300002" .
+<http://animalloo.kr/ontology/facility/shelter/369569202000001>
+  a ex:AnimalShelter ;
+  schema:name "세종유기동물보호센터" ;
+  schema:address "세종특별자치시  전동면 미륵당1길 188 (전동면) " ;
+  ex:latitude 36.673023 ;
+  ex:longitude 127.221306 ;
+  ex:savesAnimalType "개+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "세종특별자치시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "369569202000001" .
+<http://animalloo.kr/ontology/facility/shelter/369569201900001>
+  a ex:AnimalShelter ;
+  schema:name "세종종합동물병원" ;
+  schema:address "세종특별자치시 조치원읍 죽림로 60  세종종합동물병원" ;
+  schema:telephone "044-868-8275" ;
+  ex:latitude 36.599155 ;
+  ex:longitude 127.298300 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "세종특별자치시" ;
+  ex:weekdayOpenTime "09:18" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "369569201900001" .
+<http://animalloo.kr/ontology/facility/shelter/342423201200001>
+  a ex:AnimalShelter ;
+  schema:name "속초시유기동물보호소" ;
+  schema:address "강원도 속초시 하도문길 103 (대포동) " ;
+  schema:telephone "033-636-2519" ;
+  ex:latitude 38.169190 ;
+  ex:longitude 128.598880 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 속초시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342423201200001" .
+<http://animalloo.kr/ontology/facility/shelter/341374202000001>
+  a ex:AnimalShelter ;
+  schema:name "수원시 동물보호센터" ;
+  schema:address "경기도 수원시 영통구 광교호수로 234 (하동, 수원시 동물보호센터) 하동 40-10" ;
+  schema:telephone "031-5191-3557" ;
+  ex:latitude 37.285023 ;
+  ex:longitude 127.078710 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 수원시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_수원시> ;
+  ex:careRegNo "341374202000001" .
+<http://animalloo.kr/ontology/facility/shelter/345477202000001>
+  a ex:AnimalShelter ;
+  schema:name "순창유기동물보호소" ;
+  schema:address "전라북도 순창군 구림면 삭골길 56-1  " ;
+  schema:telephone "063-650-5643" ;
+  ex:latitude 35.437366 ;
+  ex:longitude 127.041855 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 순창군" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_순창군> ;
+  ex:careRegNo "345477202000001" .
+<http://animalloo.kr/ontology/facility/shelter/346482201600003>
+  a ex:AnimalShelter ;
+  schema:name "순천시유기동물보호소" ;
+  schema:address "전라남도 순천시 승주읍 승주로 628 (승주읍, 농업기술센터) 순천시유기동물보호소" ;
+  schema:telephone "061-749-3094" ;
+  ex:latitude 35.015810 ;
+  ex:longitude 127.379420 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 순천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_순천시> ;
+  ex:careRegNo "346482201600003" .
+<http://animalloo.kr/ontology/facility/shelter/331370201200001>
+  a ex:AnimalShelter ;
+  schema:name "스마일동물병원" ;
+  schema:address "울산광역시 남구 대학로 112 (무거동) " ;
+  schema:telephone "052-277-0075" ;
+  ex:latitude 35.544704 ;
+  ex:longitude 129.260880 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "울산광역시 남구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_남구> ;
+  ex:careRegNo "331370201200001" .
+<http://animalloo.kr/ontology/facility/shelter/328353202600004>
+  a ex:AnimalShelter ;
+  schema:name "시민동물병원" ;
+  schema:address "인천광역시 부평구 경인로 855 (부평동) " ;
+  schema:telephone "032-426-4545" ;
+  ex:latitude 37.484318 ;
+  ex:longitude 126.715485 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 남동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_부평구> ;
+  ex:careRegNo "328353202600004" .
+<http://animalloo.kr/ontology/facility/shelter/341401202200001>
+  a ex:AnimalShelter ;
+  schema:name "시흥동물누리보호센터" ;
+  schema:address "경기도 시흥시 뒷방울길 218 (정왕동) " ;
+  schema:telephone "031-310-6945" ;
+  ex:latitude 37.373970 ;
+  ex:longitude 126.742546 ;
+  ex:savesAnimalType "개+고양이+햄스터+기니피그+페럿" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 시흥시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_시흥시> ;
+  ex:careRegNo "341401202200001" .
+<http://animalloo.kr/ontology/facility/shelter/328349201500001>
+  a ex:AnimalShelter ;
+  schema:name "신공항동물병원" ;
+  schema:address "인천광역시 중구 운남동로3번길 9 (운남동) " ;
+  schema:telephone "032-751-4598" ;
+  ex:latitude 37.488678 ;
+  ex:longitude 126.533356 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "인천광역시 중구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_중구> ;
+  ex:careRegNo "328349201500001" .
+<http://animalloo.kr/ontology/facility/shelter/327346201500011>
+  a ex:AnimalShelter ;
+  schema:name "신세계동물병원" ;
+  schema:address "대구광역시 수성구 수성동1가 명덕로 393 (수성동1가) " ;
+  schema:telephone "053-751-6693" ;
+  ex:latitude 35.854717 ;
+  ex:longitude 128.613200 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:careRegNo "327346201500011" .
+<http://animalloo.kr/ontology/facility/shelter/329359201700004>
+  a ex:AnimalShelter ;
+  schema:name "신세계동물병원" ;
+  schema:address "광주광역시 동구 중앙로 150 (호남동) " ;
+  schema:telephone "062-226-7585" ;
+  ex:latitude 35.456460 ;
+  ex:longitude 126.885290 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "광주광역시 동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_동구> ;
+  ex:careRegNo "329359201700004" .
+<http://animalloo.kr/ontology/facility/shelter/346501201700001>
+  a ex:AnimalShelter ;
+  schema:name "신안군유기동물보호소" ;
+  schema:address "전라남도 무안군 삼향읍 석매길 36  " ;
+  ex:latitude 34.853508 ;
+  ex:longitude 126.430020 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 신안군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_무안군> ;
+  ex:careRegNo "346501201700001" .
+<http://animalloo.kr/ontology/facility/shelter/328355200900001>
+  a ex:AnimalShelter ;
+  schema:name "신영재동물병원" ;
+  schema:address "인천광역시 계양구 장제로 923 (병방동) " ;
+  schema:telephone "032-552-0075" ;
+  ex:latitude 37.548847 ;
+  ex:longitude 126.741370 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 계양구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_계양구> ;
+  ex:careRegNo "328355200900001" .
+<http://animalloo.kr/ontology/facility/shelter/344452202300001>
+  a ex:AnimalShelter ;
+  schema:name "아산동물복지지원센터" ;
+  schema:address "충청남도 아산시 환경공원로 158 (배미동) " ;
+  schema:telephone "041-530-6200" ;
+  ex:latitude 36.800564 ;
+  ex:longitude 126.977590 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 아산시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_아산시> ;
+  ex:careRegNo "344452202300001" .
+<http://animalloo.kr/ontology/facility/shelter/311303202500005>
+  a ex:AnimalShelter ;
+  schema:name "아지동물병원" ;
+  schema:address "서울특별시 성동구 독서당로 289 (금호동4가) " ;
+  schema:telephone "02-6085-7750" ;
+  ex:latitude 37.548077 ;
+  ex:longitude 127.021034 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 성동구" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_성동구> ;
+  ex:careRegNo "311303202500005" .
+<http://animalloo.kr/ontology/facility/shelter/341408200900001>
+  a ex:AnimalShelter ;
+  schema:name "안성시동물보호센터" ;
+  schema:address "경기도 안성시 보개원삼로 157 (가사동) 미래동물병원" ;
+  schema:telephone "031-673-5491" ;
+  ex:latitude 37.006670 ;
+  ex:longitude 127.274864 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 안성시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안성시> ;
+  ex:careRegNo "341408200900001" .
+<http://animalloo.kr/ontology/facility/shelter/342432201000001>
+  a ex:AnimalShelter ;
+  schema:name "양구군유기동물보호소" ;
+  schema:address "강원도 양구군 국토정중앙면 삼팔선로 680  유기동물보호소" ;
+  schema:telephone "033-480-7785" ;
+  ex:latitude 38.050987 ;
+  ex:longitude 128.046800 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 양구군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342432201000001" .
+<http://animalloo.kr/ontology/facility/shelter/348538200900001>
+  a ex:AnimalShelter ;
+  schema:name "양산시 동물보호센터" ;
+  schema:address "경상남도 양산시 동면 양산대로 618  양산시 농업기술센터" ;
+  schema:telephone "055-392-5669" ;
+  ex:latitude 35.324547 ;
+  ex:longitude 129.034420 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 양산시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_양산시> ;
+  ex:careRegNo "348538200900001" .
+<http://animalloo.kr/ontology/facility/shelter/342435201000001>
+  a ex:AnimalShelter ;
+  schema:name "양양군유기동물보호소" ;
+  schema:address "강원도 양양군 손양면 동막골길 115-35  ." ;
+  schema:telephone "033-670-2459" ;
+  ex:latitude 38.020460 ;
+  ex:longitude 128.643310 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 양양군" ;
+  ex:weekdayOpenTime "08:30" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342435201000001" .
+<http://animalloo.kr/ontology/facility/shelter/341417201800001>
+  a ex:AnimalShelter ;
+  schema:name "양평군유기동물보호소" ;
+  schema:address "경기도 양평군 양평읍 농업기술센터길 59-1  " ;
+  schema:telephone "031-770-2337" ;
+  ex:latitude 37.510906 ;
+  ex:longitude 127.513310 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 양평군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양평군> ;
+  ex:careRegNo "341417201800001" .
+<http://animalloo.kr/ontology/facility/shelter/330366202600001>
+  a ex:AnimalShelter ;
+  schema:name "엄마손동물병원" ;
+  schema:address "대전광역시 서구 계백로 1426 (도마동, 도마동써머스빌주상복합) 1층" ;
+  schema:telephone "042-585-0076" ;
+  ex:latitude 36.312576 ;
+  ex:longitude 127.379745 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대전광역시 서구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_서구> ;
+  ex:careRegNo "330366202600001" .
+<http://animalloo.kr/ontology/facility/shelter/311302201000006>
+  a ex:AnimalShelter ;
+  schema:name "열린동물병원" ;
+  schema:address "서울특별시 용산구 원효로2가 84-10" ;
+  schema:telephone "02-3273-0075" ;
+  ex:latitude 37.535050 ;
+  ex:longitude 126.962810 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 용산구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_용산구> ;
+  ex:careRegNo "311302201000006" .
+<http://animalloo.kr/ontology/facility/shelter/346497201300001>
+  a ex:AnimalShelter ;
+  schema:name "영광동물보호센터" ;
+  schema:address "전라남도 영광군 불갑면 함영로 2755-48  " ;
+  ex:latitude 35.205150 ;
+  ex:longitude 126.494140 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 영광군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_영광군> ;
+  ex:careRegNo "346497201300001" .
+<http://animalloo.kr/ontology/facility/shelter/347518202500001>
+  a ex:AnimalShelter ;
+  schema:name "영덕반려동물입양센터" ;
+  schema:address "경상북도 영덕군 영덕읍 중앙길 88-1  1층" ;
+  schema:telephone "054-733-7583" ;
+  ex:latitude 36.410750 ;
+  ex:longitude 129.370450 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 영덕군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_영덕군> ;
+  ex:careRegNo "347518202500001" .
+<http://animalloo.kr/ontology/facility/shelter/347518201000001>
+  a ex:AnimalShelter ;
+  schema:name "영덕유기동물보호센터" ;
+  schema:address "경상북도 영덕군 영덕읍 구미2길 14-1 (영덕읍) 영덕군유기동물보호센터" ;
+  schema:telephone "054-730-6286" ;
+  ex:latitude 36.435738 ;
+  ex:longitude 129.357620 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 영덕군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_영덕군> ;
+  ex:careRegNo "347518201000001" .
+<http://animalloo.kr/ontology/facility/shelter/347517201400001>
+  a ex:AnimalShelter ;
+  schema:name "영양군유기동물보호소" ;
+  schema:address "경상북도 영양군 영양읍 달구터길 85  " ;
+  schema:telephone "070-7792-6660" ;
+  ex:latitude 36.687830 ;
+  ex:longitude 129.113240 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상북도 영양군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_영양군> ;
+  ex:careRegNo "347517201400001" .
+<http://animalloo.kr/ontology/facility/shelter/342427201400001>
+  a ex:AnimalShelter ;
+  schema:name "영월군 동물보호센터" ;
+  schema:address "강원특별자치도 영월군 남면 갈골길 12  영월군 동물보호센터" ;
+  schema:telephone "033-374-4983" ;
+  ex:latitude 37.209248 ;
+  ex:longitude 128.412830 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "강원특별자치도 영월군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_영월군> ;
+  ex:careRegNo "342427201400001" .
+<http://animalloo.kr/ontology/facility/shelter/347509200900001>
+  a ex:AnimalShelter ;
+  schema:name "영주시 동물보호센터" ;
+  schema:address "경상북도 영주시 장수면 반구로 143 [*미고시] 영주시동물보호센터" ;
+  schema:telephone "054-631-3997" ;
+  ex:latitude 36.772324 ;
+  ex:longitude 128.593960 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상북도 영주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_영주시> ;
+  ex:careRegNo "347509200900001" .
+<http://animalloo.kr/ontology/facility/shelter/347510201600001>
+  a ex:AnimalShelter ;
+  schema:name "영천유기동물보호센터" ;
+  schema:address "경상북도 영천시 천문로 622-13 (오미동, 영천시농업기술센터) " ;
+  schema:telephone "054-339-7177" ;
+  ex:latitude 35.990917 ;
+  ex:longitude 128.925960 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 영천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_영천시> ;
+  ex:careRegNo "347510201600001" .
+<http://animalloo.kr/ontology/facility/shelter/344461202400001>
+  a ex:AnimalShelter ;
+  schema:name "예산임시동물보호센터" ;
+  schema:address "충청남도 예산군 예산읍 군청로 22  " ;
+  schema:telephone "041-339-7838" ;
+  ex:latitude 36.680843 ;
+  ex:longitude 126.844650 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청남도 예산군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_예산군> ;
+  ex:careRegNo "344461202400001" .
+<http://animalloo.kr/ontology/facility/shelter/347523201200001>
+  a ex:AnimalShelter ;
+  schema:name "예천군유기동물보호소" ;
+  schema:address "경상북도 예천군 예천읍 충효로 632-84 (예천읍, 유기동물보호소) " ;
+  schema:telephone "054-650-6578" ;
+  ex:latitude 36.674850 ;
+  ex:longitude 128.476240 ;
+  ex:savesAnimalType "개+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 예천군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_예천군> ;
+  ex:careRegNo "347523201200001" .
+<http://animalloo.kr/ontology/facility/shelter/311303202500003>
+  a ex:AnimalShelter ;
+  schema:name "오렌지동물병원" ;
+  schema:address "서울특별시 성동구 행당로8길 41-2 (행당동) " ;
+  schema:telephone "02-2297-7585" ;
+  ex:latitude 37.556200 ;
+  ex:longitude 127.033970 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 성동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_성동구> ;
+  ex:careRegNo "311303202500003" .
+<http://animalloo.kr/ontology/facility/shelter/341400200900001>
+  a ex:AnimalShelter ;
+  schema:name "오산 유기동물보호소" ;
+  schema:address "경기도 오산시 성호대로 36 (오산동) " ;
+  schema:telephone "031-372-9325" ;
+  ex:latitude 37.149086 ;
+  ex:longitude 127.065200 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 오산시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_오산시> ;
+  ex:careRegNo "341400200900001" .
+<http://animalloo.kr/ontology/facility/shelter/343443201500001>
+  a ex:AnimalShelter ;
+  schema:name "옥천동물병원" ;
+  schema:address "충청북도 옥천군 옥천읍 삼금로 53 (옥천읍, 동물병원) 옥천동물병원" ;
+  ex:latitude 36.303050 ;
+  ex:longitude 127.568780 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "충청북도 옥천군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_옥천군> ;
+  ex:careRegNo "343443201500001" .
+<http://animalloo.kr/ontology/facility/shelter/331373201200001>
+  a ex:AnimalShelter ;
+  schema:name "와우동물병원" ;
+  schema:address "울산광역시 울주군 언양읍 읍성로 135 (언양읍) " ;
+  schema:telephone "052-225-0075" ;
+  ex:latitude 35.570267 ;
+  ex:longitude 129.123100 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 울주군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:careRegNo "331373201200001" .
+<http://animalloo.kr/ontology/facility/shelter/345472202300001>
+  a ex:AnimalShelter ;
+  schema:name "완주군유기동물보호소" ;
+  schema:address "전북특별자치도 완주군 화산면 누하길 127  " ;
+  schema:telephone "063-290-3248" ;
+  ex:latitude 35.941900 ;
+  ex:longitude 127.190320 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전북특별자치도 완주군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_완주군> ;
+  ex:careRegNo "345472202300001" .
+<http://animalloo.kr/ontology/facility/shelter/341405201800001>
+  a ex:AnimalShelter ;
+  schema:name "용인시 동물보호센터" ;
+  schema:address "경기도 용인시 처인구 중부대로 1074-1 (삼가동) 용인시 동물보호센터" ;
+  schema:telephone "031-6193-3463" ;
+  ex:latitude 37.243313 ;
+  ex:longitude 127.159340 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 용인시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_용인시> ;
+  ex:careRegNo "341405201800001" .
+<http://animalloo.kr/ontology/facility/shelter/347526201600001>
+  a ex:AnimalShelter ;
+  schema:name "울릉군농업기술센터" ;
+  schema:address "경상북도 울릉군 울릉읍 신리길 68 (울릉읍, 울릉도축장) " ;
+  schema:telephone "054-790-6284" ;
+  ex:latitude 37.467354 ;
+  ex:longitude 130.877720 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 울릉군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_울릉군> ;
+  ex:careRegNo "347526201600001" .
+<http://animalloo.kr/ontology/facility/shelter/331371201200001>
+  a ex:AnimalShelter ;
+  schema:name "울산유기동물보호센터" ;
+  schema:address "울산광역시 울주군 온양읍 화산발리로 543 (온양읍) " ;
+  schema:telephone "052-238-6113" ;
+  ex:latitude 35.390892 ;
+  ex:longitude 129.286000 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "울산광역시 동구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:careRegNo "331371201200001" .
+<http://animalloo.kr/ontology/facility/shelter/331369201400003>
+  a ex:AnimalShelter ;
+  schema:name "울산유기동물보호센터" ;
+  schema:address "울산광역시 울주군 온양읍 화산발리로 543 (온양읍) " ;
+  schema:telephone "052-238-6113" ;
+  ex:latitude 35.391132 ;
+  ex:longitude 129.285830 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 중구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:careRegNo "331369201400003" .
+<http://animalloo.kr/ontology/facility/shelter/331370201200003>
+  a ex:AnimalShelter ;
+  schema:name "울산유기동물보호센터" ;
+  schema:address "울산광역시 울주군 온양읍 화산발리로 543 (온양읍) " ;
+  schema:telephone "052-238-6113" ;
+  ex:latitude 35.390892 ;
+  ex:longitude 129.286000 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 남구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:careRegNo "331370201200003" .
+<http://animalloo.kr/ontology/facility/shelter/331372201200001>
+  a ex:AnimalShelter ;
+  schema:name "울산유기동물보호센터" ;
+  schema:address "울산광역시 울주군 온양읍 화산발리로 543  " ;
+  schema:telephone "052-238-6113" ;
+  ex:latitude 35.410290 ;
+  ex:longitude 129.288510 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "울산광역시 북구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:careRegNo "331372201200001" .
+<http://animalloo.kr/ontology/facility/shelter/331373201200002>
+  a ex:AnimalShelter ;
+  schema:name "울산유기동물보호센터" ;
+  schema:address "울산광역시 울주군 온양읍 발리 1144" ;
+  schema:telephone "052-238-6113" ;
+  ex:latitude 35.410290 ;
+  ex:longitude 129.288510 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 울주군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:careRegNo "331373201200002" .
+<http://animalloo.kr/ontology/facility/shelter/331371202500002>
+  a ex:AnimalShelter ;
+  schema:name "울산유기동물입양센터" ;
+  schema:address "울산광역시 중구 젊음의거리 31 (성남동) 2~3층" ;
+  ex:latitude 35.553734 ;
+  ex:longitude 129.318390 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 동구" ;
+  ex:weekdayOpenTime "17:00" ;
+  ex:weekdayCloseTime "20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_중구> ;
+  ex:careRegNo "331371202500002" .
+<http://animalloo.kr/ontology/facility/shelter/347525202100001>
+  a ex:AnimalShelter ;
+  schema:name "울진군동물보호센터" ;
+  schema:address "경상북도 울진군 울진읍 대흥신림로 916-37  " ;
+  schema:telephone "054-789-6795" ;
+  ex:latitude 37.003430 ;
+  ex:longitude 129.360600 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상북도 울진군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_울진군> ;
+  ex:careRegNo "347525202100001" .
+<http://animalloo.kr/ontology/facility/shelter/342419200900001>
+  a ex:AnimalShelter ;
+  schema:name "원주시동물보호센터" ;
+  schema:address "강원특별자치도 원주시 호저면 칠봉로 109-17  " ;
+  schema:telephone "033-731-1119" ;
+  ex:latitude 37.413876 ;
+  ex:longitude 127.914240 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 원주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_원주시> ;
+  ex:careRegNo "342419200900001" .
+<http://animalloo.kr/ontology/facility/shelter/344455202100001>
+  a ex:AnimalShelter ;
+  schema:name "월드동물병원" ;
+  schema:address "충청남도 금산군 금산읍 비단로 102  103호" ;
+  schema:telephone "041-750-2584" ;
+  ex:latitude 36.098830 ;
+  ex:longitude 127.491700 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 금산군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_금산군> ;
+  ex:careRegNo "344455202100001" .
+<http://animalloo.kr/ontology/facility/shelter/311313201300003>
+  a ex:AnimalShelter ;
+  schema:name "웰케어 동물병원" ;
+  schema:address "서울특별시 마포구 월드컵북로 27 (서교동, 이화빌딩) 서교동447-2" ;
+  schema:telephone "02-337-7575" ;
+  ex:latitude 37.556877 ;
+  ex:longitude 126.919080 ;
+  ex:savesAnimalType "개+고양이+토끼+기니피그+페럿+햄스터" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "서울특별시 마포구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:careRegNo "311313201300003" .
+<http://animalloo.kr/ontology/facility/shelter/341407201900001>
+  a ex:AnimalShelter ;
+  schema:name "위더스 동물보호센터" ;
+  schema:address "경기도 여주시 여양2로 42 (천송동) " ;
+  schema:telephone "031-882-4381" ;
+  ex:latitude 37.307938 ;
+  ex:longitude 127.673780 ;
+  ex:savesAnimalType "개+고양이+기타동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 이천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_여주시> ;
+  ex:careRegNo "341407201900001" .
+<http://animalloo.kr/ontology/facility/shelter/346494201700001>
+  a ex:AnimalShelter ;
+  schema:name "유기동물 삼호 보호소" ;
+  schema:address "전라남도 영암군 삼호읍 녹색로 1117-49 (삼호읍) 영암유기동물 삼호보호소" ;
+  ex:latitude 34.748330 ;
+  ex:longitude 126.485840 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 영암군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_영암군> ;
+  ex:careRegNo "346494201700001" .
+<http://animalloo.kr/ontology/facility/shelter/347507200900001>
+  a ex:AnimalShelter ;
+  schema:name "유기동물보호센터" ;
+  schema:address "경상북도 안동시 서후면 풍산태사로 3252-29 (서후면) " ;
+  ex:latitude 36.635990 ;
+  ex:longitude 128.683840 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상북도 안동시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_안동시> ;
+  ex:careRegNo "347507200900001" .
+<http://animalloo.kr/ontology/facility/shelter/346499201300001>
+  a ex:AnimalShelter ;
+  schema:name "유기동물임시보호센터" ;
+  schema:address "전라남도 완도군 신지면 신지로6번길 23-89 (신지면) " ;
+  schema:telephone "061-550-5749" ;
+  ex:latitude 34.331898 ;
+  ex:longitude 126.781204 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 완도군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_완도군> ;
+  ex:careRegNo "346499201300001" .
+<http://animalloo.kr/ontology/facility/shelter/343447202600001>
+  a ex:AnimalShelter ;
+  schema:name "음성군 동물보호센터" ;
+  schema:address "충청북도 음성군 삼성면 대금로 715-5  " ;
+  schema:telephone "043-877-3081" ;
+  ex:latitude 36.973564 ;
+  ex:longitude 127.515274 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청북도 음성군" ;
+  ex:weekdayOpenTime "09:18" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_음성군> ;
+  ex:careRegNo "343447202600001" .
+<http://animalloo.kr/ontology/facility/shelter/348539201900001>
+  a ex:AnimalShelter ;
+  schema:name "의령군 동물보호센터" ;
+  schema:address "경상남도 의령군 의령읍 남강로 485-75  " ;
+  schema:telephone "055-570-4203" ;
+  ex:latitude 35.296494 ;
+  ex:longitude 128.280760 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 의령군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_의령군> ;
+  ex:careRegNo "348539201900001" .
+<http://animalloo.kr/ontology/facility/shelter/347515201900001>
+  a ex:AnimalShelter ;
+  schema:name "의성동물보호센터" ;
+  schema:address "경상북도 의성군 의성읍 의성사곡로 101  상리리 440-2" ;
+  ex:latitude 36.351913 ;
+  ex:longitude 128.721920 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 의성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_의성군> ;
+  ex:careRegNo "347515201900001" .
+<http://animalloo.kr/ontology/facility/shelter/341403202000001>
+  a ex:AnimalShelter ;
+  schema:name "의왕시청" ;
+  schema:address "경기도 의왕시 백운로 23 (오전동) 도시농업과" ;
+  schema:telephone "031-345-2383" ;
+  ex:latitude 37.352077 ;
+  ex:longitude 126.982260 ;
+  ex:savesAnimalType "개+고양이+기타축종" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경기도 의왕시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_의왕시> ;
+  ex:careRegNo "341403202000001" .
+<http://animalloo.kr/ontology/facility/shelter/311302201000014>
+  a ex:AnimalShelter ;
+  schema:name "이상윤동물병원" ;
+  schema:address "서울특별시 용산구 이촌동 300-23" ;
+  schema:telephone "02-792-5455" ;
+  ex:latitude 37.516815 ;
+  ex:longitude 126.976200 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 용산구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_용산구> ;
+  ex:careRegNo "311302201000014" .
+<http://animalloo.kr/ontology/facility/shelter/327348202600001>
+  a ex:AnimalShelter ;
+  schema:name "이서동물병원" ;
+  schema:address "대구광역시 달서구 구마로 243 (성당동) 이서동물병원" ;
+  schema:telephone "053-719-0205" ;
+  ex:latitude 35.837650 ;
+  ex:longitude 128.554370 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대구광역시 달성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_달서구> ;
+  ex:careRegNo "327348202600001" .
+<http://animalloo.kr/ontology/facility/shelter/345468201200001>
+  a ex:AnimalShelter ;
+  schema:name "익산유기동물보호소" ;
+  schema:address "전북특별자치도 익산시 삼기면 황금로 342-17  " ;
+  schema:telephone "063-855-1214" ;
+  ex:latitude 36.025820 ;
+  ex:longitude 126.966545 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "전북특별자치도 익산시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_익산시> ;
+  ex:careRegNo "345468201200001" .
+<http://animalloo.kr/ontology/facility/shelter/345470202100001>
+  a ex:AnimalShelter ;
+  schema:name "인월동물병원" ;
+  schema:address "전북특별자치도 남원시 인월면 인월로 64  " ;
+  schema:telephone "063-636-2873" ;
+  ex:latitude 35.460613 ;
+  ex:longitude 127.602120 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 남원시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "00:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_남원시> ;
+  ex:careRegNo "345470202100001" .
+<http://animalloo.kr/ontology/facility/shelter/342433201300001>
+  a ex:AnimalShelter ;
+  schema:name "인제군동물보호센터" ;
+  schema:address "강원특별자치도 인제군 인제읍 덕산로 256-41  " ;
+  schema:telephone "033-460-2473" ;
+  ex:latitude 38.058823 ;
+  ex:longitude 128.166020 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 인제군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_인제군> ;
+  ex:careRegNo "342433201300001" .
+<http://animalloo.kr/ontology/facility/shelter/328358201000001>
+  a ex:AnimalShelter ;
+  schema:name "인천수의사회유기동물" ;
+  schema:address "인천광역시 계양구 다남로165번길 56 (다남동) 인천수의사회유기동물보호소" ;
+  schema:telephone "032-515-7567" ;
+  ex:latitude 37.566288 ;
+  ex:longitude 126.719650 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 옹진군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_계양구> ;
+  ex:careRegNo "328358201000001" .
+<http://animalloo.kr/ontology/facility/shelter/331371201000001>
+  a ex:AnimalShelter ;
+  schema:name "일산동물의료센터" ;
+  schema:address "울산광역시 동구 방어진순환도로 645 (일산동) " ;
+  schema:telephone "052-252-5878" ;
+  ex:latitude 35.499413 ;
+  ex:longitude 129.428100 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_동구> ;
+  ex:careRegNo "331371201000001" .
+<http://animalloo.kr/ontology/facility/shelter/345476202100001>
+  a ex:AnimalShelter ;
+  schema:name "임실유기동물보호센터" ;
+  schema:address "전라북도 임실군 오수면 춘향로 1554-95  펫추모공원 입구, 유기동물보호센터" ;
+  schema:telephone "063-642-5550" ;
+  ex:latitude 35.538880 ;
+  ex:longitude 127.343280 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 임실군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_임실군> ;
+  ex:careRegNo "345476202100001" .
+<http://animalloo.kr/ontology/facility/shelter/346498202000001>
+  a ex:AnimalShelter ;
+  schema:name "장성군동물보호센터" ;
+  schema:address "전라남도 장성군 삼계면 능성로 382-31  0" ;
+  schema:telephone "061-390-8423" ;
+  ex:latitude 35.253740 ;
+  ex:longitude 126.685370 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 장성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_장성군> ;
+  ex:careRegNo "346498202000001" .
+<http://animalloo.kr/ontology/facility/shelter/345475202200003>
+  a ex:AnimalShelter ;
+  schema:name "장수군 보호소" ;
+  schema:address "전라북도 장수군 천천면 승마1로 152  " ;
+  schema:telephone "063-350-2436" ;
+  ex:latitude 35.697975 ;
+  ex:longitude 127.508156 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전북특별자치도 장수군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_장수군> ;
+  ex:careRegNo "345475202200003" .
+<http://animalloo.kr/ontology/facility/shelter/346491201300001>
+  a ex:AnimalShelter ;
+  schema:name "장흥군 동물보호센터" ;
+  schema:address "전라남도 장흥군 안양면 우드랜드길 288 (안양면, 남도국제교육원) 축산사업소" ;
+  schema:telephone "061-860-6713" ;
+  ex:latitude 34.667660 ;
+  ex:longitude 126.944610 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 장흥군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_장흥군> ;
+  ex:careRegNo "346491201300001" .
+<http://animalloo.kr/ontology/facility/shelter/345471201800002>
+  a ex:AnimalShelter ;
+  schema:name "전북말산업복합센터" ;
+  schema:address "전라북도 김제시 용지면 금백로 571-39 (용지면) 전북말산업복합센터" ;
+  schema:telephone "063-547-3549" ;
+  ex:latitude 35.823616 ;
+  ex:longitude 126.994720 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "전북특별자치도 김제시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_김제시> ;
+  ex:careRegNo "345471201800002" .
+<http://animalloo.kr/ontology/facility/shelter/347516202000001>
+  a ex:AnimalShelter ;
+  schema:name "점곡동물보호센터" ;
+  schema:address "경상북도 청송군 현동면 청송로 3128-141  " ;
+  schema:telephone "054-870-6281" ;
+  ex:latitude 36.303750 ;
+  ex:longitude 129.055070 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 청송군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_청송군> ;
+  ex:careRegNo "347516202000001" .
+<http://animalloo.kr/ontology/facility/shelter/341386201800004>
+  a ex:AnimalShelter ;
+  schema:name "정샘동물병원" ;
+  schema:address "경기도 부천시 원미구 중동로 244 (중동, 상록센트럴타워) 109,110호" ;
+  schema:telephone "032-323-4999" ;
+  ex:latitude 37.501526 ;
+  ex:longitude 126.769035 ;
+  ex:savesAnimalType "개+고양이+등" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 부천시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_부천시> ;
+  ex:careRegNo "341386201800004" .
+<http://animalloo.kr/ontology/facility/shelter/342429201400001>
+  a ex:AnimalShelter ;
+  schema:name "정선가축병원" ;
+  schema:address "강원도 정선군 정선읍 정선로 1321 (정선읍) " ;
+  schema:telephone "033-563-0198" ;
+  ex:latitude 37.379390 ;
+  ex:longitude 128.660690 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "강원특별자치도 정선군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:30" ;
+  ex:careRegNo "342429201400001" .
+<http://animalloo.kr/ontology/facility/shelter/345469202000001>
+  a ex:AnimalShelter ;
+  schema:name "정읍시 동물보호소" ;
+  schema:address "전북특별자치도 정읍시 2산단5길 37-1 (하북동) " ;
+  schema:telephone "063-535-6295" ;
+  ex:latitude 35.591347 ;
+  ex:longitude 126.873535 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전북특별자치도 정읍시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_정읍시> ;
+  ex:careRegNo "345469202000001" .
+<http://animalloo.kr/ontology/facility/shelter/331372202000001>
+  a ex:AnimalShelter ;
+  schema:name "정철동물병원" ;
+  schema:address "울산광역시 북구 진장17길 11 (진장동) 정철동물병원" ;
+  schema:telephone "052-287-0348" ;
+  ex:latitude 35.562035 ;
+  ex:longitude 129.355300 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "울산광역시 북구" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_북구> ;
+  ex:careRegNo "331372202000001" .
+<http://animalloo.kr/ontology/facility/shelter/350651202500001>
+  a ex:AnimalShelter ;
+  schema:name "제2동물보호센터" ;
+  schema:address "제주특별자치도 제주시 애월읍 어림비로 616-107  " ;
+  schema:telephone "064-710-4806" ;
+  ex:latitude 33.382755 ;
+  ex:longitude 126.349180 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "제주특별자치도 제주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/제주특별자치도_제주시> ;
+  ex:careRegNo "350651202500001" .
+<http://animalloo.kr/ontology/facility/shelter/327346201500009>
+  a ex:AnimalShelter ;
+  schema:name "제니스동물병원" ;
+  schema:address "대구광역시 수성구 달구벌대로 2475 (범어동) " ;
+  schema:telephone "053-756-8293" ;
+  ex:latitude 35.859123 ;
+  ex:longitude 128.633400 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:careRegNo "327346201500009" .
+<http://animalloo.kr/ontology/facility/shelter/350650201200001>
+  a ex:AnimalShelter ;
+  schema:name "제주 동물보호센터" ;
+  schema:address "제주특별자치도 제주시 첨단동길 184-14 (용강동) " ;
+  schema:telephone "064-710-4065" ;
+  ex:latitude 33.455498 ;
+  ex:longitude 126.589150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 4 ;
+  ex:orgName "제주특별자치도" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/제주특별자치도_제주시> ;
+  ex:careRegNo "350650201200001" .
+<http://animalloo.kr/ontology/facility/shelter/350652200900001>
+  a ex:AnimalShelter ;
+  schema:name "제주동물보호센터" ;
+  schema:address "제주특별자치도 제주시 첨단동길 184-14 (용강동) " ;
+  schema:telephone "064-710-4067" ;
+  ex:latitude 33.455498 ;
+  ex:longitude 126.589150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 4 ;
+  ex:orgName "제주특별자치도 서귀포시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/제주특별자치도_제주시> ;
+  ex:careRegNo "350652200900001" .
+<http://animalloo.kr/ontology/facility/shelter/350651201100001>
+  a ex:AnimalShelter ;
+  schema:name "제주동물보호센터" ;
+  schema:address "제주특별자치도 제주시 첨단동길 184-14 (용강동) " ;
+  schema:telephone "064-710-4067" ;
+  ex:latitude 33.455498 ;
+  ex:longitude 126.589150 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 4 ;
+  ex:orgName "제주특별자치도 제주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/제주특별자치도_제주시> ;
+  ex:careRegNo "350651201100001" .
+<http://animalloo.kr/ontology/facility/shelter/350651202300001>
+  a ex:AnimalShelter ;
+  schema:name "제주애니시스(주)" ;
+  schema:address "제주특별자치도 제주시 아봉로 503-1 (용강동) " ;
+  ex:latitude 33.474583 ;
+  ex:longitude 126.583130 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "제주특별자치도 제주시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/제주특별자치도_제주시> ;
+  ex:careRegNo "350651202300001" .
+<http://animalloo.kr/ontology/facility/shelter/343440201500002>
+  a ex:AnimalShelter ;
+  schema:name "제천시 동물보호센터" ;
+  schema:address "충청북도 제천시 금성면 적성로8길 51 (금성면) " ;
+  schema:telephone "043-647-0059" ;
+  ex:latitude 37.084564 ;
+  ex:longitude 128.215060 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청북도 제천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_제천시> ;
+  ex:careRegNo "343440201500002" .
+<http://animalloo.kr/ontology/facility/shelter/311303202500004>
+  a ex:AnimalShelter ;
+  schema:name "조은동물병원" ;
+  schema:address "서울특별시 성동구 왕십리로 381 (하왕십리동) " ;
+  schema:telephone "02-2297-0075" ;
+  ex:latitude 37.564587 ;
+  ex:longitude 127.027860 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "서울특별시 성동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_성동구> ;
+  ex:careRegNo "311303202500004" .
+<http://animalloo.kr/ontology/facility/shelter/328354202000001>
+  a ex:AnimalShelter ;
+  schema:name "조재진동물병원" ;
+  schema:address "인천광역시 부평구 원적로 419 (산곡동) " ;
+  schema:telephone "032-518-3800" ;
+  ex:latitude 37.504032 ;
+  ex:longitude 126.711770 ;
+  ex:savesAnimalType "개+고양이+기타동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 부평구" ;
+  ex:weekdayOpenTime "10:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_부평구> ;
+  ex:careRegNo "328354202000001" .
+<http://animalloo.kr/ontology/facility/shelter/347512201700001>
+  a ex:AnimalShelter ;
+  schema:name "종합축산" ;
+  schema:address "경상북도 문경시 중앙로 170 (흥덕동) 종합축산" ;
+  schema:telephone "054-552-2233" ;
+  ex:latitude 36.599690 ;
+  ex:longitude 128.202510 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상북도 문경시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_문경시> ;
+  ex:careRegNo "347512201700001" .
+<http://animalloo.kr/ontology/facility/shelter/344558202400001>
+  a ex:AnimalShelter ;
+  schema:name "주동물병원" ;
+  schema:address "충청남도 계룡시 계룡대로 245 (금암동) 1층" ;
+  schema:telephone "042-840-2653" ;
+  ex:latitude 36.268574 ;
+  ex:longitude 127.259450 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 계룡시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_계룡시> ;
+  ex:careRegNo "344558202400001" .
+<http://animalloo.kr/ontology/facility/shelter/331370202000001>
+  a ex:AnimalShelter ;
+  schema:name "주동물병원" ;
+  schema:address "울산광역시 남구 돋질로 385-1 (삼산동) " ;
+  schema:telephone "052-268-8275" ;
+  ex:latitude 35.543655 ;
+  ex:longitude 129.347120 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "울산광역시 남구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_남구> ;
+  ex:careRegNo "331370202000001" .
+<http://animalloo.kr/ontology/facility/shelter/343445202200001>
+  a ex:AnimalShelter ;
+  schema:name "증평 가정견 훈련소" ;
+  schema:address "충청북도 증평군 도안면 입장길 239  " ;
+  ex:latitude 36.846962 ;
+  ex:longitude 127.608220 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청북도 진천군" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_증평군> ;
+  ex:careRegNo "343445202200001" .
+<http://animalloo.kr/ontology/facility/shelter/346500202400002>
+  a ex:AnimalShelter ;
+  schema:name "진도군임시보호소" ;
+  schema:address "전라남도 진도군 진도읍 성죽골길 30  " ;
+  schema:telephone "061-540-6338" ;
+  ex:latitude 34.482360 ;
+  ex:longitude 126.278570 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 진도군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_진도군> ;
+  ex:careRegNo "346500202400002" .
+<http://animalloo.kr/ontology/facility/shelter/345473202300001>
+  a ex:AnimalShelter ;
+  schema:name "진안군유기동물보호소" ;
+  schema:address "전북특별자치도 진안군 진안읍 예리길 36  ." ;
+  schema:telephone "063-430-8175" ;
+  ex:latitude 35.780716 ;
+  ex:longitude 127.464950 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "전북특별자치도 진안군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_진안군> ;
+  ex:careRegNo "345473202300001" .
+<http://animalloo.kr/ontology/facility/shelter/348531201000001>
+  a ex:AnimalShelter ;
+  schema:name "진주시동물보호센터" ;
+  schema:address "경상남도 진주시 집현면 신당길207번길 22 (집현면, 지역농업개발시설) " ;
+  schema:telephone "055-749-6134" ;
+  ex:latitude 35.226696 ;
+  ex:longitude 128.121580 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 진주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_진주시> ;
+  ex:careRegNo "348531201000001" .
+<http://animalloo.kr/ontology/facility/shelter/348532200900001>
+  a ex:AnimalShelter ;
+  schema:name "진해유기동물보호소" ;
+  schema:address "경상남도 창원시 진해구 웅천로 218 (성내동) 도시농업과 부지 내" ;
+  schema:telephone "055-225-5701" ;
+  ex:latitude 35.114000 ;
+  ex:longitude 128.754270 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 창원시 진해구" ;
+  ex:weekdayOpenTime "08:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_창원시> ;
+  ex:careRegNo "348532200900001" .
+<http://animalloo.kr/ontology/facility/shelter/348541201300001>
+  a ex:AnimalShelter ;
+  schema:name "창녕 유기동물보호소" ;
+  schema:address "경상남도 창녕군 고암면 창밀로 335-26 (고암면) 고암면 억만리 28" ;
+  ex:latitude 35.574085 ;
+  ex:longitude 128.507450 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 창녕군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_창녕군> ;
+  ex:careRegNo "348541201300001" .
+<http://animalloo.kr/ontology/facility/shelter/348527200900001>
+  a ex:AnimalShelter ;
+  schema:name "창원동물보호센터" ;
+  schema:address "경상남도 창원시 성산구 공단로474번길 117 (상복동) 창원동물보호센터" ;
+  schema:telephone "055-225-5701" ;
+  ex:latitude 35.239025 ;
+  ex:longitude 128.646600 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 창원시 의창성산구" ;
+  ex:weekdayOpenTime "08:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_창원시> ;
+  ex:careRegNo "348527200900001" .
+<http://animalloo.kr/ontology/facility/shelter/344449202100001>
+  a ex:AnimalShelter ;
+  schema:name "천안시 동물보호센터" ;
+  schema:address "충청남도 천안시 동남구 목천읍 충절로 577  문의전화 : 입양(010-5913-5119), 구조(010-4999-6119)" ;
+  ex:latitude 36.772705 ;
+  ex:longitude 127.180046 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 천안시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_천안시> ;
+  ex:careRegNo "344449202100001" .
+<http://animalloo.kr/ontology/facility/shelter/342430201900001>
+  a ex:AnimalShelter ;
+  schema:name "철원군" ;
+  schema:address "강원도 철원군 동송읍 장흥로 311  " ;
+  schema:telephone "033-450-5394" ;
+  ex:latitude 38.203907 ;
+  ex:longitude 127.250760 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 철원군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342430201900001" .
+<http://animalloo.kr/ontology/facility/shelter/347519202100001>
+  a ex:AnimalShelter ;
+  schema:name "청도군동물보호센터" ;
+  schema:address "경상북도 청도군 청도읍 중앙로 84-466  동물보호센터" ;
+  schema:telephone "054-371-9267" ;
+  ex:latitude 35.649292 ;
+  ex:longitude 128.734380 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상북도 청도군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_청도군> ;
+  ex:careRegNo "347519202100001" .
+<http://animalloo.kr/ontology/facility/shelter/344459202000001>
+  a ex:AnimalShelter ;
+  schema:name "청양보호소" ;
+  schema:address "충청남도 청양군 대치면 청산로 446-17 (대치면) " ;
+  schema:telephone "041-940-2974" ;
+  ex:latitude 36.471190 ;
+  ex:longitude 126.831400 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 청양군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_청양군> ;
+  ex:careRegNo "344459202000001" .
+<http://animalloo.kr/ontology/facility/shelter/345470200900001>
+  a ex:AnimalShelter ;
+  schema:name "청원동물병원" ;
+  schema:address "전북특별자치도 남원시 죽항동 278번지" ;
+  schema:telephone "063-633-3533" ;
+  ex:latitude 35.407608 ;
+  ex:longitude 127.384550 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 남원시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_남원시> ;
+  ex:careRegNo "345470200900001" .
+<http://animalloo.kr/ontology/facility/shelter/326337201300001>
+  a ex:AnimalShelter ;
+  schema:name "청조동물병원" ;
+  schema:address "부산광역시 연제구 온천천남로 4 (연산동) " ;
+  schema:telephone "051-503-0688" ;
+  ex:latitude 35.192960 ;
+  ex:longitude 129.091280 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "부산광역시 연제구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_연제구> ;
+  ex:careRegNo "326337201300001" .
+<http://animalloo.kr/ontology/facility/shelter/331373201600002>
+  a ex:AnimalShelter ;
+  schema:name "초록동물병원" ;
+  schema:address "울산광역시 울주군 삼남읍 상평강변길 3  " ;
+  schema:telephone "052-262-6114" ;
+  ex:latitude 35.562940 ;
+  ex:longitude 129.121630 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 울주군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_울주군> ;
+  ex:careRegNo "331373201600002" .
+<http://animalloo.kr/ontology/facility/shelter/344462200900001>
+  a ex:AnimalShelter ;
+  schema:name "최동물병원" ;
+  schema:address "충청남도 태안군 태안읍 남문리 504-6" ;
+  schema:telephone "041-672-0346" ;
+  ex:latitude 36.753563 ;
+  ex:longitude 126.292114 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청남도 태안군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_태안군> ;
+  ex:careRegNo "344462200900001" .
+<http://animalloo.kr/ontology/facility/shelter/343444200900002>
+  a ex:AnimalShelter ;
+  schema:name "최종주동물병원" ;
+  schema:address "충청북도 영동군 영동읍 계산로 54 (영동읍, 최종주동물병원) " ;
+  schema:telephone "043-744-4209" ;
+  ex:latitude 36.172623 ;
+  ex:longitude 127.782330 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "충청북도 영동군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_영동군> ;
+  ex:careRegNo "343444200900002" .
+<http://animalloo.kr/ontology/facility/shelter/330368202600001>
+  a ex:AnimalShelter ;
+  schema:name "추영재동물병원" ;
+  schema:address "대전광역시 대덕구 한밭대로 1027 (오정동) 추영재동물병원" ;
+  schema:telephone "042-628-7588" ;
+  ex:latitude 36.358803 ;
+  ex:longitude 127.412690 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 3 ;
+  ex:orgName "대전광역시 대덕구" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_대덕구> ;
+  ex:careRegNo "330368202600001" .
+<http://animalloo.kr/ontology/facility/shelter/342418201300001>
+  a ex:AnimalShelter ;
+  schema:name "춘천시 동물보호센터" ;
+  schema:address "강원도 춘천시 신북읍 영서로 3282 (신북읍) (전)102보충대 주차장" ;
+  schema:telephone "033-245-5351" ;
+  ex:latitude 37.923210 ;
+  ex:longitude 127.734480 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 춘천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342418201300001" .
+<http://animalloo.kr/ontology/facility/shelter/343439201700001>
+  a ex:AnimalShelter ;
+  schema:name "충주시동물보호센터" ;
+  schema:address "충청북도 충주시 중앙탑면 일곱실길 70 (중앙탑면) " ;
+  schema:telephone "043-851-3168" ;
+  ex:latitude 37.008360 ;
+  ex:longitude 127.849754 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "충청북도 충주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청북도_충주시> ;
+  ex:careRegNo "343439201700001" .
+<http://animalloo.kr/ontology/facility/shelter/347522201400001>
+  a ex:AnimalShelter ;
+  schema:name "칠곡유기동물보호센터" ;
+  schema:address "경상북도 칠곡군 석적읍 포망로 341 (석적읍) " ;
+  schema:telephone "054-973-5710" ;
+  ex:latitude 36.040894 ;
+  ex:longitude 128.441960 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상북도 칠곡군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_칠곡군> ;
+  ex:careRegNo "347522201400001" .
+<http://animalloo.kr/ontology/facility/shelter/331372202000002>
+  a ex:AnimalShelter ;
+  schema:name "쿨펫 홈플러스 북구점" ;
+  schema:address "울산광역시 북구 신답로 26 (상안동, 홈플러스) 쿨펫동물병원 홈플러스 북구점" ;
+  schema:telephone "052-286-3567" ;
+  ex:latitude 35.630043 ;
+  ex:longitude 129.344880 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "울산광역시 북구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_북구> ;
+  ex:careRegNo "331372202000002" .
+<http://animalloo.kr/ontology/facility/shelter/331372200900003>
+  a ex:AnimalShelter ;
+  schema:name "쿨펫동물병원" ;
+  schema:address "울산광역시 북구 진장유통로 64 (진장동, 롯데마트) 4층 쿨펫동물병원" ;
+  schema:telephone "052-288-7572" ;
+  ex:latitude 35.576000 ;
+  ex:longitude 129.359020 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "울산광역시 북구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "23:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/울산광역시_북구> ;
+  ex:careRegNo "331372200900003" .
+<http://animalloo.kr/ontology/facility/shelter/348548201700001>
+  a ex:AnimalShelter ;
+  schema:name "태민동물보호센터" ;
+  schema:address "경상남도 합천군 합천읍 옥산로 16 (합천읍, 까치빌라) 태민동물병원" ;
+  ex:latitude 35.568718 ;
+  ex:longitude 128.156660 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 합천군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_합천군> ;
+  ex:careRegNo "348548201700001" .
+<http://animalloo.kr/ontology/facility/shelter/342422200900001>
+  a ex:AnimalShelter ;
+  schema:name "태백시유기동물보호소" ;
+  schema:address "강원도 태백시 문의재로 5 (통동) " ;
+  ex:latitude 37.172890 ;
+  ex:longitude 129.040790 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 태백시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342422200900001" .
+<http://animalloo.kr/ontology/facility/shelter/344462202400001>
+  a ex:AnimalShelter ;
+  schema:name "태안 동물보호소" ;
+  schema:address "충청남도 태안군 남면 몽대로 249  " ;
+  schema:telephone "041-670-2827" ;
+  ex:latitude 36.690200 ;
+  ex:longitude 126.265000 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청남도 태안군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_태안군> ;
+  ex:careRegNo "344462202400001" .
+<http://animalloo.kr/ontology/facility/shelter/348533202100001>
+  a ex:AnimalShelter ;
+  schema:name "통영시동물보호센터" ;
+  schema:address "경상남도 통영시 광도면 전두1길 9-8  " ;
+  schema:telephone "055-650-6291" ;
+  ex:latitude 34.904404 ;
+  ex:longitude 128.404430 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 통영시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_통영시> ;
+  ex:careRegNo "348533202100001" .
+<http://animalloo.kr/ontology/facility/shelter/330366202500002>
+  a ex:AnimalShelter ;
+  schema:name "퍼피동물병원" ;
+  schema:address "대전광역시 서구 갈마로 234 (내동) " ;
+  schema:telephone "042-533-7533" ;
+  ex:latitude 36.334663 ;
+  ex:longitude 127.380130 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대전광역시 서구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대전광역시_서구> ;
+  ex:careRegNo "330366202500002" .
+<http://animalloo.kr/ontology/facility/shelter/327346201900001>
+  a ex:AnimalShelter ;
+  schema:name "펫동물병원" ;
+  schema:address "대구광역시 수성구 달구벌대로 3144 (노변동) 펫동물병원" ;
+  schema:telephone "053-474-9820" ;
+  ex:latitude 35.841440 ;
+  ex:longitude 128.700850 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:careRegNo "327346201900001" .
+<http://animalloo.kr/ontology/facility/shelter/341378201300002>
+  a ex:AnimalShelter ;
+  schema:name "펫앤쉘터동물병원" ;
+  schema:address "경기도 성남시 분당구 불정로 266 (수내동, 유신제일조합) " ;
+  schema:telephone "031-714-8392" ;
+  ex:latitude 37.367100 ;
+  ex:longitude 127.127690 ;
+  ex:savesAnimalType "개+고양이+유기유실동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 성남시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_성남시> ;
+  ex:careRegNo "341378201300002" .
+<http://animalloo.kr/ontology/facility/shelter/311302201000012>
+  a ex:AnimalShelter ;
+  schema:name "펫토이동물병원" ;
+  schema:address "서울특별시 용산구 한남동 653-26" ;
+  schema:telephone "02-795-2184" ;
+  ex:latitude 37.533978 ;
+  ex:longitude 127.002580 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 용산구" ;
+  ex:weekdayOpenTime "11:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_용산구> ;
+  ex:careRegNo "311302201000012" .
+<http://animalloo.kr/ontology/facility/shelter/342428200900001>
+  a ex:AnimalShelter ;
+  schema:name "평창군유기동물보호소" ;
+  schema:address "강원도 평창군 진부면 청송로 61 " ;
+  ex:latitude 37.636770 ;
+  ex:longitude 128.553360 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 평창군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:careRegNo "342428200900001" .
+<http://animalloo.kr/ontology/facility/shelter/341391202500001>
+  a ex:AnimalShelter ;
+  schema:name "평택시동물보호센터" ;
+  schema:address "경기도 평택시 청북읍 청북로 497  " ;
+  schema:telephone "031-8024-8081" ;
+  ex:latitude 37.071445 ;
+  ex:longitude 126.973740 ;
+  ex:savesAnimalType "개+고양이+기타동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 평택시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_평택시> ;
+  ex:careRegNo "341391202500001" .
+<http://animalloo.kr/ontology/facility/shelter/345464200900001>
+  a ex:AnimalShelter ;
+  schema:name "프렌즈동물병원" ;
+  schema:address "전라북도 전주시 완산구 삼천동1가 592-1" ;
+  schema:telephone "063-227-4975" ;
+  ex:latitude 35.796330 ;
+  ex:longitude 127.122370 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시> ;
+  ex:careRegNo "345464200900001" .
+<http://animalloo.kr/ontology/facility/shelter/345470201300002>
+  a ex:AnimalShelter ;
+  schema:name "하나동물병원" ;
+  schema:address "전북특별자치도 남원시 왕정동 67 " ;
+  schema:telephone "063-634-7582" ;
+  ex:latitude 35.406647 ;
+  ex:longitude 127.375534 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 남원시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전북특별자치도_남원시> ;
+  ex:careRegNo "345470201300002" .
+<http://animalloo.kr/ontology/facility/shelter/348544201100001>
+  a ex:AnimalShelter ;
+  schema:name "하동군유기동물보호소" ;
+  schema:address "경상남도 하동군 적량면 한옥정길 90 (적량면) 유기동물보호소" ;
+  schema:telephone "055-880-2677" ;
+  ex:latitude 35.078846 ;
+  ex:longitude 127.769120 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 하동군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_하동군> ;
+  ex:careRegNo "348544201100001" .
+<http://animalloo.kr/ontology/facility/shelter/346496201800001>
+  a ex:AnimalShelter ;
+  schema:name "학교임시동물보호센터" ;
+  schema:address "전라남도 함평군 학교면 송산길 84 (학교면) 월산리 806-1 " ;
+  ex:latitude 35.045490 ;
+  ex:longitude 126.538994 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 함평군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_함평군> ;
+  ex:careRegNo "346496201800001" .
+<http://animalloo.kr/ontology/facility/shelter/311300201300001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870483 ;
+  ex:longitude 126.983640 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 종로구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311300201300001" .
+<http://animalloo.kr/ontology/facility/shelter/311307200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.869892 ;
+  ex:longitude 126.983116 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 성북구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311307200900001" .
+<http://animalloo.kr/ontology/facility/shelter/311321201400004>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  한국동물구조관리협회" ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 서초구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311321201400004" .
+<http://animalloo.kr/ontology/facility/shelter/311316201100001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870117 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 구로구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311316201100001" .
+<http://animalloo.kr/ontology/facility/shelter/311311201100001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-48  " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870117 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 은평구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311311201100001" .
+<http://animalloo.kr/ontology/facility/shelter/311305201300001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.869892 ;
+  ex:longitude 126.983116 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 동대문구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311305201300001" .
+<http://animalloo.kr/ontology/facility/shelter/311312201100001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 서대문구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "23:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311312201100001" .
+<http://animalloo.kr/ontology/facility/shelter/311323201100001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870117 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 송파구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311323201100001" .
+<http://animalloo.kr/ontology/facility/shelter/341398200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 구리시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341398200900001" .
+<http://animalloo.kr/ontology/facility/shelter/341382200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+원숭이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 의정부시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341382200900001" .
+<http://animalloo.kr/ontology/facility/shelter/311318201200001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870117 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 5 ;
+  ex:orgName "서울특별시 영등포구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311318201200001" .
+<http://animalloo.kr/ontology/facility/shelter/341409201400001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870663 ;
+  ex:longitude 126.983350 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 김포시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341409201400001" .
+<http://animalloo.kr/ontology/facility/shelter/341559200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 양주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341559200900001" .
+<http://animalloo.kr/ontology/facility/shelter/311322200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) 한국동물구조관리협회" ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870117 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 강남구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311322200900001" .
+<http://animalloo.kr/ontology/facility/shelter/341560201000002>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870483 ;
+  ex:longitude 126.983640 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 포천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341560201000002" .
+<http://animalloo.kr/ontology/facility/shelter/311309200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 상수리 410-1" ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.898113 ;
+  ex:longitude 126.976680 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 도봉구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311309200900001" .
+<http://animalloo.kr/ontology/facility/shelter/311317201400001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 금천구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311317201400001" .
+<http://animalloo.kr/ontology/facility/shelter/311301201000001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+반려묘+다친새끼고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 중구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311301201000001" .
+<http://animalloo.kr/ontology/facility/shelter/311303200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 성동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311303200900001" .
+<http://animalloo.kr/ontology/facility/shelter/311324201200001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  (사)한국동물구조관리협회" ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 강동구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311324201200001" .
+<http://animalloo.kr/ontology/facility/shelter/311306201300001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 중랑구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311306201300001" .
+<http://animalloo.kr/ontology/facility/shelter/311304200900003>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 광진구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311304200900003" .
+<http://animalloo.kr/ontology/facility/shelter/341414201300001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 연천군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341414201300001" .
+<http://animalloo.kr/ontology/facility/shelter/341392201300001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 동두천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341392201300001" .
+<http://animalloo.kr/ontology/facility/shelter/311310201000001>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37 (남면) " ;
+  schema:telephone "031-868-2851" ;
+  ex:latitude 37.870100 ;
+  ex:longitude 126.983540 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 노원구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "311310201000001" .
+<http://animalloo.kr/ontology/facility/shelter/341406202200002>
+  a ex:AnimalShelter ;
+  schema:name "한국동물구조관리협회" ;
+  schema:address "경기도 양주시 남면 감악산로 63-37  " ;
+  schema:telephone "031-867-9119" ;
+  ex:latitude 37.870190 ;
+  ex:longitude 126.983100 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 파주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_양주시> ;
+  ex:careRegNo "341406202200002" .
+<http://animalloo.kr/ontology/facility/shelter/341403202100001>
+  a ex:AnimalShelter ;
+  schema:name "한국야생동물보호협회" ;
+  schema:address "경기도 안산시 상록구 청곡길 50 (부곡동) " ;
+  schema:telephone "031-296-0124" ;
+  ex:latitude 37.340250 ;
+  ex:longitude 126.870026 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 의왕시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:careRegNo "341403202100001" .
+<http://animalloo.kr/ontology/facility/shelter/341402202100001>
+  a ex:AnimalShelter ;
+  schema:name "한국야생동물보호협회" ;
+  schema:address "경기도 안산시 상록구 청곡길 50 (부곡동) " ;
+  schema:telephone "031-296-0124" ;
+  ex:latitude 37.340256 ;
+  ex:longitude 126.870000 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 군포시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:careRegNo "341402202100001" .
+<http://animalloo.kr/ontology/facility/shelter/341393200900001>
+  a ex:AnimalShelter ;
+  schema:name "한국야생동물보호협회" ;
+  schema:address "경기도 안산시 상록구 청곡길 50 (부곡동) 안산시 상록구 부곡동 231-5" ;
+  schema:telephone "031-296-0124" ;
+  ex:latitude 37.340250 ;
+  ex:longitude 126.870026 ;
+  ex:savesAnimalType "개+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 안산시" ;
+  ex:weekdayOpenTime "00:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:careRegNo "341393200900001" .
+<http://animalloo.kr/ontology/facility/shelter/341397202100001>
+  a ex:AnimalShelter ;
+  schema:name "한국야생동물보호협회" ;
+  schema:address "경기도 안산시 상록구 청곡길 50 (부곡동) (사)한국야생동물보호협회" ;
+  schema:telephone "031-296-0124" ;
+  ex:latitude 37.340250 ;
+  ex:longitude 126.870026 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 과천시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:careRegNo "341397202100001" .
+<http://animalloo.kr/ontology/facility/shelter/341390201300001>
+  a ex:AnimalShelter ;
+  schema:name "한국야생동물보호협회" ;
+  schema:address "경기도 안산시 상록구 청곡길 50 (부곡동) 한국야생동물보호협회" ;
+  schema:telephone "031-296-0124" ;
+  ex:latitude 37.340250 ;
+  ex:longitude 126.870026 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 광명시" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:careRegNo "341390201300001" .
+<http://animalloo.kr/ontology/facility/shelter/341383201300001>
+  a ex:AnimalShelter ;
+  schema:name "한국야생동물보호협회" ;
+  schema:address "경기도 안산시 상록구 청곡길 50 (부곡동) ." ;
+  schema:telephone "031-296-0124" ;
+  ex:latitude 37.340107 ;
+  ex:longitude 126.869970 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 안양시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안산시> ;
+  ex:careRegNo "341383201300001" .
+<http://animalloo.kr/ontology/facility/shelter/328354202600001>
+  a ex:AnimalShelter ;
+  schema:name "한국유기동물복지협회" ;
+  schema:address "경기도 파주시 광탄면 혜음로 345  1층,2층" ;
+  schema:telephone "031-941-6355" ;
+  ex:latitude 37.726900 ;
+  ex:longitude 126.890220 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 부평구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_파주시> ;
+  ex:careRegNo "328354202600001" .
+<http://animalloo.kr/ontology/facility/shelter/328356202600003>
+  a ex:AnimalShelter ;
+  schema:name "한마음동물병원" ;
+  schema:address "경기도 김포시 통진읍 김포대로 2025  " ;
+  schema:telephone "032-562-0075" ;
+  ex:latitude 37.682640 ;
+  ex:longitude 126.618546 ;
+  ex:savesAnimalType "개+고양이+기타동물" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "인천광역시 서구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_김포시> ;
+  ex:careRegNo "328356202600003" .
+<http://animalloo.kr/ontology/facility/shelter/311303202000002>
+  a ex:AnimalShelter ;
+  schema:name "한빛동물병원" ;
+  schema:address "서울특별시 성동구 금호산길 58 (금호동2가) " ;
+  schema:telephone "02-2233-1848" ;
+  ex:latitude 37.553337 ;
+  ex:longitude 127.019540 ;
+  ex:savesAnimalType "고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 성동구" ;
+  ex:weekdayOpenTime "10:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_성동구> ;
+  ex:careRegNo "311303202000002" .
+<http://animalloo.kr/ontology/facility/shelter/348540200900001>
+  a ex:AnimalShelter ;
+  schema:name "함안군동물보호센터" ;
+  schema:address "경상남도 함안군 가야읍 함안대로 755 " ;
+  ex:latitude 35.293070 ;
+  ex:longitude 128.398500 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "경상남도 함안군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_함안군> ;
+  ex:careRegNo "348540200900001" .
+<http://animalloo.kr/ontology/facility/shelter/348546200900001>
+  a ex:AnimalShelter ;
+  schema:name "함양군 동물보호센터" ;
+  schema:address "경상남도 함양군 함양읍 함양남서로 996-76  농업기술센터 부지내" ;
+  schema:telephone "055-960-8143" ;
+  ex:latitude 35.507590 ;
+  ex:longitude 127.741370 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경상남도 함양군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_함양군> ;
+  ex:careRegNo "348546200900001" .
+<http://animalloo.kr/ontology/facility/shelter/346493200900001>
+  a ex:AnimalShelter ;
+  schema:name "해남유기동물보호센터" ;
+  schema:address "전라남도 해남군 해남읍 용머리길 14-37  " ;
+  schema:telephone "061-531-3916" ;
+  ex:latitude 34.564880 ;
+  ex:longitude 126.587430 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전라남도 해남군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_해남군> ;
+  ex:careRegNo "346493200900001" .
+<http://animalloo.kr/ontology/facility/shelter/345464201200001>
+  a ex:AnimalShelter ;
+  schema:name "행복한동물병원" ;
+  schema:address "전라북도 전주시 덕진구 인후동1가 806-6" ;
+  schema:telephone "063-244-0090" ;
+  ex:latitude 35.831340 ;
+  ex:longitude 127.157990 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시> ;
+  ex:careRegNo "345464201200001" .
+<http://animalloo.kr/ontology/facility/shelter/327346201800001>
+  a ex:AnimalShelter ;
+  schema:name "허동물병원" ;
+  schema:address "대구광역시 수성구 수성동2가 명덕로 421 (수성동2가) 허동물병원" ;
+  schema:telephone "053-752-7535" ;
+  ex:latitude 35.854633 ;
+  ex:longitude 128.616320 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "대구광역시 수성구" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:careRegNo "327346201800001" .
+<http://animalloo.kr/ontology/facility/shelter/344460202500001>
+  a ex:AnimalShelter ;
+  schema:name "홍성반려동물문화센터" ;
+  schema:address "충청남도 홍성군 은하면 은하로 155-38  " ;
+  schema:telephone "041-630-1374" ;
+  ex:latitude 36.527393 ;
+  ex:longitude 126.585200 ;
+  ex:savesAnimalType "개+고양이+반려동물" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "충청남도 홍성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/충청남도_홍성군> ;
+  ex:careRegNo "344460202500001" .
+<http://animalloo.kr/ontology/facility/shelter/311313201000017>
+  a ex:AnimalShelter ;
+  schema:name "홍익동물병원" ;
+  schema:address "서울특별시 마포구 독막로 45 (합정동) " ;
+  schema:telephone "02-325-2026" ;
+  ex:latitude 37.548100 ;
+  ex:longitude 126.918390 ;
+  ex:savesAnimalType "개+고양이+토끼+기니피그+페럿+햄스터" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "서울특별시 마포구" ;
+  ex:weekdayOpenTime "09:30" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:careRegNo "311313201000017" .
+<http://animalloo.kr/ontology/facility/shelter/342425201400001>
+  a ex:AnimalShelter ;
+  schema:name "홍천군유기동물보호소" ;
+  schema:address "강원도 홍천군 화촌면 둔덕이길 68 (화촌면, 홍천군유기동물보호센터) " ;
+  schema:telephone "033-434-9435" ;
+  ex:latitude 37.755093 ;
+  ex:longitude 127.947470 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 홍천군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342425201400001" .
+<http://animalloo.kr/ontology/facility/shelter/341553202500001>
+  a ex:AnimalShelter ;
+  schema:name "화성시민동물보호센터" ;
+  schema:address "경기도 화성시 서신면 전곡항로 492  " ;
+  ex:latitude 37.190857 ;
+  ex:longitude 126.673225 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "경기도 화성시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:careRegNo "341553202500001" .
+<http://animalloo.kr/ontology/facility/shelter/346490202000001>
+  a ex:AnimalShelter ;
+  schema:name "화순군유기동물보호소" ;
+  schema:address "전라남도 화순군 한천면 덕음로 115 (한천면) " ;
+  ex:latitude 34.985350 ;
+  ex:longitude 126.998924 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "전라남도 화순군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_화순군> ;
+  ex:careRegNo "346490202000001" .
+<http://animalloo.kr/ontology/facility/shelter/327348201500004>
+  a ex:AnimalShelter ;
+  schema:name "화원연합동물병원" ;
+  schema:address "대구광역시 달성군 화원읍 사문진로 447 (화원읍) 화원읍 관할" ;
+  schema:telephone "053-634-7975" ;
+  ex:latitude 35.803734 ;
+  ex:longitude 128.497420 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 2 ;
+  ex:orgName "대구광역시 달성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_달성군> ;
+  ex:careRegNo "327348201500004" .
+<http://animalloo.kr/ontology/facility/shelter/342431201300001>
+  a ex:AnimalShelter ;
+  schema:name "화천군농업기술센터" ;
+  schema:address "강원도 화천군 상서면 영서로 6387-9  화천농업기술센터" ;
+  schema:telephone "033-440-2941" ;
+  ex:latitude 38.115845 ;
+  ex:longitude 127.681946 ;
+  ex:savesAnimalType "개" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 화천군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:careRegNo "342431201300001" .
+<http://animalloo.kr/ontology/facility/shelter/342426202500001>
+  a ex:AnimalShelter ;
+  schema:name "횡성반려동물보호센터" ;
+  schema:address "강원특별자치도 횡성군 우천면 한우로 1109  " ;
+  schema:telephone "033-340-2395" ;
+  ex:latitude 37.470608 ;
+  ex:longitude 128.055470 ;
+  ex:savesAnimalType "개+고양이" ;
+  ex:vetPersonCnt 0 ;
+  ex:orgName "강원특별자치도 횡성군" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원특별자치도_횡성군> ;
+  ex:careRegNo "342426202500001" .
+<http://animalloo.kr/ontology/facility/shelter/345464202200001>
+  a ex:AnimalShelter ;
+  schema:name "효자동물병원" ;
+  schema:address "전라북도 전주시 완산구 백제대로 121 (효자동1가) " ;
+  schema:telephone "063-224-6672" ;
+  ex:latitude 35.803795 ;
+  ex:longitude 127.123764 ;
+  ex:savesAnimalType "개+고양이+기타" ;
+  ex:vetPersonCnt 1 ;
+  ex:orgName "전북특별자치도 전주시" ;
+  ex:weekdayOpenTime "09:00" ;
+  ex:weekdayCloseTime "18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시> ;
+  ex:careRegNo "345464202200001" .

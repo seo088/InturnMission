@@ -807,6 +807,8 @@ function PosterPage({ datasets }) {
         </div>
       </div>
 
+
+
       {/* Category sections */}
       {Object.entries(categoryGroups).map(([cat, dsets]) => (
         <div key={cat} style={{ marginBottom: 24 }}>

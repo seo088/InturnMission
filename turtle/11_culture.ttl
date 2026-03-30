@@ -1,0 +1,1404 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/culture/facility/0_1004_약국>
+  a ex:CulturalFacility ;
+  schema:name "1004 약국" ;
+  schema:address "경기도 고양시 덕양구 동세로 19" ;
+  schema:telephone "02-381-5052" ;
+  ex:latitude 37.644543 ;
+  ex:longitude 126.886336 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_고양시_덕양구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/1_1004섬수석미술관>
+  a ex:CulturalFacility ;
+  schema:name "1004섬수석미술관" ;
+  schema:address "전라남도 신안군 자은면 자은서부2길 508-68" ;
+  schema:telephone "061-240-8359" ;
+  ex:latitude 34.880093 ;
+  ex:longitude 125.996874 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "N" ;
+  ex:petRestriction "해당없음" ;
+  ex:allowedPetSize "해당없음" ;
+  schema:openingHours "화~일 09:00~18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_신안군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/2_100세건강약국>
+  a ex:CulturalFacility ;
+  schema:name "100세건강약국" ;
+  schema:address "경기도 안양시 만안구 안양로 408" ;
+  schema:telephone "031-465-1320" ;
+  ex:latitude 37.407150 ;
+  ex:longitude 126.914837 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~21:00, 토 09:00~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_안양시_만안구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/3_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "서울특별시 영등포구 양평로 24" ;
+  schema:telephone "02-2678-8217" ;
+  ex:latitude 37.533260 ;
+  ex:longitude 126.903741 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~21:00, 토 08:30~18:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_영등포구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/4_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "서울특별시 영등포구 양평로 24" ;
+  schema:telephone "02-2678-8217" ;
+  ex:latitude 37.533260 ;
+  ex:longitude 126.903741 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~21:00, 토 08:30~18:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_영등포구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/5_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "서울특별시 영등포구 양평로 24" ;
+  schema:telephone "02-2678-8217" ;
+  ex:latitude 37.533260 ;
+  ex:longitude 126.903741 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~21:00, 토 08:30~18:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_영등포구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/6_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "경기도 수원시 팔달구 경수대로 568" ;
+  schema:telephone "031-239-4801" ;
+  ex:latitude 37.276272 ;
+  ex:longitude 127.030911 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~15:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_수원시_팔달구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/7_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "경기도 수원시 팔달구 경수대로 568" ;
+  schema:telephone "031-239-4801" ;
+  ex:latitude 37.276272 ;
+  ex:longitude 127.030911 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~15:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_수원시_팔달구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/8_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "경기도 수원시 팔달구 경수대로 568" ;
+  schema:telephone "031-239-4801" ;
+  ex:latitude 37.276272 ;
+  ex:longitude 127.030911 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~15:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_수원시_팔달구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/9_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "인천광역시 남동구 남동대로 892" ;
+  schema:telephone "032-427-7585" ;
+  ex:latitude 37.462072 ;
+  ex:longitude 126.708644 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/10_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "인천광역시 남동구 남동대로 892" ;
+  schema:telephone "032-427-7585" ;
+  ex:latitude 37.462072 ;
+  ex:longitude 126.708644 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/11_100세약국>
+  a ex:CulturalFacility ;
+  schema:name "100세약국" ;
+  schema:address "인천광역시 남동구 남동대로 892" ;
+  schema:telephone "032-427-7585" ;
+  ex:latitude 37.462072 ;
+  ex:longitude 126.708644 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/12_100코달리_와인바>
+  a ex:CulturalFacility ;
+  schema:name "100코달리 와인바" ;
+  schema:address "서울특별시 중구 다산로38길 11" ;
+  schema:telephone "050713466774" ;
+  ex:latitude 37.563305 ;
+  ex:longitude 127.016417 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "화~일 18:00~02:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_중구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/13_100평_광장약국>
+  a ex:CulturalFacility ;
+  schema:name "100평 광장약국" ;
+  schema:address "경기도 의정부시 동일로 732" ;
+  schema:telephone "031-847-1269" ;
+  ex:latitude 37.751957 ;
+  ex:longitude 127.049286 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 10:00~18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_의정부시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/14_107page>
+  a ex:CulturalFacility ;
+  schema:name "107page" ;
+  schema:address "경상북도 구미시 봉곡서로 87-34" ;
+  schema:telephone "050713317179" ;
+  ex:latitude 36.158634 ;
+  ex:longitude 128.306270 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "마당, 1층만 입장 가능, 목줄, 배변봉투" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "화~일 12:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/15_119동물병원>
+  a ex:CulturalFacility ;
+  schema:name "119동물병원" ;
+  schema:address "대구광역시 달성군 다사읍 달구벌대로 893" ;
+  schema:telephone "053-585-1195" ;
+  ex:latitude 35.857157 ;
+  ex:longitude 128.466544 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:30~18:30, 토 09:30~16:00, 일 12:00~12:30, 법정공휴일 09:30~16:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_달성군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/16_153약국>
+  a ex:CulturalFacility ;
+  schema:name "153약국" ;
+  schema:address "세종특별자치시 달빛로 43" ;
+  schema:telephone "050713691531" ;
+  ex:latitude 36.502719 ;
+  ex:longitude 127.250023 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~18:00, 토 09:00~13:00" ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/17_1723_카페>
+  a ex:CulturalFacility ;
+  schema:name "1723 카페" ;
+  schema:address "전라북도 전주시 완산구 오목대길 83" ;
+  schema:telephone "063-288-1723" ;
+  ex:latitude 35.812636 ;
+  ex:longitude 127.151717 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "야외테라스만 동반 가능" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 10:30~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시_완산구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/18_1919봄>
+  a ex:CulturalFacility ;
+  schema:name "1919봄" ;
+  schema:address "경상남도 밀양시 산외면 산외로 191" ;
+  schema:telephone "050713469661" ;
+  ex:latitude 35.505426 ;
+  ex:longitude 128.789995 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "실외만 동반 가능" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "수~월 11:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_밀양시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/19_1974유달동미스박>
+  a ex:CulturalFacility ;
+  schema:name "1974유달동미스박" ;
+  schema:address "전라남도 목포시 비파로 61" ;
+  schema:telephone "061-285-1974" ;
+  ex:latitude 34.803932 ;
+  ex:longitude 126.425756 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "화~일 11:00~23:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_목포시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/20_1번가온누리약국>
+  a ex:CulturalFacility ;
+  schema:name "1번가온누리약국" ;
+  schema:address "강원도 평창군 진부면 진부중앙로 74-2" ;
+  schema:telephone "033-333-7300" ;
+  ex:latitude 37.637676 ;
+  ex:longitude 128.559285 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~화 08:40~18:00, 수 08:30~21:30, 목~금 08:30~17:30, 토~일, 법정공휴일 08:30~13:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원도_평창군> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/21_1층메디컬약국>
+  a ex:CulturalFacility ;
+  schema:name "1층메디컬약국" ;
+  schema:address "서울특별시 금천구 시흥대로 214" ;
+  schema:telephone "02-891-1112" ;
+  ex:latitude 37.453043 ;
+  ex:longitude 126.901712 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~수, 금 09:00~20:00, 목 09:00~20:30, 토 09:00~15:30, 일 09:00~13:30, 법정공휴일 10:00~16:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_금천구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/22_1층이화약국>
+  a ex:CulturalFacility ;
+  schema:name "1층이화약국" ;
+  schema:address "서울특별시 성동구 왕십리로 410" ;
+  schema:telephone "070-7798-1281" ;
+  ex:latitude 37.566590 ;
+  ex:longitude 127.024082 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월, 목 09:00~20:00, 화, 목 09:00~19:00, 수 09:00~18:00, 토 09:00~14:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_성동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/23_1호선범일약국>
+  a ex:CulturalFacility ;
+  schema:name "1호선범일약국" ;
+  schema:address "부산광역시 동구 범일로 지하 108" ;
+  schema:telephone "051-637-0421" ;
+  ex:latitude 35.140723 ;
+  ex:longitude 129.059343 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~14:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/24_202펫푸드>
+  a ex:CulturalFacility ;
+  schema:name "202펫푸드" ;
+  schema:address "경상남도 창원시 마산합포구 현동6길 94" ;
+  ex:latitude 35.150122 ;
+  ex:longitude 128.553719 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "수~일 11:30~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_창원시_마산합포구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/25_21세기_동규약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기 동규약국" ;
+  schema:address "경기도 오산시 대원로 1" ;
+  schema:telephone "031-374-2943" ;
+  ex:latitude 37.146604 ;
+  ex:longitude 127.068648 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~21:00, 토 08:30~21:00, 일 12:00~21:00, 법정공휴일 12:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_오산시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/26_21세기_동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기 동물병원" ;
+  schema:address "전라북도 전주시 덕진구 시천로 26" ;
+  schema:telephone "063-251-1015" ;
+  ex:latitude 35.861545 ;
+  ex:longitude 127.114938 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "정보없음" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시_덕진구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/27_21세기_세계로약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기 세계로약국" ;
+  schema:address "경기도 성남시 중원구 산성대로372번길 14" ;
+  schema:telephone "031-743-0624" ;
+  ex:latitude 37.444751 ;
+  ex:longitude 127.158591 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:30, 토 08:30~20:00, 일 09:30~19:00, 법정공휴일 09:30~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_성남시_중원구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/28_21세기_약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기 약국" ;
+  schema:address "경기도 광명시 오리로 853" ;
+  schema:telephone "02-897-7470" ;
+  ex:latitude 37.474504 ;
+  ex:longitude 126.866592 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:30, 토 09:00~15:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광명시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/29_21세기_우리네약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기 우리네약국" ;
+  schema:address "부산광역시 남구 수영로 43" ;
+  schema:telephone "051-646-8260" ;
+  ex:latitude 35.136694 ;
+  ex:longitude 129.072687 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:30, 토 09:00~16:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_남구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/30_21세기_정약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기 정약국" ;
+  schema:address "경기도 수원시 권선구 정조로 523" ;
+  schema:telephone "031-234-3847" ;
+  ex:latitude 37.255965 ;
+  ex:longitude 127.011044 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_수원시_권선구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/31_21세기건강약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기건강약국" ;
+  schema:address "광주광역시 북구 면앙로32번길 1" ;
+  schema:telephone "062-261-5627" ;
+  ex:latitude 35.179428 ;
+  ex:longitude 126.915844 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~22:00, 법정공휴일 09:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/32_21세기동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기동물병원" ;
+  schema:address "서울특별시 용산구 보광로 46" ;
+  schema:telephone "02-749-6750" ;
+  ex:latitude 37.528316 ;
+  ex:longitude 126.999196 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_용산구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/33_21세기동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기동물병원" ;
+  schema:address "서울특별시 용산구 보광로 46" ;
+  schema:telephone "02-749-6750" ;
+  ex:latitude 37.528316 ;
+  ex:longitude 126.999196 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_용산구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/34_21세기동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기동물병원" ;
+  schema:address "전라남도 목포시 영산로 503" ;
+  schema:telephone "061-279-0006" ;
+  ex:latitude 34.810647 ;
+  ex:longitude 126.417274 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "정보없음" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_목포시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/35_21세기동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기동물병원" ;
+  schema:address "전라남도 목포시 영산로 503" ;
+  schema:telephone "061-279-0006" ;
+  ex:latitude 34.810647 ;
+  ex:longitude 126.417274 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "정보없음" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_목포시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/36_21세기맑은약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기맑은약국" ;
+  schema:address "인천광역시 부평구 길주로 623" ;
+  schema:telephone "032-363-2201" ;
+  ex:latitude 37.507888 ;
+  ex:longitude 126.732054 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 10:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_부평구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/37_21세기새롬약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기새롬약국" ;
+  schema:address "경기도 고양시 덕양구 화정로 53" ;
+  schema:telephone "031-965-4677" ;
+  ex:latitude 37.635226 ;
+  ex:longitude 126.831888 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~21:00, 토 09:00~18:00, 일, 법정공휴일 09:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_고양시_덕양구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/38_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "인천광역시 남동구 만수로 47" ;
+  schema:telephone "032-468-3737" ;
+  ex:latitude 37.460544 ;
+  ex:longitude 126.733548 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:00, 토 08:30~15:00, 일 10:00~20:00, 법정공휴일 10:00~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/39_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "인천광역시 남동구 만수로 47" ;
+  schema:telephone "032-468-3737" ;
+  ex:latitude 37.460544 ;
+  ex:longitude 126.733548 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:00, 토 08:30~15:00, 일 10:00~20:00, 법정공휴일 10:00~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/40_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "인천광역시 남동구 만수로 47" ;
+  schema:telephone "032-468-3737" ;
+  ex:latitude 37.460544 ;
+  ex:longitude 126.733548 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:00, 토 08:30~15:00, 일 10:00~20:00, 법정공휴일 10:00~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/41_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "인천광역시 남동구 만수로 47" ;
+  schema:telephone "032-468-3737" ;
+  ex:latitude 37.460544 ;
+  ex:longitude 126.733548 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:00, 토 08:30~15:00, 일 10:00~20:00, 법정공휴일 10:00~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/42_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "인천광역시 남동구 만수로 47" ;
+  schema:telephone "032-468-3737" ;
+  ex:latitude 37.460544 ;
+  ex:longitude 126.733548 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:00, 토 08:30~15:00, 일 10:00~20:00, 법정공휴일 10:00~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_남동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/43_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "강원도 춘천시 보안길 64-1" ;
+  schema:telephone "033-255-0990" ;
+  ex:latitude 37.880227 ;
+  ex:longitude 127.750636 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~13:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원도_춘천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/44_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "강원도 춘천시 보안길 64-1" ;
+  schema:telephone "033-255-0990" ;
+  ex:latitude 37.880227 ;
+  ex:longitude 127.750636 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~13:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원도_춘천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/45_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "강원도 춘천시 보안길 64-1" ;
+  schema:telephone "033-255-0990" ;
+  ex:latitude 37.880227 ;
+  ex:longitude 127.750636 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~13:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원도_춘천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/46_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "강원도 춘천시 보안길 64-1" ;
+  schema:telephone "033-255-0990" ;
+  ex:latitude 37.880227 ;
+  ex:longitude 127.750636 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~13:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원도_춘천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/47_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "강원도 춘천시 보안길 64-1" ;
+  schema:telephone "033-255-0990" ;
+  ex:latitude 37.880227 ;
+  ex:longitude 127.750636 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~13:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/강원도_춘천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/48_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "경상북도 구미시 송정대로 5" ;
+  schema:telephone "054-452-2121" ;
+  ex:latitude 36.116789 ;
+  ex:longitude 128.339361 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~23:30, 토 09:00~23:30, 일 10:30~23:30, 법정공휴일 09:00~23:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/49_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "경상북도 구미시 송정대로 5" ;
+  schema:telephone "054-452-2121" ;
+  ex:latitude 36.116789 ;
+  ex:longitude 128.339361 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~23:30, 토 09:00~23:30, 일 10:30~23:30, 법정공휴일 09:00~23:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/50_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "경상북도 구미시 송정대로 5" ;
+  schema:telephone "054-452-2121" ;
+  ex:latitude 36.116789 ;
+  ex:longitude 128.339361 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~23:30, 토 09:00~23:30, 일 10:30~23:30, 법정공휴일 09:00~23:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/51_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "경상북도 구미시 송정대로 5" ;
+  schema:telephone "054-452-2121" ;
+  ex:latitude 36.116789 ;
+  ex:longitude 128.339361 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~23:30, 토 09:00~23:30, 일 10:30~23:30, 법정공휴일 09:00~23:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/52_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "경상북도 구미시 송정대로 5" ;
+  schema:telephone "054-452-2121" ;
+  ex:latitude 36.116789 ;
+  ex:longitude 128.339361 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~23:30, 토 09:00~23:30, 일 10:30~23:30, 법정공휴일 09:00~23:30" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상북도_구미시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/53_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "부산광역시 동래구 중앙대로 1393" ;
+  schema:telephone "051-668-2751" ;
+  ex:latitude 35.211708 ;
+  ex:longitude 129.077480 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~21:00, 일 11:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_동래구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/54_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "부산광역시 동래구 중앙대로 1393" ;
+  schema:telephone "051-668-2751" ;
+  ex:latitude 35.211708 ;
+  ex:longitude 129.077480 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~21:00, 일 11:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_동래구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/55_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "부산광역시 동래구 중앙대로 1393" ;
+  schema:telephone "051-668-2751" ;
+  ex:latitude 35.211708 ;
+  ex:longitude 129.077480 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~21:00, 일 11:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_동래구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/56_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "부산광역시 동래구 중앙대로 1393" ;
+  schema:telephone "051-668-2751" ;
+  ex:latitude 35.211708 ;
+  ex:longitude 129.077480 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~21:00, 일 11:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_동래구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/57_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "부산광역시 동래구 중앙대로 1393" ;
+  schema:telephone "051-668-2751" ;
+  ex:latitude 35.211708 ;
+  ex:longitude 129.077480 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 09:00~21:00, 일 11:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_동래구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/58_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "광주광역시 서구 금화로 240" ;
+  schema:telephone "062-652-8825" ;
+  ex:latitude 35.133646 ;
+  ex:longitude 126.874830 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 10:00~22:00, 토 10:00~22:00, 일 10:00~22:00, 법정공휴일 10:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/59_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "광주광역시 서구 금화로 240" ;
+  schema:telephone "062-652-8825" ;
+  ex:latitude 35.133646 ;
+  ex:longitude 126.874830 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 10:00~22:00, 토 10:00~22:00, 일 10:00~22:00, 법정공휴일 10:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/60_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "광주광역시 서구 금화로 240" ;
+  schema:telephone "062-652-8825" ;
+  ex:latitude 35.133646 ;
+  ex:longitude 126.874830 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 10:00~22:00, 토 10:00~22:00, 일 10:00~22:00, 법정공휴일 10:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/61_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "광주광역시 서구 금화로 240" ;
+  schema:telephone "062-652-8825" ;
+  ex:latitude 35.133646 ;
+  ex:longitude 126.874830 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 10:00~22:00, 토 10:00~22:00, 일 10:00~22:00, 법정공휴일 10:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/62_21세기약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기약국" ;
+  schema:address "광주광역시 서구 금화로 240" ;
+  schema:telephone "062-652-8825" ;
+  ex:latitude 35.133646 ;
+  ex:longitude 126.874830 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 10:00~22:00, 토 10:00~22:00, 일 10:00~22:00, 법정공휴일 10:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/63_21세기종합동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기종합동물병원" ;
+  schema:address "대구광역시 동구 아양로 216" ;
+  schema:telephone "053-959-0121" ;
+  ex:latitude 35.885938 ;
+  ex:longitude 128.636764 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "정보없음" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/64_21세기종합동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기종합동물병원" ;
+  schema:address "대구광역시 동구 아양로 216" ;
+  schema:telephone "053-959-0121" ;
+  ex:latitude 35.885938 ;
+  ex:longitude 128.636764 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "정보없음" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_동구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/65_21세기종합동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기종합동물병원" ;
+  schema:address "부산광역시 북구 만덕대로 34" ;
+  schema:telephone "051-365-0075" ;
+  ex:latitude 35.210759 ;
+  ex:longitude 129.008783 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 9:00~20:00, 토~일 9:00~18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_북구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/66_21세기종합동물병원>
+  a ex:CulturalFacility ;
+  schema:name "21세기종합동물병원" ;
+  schema:address "부산광역시 북구 만덕대로 34" ;
+  schema:telephone "051-365-0075" ;
+  ex:latitude 35.210759 ;
+  ex:longitude 129.008783 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 9:00~20:00, 토~일 9:00~18:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_북구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/67_21세기종합약국>
+  a ex:CulturalFacility ;
+  schema:name "21세기종합약국" ;
+  schema:address "전라북도 전주시 덕진구 기린대로 400-8" ;
+  schema:telephone "063-274-4949" ;
+  ex:latitude 35.838020 ;
+  ex:longitude 127.132838 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~19:00, 토 09:00~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라북도_전주시_덕진구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/68_21C_세계로약국>
+  a ex:CulturalFacility ;
+  schema:name "21C 세계로약국" ;
+  schema:address "서울특별시 강서구 화곡로 173" ;
+  schema:telephone "02-2607-0624" ;
+  ex:latitude 37.542046 ;
+  ex:longitude 126.840751 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:30, 토, 법정공휴일 08:30~20:00, 일 09:30~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_강서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/69_21c청학보건당>
+  a ex:CulturalFacility ;
+  schema:name "21c청학보건당" ;
+  schema:address "경기도 남양주시 별내면 청학로중앙길 9" ;
+  schema:telephone "031-821-1653" ;
+  ex:latitude 37.708695 ;
+  ex:longitude 127.118397 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~일 법정공휴일 09:00~22:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_남양주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/70_228약국>
+  a ex:CulturalFacility ;
+  schema:name "228약국" ;
+  schema:address "대구광역시 중구 동성로2길 95" ;
+  schema:telephone "053-422-2228" ;
+  ex:latitude 35.870190 ;
+  ex:longitude 128.596901 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:00~20:30, 토 09:00~17:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_중구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/71_22세기_약국>
+  a ex:CulturalFacility ;
+  schema:name "22세기 약국" ;
+  schema:address "대구광역시 수성구 달구벌대로 지하 2396" ;
+  schema:telephone "053-741-6467" ;
+  ex:latitude 35.859015 ;
+  ex:longitude 128.624455 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:30, 토 09:00~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/72_22세기_약국>
+  a ex:CulturalFacility ;
+  schema:name "22세기 약국" ;
+  schema:address "대구광역시 수성구 달구벌대로 지하 2396" ;
+  schema:telephone "053-741-6467" ;
+  ex:latitude 35.859015 ;
+  ex:longitude 128.624455 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:30~20:30, 토 09:00~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/대구광역시_수성구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/73_22세기_약국>
+  a ex:CulturalFacility ;
+  schema:name "22세기 약국" ;
+  schema:address "전라남도 순천시 팔마로 222" ;
+  schema:telephone "053-741-6467" ;
+  ex:latitude 34.939906 ;
+  ex:longitude 127.508761 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:00~20:00, 토 09:00~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_순천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/74_22세기_약국>
+  a ex:CulturalFacility ;
+  schema:name "22세기 약국" ;
+  schema:address "전라남도 순천시 팔마로 222" ;
+  schema:telephone "053-741-6467" ;
+  ex:latitude 34.939906 ;
+  ex:longitude 127.508761 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 08:00~20:00, 토 09:00~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/전라남도_순천시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/75_24시_강서_젠틀리동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 강서 젠틀리동물의료센터" ;
+  schema:address "서울특별시 강서구 마곡중앙1로 72" ;
+  schema:telephone "02-2662-8111" ;
+  ex:latitude 37.559040 ;
+  ex:longitude 126.820063 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_강서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/76_24시_건국_본_동물병원>
+  a ex:CulturalFacility ;
+  schema:name "24시 건국 본 동물병원" ;
+  schema:address "인천광역시 미추홀구 인하로 287" ;
+  schema:telephone "032-864-0075" ;
+  ex:latitude 37.448246 ;
+  ex:longitude 126.679984 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_미추홀구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/77_24시_굿케어동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 굿케어동물의료센터" ;
+  schema:address "서울특별시 관악구 남부순환로 1861" ;
+  schema:telephone "02-6956-2475" ;
+  ex:latitude 37.480000 ;
+  ex:longitude 126.956867 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_관악구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/78_24시_글로리_동물병원>
+  a ex:CulturalFacility ;
+  schema:name "24시 글로리 동물병원" ;
+  schema:address "서울특별시 금천구 시흥대로 483" ;
+  schema:telephone "02-855-8575" ;
+  ex:latitude 37.476744 ;
+  ex:longitude 126.898256 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_금천구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/79_24시_당신의_동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 당신의 동물의료센터" ;
+  schema:address "경기도 수원시 장안구 천천로 100" ;
+  schema:telephone "031-268-6575" ;
+  ex:latitude 37.300625 ;
+  ex:longitude 126.983998 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_수원시_장안구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/80_24시_더나은_동물메디컬_센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 더나은 동물메디컬 센터" ;
+  schema:address "경상남도 거제시 동문천로 47" ;
+  schema:telephone "055-716-1175" ;
+  ex:latitude 34.882989 ;
+  ex:longitude 128.625276 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~토 10:00~21:00, 일 11:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경상남도_거제시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/81_24시_더블유_동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 더블유 동물의료센터" ;
+  schema:address "인천광역시 서구 청라커낼로260번길 27" ;
+  schema:telephone "032-565-8270" ;
+  ex:latitude 37.532388 ;
+  ex:longitude 126.647045 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 10:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/82_24시_더원_동물병원>
+  a ex:CulturalFacility ;
+  schema:name "24시 더원 동물병원" ;
+  schema:address "인천광역시 서구 발산로 41" ;
+  schema:telephone "032-569-6677" ;
+  ex:latitude 37.592991 ;
+  ex:longitude 126.712012 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/인천광역시_서구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/83_24시_더케어_동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 더케어 동물의료센터" ;
+  schema:address "경기도 구리시 경춘로 294" ;
+  schema:telephone "031-516-8585" ;
+  ex:latitude 37.603330 ;
+  ex:longitude 127.147316 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_구리시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/84_24시_동물응급의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 동물응급의료센터" ;
+  schema:address "서울특별시 중랑구 망우로 247" ;
+  schema:telephone "02-494-7582" ;
+  ex:latitude 37.595322 ;
+  ex:longitude 127.079577 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_중랑구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/85_24시_동탄_이음동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 동탄 이음동물의료센터" ;
+  schema:address "경기도 화성시 동탄대로6길 15" ;
+  schema:telephone "031-831-3513" ;
+  ex:latitude 37.168739 ;
+  ex:longitude 127.108433 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_화성시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/86_24시_라움동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 라움동물의료센터" ;
+  schema:address "경기도 평택시 비전5로 20-24" ;
+  schema:telephone "031-692-5022" ;
+  ex:latitude 36.998875 ;
+  ex:longitude 127.114167 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_평택시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/87_24시_라인동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 라인동물의료센터" ;
+  schema:address "경기도 고양시 덕양구 동송로 70" ;
+  schema:telephone "02-381-2475" ;
+  ex:latitude 37.652680 ;
+  ex:longitude 126.896113 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_고양시_덕양구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/88_24시_리본동물의료센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 리본동물의료센터" ;
+  schema:address "부산광역시 동래구 충렬대로 194" ;
+  schema:telephone "051-711-0006" ;
+  ex:latitude 35.202916 ;
+  ex:longitude 129.080986 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 09:30~19:00, 토 09:30~19:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/부산광역시_동래구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/89_24시_멍냥마켓_파장점>
+  a ex:CulturalFacility ;
+  schema:name "24시 멍냥마켓 파장점" ;
+  schema:address "경기도 수원시 장안구 파장로 96" ;
+  ex:latitude 37.307521 ;
+  ex:longitude 126.991039 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_수원시_장안구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/90_24시_명동물메디컬센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 명동물메디컬센터" ;
+  schema:address "서울특별시 구로구 남부순환로 775" ;
+  schema:telephone "02-2619-5102" ;
+  ex:latitude 37.501568 ;
+  ex:longitude 126.847162 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_구로구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/91_24시_모두의동물병원>
+  a ex:CulturalFacility ;
+  schema:name "24시 모두의동물병원" ;
+  schema:address "경기도 광명시 하안로 289" ;
+  schema:telephone "02-6951-2475" ;
+  ex:latitude 37.461690 ;
+  ex:longitude 126.880189 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광명시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/92_24시_모란동물_메디컬센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 모란동물 메디컬센터" ;
+  schema:address "경기도 광주시 경충대로 1448" ;
+  schema:telephone "031-765-1100" ;
+  ex:latitude 37.399405 ;
+  ex:longitude 127.273675 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_광주시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/93_24시_무인_애완용품_펫싸롱_4호점>
+  a ex:CulturalFacility ;
+  schema:name "24시 무인 애완용품 펫싸롱 4호점" ;
+  schema:address "경기도 의정부시 평화로 689" ;
+  schema:telephone "031-848-2711" ;
+  ex:latitude 37.753282 ;
+  ex:longitude 127.043409 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_의정부시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/94_24시_무인_애완용품_펫싸롱_의정부점>
+  a ex:CulturalFacility ;
+  schema:name "24시 무인 애완용품 펫싸롱 의정부점" ;
+  schema:address "경기도 의정부시 호국로 1187-2" ;
+  schema:telephone "031-855-2710" ;
+  ex:latitude 37.743534 ;
+  ex:longitude 127.035937 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_의정부시> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/95_24시_블레스동물메디컬센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 블레스동물메디컬센터" ;
+  schema:address "경기도 용인시 기흥구 동백3로11번길 9" ;
+  schema:telephone "031-546-0942" ;
+  ex:latitude 37.269682 ;
+  ex:longitude 127.152921 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_용인시_기흥구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/96_24시_블루밍_동물병원>
+  a ex:CulturalFacility ;
+  schema:name "24시 블루밍 동물병원" ;
+  schema:address "광주광역시 북구 대자로 36" ;
+  schema:telephone "062-416-7975" ;
+  ex:latitude 35.173312 ;
+  ex:longitude 126.876256 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 08:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/광주광역시_북구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/97_24시_사람앤동물메디컬센터>
+  a ex:CulturalFacility ;
+  schema:name "24시 사람앤동물메디컬센터" ;
+  schema:address "경기도 용인시 수지구 수지로 124" ;
+  schema:telephone "031-262-0306" ;
+  ex:latitude 37.312684 ;
+  ex:longitude 127.079742 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 00:00~24:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/경기도_용인시_수지구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/98_24시_산들산들_동물병원>
+  a ex:CulturalFacility ;
+  schema:name "24시 산들산들 동물병원" ;
+  schema:address "서울특별시 마포구 마포대로16길 7" ;
+  schema:telephone "02-393-3588" ;
+  ex:latitude 37.550975 ;
+  ex:longitude 126.956497 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "월~금 10:00~24:00, 토~일 10:00~20:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_마포구> ;
+  ex:coord_status "ok" .
+<http://animalloo.kr/ontology/culture/facility/99_24시_서울_탑_동물병원>
+  a ex:CulturalFacility ;
+  schema:name "24시 서울 탑 동물병원" ;
+  schema:address "서울특별시 양천구 중앙로 237" ;
+  schema:telephone "02-2601-8875" ;
+  ex:latitude 37.517743 ;
+  ex:longitude 126.853643 ;
+  schema:category "반려동물업" ;
+  ex:petAllowedInfo "Y" ;
+  ex:petRestriction "제한사항 없음" ;
+  ex:allowedPetSize "모두 가능" ;
+  schema:openingHours "매일 09:00~21:00" ;
+  ex:locatedIn <http://animalloo.kr/ontology/region/서울특별시_양천구> ;
+  ex:coord_status "ok" .

@@ -1,0 +1,935 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <http://animalloo.kr/ontology#> .
+
+<http://animalloo.kr/ontology/medical/disease/28>
+  a ex:Disease ;
+  ex:diseaseName "돼지단독" ;
+  ex:diseaseNameEN "Swine erysipelas" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/29>
+  a ex:Disease ;
+  ex:diseaseName "돼지로타바이러스감염증" ;
+  ex:diseaseNameEN "Porcine rotavirus infection" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/30>
+  a ex:Disease ;
+  ex:diseaseName "돼지생식기호흡기증후군" ;
+  ex:diseaseNameEN "Porcine reproductive and respiratory syndrom" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/31>
+  a ex:Disease ;
+  ex:diseaseName "돼지수포병" ;
+  ex:diseaseNameEN "Swine vesicular disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/32>
+  a ex:Disease ;
+  ex:diseaseName "돼지써코바이러스감염증" ;
+  ex:diseaseNameEN "PCV-2 infection" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/33>
+  a ex:Disease ;
+  ex:diseaseName "돼지유행성설사병" ;
+  ex:diseaseNameEN "Porcine epidemic diarrhea" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/34>
+  a ex:Disease ;
+  ex:diseaseName "돼지적리" ;
+  ex:diseaseNameEN "Swine dysentery" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/35>
+  a ex:Disease ;
+  ex:diseaseName "돼지열병" ;
+  ex:diseaseNameEN "Classical swine fever" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/36>
+  a ex:Disease ;
+  ex:diseaseName "돼지파보바이러스감염증" ;
+  ex:diseaseNameEN "Porcine parvovirus infection" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/37>
+  a ex:Disease ;
+  ex:diseaseName "돼지호흡기코로나바이러스감염증" ;
+  ex:diseaseNameEN "Porcine respiratory coronaviral infection" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/38>
+  a ex:Disease ;
+  ex:diseaseName "흉막폐렴" ;
+  ex:diseaseNameEN "Pleuropneumonia of pigs" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/39>
+  a ex:Disease ;
+  ex:diseaseName "럼피스킨병" ;
+  ex:diseaseNameEN "Lumpy skin disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,기타 미분류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/40>
+  a ex:Disease ;
+  ex:diseaseName "레오바이러스감염증" ;
+  ex:diseaseNameEN "Reovirus infection" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭,소,기타 미분류,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/41>
+  a ex:Disease ;
+  ex:diseaseName "렙토스피라병" ;
+  ex:diseaseNameEN "Leptospirosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/42>
+  a ex:Disease ;
+  ex:diseaseName "리스테리아병" ;
+  ex:diseaseNameEN "Listeriosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "닭,소,개,너구리,면양,기타 미분류,돼지,야생동물,산양,면양,쥐-랫트" ;
+  ex:targetsDog true ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/43>
+  a ex:Disease ;
+  ex:diseaseName "리프트계곡열" ;
+  ex:diseaseNameEN "Rift valley fever" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,면양,산양,면양" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/44>
+  a ex:Disease ;
+  ex:diseaseName "마렉병" ;
+  ex:diseaseNameEN "Marek's disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/45>
+  a ex:Disease ;
+  ex:diseaseName "닭 마이코플라즈마병" ;
+  ex:diseaseNameEN "Avian mycoplasmosis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/46>
+  a ex:Disease ;
+  ex:diseaseName "마이코플라즈마폐렴" ;
+  ex:diseaseNameEN "Mycoplasmal pneumonia" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/47>
+  a ex:Disease ;
+  ex:diseaseName "말바이러스성동맥염" ;
+  ex:diseaseNameEN "Equine viral arteritis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/48>
+  a ex:Disease ;
+  ex:diseaseName "말비저" ;
+  ex:diseaseNameEN "Glanders" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/49>
+  a ex:Disease ;
+  ex:diseaseName "말선역" ;
+  ex:diseaseNameEN "Strangles" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/50>
+  a ex:Disease ;
+  ex:diseaseName "말전염성빈혈" ;
+  ex:diseaseNameEN "Equine infectious anemia" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/51>
+  a ex:Disease ;
+  ex:diseaseName "밍크바이러스성장염" ;
+  ex:diseaseNameEN "Mink viral enteritis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "밍크" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/52>
+  a ex:Disease ;
+  ex:diseaseName "밍크알류샨병" ;
+  ex:diseaseNameEN "Aleutian disease in mink" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "밍크" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/53>
+  a ex:Disease ;
+  ex:diseaseName "보툴리즘" ;
+  ex:diseaseNameEN "Clostridium botulinum" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,야생조류-기타,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/54>
+  a ex:Disease ;
+  ex:diseaseName "봉입체성간염" ;
+  ex:diseaseNameEN "Inclusion body hepatitis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/55>
+  a ex:Disease ;
+  ex:diseaseName "브루셀라병" ;
+  ex:diseaseNameEN "Brucellosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,개,기타 미분류,돼지,야생동물" ;
+  ex:targetsDog true ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/56>
+  a ex:Disease ;
+  ex:diseaseName "부저병" ;
+  ex:diseaseNameEN "American foulbrood disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "벌-꿀벌" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/57>
+  a ex:Disease ;
+  ex:diseaseName "블루텅" ;
+  ex:diseaseNameEN "Bluetongue" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소,면양,기타 미분류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/58>
+  a ex:Disease ;
+  ex:diseaseName "사슴만성소모성질병" ;
+  ex:diseaseNameEN "Chronic wasting disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "사슴" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/59>
+  a ex:Disease ;
+  ex:diseaseName "살모넬라균증" ;
+  ex:diseaseNameEN "Salmonellosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/60>
+  a ex:Disease ;
+  ex:diseaseName "선모충증" ;
+  ex:diseaseNameEN "richinosis" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "기타 미분류,돼지,쥐-마우스" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/61>
+  a ex:Disease ;
+  ex:diseaseName "소결핵병" ;
+  ex:diseaseNameEN "Tuberculosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,오소리,고양이,사슴,개,너구리,면양,기타 미분류,돼지,쥐-랫트" ;
+  ex:targetsDog true ;
+  ex:targetsCat true .
+<http://animalloo.kr/ontology/medical/disease/62>
+  a ex:Disease ;
+  ex:diseaseName "소로타바이러스감염증" ;
+  ex:diseaseNameEN "Bovine rotavirus infection" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/63>
+  a ex:Disease ;
+  ex:diseaseName "소바베시아병" ;
+  ex:diseaseNameEN "Babesiosis" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/64>
+  a ex:Disease ;
+  ex:diseaseName "소바이러스성설사" ;
+  ex:diseaseNameEN "Bovine viral diarrhea" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,사슴,면양,산양,면양" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/65>
+  a ex:Disease ;
+  ex:diseaseName "소백혈병" ;
+  ex:diseaseNameEN "Bovine leukemia" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/66>
+  a ex:Disease ;
+  ex:diseaseName "소아데노바이러스감염증" ;
+  ex:diseaseNameEN "Adenovirus infection" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/67>
+  a ex:Disease ;
+  ex:diseaseName "소유행열" ;
+  ex:diseaseNameEN "Bovine ephemeral fever" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,기타 미분류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/68>
+  a ex:Disease ;
+  ex:diseaseName "소전염성비기관염" ;
+  ex:diseaseNameEN "Infectious bovine rhinotracheitis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/69>
+  a ex:Disease ;
+  ex:diseaseName "소츄잔병" ;
+  ex:diseaseNameEN "Chuzan disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/70>
+  a ex:Disease ;
+  ex:diseaseName "소캄필로박터증" ;
+  ex:diseaseNameEN "Genital Campylobacteriosis" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/71>
+  a ex:Disease ;
+  ex:diseaseName "소콕시듐증" ;
+  ex:diseaseNameEN "Coccidiosis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/73>
+  a ex:Disease ;
+  ex:diseaseName "소RS바이러스병" ;
+  ex:diseaseNameEN "Bovine respiratory syncytial virus infection" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/74>
+  a ex:Disease ;
+  ex:diseaseName "수포성구내염" ;
+  ex:diseaseNameEN "Vesicular stomatitis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소,면양,기타 미분류,돼지,야생동물,쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/75>
+  a ex:Disease ;
+  ex:diseaseName "스피로헤타증" ;
+  ex:diseaseNameEN "Spirochetosis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/76>
+  a ex:Disease ;
+  ex:diseaseName "소아까바네병" ;
+  ex:diseaseNameEN "Akabane disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/77>
+  a ex:Disease ;
+  ex:diseaseName "아나플라즈마병" ;
+  ex:diseaseNameEN "Anaplasmasis" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "소,사슴" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/78>
+  a ex:Disease ;
+  ex:diseaseName "아이노바이러스감염증" ;
+  ex:diseaseNameEN "Aino virus infection" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/79>
+  a ex:Disease ;
+  ex:diseaseName "아프리카돼지열병" ;
+  ex:diseaseNameEN "African swine fever" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "기타 미분류,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/80>
+  a ex:Disease ;
+  ex:diseaseName "아프리카마역" ;
+  ex:diseaseNameEN "African horse sickness" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "기타 미분류,쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/81>
+  a ex:Disease ;
+  ex:diseaseName "에드워드병" ;
+  ex:diseaseNameEN "Edwardsiellosis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "어류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/82>
+  a ex:Disease ;
+  ex:diseaseName "에로모나스증" ;
+  ex:diseaseNameEN "Aeromonas infection" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "어류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/83>
+  a ex:Disease ;
+  ex:diseaseName "에페리스로조아병" ;
+  ex:diseaseNameEN "Eperythrozoonosis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/84>
+  a ex:Disease ;
+  ex:diseaseName "연쇄상구균감염증" ;
+  ex:diseaseNameEN "Streptococcosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "야생조류-기타,기타 미분류,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/85>
+  a ex:Disease ;
+  ex:diseaseName "오리바이러스성간염" ;
+  ex:diseaseNameEN "Duck hepatitis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "오리" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/86>
+  a ex:Disease ;
+  ex:diseaseName "오리패혈증" ;
+  ex:diseaseNameEN "Remerella infection" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "오리" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/87>
+  a ex:Disease ;
+  ex:diseaseName "오제스키병" ;
+  ex:diseaseNameEN "Aujeszky's disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/88>
+  a ex:Disease ;
+  ex:diseaseName "요네병" ;
+  ex:diseaseNameEN "Johne's disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,사슴,면양,돼지,산양,면양" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/89>
+  a ex:Disease ;
+  ex:diseaseName "우역" ;
+  ex:diseaseNameEN "Rinderpest" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/90>
+  a ex:Disease ;
+  ex:diseaseName "우폐역" ;
+  ex:diseaseNameEN "Contagious Bovine Pleuropneumonia" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,기타 미분류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/91>
+  a ex:Disease ;
+  ex:diseaseName "웨스트나일열" ;
+  ex:diseaseNameEN "West nile fever" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,고양이,개,토끼,너구리,야생조류,기타 미분류" ;
+  ex:targetsDog true ;
+  ex:targetsCat true .
+<http://animalloo.kr/ontology/medical/disease/92>
+  a ex:Disease ;
+  ex:diseaseName "위축성비염" ;
+  ex:diseaseNameEN "Atrophic rhinitis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/93>
+  a ex:Disease ;
+  ex:diseaseName "유방염" ;
+  ex:diseaseNameEN "Mastitis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/94>
+  a ex:Disease ;
+  ex:diseaseName "이바라기병" ;
+  ex:diseaseNameEN "Ibaraki disease" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/95>
+  a ex:Disease ;
+  ex:diseaseName "돼지일본뇌염" ;
+  ex:diseaseNameEN "Japanese B Encephalitis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/96>
+  a ex:Disease ;
+  ex:diseaseName "장독혈증" ;
+  ex:diseaseNameEN "Enterotoxemia" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,면양,돼지,산양,면양" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/97>
+  a ex:Disease ;
+  ex:diseaseName "전염성기관지염" ;
+  ex:diseaseNameEN "Infectious bronchitis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/98>
+  a ex:Disease ;
+  ex:diseaseName "전염성비염" ;
+  ex:diseaseNameEN "Snuffles" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "토끼" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/99>
+  a ex:Disease ;
+  ex:diseaseName "돼지전염성위장염" ;
+  ex:diseaseNameEN "Transmissible gastroenteritis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/100>
+  a ex:Disease ;
+  ex:diseaseName "전염성후두기관염" ;
+  ex:diseaseNameEN "Infectious laryngotracheitis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "야생조류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/101>
+  a ex:Disease ;
+  ex:diseaseName "전염성F낭병" ;
+  ex:diseaseNameEN "Infectiious bursal disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/102>
+  a ex:Disease ;
+  ex:diseaseName "닭백혈병" ;
+  ex:diseaseNameEN "Lymphoid Leukosis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "야생조류-기타" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/103>
+  a ex:Disease ;
+  ex:diseaseName "저병원성조류인플루엔자" ;
+  ex:diseaseNameEN "Avian virus influenza" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "야생조류-기타" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/104>
+  a ex:Disease ;
+  ex:diseaseName "지간부란" ;
+  ex:diseaseNameEN "Foot Rot" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,기타 미분류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/105>
+  a ex:Disease ;
+  ex:diseaseName "추백리" ;
+  ex:diseaseNameEN "Pullorum disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭,칠면조,메추리" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/106>
+  a ex:Disease ;
+  ex:diseaseName "칸디다증" ;
+  ex:diseaseNameEN "Candidiasis" ;
+  ex:causeClass "곰팡이" ;
+  ex:mainTargetAnimal "닭,칠면조,메추리" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/107>
+  a ex:Disease ;
+  ex:diseaseName "큐열" ;
+  ex:diseaseNameEN "Q fever" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,고양이,사슴,개,면양,산양,면양" ;
+  ex:targetsDog true ;
+  ex:targetsCat true .
+<http://animalloo.kr/ontology/medical/disease/109>
+  a ex:Disease ;
+  ex:diseaseName "크립토스포리디움증" ;
+  ex:diseaseNameEN "Cryptosporidiosis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,고양이,개,면양,기타 미분류,쥐-마우스,쥐-랫트" ;
+  ex:targetsDog true ;
+  ex:targetsCat true .
+<http://animalloo.kr/ontology/medical/disease/110>
+  a ex:Disease ;
+  ex:diseaseName "클라미디아병" ;
+  ex:diseaseNameEN "Chlamydiosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,야생조류-기타,기타 미분류,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/112>
+  a ex:Disease ;
+  ex:diseaseName "탄저" ;
+  ex:diseaseNameEN "Anthrax" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,면양,돼지,쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/113>
+  a ex:Disease ;
+  ex:diseaseName "토끼바이러스성출혈병" ;
+  ex:diseaseNameEN "Viral haemorrhagic fever of rabbit" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "토끼" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/115>
+  a ex:Disease ;
+  ex:diseaseName "개코로나바이러스감염증" ;
+  ex:diseaseNameEN "Canine coronavirus infection" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "개" ;
+  ex:targetsDog true ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/116>
+  a ex:Disease ;
+  ex:diseaseName "소부제병" ;
+  ex:diseaseNameEN "Foot rot" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/117>
+  a ex:Disease ;
+  ex:diseaseName "파스튜렐라폐렴" ;
+  ex:diseaseNameEN "Pasteurella Pneumonia" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/118>
+  a ex:Disease ;
+  ex:diseaseName "스크래피" ;
+  ex:diseaseNameEN "Scrapie" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "면양,산양,면양" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/119>
+  a ex:Disease ;
+  ex:diseaseName "류코사이토준병" ;
+  ex:diseaseNameEN "Leucocytozoonosis" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "닭,오리,꿩,칠면조" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/120>
+  a ex:Disease ;
+  ex:diseaseName "소해면상뇌증" ;
+  ex:diseaseNameEN "Bovine Spongiform Encephalopathy" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/121>
+  a ex:Disease ;
+  ex:diseaseName "타이레리아" ;
+  ex:diseaseNameEN "Theilerosis : T.parma, emulata" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "소" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/1>
+  a ex:Disease ;
+  ex:diseaseName "가금티푸스" ;
+  ex:diseaseNameEN "Fowl typhoid" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/2>
+  a ex:Disease ;
+  ex:diseaseName "가성우역" ;
+  ex:diseaseNameEN "Peste des petits ruminants" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소,사슴,면양,기타 미분류,산양,면양" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/3>
+  a ex:Disease ;
+  ex:diseaseName "가금콜레라" ;
+  ex:diseaseNameEN "Fowl cholera" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "닭,오리,야생조류" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/4>
+  a ex:Disease ;
+  ex:diseaseName "간질증" ;
+  ex:diseaseNameEN "Liver fluke or Fascioliasis" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "면양" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/5>
+  a ex:Disease ;
+  ex:diseaseName "개디스템퍼" ;
+  ex:diseaseNameEN "Canine distemper" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "개" ;
+  ex:targetsDog true ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/6>
+  a ex:Disease ;
+  ex:diseaseName "개보데텔라폐렴" ;
+  ex:diseaseNameEN "Pneumonic bordetellosis of dogs" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "개" ;
+  ex:targetsDog true ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/7>
+  a ex:Disease ;
+  ex:diseaseName "개선충증" ;
+  ex:diseaseNameEN "Mange or Scabs" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "기타 미분류,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/8>
+  a ex:Disease ;
+  ex:diseaseName "개파보바이러스감염증" ;
+  ex:diseaseNameEN "Canine parvovirus infection" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "개" ;
+  ex:targetsDog true ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/9>
+  a ex:Disease ;
+  ex:diseaseName "계두" ;
+  ex:diseaseNameEN "Fowl pox" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "야생조류-기타" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/11>
+  a ex:Disease ;
+  ex:diseaseName "곰팡이성폐렴" ;
+  ex:diseaseNameEN "Aspergillosis" ;
+  ex:causeClass "곰팡이" ;
+  ex:mainTargetAnimal "야생조류-기타" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/12>
+  a ex:Disease ;
+  ex:diseaseName "광견병" ;
+  ex:diseaseNameEN "Rabies" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소,고양이,기타 미분류" ;
+  ex:targetsDog false ;
+  ex:targetsCat true .
+<http://animalloo.kr/ontology/medical/disease/13>
+  a ex:Disease ;
+  ex:diseaseName "구제역" ;
+  ex:diseaseNameEN "Foot and mouth disease" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소,사슴,면양,기타 미분류,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/14>
+  a ex:Disease ;
+  ex:diseaseName "글래서씨병" ;
+  ex:diseaseNameEN "Glasser's disease" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/15>
+  a ex:Disease ;
+  ex:diseaseName "기종저" ;
+  ex:diseaseNameEN "Blackleg" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "소,면양,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/16>
+  a ex:Disease ;
+  ex:diseaseName "꿀벌백묵병" ;
+  ex:diseaseNameEN "Chalkbrood disease" ;
+  ex:causeClass "곰팡이" ;
+  ex:mainTargetAnimal "벌-꿀벌" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/17>
+  a ex:Disease ;
+  ex:diseaseName "낭미충증" ;
+  ex:diseaseNameEN "Cysticercosis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/18>
+  a ex:Disease ;
+  ex:diseaseName "네오스포라병" ;
+  ex:diseaseNameEN "Neosporosis" ;
+  ex:causeClass "기생충" ;
+  ex:mainTargetAnimal "소,개,면양,기타 미분류" ;
+  ex:targetsDog true ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/19>
+  a ex:Disease ;
+  ex:diseaseName "노제마병" ;
+  ex:diseaseNameEN "Nosema disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "벌-꿀벌" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/20>
+  a ex:Disease ;
+  ex:diseaseName "뇌척수염" ;
+  ex:diseaseNameEN "Avian encephalomyelitis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "닭,꿩,칠면조,메추리" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/21>
+  a ex:Disease ;
+  ex:diseaseName "뉴캣슬병" ;
+  ex:diseaseNameEN "Newcastle disease" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭,꿩,메추리" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/22>
+  a ex:Disease ;
+  ex:diseaseName "니파바이러스감염증" ;
+  ex:diseaseNameEN "Nipahvirus infection" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "고양이,개,돼지,산양,면양,쥐-랫트" ;
+  ex:targetsDog true ;
+  ex:targetsCat true .
+<http://animalloo.kr/ontology/medical/disease/23>
+  a ex:Disease ;
+  ex:diseaseName "닭세망내피증" ;
+  ex:diseaseNameEN "Reticuloendotheliosis" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "닭,오리,칠면조" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/24>
+  a ex:Disease ;
+  ex:diseaseName "닭콕시듐증" ;
+  ex:diseaseNameEN "Coccidiosis" ;
+  ex:causeClass "기타" ;
+  ex:mainTargetAnimal "닭" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/25>
+  a ex:Disease ;
+  ex:diseaseName "대장균증" ;
+  ex:diseaseNameEN "Colibacillosis" ;
+  ex:causeClass "세균" ;
+  ex:mainTargetAnimal "소,돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/26>
+  a ex:Disease ;
+  ex:diseaseName "돼지게타바이러스감염증" ;
+  ex:diseaseNameEN "Porcine getahvirus disease" ;
+  ex:causeClass "바이러스" ;
+  ex:mainTargetAnimal "소,돼지,쥐-랫트" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
+<http://animalloo.kr/ontology/medical/disease/27>
+  a ex:Disease ;
+  ex:diseaseName "돼지뇌심근염" ;
+  ex:diseaseNameEN "Encephalomyocarditis" ;
+  ex:causeClass "기타,바이러스" ;
+  ex:mainTargetAnimal "돼지" ;
+  ex:targetsDog false ;
+  ex:targetsCat false .
