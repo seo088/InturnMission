@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/HKUDS/OpenHarness/main/schemas/mcp-server.schema.json",
+  "name": "petgraph_sparql",
+  "description": "Pet-Graph 지식그래프 SPARQL 질의 MCP 서버. 로컬 Apache Jena Fuseki(http://localhost:3030/knowledgemap) 프록시.",
+  "transport": "stdio",
+  "command": "python3",
+  "args": [
+    "-m",
+    "petgraph_mcp.sparql_server",
+    "--endpoint",
+    "http://localhost:3030/knowledgemap",
+    "--default-graph",
+    "urn:knowledgemap:all"
+  ],
+  "env": {
+    "PYTHONPATH": "backend"
+  },
+  "permissions": {
+    "mode": "read-only"
+  },
+  "tools": [
+    {
+      "name": "sparql_select",
+      "description": "SPARQL SELECT 질의 실행",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "list_classes",
+      "description": "그래프 내 ex: 네임스페이스 클래스 목록",
+      "input_schema": { "type": "object", "properties": {} }
+    }
+  ],
+  "notes": [
+    "petgraph_mcp.sparql_server 모듈은 본 PoC 단계에서는 미구현 — 사용자 결정 후 backend/petgraph_mcp/ 에 신규 작성 필요.",
+    "구현 시 rdflib.Graph 를 모듈 로드 시 1회 파싱 후 캐시."
+  ]
+}

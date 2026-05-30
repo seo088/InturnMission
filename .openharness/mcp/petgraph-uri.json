@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/HKUDS/OpenHarness/main/schemas/mcp-server.schema.json",
+  "name": "petgraph_uri",
+  "description": "knowledgemap.kr URI mint/parse/validate MCP. backend/kg/uri.py 단일 구현을 도구로 노출. UK URI 101 정책 강제.",
+  "transport": "stdio",
+  "command": "python3",
+  "args": ["-m", "petgraph_mcp.uri_server"],
+  "env": {
+    "PYTHONPATH": "backend",
+    "URI_REGISTRY": "backend/kg/uri_registry.parquet"
+  },
+  "permissions": { "mode": "mixed", "write_tools": ["mint"], "write_requires_confirmation": false },
+  "tools": [
+    { "name": "mint",      "description": "mint(klass, key, kind='id'|'doc') → URI. 등록부 자동 갱신" },
+    { "name": "mint_def",  "description": "온톨로지 term URI 발급" },
+    { "name": "mint_set",  "description": "컬렉션 URI 발급" },
+    { "name": "parse",     "description": "URI → (kind, klass, key)" },
+    { "name": "validate",  "description": "URI 가 정책 준수하는지 검사" },
+    { "name": "lookup",    "description": "source_key 로 기존 URI 조회 (결정성 보장)" }
+  ],
+  "notes": [
+    "P1 에서 backend/petgraph_mcp/uri_server.py 신규 작성. 그 전에는 직접 파이썬 import 로 사용 가능.",
+    "다른 모든 모듈의 URI 직접 조립 금지 — 본 MCP 또는 backend/kg/uri.py 만 사용."
+  ]
+}

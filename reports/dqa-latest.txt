@@ -1,0 +1,65 @@
+# DQA report — local TTL union
+
+## Total triples: 838,980
+
+## B-1. Distinct instances per class
+class                    distinct
+AnimalHospital               5,373
+Pharmacy                    13,054
+Grooming                    10,814
+Boarding                     5,821
+Cremation                       84
+AbandonedAnimal             15,240
+Dog                         13,627
+Cat                          1,504
+LostAnimal                   2,884
+AnimalShelter                  330
+CultureFacility                 67
+RestArea                        20
+TravelSpot                   1,000
+Symptom                        516
+SymptomCategory                 12
+Disease                         13
+VetDepartment                    5
+VetQA                           25
+
+## B-2. rdfs:label completeness (label-bearing classes)
+class                    n   missing
+AnimalHospital             5373        0
+Pharmacy                  13054        0
+Grooming                  10814        0
+Boarding                   5821        0
+Cremation                    84        0
+AnimalShelter               330        0
+CultureFacility              67        0
+RestArea                     20        0
+Disease                      13        0
+Symptom                     516        0
+SymptomCategory              12        0
+VetDepartment                 5        0
+
+## B-3. ds08 protectedBy → ds10 join
+  abandoned animals: 15240
+  referenced shelters: 283
+  ds10 has:            330
+  deadlinks:           0 (0.0%)
+
+## B-4. Symptom -> Disease -> Department reachability
+  reachable paths: 58
+
+## B-5. region coverage (locatedIn / foundAt)
+class                    n   with_region
+AnimalHospital             5373       5373
+Pharmacy                  13054      13054
+Grooming                  10814      10814
+Boarding                   5821       5821
+Cremation                    84         84
+CultureFacility              67         67
+RestArea                     20         20
+AbandonedAnimal           15240      14932
+LostAnimal                 2884       2866
+AnimalShelter               330        314
+
+## B-6. Disease typing graph distribution
+  distinct Disease subjects: 13
+  total Disease typing triples: 13

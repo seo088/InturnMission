@@ -1,0 +1,39 @@
+# Dependency folders (Node.js)
+node_modules/
+
+# Python environment & cache
+__pycache__/
+venv/
+.venv/
+env/
+
+# Environment variables (Sensitive data)
+.env
+.env.local
+
+# OS generated files
+.DS_Store
+Thumbs.dbbackend/venv_backup/
+frontend/.vite/
+공공데이터_CSV/08_구조동물_조회데이터.csv
+공공데이터_CSV/08_구조동물_조회데 이터.csv
+csv_data/08_구조동물_조회데이터.csv
+venv/
+csv_data/
+postgres_data/
+__pycache__/
+*.tar
+*.csv
+backend/venv/
+backend/venv_backup/
+venv/
+backend/venv/
+backend/venv_backup/
+csv_data/
+postgres_data/
+*.tar
+graphdb_data/
+turtle/
+csv_data/
+preprocessed_data/
+postgres_data/

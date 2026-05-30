@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:15
+    container_name: petgraph_db
+    restart: always
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: petdb
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+
+  graphdb:
+    image: ontotext/graphdb:10.6.0
+    container_name: petgraph_graphdb
+    restart: always
+    ports:
+      - "7200:7200"
+    volumes:
+      - ./graphdb_data:/opt/graphdb/home

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/HKUDS/OpenHarness/main/schemas/mcp-server.schema.json",
+  "name": "petgraph_pg",
+  "description": "Pet-Graph PostgreSQL 읽기 전용 MCP 서버. 14개 데이터셋 테이블 질의.",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": [
+    "mcp-server-postgres",
+    "postgresql://postgres:spark!1@127.0.0.1:5435/petgraph_db"
+  ],
+  "env": {},
+  "permissions": {
+    "mode": "read-only",
+    "allowed_statements": ["SELECT", "EXPLAIN"],
+    "denied_keywords": ["DROP", "DELETE", "TRUNCATE", "ALTER", "INSERT", "UPDATE", "GRANT"]
+  },
+  "notes": [
+    "사용자 환경에 mcp-server-postgres(uvx) 또는 동등 패키지 설치 필요.",
+    "운영 자격증명은 .env 의 PETGRAPH_DB_URL 로 분리하는 것을 권장 (현재는 코드 호환을 위해 인라인)."
+  ]
+}

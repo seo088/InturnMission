@@ -1,0 +1,511 @@
+# Single source of truth for the knowledgemap animal ontology.
+#
+# Edited by humans, validated by docs/respec/build.py against
+# backend/kg/vocab.py (every term here MUST be in CLASSES or PROPERTIES,
+# and every CLASSES/PROPERTIES entry MUST appear here — no drift).
+#
+# Generated artifacts:
+#   docs/respec/ontology.html   (W3C ReSpec)
+#   turtle/def_animal.ttl       (OWL ontology, loaded as urn:knowledgemap:def)
+
+ontology:
+  iri: https://knowledgemap.kr/koah/def/
+  title: "KOAH — Korea Open Animal Hub Ontology"
+  short_name: koah
+  version: "0.1.0"
+  status: unofficial
+  editors:
+    - name: "Pet-Graph Working Group"
+  abstract: |
+    14개 공공 데이터셋과 1개 추론 체인으로 구성된 전국 반려동물 지식그래프의
+    어휘. UK Public Sector URI 101 (def/id/doc/set 4-layer) 정책을 따른다.
+
+# ── Classes ────────────────────────────────────────────────────────────
+classes:
+
+  # Facility cluster (5)
+  AnimalHospital:
+    label_ko: 동물병원
+    comment: 동물 진료를 제공하는 시설
+    parent: Facility
+    used_by: [01]
+
+  Pharmacy:
+    label_ko: 동물약국
+    comment: 동물용 의약품을 판매하는 약국
+    parent: Facility
+    used_by: [02]
+
+  Grooming:
+    label_ko: 동물미용업
+    parent: Facility
+    used_by: [03]
+
+  Boarding:
+    label_ko: 동물위탁관리업
+    comment: 반려동물 위탁관리(보딩) 시설
+    parent: Facility
+    used_by: [04]
+
+  Cremation:
+    label_ko: 동물장묘업
+    parent: Facility
+    used_by: [05]
+
+  # Animal cluster
+  AbandonedAnimal:
+    label_ko: 구조동물
+    comment: ProcessState='보호중' 인 유기·구조 동물
+    used_by: [08]
+
+  LostAnimal:
+    label_ko: 분실동물
+    used_by: [09]
+
+  Dog:
+    label_ko: 개
+    parent: AbandonedAnimal
+
+  Cat:
+    label_ko: 고양이
+    parent: AbandonedAnimal
+
+  AnimalShelter:
+    label_ko: 동물보호센터
+    used_by: [10]
+
+  # Companion-friendly venues
+  CultureFacility:
+    label_ko: 반려동물 동반 가능 문화시설
+    used_by: [11]
+
+  RestArea:
+    label_ko: 휴게소 반려동물 놀이터
+    used_by: [12]
+
+  TravelSpot:
+    label_ko: 반려동물 동반여행 명소
+    used_by: [07]
+
+  # Medical / reasoning
+  Symptom:
+    label_ko: 동물 질병 증상
+    used_by: [13]
+
+  SymptomCategory:
+    label_ko: 증상 분류 (a..l)
+    used_by: [13, 16]
+
+  Disease:
+    label_ko: 동물 질병
+    used_by: [15]
+
+  VetDepartment:
+    label_ko: 진료과 (내과/외과/피부과/안과/치과)
+    used_by: [16]
+
+  # Geo
+  Region:
+    label_ko: 행정구역(시도/시군구)
+    used_by: [08, 09, 10, 11]
+
+  VetQA:
+    label_ko: 수의학 Q&A 페어
+    comment: AI Hub 반려동물 성장·질병 말뭉치에서 추출한 질문/답변 페어
+    used_by: [14]
+
+# ── Properties ─────────────────────────────────────────────────────────
+# kind: object | data
+properties:
+
+  # ─ facility data ─
+  address:        {kind: data,   range: "xsd:string", label_ko: 도로명 주소}
+  phone:          {kind: data,   range: "xsd:string", label_ko: 전화번호}
+  locatedIn:      {kind: object, range: Region,        label_ko: 위치한 행정구역}
+
+  # ─ AbandonedAnimal ─
+  desertionNo:    {kind: data, range: "xsd:string", label_ko: 유기번호, domain: AbandonedAnimal}
+  noticeNo:       {kind: data, range: "xsd:string", label_ko: 공고번호, domain: AbandonedAnimal}
+  animalBreed:    {kind: data, range: "xsd:string", label_ko: 품종명}
+  kindFullName:   {kind: data, range: "xsd:string", label_ko: 품종 풀네임}
+  colorCode:      {kind: data, range: "xsd:string", label_ko: 색상 코드}
+  neuterYn:       {kind: data, range: "xsd:string", label_ko: 중성화 여부}
+  weightKg:       {kind: data, range: "xsd:decimal", label_ko: 체중(Kg)}
+  birthYear:      {kind: data, range: "xsd:gYear",   label_ko: 출생년도}
+  ageDetail:      {kind: data, range: "xsd:string",  label_ko: 나이 상세}
+  specialMark:    {kind: data, range: "xsd:string",  label_ko: 특이사항}
+  processState:   {kind: data, range: "xsd:string",  label_ko: 보호상태}
+  happenDate:     {kind: data, range: "xsd:date",    label_ko: 발견일자}
+  noticeSDate:    {kind: data, range: "xsd:date",    label_ko: 공고시작일}
+  noticeEDate:    {kind: data, range: "xsd:date",    label_ko: 공고종료일}
+  happenPlace:    {kind: data, range: "xsd:string",  label_ko: 발견장소}
+  imageList:      {kind: data, range: "xsd:string",  label_ko: 이미지 URL 목록(파이프 구분)}
+  vaccinationChk: {kind: data, range: "xsd:string",  label_ko: 백신접종 여부}
+  healthChk:      {kind: data, range: "xsd:string",  label_ko: 건강검진 여부}
+  adoptionTitle:  {kind: data, range: "xsd:string",  label_ko: 입양공고 제목}
+  adoptionText:   {kind: data, range: "xsd:string",  label_ko: 입양공고 본문(200자 truncate)}
+  adoptionCondition: {kind: data, range: "xsd:string", label_ko: 입양 조건}
+  rfidCode:       {kind: data, range: "xsd:string",  label_ko: RFID 코드}
+  endReason:      {kind: data, range: "xsd:string",  label_ko: 종료 사유}
+
+  # ─ facility cluster (ds01-05, ds10) ─
+  category:             {kind: data, range: "xsd:string", label_ko: 분류}
+  businessStatus:       {kind: data, range: "xsd:string", label_ko: 영업상태}
+  businessStatusDetail: {kind: data, range: "xsd:string", label_ko: 영업상태 상세}
+  licenseDate:          {kind: data, range: "xsd:date",   label_ko: 인허가일}
+  closingDate:          {kind: data, range: "xsd:date",   label_ko: 폐업일}
+  designatedDate:       {kind: data, range: "xsd:date",   label_ko: 지정일 (보호센터)}
+  targetAnimal:         {kind: data, range: "xsd:string", label_ko: 보호 대상 동물}
+  causeClass:           {kind: data, range: "xsd:string", label_ko: 발병 원인 분류}
+  categoryOf:           {kind: object, domain: Symptom, range: SymptomCategory, label_ko: 증상이 속한 분류}
+
+  # ─ ds02 pharmacy ─
+  floorAreaSqm:    {kind: data, range: "xsd:decimal", label_ko: 영업장 면적(㎡)}
+  reopenDate:      {kind: data, range: "xsd:date",    label_ko: 재개업일}
+  suspensionStart: {kind: data, range: "xsd:date",    label_ko: 휴업 시작일}
+  suspensionEnd:   {kind: data, range: "xsd:date",    label_ko: 휴업 종료일}
+
+  # ─ ds04 boarding ─
+  taskType:       {kind: data, range: "xsd:string", label_ko: 위탁관리 업무 유형}
+
+  # ─ ds11 culture ─
+  petPolicy:      {kind: data, range: "xsd:string", label_ko: 반려동물 동반 가능 정보}
+  petRestriction: {kind: data, range: "xsd:string", label_ko: 반려동물 제한사항}
+  allowedPetSize: {kind: data, range: "xsd:string", label_ko: 입장 가능 동물 크기}
+  operatingHours: {kind: data, range: "xsd:string", label_ko: 운영시간}
+  closeDay:       {kind: data, range: "xsd:string", label_ko: 휴무일}
+  entryFee:       {kind: data, range: "xsd:string", label_ko: 입장료}
+  homepage:       {kind: data, range: "xsd:anyURI", label_ko: 홈페이지}
+
+  # ─ ds12 restarea ─
+  facilityType:    {kind: data, range: "xsd:string", label_ko: 시설 유형}
+  establishedYear: {kind: data, range: "xsd:gYear",  label_ko: 설립 연도}
+  remark:          {kind: data, range: "xsd:string", label_ko: 비고}
+
+  # ─ ds09 lost ─
+  matchingGrade: {kind: data, range: "xsd:string", label_ko: 매칭 등급}
+  contactHash:   {kind: data, range: "xsd:string", label_ko: 연락처 해시(PII 보호)}
+
+  # ─ ds14 vetqa ─
+  question:        {kind: data,   range: "xsd:string",                                 label_ko: 질문 본문}
+  answer:          {kind: data,   range: "xsd:string",                                 label_ko: 답변 본문}
+  department:      {kind: object, domain: VetQA, range: VetDepartment,                 label_ko: 진료과(객체 링크)}
+  departmentLabel: {kind: data,   range: "xsd:string",                                 label_ko: 진료과 한글 라벨}
+
+  # ─ ds07 travel ─
+  areaCode:    {kind: data, range: "xsd:string", label_ko: 관광 API 지역코드}
+  sigunguCode: {kind: data, range: "xsd:string", label_ko: 관광 API 시군구코드}
+
+  # ─ ds10 operating hours (F5) ─
+  weekdayOpenTime:      {kind: data, range: "xsd:string", label_ko: 평일 운영 시작시간}
+  weekdayCloseTime:     {kind: data, range: "xsd:string", label_ko: 평일 운영 종료시간}
+  weekdayCellOpenTime:  {kind: data, range: "xsd:string", label_ko: 평일 분양 시작시간}
+  weekdayCellCloseTime: {kind: data, range: "xsd:string", label_ko: 평일 분양 종료시간}
+  weekendOpenTime:      {kind: data, range: "xsd:string", label_ko: 주말 운영 시작시간}
+  weekendCloseTime:     {kind: data, range: "xsd:string", label_ko: 주말 운영 종료시간}
+  weekendCellOpenTime:  {kind: data, range: "xsd:string", label_ko: 주말 분양 시작시간}
+  weekendCellCloseTime: {kind: data, range: "xsd:string", label_ko: 주말 분양 종료시간}
+  vetStaffCount:        {kind: data, range: "xsd:integer", label_ko: 수의사 수}
+  specStaffCount:       {kind: data, range: "xsd:integer", label_ko: 일반인력 수}
+  medicalCount:         {kind: data, range: "xsd:integer", label_ko: 의료실 수}
+  breedCount:           {kind: data, range: "xsd:integer", label_ko: 사육실 수}
+  quarantineCount:      {kind: data, range: "xsd:integer", label_ko: 격리실 수}
+  feedCount:            {kind: data, range: "xsd:integer", label_ko: 먹이공간 수}
+  transportCarCount:    {kind: data, range: "xsd:integer", label_ko: 운반차량 수}
+
+  # ─ ds08 reconciliation (F3) ─
+  unresolvedCareRegNo:  {kind: data, range: "xsd:string", label_ko: ds10 마스터 미존재 CareRegNo}
+
+  # ─ relationships ─
+  protectedBy:        {kind: object, domain: AbandonedAnimal, range: AnimalShelter,  label_ko: 보호 중인 보호센터}
+  foundAt:            {kind: object, range: Region,                                   label_ko: 발견 행정구역}
+  matchingCandidate:  {kind: object, domain: AbandonedAnimal, range: LostAnimal,      label_ko: 분실동물 매칭 후보}
+
+  # ─ reasoning chain ─
+  mapsTo:             {kind: object, domain: SymptomCategory, range: VetDepartment,   label_ko: 증상분류 → 진료과 매핑}
+  indicatesDisease:   {kind: object, domain: Symptom,         range: Disease,         label_ko: 증상 → 의심 질병}
+  hasSymptom:         {kind: object, domain: Disease,         range: Symptom,         label_ko: 질병의 증상 (역방향)}
+  treatedAt:          {kind: object, domain: Disease,         range: AnimalHospital,  label_ko: 진료 가능 병원}
+  treatedByDept:      {kind: object, domain: Disease,         range: VetDepartment,   label_ko: 담당 진료과}
+  handledBy:          {kind: object, domain: VetDepartment,   range: AnimalHospital,  label_ko: 진료과를 운영하는 시설 클래스}
+  treatsSympCategory: {kind: object, domain: VetDepartment,   range: SymptomCategory, label_ko: 진료과 → 증상분류 역매핑}
+  deptHint:           {kind: data,   range: "xsd:string",                              label_ko: 진료과 매핑 힌트(한글 라벨)}
+
+# ── Datasets (R2RML-style CSV→RDF mapping) ────────────────────────────
+# 각 데이터셋은 backend/kg/builders/dsXX_*.py 정본 빌더에 1:1 대응한다.
+# 필드:
+#   name_ko        : 한글 데이터셋 명 (sources 셀에서 표시)
+#   source_csv     : csv_data/ 하위 원본 파일
+#   builder        : 정본 빌더 모듈 경로
+#   primary_class  : 기본 인스턴스가 인스턴스화되는 def: 클래스
+#   uri_template   : https://knowledgemap.kr/koah/id/{class}/{key} 형태
+#   key_columns    : URI key를 만드는 CSV 컬럼들
+#   column_map     : CSV 컬럼 → def: 속성 매핑 (R2RML rr:predicate-rr:column 동치)
+#   relations      : 객체 속성 매핑(다른 인스턴스 참조)
+#   notes          : 빌더 특이사항
+
+datasets:
+
+  ds01:
+    name_ko: 동물병원
+    source_csv: 01_동물병원_조회데이터.csv
+    builder: backend.kg.builders.ds01_hospital
+    primary_class: AnimalHospital
+    uri_template: id:animal/animal-hospital/{licenseNo}
+    key_columns: [LicenseNo]
+    column_map:
+      Name:           rdfs:label
+      Address:        address
+      Phone:          phone
+      BusinessStatus: businessStatus
+      LicenseDate:    licenseDate
+      ClosingDate:    closingDate
+    relations:
+      Sigungu: { property: locatedIn, target_class: Region }
+
+  ds02:
+    name_ko: 동물약국
+    source_csv: 02_동물약국_조회데이터.csv
+    builder: backend.kg.builders.ds02_pharmacy
+    primary_class: Pharmacy
+    uri_template: id:animal/pharmacy/{licenseNo}
+    key_columns: [LicenseNo]
+    column_map:
+      Name:            rdfs:label
+      Address:         address
+      Phone:           phone
+      FloorAreaSqm:    floorAreaSqm
+      ReopenDate:      reopenDate
+      SuspensionStart: suspensionStart
+      SuspensionEnd:   suspensionEnd
+
+  ds03:
+    name_ko: 동물미용업
+    source_csv: 03_동물미용업_조회데이터.csv
+    builder: backend.kg.builders.ds03_grooming
+    primary_class: Grooming
+    uri_template: id:animal/grooming/{licenseNo}
+    key_columns: [LicenseNo]
+    column_map:
+      Name:           rdfs:label
+      Address:        address
+      Phone:          phone
+      BusinessStatus: businessStatus
+
+  ds04:
+    name_ko: 동물위탁관리업(보딩)
+    source_csv: 04_동물위탁관리업_조회데이터.csv
+    builder: backend.kg.builders.ds04_boarding
+    primary_class: Boarding
+    uri_template: id:animal/boarding/{licenseNo}
+    key_columns: [LicenseNo]
+    column_map:
+      Name:     rdfs:label
+      Address:  address
+      Phone:    phone
+      TaskType: taskType
+
+  ds05:
+    name_ko: 동물장묘업
+    source_csv: 05_동물장묘업_조회데이터.csv
+    builder: backend.kg.builders.ds05_cremation
+    primary_class: Cremation
+    uri_template: id:animal/cremation/{licenseNo}
+    key_columns: [LicenseNo]
+    column_map:
+      Name:    rdfs:label
+      Address: address
+      Phone:   phone
+
+  ds07:
+    name_ko: 반려동물 동반여행 명소 (관광 API)
+    source_csv: (직접 호출, preprocessed_data/07_travel.json)
+    builder: backend.kg.builders.ds07_travel
+    primary_class: TravelSpot
+    uri_template: id:animal/travel-spot/{contentId}
+    key_columns: [contentid]
+    column_map:
+      title:       rdfs:label
+      addr1:       address
+      tel:         phone
+      areacode:    areaCode
+      sigungucode: sigunguCode
+
+  ds08:
+    name_ko: 구조동물 (유기·구조)
+    source_csv: 08_구조동물_조회데이터.csv
+    builder: backend.kg.builders.ds08_abandoned
+    primary_class: AbandonedAnimal
+    uri_template: id:animal/abandoned/{careRegNo}/{noticeNo}
+    key_columns: [CareRegNo, NoticeNo]
+    column_map:
+      DesertionNo:    desertionNo
+      NoticeNo:       noticeNo
+      KindCd:         animalBreed
+      KindFullNm:     kindFullName
+      ColorCd:        colorCode
+      NeuterYn:       neuterYn
+      Weight:         weightKg
+      BirthYear:      birthYear
+      AgeDetail:      ageDetail
+      SpecialMark:    specialMark
+      ProcessState:   processState
+      HappenDt:       happenDate
+      NoticeSdt:      noticeSDate
+      NoticeEdt:      noticeEDate
+      HappenPlace:    happenPlace
+      Image1..Image4: imageList
+      VaccinationChk: vaccinationChk
+      HealthChk:      healthChk
+      AdoptionTitle:  adoptionTitle
+      AdoptionText:   adoptionText
+      AdoptionCondition: adoptionCondition
+      RfidCd:         rfidCode
+      EndReason:      endReason
+    relations:
+      CareRegNo: { property: protectedBy, target_class: AnimalShelter, join: ds10.CareRegNo }
+      OrgNm/CareAddr → Sido+Sigungu: { property: foundAt, target_class: Region }
+    notes: |
+      ProcessState='보호중' 행만 인스턴스화. 날짜 YYYYMMDD→xsd:date, RFID 정규화,
+      Image1..Image4 → ImageMain + pipe-joined imageList, Sido/Sigungu 추출 후
+      Region 인스턴스에 foundAt 으로 링크. 결정성을 위해 DesertionNo 정렬 후 직렬화.
+
+  ds09:
+    name_ko: 분실동물
+    source_csv: 09_분실동물_조회데이터.csv
+    builder: backend.kg.builders.ds09_lost
+    primary_class: LostAnimal
+    uri_template: id:animal/lost/{lostId}
+    key_columns: [LostId]
+    column_map:
+      KindCd:        animalBreed
+      ColorCd:       colorCode
+      HappenDt:      happenDate
+      HappenPlace:   happenPlace
+      MatchingGrade: matchingGrade
+      ContactHash:   contactHash
+    relations:
+      Sido+Sigungu: { property: foundAt, target_class: Region }
+
+  ds10:
+    name_ko: 동물보호센터
+    source_csv: 10_동물보호센터_조회데이터.csv
+    builder: backend.kg.builders.ds10_shelter
+    primary_class: AnimalShelter
+    uri_template: id:animal/animal-shelter/{careRegNo}
+    key_columns: [CareRegNo]
+    column_map:
+      CareNm:               rdfs:label
+      CareAddr:             address
+      CareTel:              phone
+      DesignationDate:      designatedDate
+      WeekOprStime:         weekdayOpenTime
+      WeekOprEtime:         weekdayCloseTime
+      WeekCellStime:        weekdayCellOpenTime
+      WeekCellEtime:        weekdayCellCloseTime
+      WeekendOprStime:      weekendOpenTime
+      WeekendOprEtime:      weekendCloseTime
+      WeekendCellStime:     weekendCellOpenTime
+      WeekendCellEtime:     weekendCellCloseTime
+      VetPersonCnt:         vetStaffCount
+      SpecsPersonCnt:       specStaffCount
+      MedicalCnt:           medicalCount
+      BreedCnt:             breedCount
+      QuarabtineCnt:        quarantineCount
+      FeedCnt:              feedCount
+      TransCarCnt:          transportCarCount
+
+  ds11:
+    name_ko: 반려동물 동반 가능 문화시설
+    source_csv: 11_반려동물동반가능_문화시설.csv
+    builder: backend.kg.builders.ds11_culture
+    primary_class: CultureFacility
+    uri_template: id:animal/culture-facility/{slug}
+    key_columns: [Name, Address]
+    column_map:
+      Name:           rdfs:label
+      Address:        address
+      Phone:          phone
+      PetPolicy:      petPolicy
+      PetRestriction: petRestriction
+      AllowedPetSize: allowedPetSize
+      OperatingHours: operatingHours
+      CloseDay:       closeDay
+      EntryFee:       entryFee
+      Homepage:       homepage
+    relations:
+      Sigungu: { property: locatedIn, target_class: Region }
+
+  ds12:
+    name_ko: 휴게소 반려동물 놀이터
+    source_csv: 12_휴게소_반려동물놀이터.csv
+    builder: backend.kg.builders.ds12_restarea
+    primary_class: RestArea
+    uri_template: id:animal/rest-area/{slug}
+    key_columns: [Name]
+    column_map:
+      Name:            rdfs:label
+      Address:         address
+      FacilityType:    facilityType
+      EstablishedYear: establishedYear
+      Remark:          remark
+
+  ds13:
+    name_ko: 동물질병 증상
+    source_csv: 13_동물질병증상_데이터.csv
+    builder: backend.kg.builders.ds13_symptoms
+    primary_class: Symptom
+    uri_template: id:animal/symptom/{symptomCode}
+    key_columns: [SymptomCode]
+    column_map:
+      SymptomCode: rdfs:label
+      SymptomName: rdfs:label
+      CauseClass:  causeClass
+    relations:
+      CategoryCode: { property: categoryOf, target_class: SymptomCategory }
+
+  ds14:
+    name_ko: 수의학 Q&A (AI Hub 반려동물)
+    source_csv: 14_동물성장_및_질병_데이터.csv
+    builder: backend.kg.builders.ds14_vetqa
+    primary_class: VetQA
+    uri_template: id:animal/vet-qa/{qaId}
+    key_columns: [QaId]
+    column_map:
+      Question:        question
+      Answer:          answer
+      DepartmentLabel: departmentLabel
+    relations:
+      DepartmentCode: { property: department, target_class: VetDepartment }
+
+  ds15:
+    name_ko: 동물 질병 마스터
+    source_csv: 15_동물질병_데이터.csv
+    builder: backend.kg.builders.ds15_diseases
+    primary_class: Disease
+    uri_template: id:animal/disease/{diseaseCode}
+    key_columns: [DiseaseCode]
+    column_map:
+      DiseaseCode: rdfs:label
+      DiseaseName: rdfs:label
+    relations:
+      SymptomCodes: { property: hasSymptom, target_class: Symptom, cardinality: 1..N }
+
+  ds16:
+    name_ko: 추론 체인 (파생)
+    source_csv: (없음 — ds13 + ds15 + ds14 조합)
+    builder: backend.kg.builders.ds16_reasoning
+    primary_class: SymptomCategory
+    uri_template: id:animal/symptom-category/{categoryCode}
+    key_columns: [CategoryCode]
+    column_map: {}
+    relations:
+      Category→Dept:    { property: mapsTo,             target_class: VetDepartment }
+      Symptom→Disease:  { property: indicatesDisease,   target_class: Disease }
+      Disease→Dept:     { property: treatedByDept,      target_class: VetDepartment }
+      Dept→Category:    { property: treatsSympCategory, target_class: SymptomCategory }
+      Dept→Hospital:    { property: handledBy,          target_class: AnimalHospital }
+    notes: |
+      파생 데이터셋 — CSV 입력 없이 ds13/15/14의 코드 매핑 테이블을 합성.
+      증상 → 질병 → 진료과 → 병원의 5-hop 추론 체인 인스턴스화.
+

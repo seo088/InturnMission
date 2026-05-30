@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MCPMap · AgentMap 어휘 명세 v0.5</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap');
+:root{
+  --c-bg:#f9f8f5;--c-surf:#fff;--c-border:#e0ddd4;--c-text:#1a1917;--c-muted:#6b6860;
+  --c-mcpm:#1a4e8a;--c-mcpm-bg:#eef4fc;--c-mcpm-bd:#b8d0ef;
+  --c-am:#2d6a4f;--c-am-bg:#eaf5ee;--c-am-bd:#a8d5b5;
+  --c-harness:#6b21a8;--c-harness-bg:#f5f0ff;--c-harness-bd:#c4b5fd;
+  --c-aird:#b45309;--c-aird-bg:#fffbeb;--c-aird-bd:#fcd34d;
+  --c-new:#c05621;--c-new-bg:#fff7ed;--c-lov:#065f46;--c-lov-bg:#ecfdf5;
+  --c-chg:#1e40af;--c-chg-bg:#eff6ff;--c-chg-bd:#93c5fd;
+  --sidebar:220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--c-bg);color:var(--c-text);font-size:13.5px;line-height:1.8;display:flex}
+
+/* ── Sidebar ── */
+nav#sb{width:var(--sidebar);min-height:100vh;background:#f0ede6;border-right:1px solid var(--c-border);padding:20px 0;position:sticky;top:0;overflow-y:auto;flex-shrink:0}
+nav#sb .logo{padding:0 16px 16px;border-bottom:1px solid var(--c-border);margin-bottom:12px}
+nav#sb .logo h1{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--c-mcpm)}
+nav#sb .logo p{font-size:10px;color:var(--c-muted);margin-top:2px}
+nav#sb .ns{padding:6px 16px 2px;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--c-muted);margin-top:10px}
+nav#sb a{display:block;padding:4px 16px;font-size:12px;color:var(--c-text);text-decoration:none;border-left:3px solid transparent;transition:.12s}
+nav#sb a:hover{background:#e5e0d6;border-left-color:var(--c-mcpm);color:var(--c-mcpm)}
+nav#sb a.am:hover{border-left-color:var(--c-am);color:var(--c-am)}
+nav#sb a.harness:hover{border-left-color:var(--c-harness);color:var(--c-harness)}
+nav#sb a.aird:hover{border-left-color:var(--c-aird);color:var(--c-aird)}
+nav#sb .badge-new-nav{font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:var(--c-new-bg);color:var(--c-new);border:1px solid #fed7aa;margin-left:4px;vertical-align:middle}
+nav#sb .badge-chg-nav{font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:var(--c-chg-bg);color:var(--c-chg);border:1px solid var(--c-chg-bd);margin-left:4px;vertical-align:middle}
+
+/* ── Main ── */
+main{flex:1;padding:36px 44px;max-width:880px}
+
+/* ── Doc header ── */
+.dh{border-bottom:2px solid var(--c-border);padding-bottom:20px;margin-bottom:32px}
+.dh .brow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:2px 9px;border-radius:3px;font-weight:600}
+.bm{background:var(--c-mcpm-bg);color:var(--c-mcpm);border:1px solid var(--c-mcpm-bd)}
+.ba{background:var(--c-am-bg);color:var(--c-am);border:1px solid var(--c-am-bd)}
+.bh{background:var(--c-harness-bg);color:var(--c-harness);border:1px solid var(--c-harness-bd)}
+.bv{background:#f0ede6;color:#555;border:1px solid #ccc}
+.dh h1{font-family:'Noto Serif KR',serif;font-size:24px;font-weight:600;line-height:1.3;margin-bottom:6px}
+.dh .meta{font-size:12px;color:var(--c-muted)}
+.dh .meta span{margin-right:18px}
+
+/* ── Changelog box ── */
+.changelog{background:var(--c-chg-bg);border:1px solid var(--c-chg-bd);border-radius:8px;padding:14px 18px;margin:0 0 28px}
+.changelog h4{font-size:12px;font-weight:700;color:var(--c-chg);margin-bottom:8px;letter-spacing:.3px}
+.changelog ul{list-style:none;font-size:12px;color:#1e3a8a}
+.changelog li{padding:2px 0;display:flex;gap:8px;align-items:baseline}
+.cl-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;flex-shrink:0}
+.cl-new{background:var(--c-new-bg);color:var(--c-new);border:1px solid #fed7aa}
+.cl-mod{background:var(--c-chg-bg);color:var(--c-chg);border:1px solid var(--c-chg-bd)}
+
+/* ── Section ── */
+h2{font-family:'Noto Serif KR',serif;font-size:19px;font-weight:600;margin:36px 0 14px;padding-bottom:7px;border-bottom:1.5px solid var(--c-border);scroll-margin-top:20px}
+h3{font-size:14px;font-weight:700;margin:24px 0 10px;color:var(--c-mcpm);scroll-margin-top:20px}
+h3.am-h{color:var(--c-am)}
+h3.harness-h{color:var(--c-harness)}
+h3.aird-h{color:var(--c-aird)}
+p{margin:6px 0;color:#2a2825}
+
+/* ── Tables ── */
+.tw{overflow-x:auto;margin:12px 0 20px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{background:#eae8e0;text-align:left;padding:7px 11px;font-weight:700;font-size:11.5px;border-bottom:1.5px solid var(--c-border)}
+td{padding:6px 11px;border-bottom:1px solid #e8e5dc;vertical-align:top}
+tr:hover td{background:#f4f2ec}
+code{font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:#ece9e0;padding:1px 5px;border-radius:3px;color:#2a2825}
+
+/* ── Tag badges ── */
+.tn {font-size:9.5px;font-weight:700;padding:1px 6px;border-radius:3px;border:1px solid}
+.tn.new  {background:var(--c-new-bg);color:var(--c-new);border-color:#fed7aa}
+.tn.lov  {background:var(--c-lov-bg);color:var(--c-lov);border-color:#6ee7b7}
+.tn.lovkr{background:#f0fdf4;color:#166534;border-color:#86efac}
+.tn.chg  {background:var(--c-chg-bg);color:var(--c-chg);border-color:var(--c-chg-bd)}
+.tn.aird {background:var(--c-aird-bg);color:var(--c-aird);border-color:var(--c-aird-bd)}
+.tn.harness{background:var(--c-harness-bg);color:var(--c-harness);border-color:var(--c-harness-bd)}
+
+/* ── Term cards ── */
+.tc{border:1px solid var(--c-mcpm-bd);border-radius:8px;margin:12px 0;background:var(--c-surf);overflow:hidden}
+.tc.am{border-color:var(--c-am-bd)}
+.tc.harness{border-color:var(--c-harness-bd)}
+.tc.aird{border-color:var(--c-aird-bd)}
+.tc.chg{border-color:var(--c-chg-bd)}
+.tc-head{background:var(--c-mcpm-bg);padding:9px 15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tc.am .tc-head{background:var(--c-am-bg)}
+.tc.harness .tc-head{background:var(--c-harness-bg)}
+.tc.aird .tc-head{background:var(--c-aird-bg)}
+.tc.chg .tc-head{background:var(--c-chg-bg)}
+.tc-name{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:var(--c-mcpm)}
+.tc.am .tc-name{color:var(--c-am)}
+.tc.harness .tc-name{color:var(--c-harness)}
+.tc.aird .tc-name{color:var(--c-aird)}
+.tc.chg .tc-name{color:var(--c-chg)}
+.tc-label{font-size:12px;color:var(--c-muted)}
+.tc-body{padding:11px 15px}
+.tc-body dl{display:grid;grid-template-columns:110px 1fr;gap:3px 10px;font-size:12.5px}
+.tc-body dt{font-weight:700;color:var(--c-muted);font-size:11.5px;padding-top:2px}
+.tc-body dd{color:var(--c-text)}
+
+/* ── Hierarchy ── */
+.hier{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:2.1;background:#ece9e0;border-radius:6px;padding:14px 18px;margin:10px 0}
+.hm{color:var(--c-mcpm);font-weight:600}
+.ha{color:var(--c-am);font-weight:600}
+.hh{color:var(--c-harness);font-weight:600}
+.he{color:var(--c-muted)}
+.hnew{color:var(--c-new);font-weight:700}
+
+/* ── Turtle ── */
+.turtle{background:#1a1917;border-radius:6px;padding:14px 18px;margin:12px 0;overflow-x:auto}
+.turtle pre{font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.85;color:#d4d0c8;white-space:pre}
+.t-kw{color:#c792ea}.t-px{color:#82aaff}.t-uri{color:#c3e88d}
+.t-str{color:#f78c6c}.t-cmt{color:#4a5568;font-style:italic}.t-ty{color:#ffcb6b}
+
+/* ── Note ── */
+.note{background:#fffbeb;border-left:4px solid #d97706;padding:9px 13px;border-radius:0 6px 6px 0;font-size:12.5px;margin:10px 0;color:#78350f}
+.note.info{background:#eff6ff;border-left-color:#3b82f6;color:#1e3a8a}
+hr.div{border:none;border-top:1px solid var(--c-border);margin:36px 0}
+</style>
+</head>
+<body>
+
+<!-- ═══ SIDEBAR ═══ -->
+<nav id="sb">
+  <div class="logo">
+    <h1>MCPMap · AgentMap</h1>
+    <p>어휘 명세 v0.5 — OpenHarness 반영</p>
+  </div>
+  <ul>
+    <li class="ns">개요</li>
+    <li><a href="#overview">문서 개요 & 변경이력</a></li>
+    <li><a href="#prefixes">Prefix 목록 (15개)</a></li>
+    <li><a href="#hierarchy">클래스 계층도</a></li>
+
+    <li class="ns">Part 1 — mcpm:</li>
+    <li><a href="#mcpm-classes">클래스 요약</a></li>
+    <li><a href="#mcpm-MCPServerMap">MCPServerMap</a></li>
+    <li><a href="#mcpm-Tool">Tool</a></li>
+    <li><a href="#mcpm-Parameter">Parameter</a></li>
+    <li><a href="#mcpm-Resource">Resource</a></li>
+    <li><a href="#mcpm-Prompt">Prompt</a></li>
+    <li><a href="#mcpm-Transport">Transport</a></li>
+    <li><a href="#mcpm-props">속성 전체</a></li>
+
+    <li class="ns">Part 2 — am:</li>
+    <li><a href="#am-Agent" class="am">Agent <span class="badge-chg-nav">CHG</span></a></li>
+    <li><a href="#am-AgentHarness" class="harness">AgentHarness <span class="badge-new-nav">NEW</span></a></li>
+    <li><a href="#am-Skill" class="am">Skill</a></li>
+    <li><a href="#am-Rule" class="am">Rule</a></li>
+    <li><a href="#am-Command" class="am">Command</a></li>
+    <li><a href="#am-SubAgent" class="am">SubAgent</a></li>
+    <li><a href="#am-props" class="am">속성 전체</a></li>
+
+    <li class="ns">AIRD + Harness 연계</li>
+    <li><a href="#aird-ext" class="aird">§6 세 속성 결합 효과</a></li>
+    <li><a href="#three-props" class="aird">6-1. 단독 효과</a></li>
+    <li><a href="#combo-matrix" class="aird">6-2. 결합 매트릭스</a></li>
+    <li><a href="#pack-reqs" class="aird">6-3. Pack 유형별 요건</a></li>
+    <li><a href="#harness-gov" class="harness">6-4. GovernanceMode</a></li>
+    <li><a href="#sparql">7. SPARQL 예제</a></li>
+    <li><a href="#turtle-full">8. Turtle 전문</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ MAIN ═══ -->
+<main>
+
+<!-- ── Header ── -->
+<div class="dh">
+  <div class="brow">
+    <span class="badge bm">mcpm: v0.5</span>
+    <span class="badge ba">am: v0.5</span>
+    <span class="badge bh">OpenHarness 반영</span>
+    <span class="badge bv">2026-04</span>
+    <span class="badge bv">TTA DataMap 확장</span>
+  </div>
+  <h1>MCPMap · AgentMap<br>어휘 명세 (Vocabulary Specification) v0.5</h1>
+  <div class="meta">
+    <span>군산대학교 AMI Lab.</span>
+    <span>네임스페이스: <code>https://vocab.knowledgemap.kr/def/</code></span>
+  </div>
+</div>
+
+<!-- ── Changelog ── -->
+<div class="changelog">
+  <h4>v0.5 변경이력 — OpenHarness 반영 (2026-04)</h4>
+  <ul>
+    <li><span class="cl-tag cl-new">NEW</span><strong>am:AgentHarness</strong> 클래스 신설 — 인지 주체(Agent)와 실행 인프라(Harness) 분리</li>
+    <li><span class="cl-tag cl-mod">CHG</span><strong>am:Agent</strong> 수정 — <code>am:runsOn</code> → <code>am:runsOnHarness</code>로 재정의</li>
+    <li><span class="cl-tag cl-new">NEW</span><strong>am:governanceMode</strong> · <strong>am:hookType</strong> · <strong>am:executionTrace</strong> 추가 (STD-004 L3 대응)</li>
+    <li><span class="cl-tag cl-new">NEW</span><strong>am:mcpCompatible</strong> · <strong>am:skillsCompatible</strong> · <strong>am:swarmEnabled</strong> 플래그 추가</li>
+    <li><span class="cl-tag cl-new">NEW</span><strong>am:GovernanceMode</strong> · <strong>am:HookType</strong> 열거 인스턴스 사전 정의</li>
+    <li><span class="cl-tag cl-mod">CHG</span>SPARQL 예제에 Harness 기반 STD-004 인증 쿼리 추가</li>
+  </ul>
+</div>
+
+<!-- ══════════════════ -->
+<h2 id="overview">1. 문서 개요</h2>
+<p>본 명세는 MCP Server·에이전트·스킬의 메타데이터를 시맨틱 웹 어휘로 표현하기 위한 두 어휘(mcpm:, am:)를 정의한다. v0.5는 HKUDS의 <strong>OpenHarness</strong>(2026-04-01) 등장에 따라 <em>에이전트 인지 주체</em>와 <em>하네스 실행 인프라</em>를 분리하는 구조 변경을 포함한다.</p>
+<div class="note info"><strong>설계 원칙:</strong> LOV 재사용 우선. 기존 국제 표준 어휘로 표현 가능한 개념은 mcpm:/am:에 정의하지 않는다. MCP 프로토콜·Agent Harness에 고유한 개념만 신규 정의한다.</div>
+
+<!-- ══════════════════ -->
+<h2 id="prefixes">2. Prefix 목록 (15개)</h2>
+<div class="tw"><table>
+<thead><tr><th>#</th><th>Prefix</th><th>Namespace URI</th><th>역할</th><th>유형</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><code>mcpm:</code></td><td><code>https://vocab.knowledgemap.kr/def/mcpmap/</code></td><td>MCP Server 고유 개념</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td>2</td><td><code>am:</code></td><td><code>https://vocab.knowledgemap.kr/def/agentmap/</code></td><td>Agent/Harness/Skill 고유 개념</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td>3</td><td><code>dm:</code></td><td><code>https://vocab.datahub.kr/def/datamap/</code></td><td>DataMap TTA 표준 (TTAK.KO-10.1291)</td><td><span class="tn lovkr">LOV-KR</span></td></tr>
+<tr><td>4</td><td><code>dcat:</code></td><td><code>http://www.w3.org/ns/dcat#</code></td><td>카탈로그·리소스·배포</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>5</td><td><code>dct:</code></td><td><code>http://purl.org/dc/terms/</code></td><td>제목·설명·작성자·라이선스</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>6</td><td><code>prov:</code></td><td><code>http://www.w3.org/ns/prov#</code></td><td>출처·수집이력·소프트웨어 에이전트</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>7</td><td><code>schema:</code></td><td><code>http://schema.org/</code></td><td>소프트웨어 버전·애플리케이션</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>8</td><td><code>skos:</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td><td>분류 체계·카테고리</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>9</td><td><code>foaf:</code></td><td><code>http://xmlns.com/foaf/0.1/</code></td><td>조직·개발자·홈페이지</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>10</td><td><code>doap:</code></td><td><code>http://usefulinc.com/ns/doap#</code></td><td>프로젝트·소스 저장소·언어</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>11</td><td><code>rdfs:</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td><td>클래스 관계·레이블·코멘트</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>12</td><td><code>owl:</code></td><td><code>http://www.w3.org/2002/07/owl#</code></td><td>온톨로지 정의</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>13</td><td><code>vann:</code></td><td><code>http://purl.org/vocab/vann/</code></td><td>네임스페이스 메타데이터</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>14</td><td><code>xsd:</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td><td>데이터 타입</td><td><span class="tn lov">LOV</span></td></tr>
+<tr><td>15</td><td><code>adms:</code></td><td><code>http://www.w3.org/ns/adms#</code></td><td>패키지 식별자</td><td><span class="tn lov">LOV</span></td></tr>
+</tbody></table></div>
+
+<!-- ══════════════════ -->
+<h2 id="hierarchy">3. 클래스 계층 구조 (v0.5)</h2>
+<div class="hier">
+<span class="he">owl:Thing</span>
+├── <span class="he">dm:Datamap</span>
+│   ├── <span class="hm">mcpm:MCPMap</span>
+│   ├── <span class="hm">mcpm:MCPServerMap</span>
+│   └── <span class="ha">am:AgentMap</span>
+├── <span class="he">dcat:Catalog</span>
+│   ├── <span class="hm">mcpm:MCPCatalog</span>
+│   └── <span class="ha">am:AgentCatalog</span>
+├── <span class="he">dm:Column   →  </span><span class="hm">mcpm:Parameter</span>
+├── <span class="he">dcat:Dataset →  </span><span class="hm">mcpm:Resource</span>
+├── <span class="he">dm:DatamapStat</span>
+│   ├── <span class="hm">mcpm:MCPServerStat</span>
+│   └── <span class="ha">am:AgentStat</span>
+├── <span class="hm">mcpm:Tool</span>     <span class="he">  # LOV 대응 없음 — MCP 고유</span>
+├── <span class="hm">mcpm:Prompt</span>   <span class="he">  # LOV 대응 없음 — MCP 고유</span>
+├── <span class="hm">mcpm:Transport</span><span class="he">  # 인스턴스: STDIO · SSE · StreamableHTTP</span>
+├── <span class="he">prov:SoftwareAgent</span>
+│   ├── <span class="ha">am:Agent</span>       <span class="he">  # 인지 주체 (LLM + 프롬프트)</span>
+│   └── <span class="ha">am:SubAgent</span>    <span class="he">  # 위임 하위 에이전트</span>
+├── <span class="he">schema:SoftwareApplication</span>
+│   └── <span class="hh">am:AgentHarness</span><span class="hnew"> ★NEW</span><span class="he">  # 실행 인프라 (툴실행·권한·메모리·Swarm)</span>
+├── <span class="ha">am:Skill</span>       <span class="he">  # 재사용 가능한 능력 모듈</span>
+├── <span class="ha">am:Rule</span>        <span class="he">  # 행동 제약 규칙</span>
+└── <span class="ha">am:Command</span>     <span class="he">  # 슬래시 명령</span>
+</div>
+
+<div class="note"><strong>v0.4 → v0.5 핵심 변경:</strong> <code>am:Agent.runsOn → schema:SoftwareApplication</code>이었던 것을 <code>am:Agent.runsOnHarness → am:AgentHarness</code>로 재정의. 인지 주체와 실행 인프라를 명시적으로 분리하여 STD-004 Governance 심사 경로를 확보.</div>
+
+<hr class="div"/>
+
+<!-- ══════════════════ -->
+<h2 id="mcpm-classes">4. Part 1 — mcpm: 클래스 명세</h2>
+
+<h3 id="mcpm-MCPServerMap">mcpm:MCPServerMap</h3>
+<div class="tc"><div class="tc-head"><span class="tc-name">mcpm:MCPServerMap</span><span class="tc-label">개별 MCP Server 메타데이터</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd><code>dm:Datamap</code></dd>
+<dt>정의</dt><dd>하나의 MCP Server에 대한 메타데이터. Tool·Resource·Prompt 목록과 전송 방식·프로토콜 버전을 포함한다.</dd>
+<dt>주요 속성</dt><dd><code>mcpm:tool</code>, <code>mcpm:resource</code>, <code>mcpm:prompt</code>, <code>mcpm:transport</code>, <code>mcpm:protocolVersion</code>, <code>dct:title</code>, <code>schema:softwareVersion</code>, <code>doap:repository</code>, <code>foaf:homepage</code>, <code>dm:category</code></dd>
+</dl></div></div>
+
+<h3 id="mcpm-Tool">mcpm:Tool</h3>
+<div class="tc"><div class="tc-head"><span class="tc-name">mcpm:Tool</span><span class="tc-label">MCP 실행 가능 함수</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd>— (LOV 대응 없음)</dd>
+<dt>정의</dt><dd><code>tools/list</code>에서 수집되는 실행 가능한 함수 단위. <code>mcpm:idempotent</code>·<code>mcpm:destructive</code>는 MCP annotations 고유 속성이다.</dd>
+<dt>AIRD 연계</dt><dd><code>mcpm:hasScenario</code>, <code>mcpm:hasLimitation</code>, <code>mcpm:connectedDataset</code></dd>
+</dl></div></div>
+
+<h3 id="mcpm-Parameter">mcpm:Parameter</h3>
+<div class="tc"><div class="tc-head"><span class="tc-name">mcpm:Parameter</span><span class="tc-label">Tool 입력 매개변수</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd><code>dm:Column</code></dd>
+<dt>정의</dt><dd>Tool의 <code>inputSchema</code>를 구성하는 개별 매개변수. JSON Schema 타입·필수 여부·열거값을 추가한다.</dd>
+</dl></div></div>
+
+<h3 id="mcpm-Resource">mcpm:Resource</h3>
+<div class="tc"><div class="tc-head"><span class="tc-name">mcpm:Resource</span><span class="tc-label">읽기 전용 컨텍스트 데이터</span><span class="tn lov">dcat:Dataset 서브</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd><code>dcat:Dataset</code></dd>
+<dt>정의</dt><dd><code>resources/list</code>에서 수집되는 읽기 전용 데이터. <code>mcpm:resourceUri</code>로 URI 템플릿을 기술한다.</dd>
+</dl></div></div>
+
+<h3 id="mcpm-Prompt">mcpm:Prompt</h3>
+<div class="tc"><div class="tc-head"><span class="tc-name">mcpm:Prompt</span><span class="tc-label">사전 정의 프롬프트 템플릿</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd>— (LOV 대응 없음)</dd>
+<dt>정의</dt><dd><code>prompts/list</code>에서 수집되는 재사용 가능한 프롬프트 템플릿.</dd>
+</dl></div></div>
+
+<h3 id="mcpm-Transport">mcpm:Transport</h3>
+<div class="tc"><div class="tc-head"><span class="tc-name">mcpm:Transport</span><span class="tc-label">MCP 전송 방식</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>정의</dt><dd>MCP 클라이언트-서버 간 통신 방식. 사전 정의 인스턴스: <code>mcpm:STDIO</code>, <code>mcpm:SSE</code>, <code>mcpm:StreamableHTTP</code></dd>
+</dl></div></div>
+
+<h3 id="mcpm-props">mcpm: 속성 전체</h3>
+<div class="tw"><table>
+<thead><tr><th>속성</th><th>도메인</th><th>범위</th><th>정의</th><th>유형</th></tr></thead>
+<tbody>
+<tr><td><code>mcpm:tool</code></td><td>MCPServerMap</td><td>Tool</td><td>Server가 제공하는 Tool</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:resource</code></td><td>MCPServerMap</td><td>Resource</td><td>읽기 전용 컨텍스트 데이터</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:prompt</code></td><td>MCPServerMap</td><td>Prompt</td><td>프롬프트 템플릿</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:transport</code></td><td>MCPServerMap</td><td>Transport</td><td>전송 방식</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:protocolVersion</code></td><td>MCPServerMap</td><td>xsd:string</td><td>MCP 프로토콜 버전 (예: 2025-11-25)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:parameter</code></td><td>Tool</td><td>Parameter</td><td>Tool의 입력 매개변수</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:returnType</code></td><td>Tool</td><td>xsd:string</td><td>반환 타입 (text/image/audio)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:idempotent</code></td><td>Tool</td><td>xsd:boolean</td><td>멱등성 (MCP annotations)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:destructive</code></td><td>Tool</td><td>xsd:boolean</td><td>데이터 변경/삭제 부수 효과</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:jsonSchemaType</code></td><td>Parameter</td><td>xsd:string</td><td>JSON Schema 타입</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:required</code></td><td>Parameter</td><td>xsd:boolean</td><td>필수 매개변수 여부</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:enumValues</code></td><td>Parameter</td><td>rdf:List</td><td>허용 값 열거</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:resourceUri</code></td><td>Resource</td><td>xsd:anyURI</td><td>리소스 URI 또는 URI 템플릿</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:numberOfTools</code></td><td>MCPServerStat</td><td>xsd:nonNegativeInteger</td><td>Tool 수</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:totalCalls</code></td><td>MCPServerStat</td><td>xsd:nonNegativeInteger</td><td>누적 호출 횟수</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:avgResponseTime</code></td><td>MCPServerStat</td><td>xsd:nonNegativeInteger</td><td>평균 응답 시간 (ms)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>mcpm:hasScenario</code></td><td>Tool, am:Skill</td><td>Blank Node</td><td>AIRD Pack 소비 시나리오 명세</td><td><span class="tn aird">AIRD</span></td></tr>
+<tr><td><code>mcpm:hasLimitation</code></td><td>Tool, am:Skill</td><td>Blank Node</td><td>적용 한계 명세</td><td><span class="tn aird">AIRD</span></td></tr>
+<tr><td><code>mcpm:connectedDataset</code></td><td>Tool</td><td>dcat:Dataset</td><td>연결된 AIRD Pack URI</td><td><span class="tn aird">AIRD</span></td></tr>
+<tr style="background:#f5f3ec"><td><code>dct:title</code></td><td>MCPServerMap, Tool…</td><td>rdfs:Literal</td><td>이름</td><td><span class="tn lov">LOV</span></td></tr>
+<tr style="background:#f5f3ec"><td><code>schema:softwareVersion</code></td><td>MCPServerMap</td><td>xsd:string</td><td>버전</td><td><span class="tn lov">LOV</span></td></tr>
+<tr style="background:#f5f3ec"><td><code>doap:repository</code></td><td>MCPServerMap</td><td>xsd:anyURI</td><td>소스 저장소</td><td><span class="tn lov">LOV</span></td></tr>
+<tr style="background:#f5f3ec"><td><code>dcat:mediaType</code></td><td>Resource</td><td>xsd:string</td><td>MIME 타입</td><td><span class="tn lov">LOV</span></td></tr>
+<tr style="background:#f5f3ec"><td><code>prov:wasGeneratedBy</code></td><td>MCPServerMap</td><td>prov:Activity</td><td>수집 이력</td><td><span class="tn lov">LOV</span></td></tr>
+</tbody></table></div>
+
+<hr class="div"/>
+
+<!-- ══════════════════ -->
+<h2 id="am-classes">5. Part 2 — am: 클래스 명세</h2>
+
+<!-- Agent (CHG) -->
+<h3 id="am-Agent" class="am-h">am:Agent <span class="tn chg" style="font-size:10px;vertical-align:middle">v0.5 변경</span></h3>
+<div class="tc chg"><div class="tc-head"><span class="tc-name">am:Agent</span><span class="tc-label">LLM 기반 자율 에이전트 (인지 주체)</span><span class="tn chg">CHG</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd><code>prov:SoftwareAgent</code></dd>
+<dt>정의</dt><dd>LLM을 핵심 엔진으로 도구를 자율 선택·실행하는 소프트웨어 행위자. <strong>v0.5 변경</strong>: <code>am:runsOn</code>(→ schema:SoftwareApplication) 제거, <code>am:runsOnHarness</code>(→ am:AgentHarness) 신설. 인지 주체만 표현하며 실행 인프라는 am:AgentHarness로 위임.</dd>
+<dt>주요 속성</dt><dd><code>am:runsOnHarness</code>★, <code>am:usesMCPServer</code>, <code>am:skill</code>, <code>am:rule</code>, <code>am:command</code>, <code>am:model</code>, <code>am:allowedTool</code>, <code>am:executionTrace</code>★</dd>
+</dl></div></div>
+
+<!-- AgentHarness (NEW) -->
+<h3 id="am-AgentHarness" class="harness-h">am:AgentHarness ★ 신규</h3>
+<div class="tc harness"><div class="tc-head"><span class="tc-name">am:AgentHarness</span><span class="tc-label">에이전트 하네스 — 실행 인프라 프레임워크</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd><code>schema:SoftwareApplication</code></dd>
+<dt>정의</dt><dd>LLM이 Tool을 안전하게 실행할 수 있도록 조율하는 인프라 프레임워크. Tool 실행 루프·권한 제어·메모리 관리·Swarm 조율을 담당한다. OpenHarness·Claude Code 등이 인스턴스이다.</dd>
+<dt>주요 속성</dt><dd><code>am:governanceMode</code>, <code>am:hookType</code>, <code>am:mcpCompatible</code>, <code>am:skillsCompatible</code>, <code>am:swarmEnabled</code>, <code>am:toolCount</code>, <code>am:harnessLang</code>, <code>dct:title</code>, <code>schema:softwareVersion</code>, <code>doap:repository</code></dd>
+<dt>사전 인스턴스</dt><dd>
+  <code>&lt;mcpmap:harness/openharness&gt;</code> — Python, 43 tools, OpenHarness v0.1.0<br>
+  <code>&lt;mcpmap:harness/claude-code&gt;</code> — TypeScript, 44 tools, Anthropic
+</dd>
+</dl></div></div>
+
+<h3 id="am-Skill" class="am-h">am:Skill</h3>
+<div class="tc am"><div class="tc-head"><span class="tc-name">am:Skill</span><span class="tc-label">재사용 가능한 능력 모듈</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd>— (LOV 대응 없음)</dd>
+<dt>정의</dt><dd>SKILL.md로 패키징된 재사용 가능 능력 모듈. 허용 Tool·의존 서버를 명세. <code>mcpm:hasScenario</code>로 AIRD Pack 소비 시나리오 연결.</dd>
+</dl></div></div>
+
+<h3 id="am-Rule" class="am-h">am:Rule</h3>
+<div class="tc am"><div class="tc-head"><span class="tc-name">am:Rule</span><span class="tc-label">행동 제약 규칙</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>정의</dt><dd>Agent가 준수해야 하는 행동 제약. glob 패턴으로 조건부 적용. OpenHarness의 Governance 서브시스템에서 관리.</dd>
+</dl></div></div>
+
+<h3 id="am-Command" class="am-h">am:Command</h3>
+<div class="tc am"><div class="tc-head"><span class="tc-name">am:Command</span><span class="tc-label">슬래시 명령</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>정의</dt><dd>사용자가 명시적으로 호출하는 슬래시 명령 (<code>/review</code>, <code>/handoff</code>). OpenHarness 88개 중 54개 구현.</dd>
+</dl></div></div>
+
+<h3 id="am-SubAgent" class="am-h">am:SubAgent</h3>
+<div class="tc am"><div class="tc-head"><span class="tc-name">am:SubAgent</span><span class="tc-label">위임 하위 에이전트</span><span class="tn new">NEW</span></div>
+<div class="tc-body"><dl>
+<dt>상위 클래스</dt><dd><code>am:Agent</code></dd>
+<dt>정의</dt><dd>메인 Agent가 Swarm 조율을 통해 위임하는 하위 에이전트. 독립된 컨텍스트와 도구 권한. <code>am:delegatedBy</code>로 상위 Agent 참조.</dd>
+</dl></div></div>
+
+<!-- am: 속성 전체 -->
+<h3 id="am-props" class="am-h">am: 속성 전체</h3>
+<div class="tw"><table>
+<thead><tr><th>속성</th><th>도메인</th><th>범위</th><th>정의</th><th>유형</th></tr></thead>
+<tbody>
+<tr><td><code>am:runsOnHarness</code></td><td>Agent</td><td>AgentHarness</td><td>Agent를 실행하는 Harness ★ (v0.4 runsOn 대체)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:governanceMode</code></td><td>AgentHarness</td><td>am:GovernanceMode</td><td>권한 모드 (Default·Auto·Plan)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:hookType</code></td><td>AgentHarness</td><td>am:HookType</td><td>실행 훅 (PreToolUse·PostToolUse)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:mcpCompatible</code></td><td>AgentHarness</td><td>xsd:boolean</td><td>MCP Tool 호환 여부</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:skillsCompatible</code></td><td>AgentHarness</td><td>xsd:boolean</td><td>anthropics/skills 호환 여부</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:swarmEnabled</code></td><td>AgentHarness</td><td>xsd:boolean</td><td>SubAgent Swarm 지원 여부</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:toolCount</code></td><td>AgentHarness</td><td>xsd:nonNegativeInteger</td><td>구현된 Tool 수</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:harnessLang</code></td><td>AgentHarness</td><td>xsd:string</td><td>구현 언어 (Python/TypeScript 등)</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:executionTrace</code></td><td>Agent</td><td>prov:Activity</td><td>Tool 실행 이력 — STD-004 재현성 증빙</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:usesMCPServer</code></td><td>Agent, Skill</td><td>mcpm:MCPServerMap</td><td>Part 1↔2 브릿지</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:allowedTool</code></td><td>Agent, Skill</td><td>mcpm:Tool</td><td>허용된 Tool 목록</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:skill</code></td><td>Agent</td><td>Skill</td><td>보유 Skill</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:rule</code></td><td>Agent</td><td>Rule</td><td>적용 Rule</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:command</code></td><td>Agent</td><td>Command</td><td>처리 Command</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:model</code></td><td>Agent</td><td>xsd:string</td><td>기반 LLM 모델명</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:globPattern</code></td><td>Rule</td><td>xsd:string</td><td>Rule 적용 파일 패턴</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:commandSlug</code></td><td>Command</td><td>xsd:string</td><td>슬래시 명령 식별자</td><td><span class="tn new">NEW</span></td></tr>
+<tr><td><code>am:delegatedBy</code></td><td>SubAgent</td><td>Agent</td><td>위임 상위 Agent</td><td><span class="tn new">NEW</span></td></tr>
+<tr style="background:#f5f3ec"><td><code>prov:used</code></td><td>Agent</td><td>rdfs:Resource</td><td>사용 리소스 (Provenance)</td><td><span class="tn lov">LOV</span></td></tr>
+<tr style="background:#f5f3ec"><td><code>dct:creator</code></td><td>Skill</td><td>foaf:Agent</td><td>Skill 작성자</td><td><span class="tn lov">LOV</span></td></tr>
+</tbody></table></div>
+
+<hr class="div"/>
+
+<!-- ══════════════════ -->
+<h2 id="aird-ext">6. AIRD 연계 확장 속성 — 세 속성의 결합 효과</h2>
+
+<div class="note" style="background:#faf5ff;border-left-color:#7c3aed;color:#3b0764;">
+<strong>설계 의도:</strong> <code>mcpm:hasScenario</code> + <code>am:executionTrace</code> + <code>am:governanceMode</code> 세 속성이 결합되어야
+STD-004 L3 인증의 자동화 쿼리가 완전해진다.<br/>
+<strong>그러나 그것만이 아니다.</strong> 이 세 속성은 AIRD Pack의 <em>소비 가능성 판정</em>·<em>품질 등급 자동 매핑</em>·<em>소비 Provenance 완성</em>이라는 세 가지 독립적 효과를 동시에 가진다.
+</div>
+
+<!-- 6-1: 세 속성 단독 효과 -->
+<h3 id="three-props" class="aird-h">6-1. 세 속성의 단독 효과</h3>
+<div class="tw"><table>
+<thead><tr><th>속성</th><th>단독 효과 (AIRD Pack)</th><th>단독 효과 (STD-004)</th><th>없으면 발생하는 문제</th></tr></thead>
+<tbody>
+<tr>
+  <td><code>mcpm:hasScenario</code><br/><small style="color:var(--c-muted)">+ am:feasibility<br/>+ aird:qualityGate<br/>+ am:triggerType</small></td>
+  <td><strong>소비 가능성 사전 판정.</strong><br/>AIRD Pack을 요청하기 전, Agent가 해당 Pack이 자신의 시나리오(ML/RAG/KG/Stats)에 적합한지와 최소 Q-Tier 요건을 온톨로지 쿼리로 확인. 부적합 Pack 요청 차단 → 파이프라인 낭비 제거.</td>
+  <td>심사관이 서류로만 "이 Tool이 AIRD Pack을 소비할 수 있다"를 확인하는 대신, SPARQL 쿼리 1회로 Feasible 여부를 기계 판정.</td>
+  <td>Agent가 Q-Bronze Pack을 Q-Gold 요구 ML 파이프라인에 투입 → 학습 품질 저하. 사후 발견 시 재처리 비용 발생.</td>
+</tr>
+<tr>
+  <td><code>am:executionTrace</code><br/><small style="color:var(--c-muted)">→ prov:Activity<br/>(PreToolUse~PostToolUse)</small></td>
+  <td><strong>소비 측 Provenance 완성.</strong><br/>AIRD가 정의하는 공급 측 Provenance(Raw→Gate→Pack)의 체인을 Tool 실행 이후까지 연장. "이 ML 모델은 어떤 AIRD Pack을 소비해 학습되었는가"를 역추적 가능.</td>
+  <td>STD-004가 요구하는 "완전한 데이터 계보"를 달성. 공급 측만 검증하는 기존 ISO 8000 방식과의 차별화 근거.</td>
+  <td>AIRD Pack이 AI Ready Data라는 인증을 받아도, 그것이 실제로 어떻게 소비되었는지 추적 불가 → "AI Ready"라는 주장이 공급 측 선언에 그침.</td>
+</tr>
+<tr>
+  <td><code>am:governanceMode</code><br/><small style="color:var(--c-muted)">Default·Auto·Plan<br/>+ am:hookType</small></td>
+  <td><strong>소비 환경 품질 보증.</strong><br/>AIRD Pack 소비 시 Harness의 권한 모드를 메타데이터로 기록. "이 Pack은 Auto 모드(완전 자율) 환경에서만 소비되었다"는 맥락 정보가 Pack의 신뢰도 평가에 반영.</td>
+  <td>Governance 심사 항목(권한 제어·거부 규칙 존재 여부)을 SPARQL로 자동 판정. 현장 감사 없이 서류 대체.</td>
+  <td>동일한 AIRD Pack이 Default(수동 승인)와 Auto(완전 자율) 환경에서 소비된 결과를 구분 불가 → 재현 조건 불명확.</td>
+</tr>
+</tbody></table></div>
+
+<!-- 6-2: 결합 효과 매트릭스 -->
+<h3 id="combo-matrix" class="aird-h">6-2. 결합 효과 매트릭스</h3>
+<p>세 속성은 단독으로도 효과가 있지만, 결합 시 각각의 합 이상의 효과를 만들어낸다.</p>
+<div class="tw"><table>
+<thead><tr><th>결합</th><th>AIRD Pack 효과</th><th>STD-004 효과</th></tr></thead>
+<tbody>
+<tr style="background:var(--c-aird-bg)">
+  <td><code>hasScenario</code><br/>+<code>executionTrace</code></td>
+  <td><strong>소비 사전 적합성 → 사후 이력 연결.</strong><br/>"이 시나리오(RAG)에 적합하다고 판단한 Pack이 실제로 그 용도로 실행되었는가"를 end-to-end로 검증 가능.</td>
+  <td>STD-004 파이프라인 적합성 심사 항목 ②③ 자동화.<br/>서류 제출 없이 쿼리로 대체.</td>
+</tr>
+<tr style="background:var(--c-aird-bg)">
+  <td><code>hasScenario</code><br/>+<code>governanceMode</code></td>
+  <td><strong>시나리오별 허용 거버넌스 매핑.</strong><br/>예: KG Pack은 GovernanceModeAuto만 허용, 의료 ML Pack은 GovernanceModeDefault(수동 승인) 필수. Pack 유형에 따른 소비 환경 정책을 온톨로지로 표현.</td>
+  <td>STD-004 도메인 인증 트랙(의료·금융)별 거버넌스 요건을 선언적으로 기술 가능.</td>
+</tr>
+<tr style="background:var(--c-aird-bg)">
+  <td><code>executionTrace</code><br/>+<code>governanceMode</code></td>
+  <td><strong>재현 조건 완전 명세.</strong><br/>동일 실행 이력(executionTrace)에 동일 거버넌스 모드가 결합되어야 진정한 재현성이 보장됨. GovernanceMode가 달라지면 동일 Pack으로도 다른 결과가 나올 수 있음을 명시.</td>
+  <td>L3 현장 감사의 "기술 재현 테스트" 자동화.<br/>심사관이 재현 조건(Pack URI + governanceMode)을 지정하면 SPARQL로 동일 조건의 기존 executionTrace와 비교.</td>
+</tr>
+<tr style="background:#faf5ff;border:1.5px solid #7c3aed">
+  <td><strong>세 속성 동시 결합</strong><br/><code>hasScenario</code><br/>+<code>executionTrace</code><br/>+<code>governanceMode</code></td>
+  <td><strong>완전한 AIRD Pack 소비 생애주기 명세.</strong><br/>소비 전(적합성 판정) → 소비 중(거버넌스 조건) → 소비 후(이력 기록)가 하나의 RDF 그래프로 연결. "AI Ready Data"의 AI 파이프라인 투입 가능성이 공급 측 선언이 아닌 소비 측 실행 이력으로 증명됨.</td>
+  <td><strong>STD-004 L3 완전 자동화 달성.</strong><br/>SPARQL 1 쿼리로:<br/>① Pack의 Q-Tier 충족 여부<br/>② Feasible 시나리오 매핑 존재<br/>③ 실제 실행 이력 존재<br/>④ Governance 조건 준수<br/>→ 4개 심사 항목 동시 판정.</td>
+</tr>
+</tbody></table></div>
+
+<!-- 6-3: AIRD Pack 유형별 속성 요건 -->
+<h3 id="pack-reqs" class="aird-h">6-3. AIRD Pack 유형별 속성 요건</h3>
+<div class="tw"><table>
+<thead><tr><th>Pack 유형</th><th>hasScenario 필수 값</th><th>aird:qualityGate</th><th>am:governanceMode 권장</th><th>executionTrace 기록 대상</th></tr></thead>
+<tbody>
+<tr><td><strong>ML Pack</strong><br/>(JSONL)</td><td>triggerType: BatchJob<br/>feasibility: Feasible</td><td>Q-Silver 이상</td><td>GovernanceModeAuto<br/><small>(배치 학습, 무인 환경)</small></td><td>학습 실행 Activity<br/>+ 모델 URI</td></tr>
+<tr><td><strong>RAG Pack</strong><br/>(청크+임베딩)</td><td>triggerType: EventDriven<br/>feasibility: Feasible</td><td>Q-Gold 이상<br/><small>(환각 방지)</small></td><td>GovernanceModeDefault<br/><small>(검색 결과 사람 확인)</small></td><td>인덱싱 Activity<br/>+ 청크 수·벡터 DB URI</td></tr>
+<tr><td><strong>KG Pack</strong><br/>(RDF/SPARQL)</td><td>triggerType: EventDriven<br/>feasibility: Feasible</td><td>Q-Silver 이상</td><td>GovernanceModeAuto<br/><small>(SPARQL 자동 질의)</small></td><td>추론 Activity<br/>+ SPARQL 엔드포인트 URI</td></tr>
+<tr><td><strong>Stats Pack</strong><br/>(정형 CSV)</td><td>triggerType: Scheduled<br/>feasibility: Partial</td><td>Q-Bronze 이상</td><td>GovernanceModePlan<br/><small>(계획 검토 후 실행)</small></td><td>집계 Activity<br/>+ 통계 보고서 URI</td></tr>
+</tbody></table></div>
+<div class="note">Stats Pack의 <code>feasibility: Partial</code>은 통계 목적에서는 일부 품질 차원(예: 최신성)이 낮아도 허용됨을 의미한다. <code>mcpm:hasLimitation</code>에 해당 조건을 명시해야 한다.</div>
+
+<!-- 6-4: GovernanceMode 열거 인스턴스 -->
+<h3 id="harness-gov" class="harness-h">6-4. am:GovernanceMode 열거 인스턴스</h3>
+<div class="tw"><table>
+<thead><tr><th>인스턴스 URI</th><th>레이블</th><th>AIRD Pack 소비 맥락</th><th>STD-004 연계</th></tr></thead>
+<tbody>
+<tr><td><code>am:GovernanceModeDefault</code></td><td>Default</td><td>위험 작업 시 사용자 승인 필요. 의료·금융 도메인 ML Pack 필수.</td><td>L3 도메인 인증 트랙(의료·금융)의 필수 거버넌스 조건</td></tr>
+<tr><td><code>am:GovernanceModeAuto</code></td><td>Auto</td><td>신뢰 환경에서 완전 자율 실행. ML 배치 학습·KG 자동 갱신 허용.</td><td>L2·L3 일반 인증 경로. executionTrace 자동 생성.</td></tr>
+<tr><td><code>am:GovernanceModePlan</code></td><td>Plan</td><td>실행 없이 계획만 수립. Stats Pack의 집계 계획 수립 단계.</td><td>L1 자가선언 단계에서 활용. 실행 이력 없으므로 executionTrace 미생성.</td></tr>
+</tbody></table></div>
+
+<!-- 6-5: HookType 열거 인스턴스 -->
+<h3 class="harness-h">6-5. am:HookType 열거 인스턴스</h3>
+<div class="tw"><table>
+<thead><tr><th>인스턴스 URI</th><th>레이블</th><th>AIRD Pack 소비 효과</th><th>STD-004 연계</th></tr></thead>
+<tbody>
+<tr><td><code>am:HookPreToolUse</code></td><td>PreToolUse</td><td>Pack 소비 Tool 호출 직전 — aird:qualityGate 충족 여부 자동 검사. 미충족 시 실행 차단 → 불량 Pack 투입 방지.</td><td>Provenance 체인 시작점. prov:startedAtTime 기록 → STD-004 재현성 검증의 타임스탬프 시작.</td></tr>
+<tr><td><code>am:HookPostToolUse</code></td><td>PostToolUse</td><td>Pack 소비 Tool 실행 완료 후 — 결과 검증·executionTrace 완료 기록. 소비 측 Provenance 체인 종점 확정.</td><td>Provenance 체인 종점. prov:endedAtTime 기록 → STD-004 L3 재현 테스트의 완료 조건.</td></tr>
+</tbody></table></div>
+
+<!-- ══════════════════ -->
+<h2 id="sparql">7. SPARQL 활용 예제</h2>
+
+<div class="turtle">
+<pre><span class="t-cmt"># ① STD-004 L3 자동 검증: OpenHarness Auto 모드로 실행된 AIRD Pack 소비 이력</span>
+<span class="t-kw">SELECT</span> ?pack ?harness ?govMode ?trace ?qTier <span class="t-kw">WHERE</span> {
+    ?agent <span class="t-px">am:runsOnHarness</span>   ?harness ;
+           <span class="t-px">am:executionTrace</span>  ?trace .
+    ?harness <span class="t-px">am:governanceMode</span> <span class="t-ty">am:GovernanceModeAuto</span> ;
+             <span class="t-px">am:mcpCompatible</span>  <span class="t-ty">true</span> ;
+             <span class="t-px">am:governanceMode</span> ?govMode .
+    ?tool  <span class="t-px">mcpm:connectedDataset</span> ?pack ;
+           <span class="t-px">prov:wasUsedBy</span>       ?trace .
+    ?pack  <span class="t-px">aird:qualityGate</span>     ?qTier .
+}
+
+<span class="t-cmt"># ② Harness 비교: MCP 호환 + Skill 호환 하네스 목록 (OpenHarness vs 기타)</span>
+<span class="t-kw">SELECT</span> ?h ?title ?lang ?toolCnt ?swarm <span class="t-kw">WHERE</span> {
+    ?h <span class="t-px">a</span> <span class="t-ty">am:AgentHarness</span> ;
+       <span class="t-px">dct:title</span>              ?title ;
+       <span class="t-px">am:harnessLang</span>         ?lang ;
+       <span class="t-px">am:toolCount</span>           ?toolCnt ;
+       <span class="t-px">am:swarmEnabled</span>        ?swarm ;
+       <span class="t-px">am:mcpCompatible</span>       <span class="t-ty">true</span> ;
+       <span class="t-px">am:skillsCompatible</span>    <span class="t-ty">true</span> .
+}
+<span class="t-kw">ORDER BY DESC</span>(?toolCnt)
+
+<span class="t-cmt"># ③ Skill별 AIRD Pack 소비 가능 여부 + 최소 Q-Tier 조회</span>
+<span class="t-kw">SELECT</span> ?skill ?title ?pack ?minQTier <span class="t-kw">WHERE</span> {
+    ?skill <span class="t-px">a</span> <span class="t-ty">am:Skill</span> ;
+           <span class="t-px">dct:title</span>        ?title ;
+           <span class="t-px">am:usesMCPServer</span> ?server ;
+           <span class="t-px">mcpm:hasScenario</span> [
+               <span class="t-px">am:feasibility</span>   <span class="t-ty">am:Feasible</span> ;
+               <span class="t-px">aird:qualityGate</span> ?minQTier
+           ] .
+    ?tool  <span class="t-px">mcpm:connectedDataset</span> ?pack .
+    ?server <span class="t-px">mcpm:tool</span> ?tool .
+}
+
+<span class="t-cmt"># ④ OpenHarness 미사용 Agent의 STD-004 인증 위험 탐지</span>
+<span class="t-kw">SELECT</span> ?agent ?model <span class="t-kw">WHERE</span> {
+    ?agent <span class="t-px">a</span> <span class="t-ty">am:Agent</span> ;
+           <span class="t-px">am:model</span> ?model .
+    <span class="t-kw">FILTER NOT EXISTS</span> {
+        ?agent <span class="t-px">am:runsOnHarness</span> ?h .
+        ?h     <span class="t-px">am:governanceMode</span> ?m .
+        <span class="t-kw">FILTER</span>(?m != <span class="t-ty">am:GovernanceModeDefault</span>)
+    }
+}</pre>
+</div>
+
+<!-- ══════════════════ -->
+<h2 id="turtle-full">8. Turtle 명세 전문 (핵심 발췌)</h2>
+<div class="turtle">
+<pre><span class="t-kw">@prefix</span> <span class="t-px">mcpm:</span>   &lt;https://vocab.knowledgemap.kr/def/mcpmap/&gt; .
+<span class="t-kw">@prefix</span> <span class="t-px">am:</span>     &lt;https://vocab.knowledgemap.kr/def/agentmap/&gt; .
+<span class="t-kw">@prefix</span> <span class="t-px">prov:</span>   &lt;http://www.w3.org/ns/prov#&gt; .
+<span class="t-kw">@prefix</span> <span class="t-px">schema:</span> &lt;http://schema.org/&gt; .
+
+<span class="t-cmt"># ─── am:AgentHarness (신규) ───</span>
+<span class="t-ty">am:AgentHarness</span>
+    <span class="t-px">a</span> <span class="t-ty">rdfs:Class</span> ;
+    <span class="t-px">rdfs:subClassOf</span> <span class="t-ty">schema:SoftwareApplication</span> ;
+    <span class="t-px">rdfs:label</span> <span class="t-str">"Agent Harness"</span>@en, <span class="t-str">"에이전트 하네스"</span>@ko ;
+    <span class="t-px">rdfs:comment</span>
+        <span class="t-str">"LLM이 Tool을 안전하게 실행할 수 있도록 조율하는 인프라 프레임워크.
+         Tool 실행 루프·권한 제어·메모리·Swarm 조율 담당."</span>@ko .
+
+<span class="t-ty">am:governanceMode</span>
+    <span class="t-px">a</span> <span class="t-ty">rdf:Property</span> ;
+    <span class="t-px">rdfs:domain</span> <span class="t-ty">am:AgentHarness</span> ;
+    <span class="t-px">rdfs:range</span>  <span class="t-ty">am:GovernanceMode</span> ;
+    <span class="t-px">rdfs:comment</span> <span class="t-str">"권한 모드 — STD-004 Governance 심사 항목"</span>@ko .
+
+<span class="t-ty">am:hookType</span>
+    <span class="t-px">a</span> <span class="t-ty">rdf:Property</span> ;
+    <span class="t-px">rdfs:domain</span> <span class="t-ty">am:AgentHarness</span> ;
+    <span class="t-px">rdfs:range</span>  <span class="t-ty">am:HookType</span> ;
+    <span class="t-px">rdfs:comment</span> <span class="t-str">"실행 훅 — Provenance 체인 생성의 시작/종점"</span>@ko .
+
+<span class="t-ty">am:executionTrace</span>
+    <span class="t-px">a</span> <span class="t-ty">rdf:Property</span> ;
+    <span class="t-px">rdfs:domain</span> <span class="t-ty">am:Agent</span> ;
+    <span class="t-px">rdfs:range</span>  <span class="t-ty">prov:Activity</span> ;
+    <span class="t-px">rdfs:comment</span> <span class="t-str">"Tool 실행 이력 — STD-004 L3 재현성 검증 근거"</span>@ko .
+
+<span class="t-cmt"># ─── 열거 인스턴스 ───</span>
+<span class="t-ty">am:GovernanceModeAuto</span>  <span class="t-px">a</span> <span class="t-ty">am:GovernanceMode</span> ; <span class="t-px">rdfs:label</span> <span class="t-str">"Auto"</span> .
+<span class="t-ty">am:GovernanceModeDefault</span> <span class="t-px">a</span> <span class="t-ty">am:GovernanceMode</span> ; <span class="t-px">rdfs:label</span> <span class="t-str">"Default"</span> .
+<span class="t-ty">am:GovernanceModePlan</span>  <span class="t-px">a</span> <span class="t-ty">am:GovernanceMode</span> ; <span class="t-px">rdfs:label</span> <span class="t-str">"Plan"</span> .
+<span class="t-ty">am:HookPreToolUse</span>      <span class="t-px">a</span> <span class="t-ty">am:HookType</span> ;      <span class="t-px">rdfs:label</span> <span class="t-str">"PreToolUse"</span> .
+<span class="t-ty">am:HookPostToolUse</span>     <span class="t-px">a</span> <span class="t-ty">am:HookType</span> ;      <span class="t-px">rdfs:label</span> <span class="t-str">"PostToolUse"</span> .
+
+<span class="t-cmt"># ─── OpenHarness 인스턴스 ───</span>
+&lt;https://mcpmap.knowledgemap.kr/harness/openharness&gt;
+    <span class="t-px">a</span>                      <span class="t-ty">am:AgentHarness</span> ;
+    <span class="t-px">dct:title</span>              <span class="t-str">"OpenHarness"</span> ;
+    <span class="t-px">schema:softwareVersion</span> <span class="t-str">"0.1.0"</span> ;
+    <span class="t-px">am:harnessLang</span>         <span class="t-str">"Python"</span> ;
+    <span class="t-px">am:toolCount</span>           43 ;
+    <span class="t-px">am:mcpCompatible</span>       <span class="t-ty">true</span> ;
+    <span class="t-px">am:skillsCompatible</span>    <span class="t-ty">true</span> ;
+    <span class="t-px">am:swarmEnabled</span>        <span class="t-ty">true</span> ;
+    <span class="t-px">am:governanceMode</span>      <span class="t-ty">am:GovernanceModeAuto</span> ;
+    <span class="t-px">am:hookType</span>            <span class="t-ty">am:HookPreToolUse</span>, <span class="t-ty">am:HookPostToolUse</span> ;
+    <span class="t-px">doap:repository</span>        &lt;https://github.com/HKUDS/OpenHarness&gt; .</pre>
+</div>
+
+</main>
+</body>
+</html>

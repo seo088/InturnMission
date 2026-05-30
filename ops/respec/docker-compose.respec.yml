@@ -1,0 +1,28 @@
+# Knowledgemap Animal Ontology — static serve + content negotiation
+#
+# Run from repo root:
+#   docker compose -f ops/respec/docker-compose.respec.yml up -d
+#   curl -s localhost:5280/healthz
+#   curl -sI localhost:5280/def/animal/                                    # → ontology.html
+#   curl -sI -H "Accept: text/turtle" localhost:5280/def/animal/           # → def_animal.ttl
+#   curl -sI -H "Accept: text/turtle" localhost:5280/def/animal/Disease    # → def_animal.ttl
+#
+# Stop:  docker compose -f ops/respec/docker-compose.respec.yml down
+
+services:
+  respec:
+    image: nginx:1.27-alpine
+    container_name: petgraph-respec
+    restart: unless-stopped
+    ports:
+      - "5280:80"   # host:container — 5180(vite)/8000(api)/5435(pg) 충돌 회피
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ../../docs/respec:/usr/share/nginx/html/respec:ro
+      - ../../turtle:/usr/share/nginx/html/turtle:ro
+      - ../../docs/mcpmap:/usr/share/nginx/html/mcpmap:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3

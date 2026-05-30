@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>KOAH — Korea Open Animal Hub Ontology</title>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+  <script class="remove">
+    var respecConfig = {
+      specStatus: "unofficial",
+      shortName:  "koah",
+      editors: [{ name: "Pet-Graph Working Group" }],
+      github:   "https://github.com/knowledgemap-kr/petgraph",
+      license:  "cc-by",
+      latestVersion: null,
+      maxTocLevel: 4,
+    };
+  </script>
+  <style>
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { border: 1px solid #ccc; padding: 6px 10px; vertical-align: top; }
+    th { background: #f4f6fa; text-align: left; }
+    code { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+<section id="abstract"><p>14개 공공 데이터셋과 1개 추론 체인으로 구성된 전국 반려동물 지식그래프의<br>어휘. UK Public Sector URI 101 (def/id/doc/set 4-layer) 정책을 따른다.<br></p></section>
+
+<section id="sotd"><p>본 명세는 <code>docs/respec/terms.yaml</code> 단일 진실원천에서
+자동 생성되며, <code>backend/kg/vocab.py</code> 와의 정합이 빌드 시 강제된다.</p></section>
+
+<section>
+<h2>1. Namespaces</h2>
+<table>
+  <thead><tr><th>Prefix</th><th>IRI</th><th>용도</th></tr></thead>
+  <tbody>
+    <tr><td><code>def:</code></td><td><code>https://knowledgemap.kr/koah/def/</code></td><td>온톨로지 (클래스/속성)</td></tr>
+    <tr><td><code>id:</code></td><td><code>https://knowledgemap.kr/koah/id/</code></td><td>인스턴스</td></tr>
+    <tr><td><code>doc:</code></td><td><code>https://knowledgemap.kr/koah/doc/</code></td><td>인스턴스 기술 문서 (303)</td></tr>
+    <tr><td><code>set:</code></td><td><code>https://knowledgemap.kr/koah/set/</code></td><td>컬렉션</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>2. Datasets (R2RML-style mappings)</h2>
+<p>14개 공공 데이터셋과 1개 추론 파생 데이터셋의 CSV → RDF 매핑 명세.
+각 데이터셋은 <code>backend/kg/builders/dsXX_*.py</code> 정본 빌더에 1:1 대응한다.
+R2RML(RDB 전용) 대신 CSV 친화적 단순 형식으로 표현하나
+<code>rr:logicalTable</code>·<code>rr:subjectMap</code>·<code>rr:predicateObjectMap</code>
+의 세 핵심 개념(<i>source</i>, <i>uri template</i>, <i>column → predicate</i>)을 모두 보존한다.</p>
+<section id="ds01">
+<h3>ds01 — 동물병원</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>01_동물병원_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds01_hospital</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-AnimalHospital"><code>def:AnimalHospital</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/animal-hospital/{licenseNo}</code></td></tr>
+<tr><th>Key columns</th><td><code>LicenseNo</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Name</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>Address</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>Phone</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+<tr><td><code>BusinessStatus</code></td><td><a href="#prop-businessStatus"><code>def:businessStatus</code></a></td></tr>
+<tr><td><code>LicenseDate</code></td><td><a href="#prop-licenseDate"><code>def:licenseDate</code></a></td></tr>
+<tr><td><code>ClosingDate</code></td><td><a href="#prop-closingDate"><code>def:closingDate</code></a></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>Sigungu</code></td><td><a href="#prop-locatedIn"><code>def:locatedIn</code></a></td><td><a href="#cls-Region"><code>def:Region</code></a></td><td></td></tr>
+</tbody></table>
+</section>
+<section id="ds02">
+<h3>ds02 — 동물약국</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>02_동물약국_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds02_pharmacy</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-Pharmacy"><code>def:Pharmacy</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/pharmacy/{licenseNo}</code></td></tr>
+<tr><th>Key columns</th><td><code>LicenseNo</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Name</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>Address</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>Phone</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+<tr><td><code>FloorAreaSqm</code></td><td><a href="#prop-floorAreaSqm"><code>def:floorAreaSqm</code></a></td></tr>
+<tr><td><code>ReopenDate</code></td><td><a href="#prop-reopenDate"><code>def:reopenDate</code></a></td></tr>
+<tr><td><code>SuspensionStart</code></td><td><a href="#prop-suspensionStart"><code>def:suspensionStart</code></a></td></tr>
+<tr><td><code>SuspensionEnd</code></td><td><a href="#prop-suspensionEnd"><code>def:suspensionEnd</code></a></td></tr>
+</tbody></table>
+</section>
+<section id="ds03">
+<h3>ds03 — 동물미용업</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>03_동물미용업_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds03_grooming</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-Grooming"><code>def:Grooming</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/grooming/{licenseNo}</code></td></tr>
+<tr><th>Key columns</th><td><code>LicenseNo</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Name</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>Address</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>Phone</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+<tr><td><code>BusinessStatus</code></td><td><a href="#prop-businessStatus"><code>def:businessStatus</code></a></td></tr>
+</tbody></table>
+</section>
+<section id="ds04">
+<h3>ds04 — 동물위탁관리업(보딩)</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>04_동물위탁관리업_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds04_boarding</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-Boarding"><code>def:Boarding</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/boarding/{licenseNo}</code></td></tr>
+<tr><th>Key columns</th><td><code>LicenseNo</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Name</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>Address</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>Phone</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+<tr><td><code>TaskType</code></td><td><a href="#prop-taskType"><code>def:taskType</code></a></td></tr>
+</tbody></table>
+</section>
+<section id="ds05">
+<h3>ds05 — 동물장묘업</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>05_동물장묘업_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds05_cremation</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-Cremation"><code>def:Cremation</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/cremation/{licenseNo}</code></td></tr>
+<tr><th>Key columns</th><td><code>LicenseNo</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Name</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>Address</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>Phone</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+</tbody></table>
+</section>
+<section id="ds07">
+<h3>ds07 — 반려동물 동반여행 명소 (관광 API)</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>(직접 호출, preprocessed_data/07_travel.json)</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds07_travel</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-TravelSpot"><code>def:TravelSpot</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/travel-spot/{contentId}</code></td></tr>
+<tr><th>Key columns</th><td><code>contentid</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>title</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>addr1</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>tel</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+<tr><td><code>areacode</code></td><td><a href="#prop-areaCode"><code>def:areaCode</code></a></td></tr>
+<tr><td><code>sigungucode</code></td><td><a href="#prop-sigunguCode"><code>def:sigunguCode</code></a></td></tr>
+</tbody></table>
+</section>
+<section id="ds08">
+<h3>ds08 — 구조동물 (유기·구조)</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>08_구조동물_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds08_abandoned</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-AbandonedAnimal"><code>def:AbandonedAnimal</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/abandoned/{careRegNo}/{noticeNo}</code></td></tr>
+<tr><th>Key columns</th><td><code>CareRegNo</code>, <code>NoticeNo</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>DesertionNo</code></td><td><a href="#prop-desertionNo"><code>def:desertionNo</code></a></td></tr>
+<tr><td><code>NoticeNo</code></td><td><a href="#prop-noticeNo"><code>def:noticeNo</code></a></td></tr>
+<tr><td><code>KindCd</code></td><td><a href="#prop-animalBreed"><code>def:animalBreed</code></a></td></tr>
+<tr><td><code>KindFullNm</code></td><td><a href="#prop-kindFullName"><code>def:kindFullName</code></a></td></tr>
+<tr><td><code>ColorCd</code></td><td><a href="#prop-colorCode"><code>def:colorCode</code></a></td></tr>
+<tr><td><code>NeuterYn</code></td><td><a href="#prop-neuterYn"><code>def:neuterYn</code></a></td></tr>
+<tr><td><code>Weight</code></td><td><a href="#prop-weightKg"><code>def:weightKg</code></a></td></tr>
+<tr><td><code>BirthYear</code></td><td><a href="#prop-birthYear"><code>def:birthYear</code></a></td></tr>
+<tr><td><code>AgeDetail</code></td><td><a href="#prop-ageDetail"><code>def:ageDetail</code></a></td></tr>
+<tr><td><code>SpecialMark</code></td><td><a href="#prop-specialMark"><code>def:specialMark</code></a></td></tr>
+<tr><td><code>ProcessState</code></td><td><a href="#prop-processState"><code>def:processState</code></a></td></tr>
+<tr><td><code>HappenDt</code></td><td><a href="#prop-happenDate"><code>def:happenDate</code></a></td></tr>
+<tr><td><code>NoticeSdt</code></td><td><a href="#prop-noticeSDate"><code>def:noticeSDate</code></a></td></tr>
+<tr><td><code>NoticeEdt</code></td><td><a href="#prop-noticeEDate"><code>def:noticeEDate</code></a></td></tr>
+<tr><td><code>HappenPlace</code></td><td><a href="#prop-happenPlace"><code>def:happenPlace</code></a></td></tr>
+<tr><td><code>Image1..Image4</code></td><td><a href="#prop-imageList"><code>def:imageList</code></a></td></tr>
+<tr><td><code>VaccinationChk</code></td><td><a href="#prop-vaccinationChk"><code>def:vaccinationChk</code></a></td></tr>
+<tr><td><code>HealthChk</code></td><td><a href="#prop-healthChk"><code>def:healthChk</code></a></td></tr>
+<tr><td><code>AdoptionTitle</code></td><td><a href="#prop-adoptionTitle"><code>def:adoptionTitle</code></a></td></tr>
+<tr><td><code>AdoptionText</code></td><td><a href="#prop-adoptionText"><code>def:adoptionText</code></a></td></tr>
+<tr><td><code>AdoptionCondition</code></td><td><a href="#prop-adoptionCondition"><code>def:adoptionCondition</code></a></td></tr>
+<tr><td><code>RfidCd</code></td><td><a href="#prop-rfidCode"><code>def:rfidCode</code></a></td></tr>
+<tr><td><code>EndReason</code></td><td><a href="#prop-endReason"><code>def:endReason</code></a></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>CareRegNo</code></td><td><a href="#prop-protectedBy"><code>def:protectedBy</code></a></td><td><a href="#cls-AnimalShelter"><code>def:AnimalShelter</code></a></td><td>join=ds10.CareRegNo</td></tr>
+<tr><td><code>OrgNm/CareAddr → Sido+Sigungu</code></td><td><a href="#prop-foundAt"><code>def:foundAt</code></a></td><td><a href="#cls-Region"><code>def:Region</code></a></td><td></td></tr>
+</tbody></table>
+<p><b>Notes</b><br>ProcessState=&#x27;보호중&#x27; 행만 인스턴스화. 날짜 YYYYMMDD→xsd:date, RFID 정규화,<br>Image1..Image4 → ImageMain + pipe-joined imageList, Sido/Sigungu 추출 후<br>Region 인스턴스에 foundAt 으로 링크. 결정성을 위해 DesertionNo 정렬 후 직렬화.<br></p>
+</section>
+<section id="ds09">
+<h3>ds09 — 분실동물</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>09_분실동물_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds09_lost</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-LostAnimal"><code>def:LostAnimal</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/lost/{lostId}</code></td></tr>
+<tr><th>Key columns</th><td><code>LostId</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>KindCd</code></td><td><a href="#prop-animalBreed"><code>def:animalBreed</code></a></td></tr>
+<tr><td><code>ColorCd</code></td><td><a href="#prop-colorCode"><code>def:colorCode</code></a></td></tr>
+<tr><td><code>HappenDt</code></td><td><a href="#prop-happenDate"><code>def:happenDate</code></a></td></tr>
+<tr><td><code>HappenPlace</code></td><td><a href="#prop-happenPlace"><code>def:happenPlace</code></a></td></tr>
+<tr><td><code>MatchingGrade</code></td><td><a href="#prop-matchingGrade"><code>def:matchingGrade</code></a></td></tr>
+<tr><td><code>ContactHash</code></td><td><a href="#prop-contactHash"><code>def:contactHash</code></a></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>Sido+Sigungu</code></td><td><a href="#prop-foundAt"><code>def:foundAt</code></a></td><td><a href="#cls-Region"><code>def:Region</code></a></td><td></td></tr>
+</tbody></table>
+</section>
+<section id="ds10">
+<h3>ds10 — 동물보호센터</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>10_동물보호센터_조회데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds10_shelter</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-AnimalShelter"><code>def:AnimalShelter</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/animal-shelter/{careRegNo}</code></td></tr>
+<tr><th>Key columns</th><td><code>CareRegNo</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>CareNm</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>CareAddr</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>CareTel</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+<tr><td><code>DesignationDate</code></td><td><a href="#prop-designatedDate"><code>def:designatedDate</code></a></td></tr>
+<tr><td><code>WeekOprStime</code></td><td><a href="#prop-weekdayOpenTime"><code>def:weekdayOpenTime</code></a></td></tr>
+<tr><td><code>WeekOprEtime</code></td><td><a href="#prop-weekdayCloseTime"><code>def:weekdayCloseTime</code></a></td></tr>
+<tr><td><code>WeekCellStime</code></td><td><a href="#prop-weekdayCellOpenTime"><code>def:weekdayCellOpenTime</code></a></td></tr>
+<tr><td><code>WeekCellEtime</code></td><td><a href="#prop-weekdayCellCloseTime"><code>def:weekdayCellCloseTime</code></a></td></tr>
+<tr><td><code>WeekendOprStime</code></td><td><a href="#prop-weekendOpenTime"><code>def:weekendOpenTime</code></a></td></tr>
+<tr><td><code>WeekendOprEtime</code></td><td><a href="#prop-weekendCloseTime"><code>def:weekendCloseTime</code></a></td></tr>
+<tr><td><code>WeekendCellStime</code></td><td><a href="#prop-weekendCellOpenTime"><code>def:weekendCellOpenTime</code></a></td></tr>
+<tr><td><code>WeekendCellEtime</code></td><td><a href="#prop-weekendCellCloseTime"><code>def:weekendCellCloseTime</code></a></td></tr>
+<tr><td><code>VetPersonCnt</code></td><td><a href="#prop-vetStaffCount"><code>def:vetStaffCount</code></a></td></tr>
+<tr><td><code>SpecsPersonCnt</code></td><td><a href="#prop-specStaffCount"><code>def:specStaffCount</code></a></td></tr>
+<tr><td><code>MedicalCnt</code></td><td><a href="#prop-medicalCount"><code>def:medicalCount</code></a></td></tr>
+<tr><td><code>BreedCnt</code></td><td><a href="#prop-breedCount"><code>def:breedCount</code></a></td></tr>
+<tr><td><code>QuarabtineCnt</code></td><td><a href="#prop-quarantineCount"><code>def:quarantineCount</code></a></td></tr>
+<tr><td><code>FeedCnt</code></td><td><a href="#prop-feedCount"><code>def:feedCount</code></a></td></tr>
+<tr><td><code>TransCarCnt</code></td><td><a href="#prop-transportCarCount"><code>def:transportCarCount</code></a></td></tr>
+</tbody></table>
+</section>
+<section id="ds11">
+<h3>ds11 — 반려동물 동반 가능 문화시설</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>11_반려동물동반가능_문화시설.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds11_culture</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-CultureFacility"><code>def:CultureFacility</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/culture-facility/{slug}</code></td></tr>
+<tr><th>Key columns</th><td><code>Name</code>, <code>Address</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Name</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>Address</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>Phone</code></td><td><a href="#prop-phone"><code>def:phone</code></a></td></tr>
+<tr><td><code>PetPolicy</code></td><td><a href="#prop-petPolicy"><code>def:petPolicy</code></a></td></tr>
+<tr><td><code>PetRestriction</code></td><td><a href="#prop-petRestriction"><code>def:petRestriction</code></a></td></tr>
+<tr><td><code>AllowedPetSize</code></td><td><a href="#prop-allowedPetSize"><code>def:allowedPetSize</code></a></td></tr>
+<tr><td><code>OperatingHours</code></td><td><a href="#prop-operatingHours"><code>def:operatingHours</code></a></td></tr>
+<tr><td><code>CloseDay</code></td><td><a href="#prop-closeDay"><code>def:closeDay</code></a></td></tr>
+<tr><td><code>EntryFee</code></td><td><a href="#prop-entryFee"><code>def:entryFee</code></a></td></tr>
+<tr><td><code>Homepage</code></td><td><a href="#prop-homepage"><code>def:homepage</code></a></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>Sigungu</code></td><td><a href="#prop-locatedIn"><code>def:locatedIn</code></a></td><td><a href="#cls-Region"><code>def:Region</code></a></td><td></td></tr>
+</tbody></table>
+</section>
+<section id="ds12">
+<h3>ds12 — 휴게소 반려동물 놀이터</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>12_휴게소_반려동물놀이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds12_restarea</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-RestArea"><code>def:RestArea</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/rest-area/{slug}</code></td></tr>
+<tr><th>Key columns</th><td><code>Name</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Name</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>Address</code></td><td><a href="#prop-address"><code>def:address</code></a></td></tr>
+<tr><td><code>FacilityType</code></td><td><a href="#prop-facilityType"><code>def:facilityType</code></a></td></tr>
+<tr><td><code>EstablishedYear</code></td><td><a href="#prop-establishedYear"><code>def:establishedYear</code></a></td></tr>
+<tr><td><code>Remark</code></td><td><a href="#prop-remark"><code>def:remark</code></a></td></tr>
+</tbody></table>
+</section>
+<section id="ds13">
+<h3>ds13 — 동물질병 증상</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>13_동물질병증상_데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds13_symptoms</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-Symptom"><code>def:Symptom</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/symptom/{symptomCode}</code></td></tr>
+<tr><th>Key columns</th><td><code>SymptomCode</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>SymptomCode</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>SymptomName</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>CauseClass</code></td><td><a href="#prop-causeClass"><code>def:causeClass</code></a></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>CategoryCode</code></td><td><a href="#prop-categoryOf"><code>def:categoryOf</code></a></td><td><a href="#cls-SymptomCategory"><code>def:SymptomCategory</code></a></td><td></td></tr>
+</tbody></table>
+</section>
+<section id="ds14">
+<h3>ds14 — 수의학 Q&amp;A (AI Hub 반려동물)</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>14_동물성장_및_질병_데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds14_vetqa</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-VetQA"><code>def:VetQA</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/vet-qa/{qaId}</code></td></tr>
+<tr><th>Key columns</th><td><code>QaId</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>Question</code></td><td><a href="#prop-question"><code>def:question</code></a></td></tr>
+<tr><td><code>Answer</code></td><td><a href="#prop-answer"><code>def:answer</code></a></td></tr>
+<tr><td><code>DepartmentLabel</code></td><td><a href="#prop-departmentLabel"><code>def:departmentLabel</code></a></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>DepartmentCode</code></td><td><a href="#prop-department"><code>def:department</code></a></td><td><a href="#cls-VetDepartment"><code>def:VetDepartment</code></a></td><td></td></tr>
+</tbody></table>
+</section>
+<section id="ds15">
+<h3>ds15 — 동물 질병 마스터</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>15_동물질병_데이터.csv</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds15_diseases</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-Disease"><code>def:Disease</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/disease/{diseaseCode}</code></td></tr>
+<tr><th>Key columns</th><td><code>DiseaseCode</code></td></tr>
+</tbody></table>
+<p><b>Column map</b> (CSV column → <code>def:</code> property)</p>
+<table><thead><tr><th>CSV column</th><th>Predicate</th></tr></thead><tbody>
+<tr><td><code>DiseaseCode</code></td><td><code>rdfs:label</code></td></tr>
+<tr><td><code>DiseaseName</code></td><td><code>rdfs:label</code></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>SymptomCodes</code></td><td><a href="#prop-hasSymptom"><code>def:hasSymptom</code></a></td><td><a href="#cls-Symptom"><code>def:Symptom</code></a></td><td>cardinality=1..N</td></tr>
+</tbody></table>
+</section>
+<section id="ds16">
+<h3>ds16 — 추론 체인 (파생)</h3>
+<table><tbody>
+<tr><th>Source CSV</th><td><code>(없음 — ds13 + ds15 + ds14 조합)</code></td></tr>
+<tr><th>Builder module</th><td><code>backend.kg.builders.ds16_reasoning</code></td></tr>
+<tr><th>Primary class</th><td><a href="#cls-SymptomCategory"><code>def:SymptomCategory</code></a></td></tr>
+<tr><th>URI template</th><td><code>id:animal/symptom-category/{categoryCode}</code></td></tr>
+<tr><th>Key columns</th><td><code>CategoryCode</code></td></tr>
+</tbody></table>
+<p><b>Relations</b> (object properties)</p>
+<table><thead><tr><th>Source columns</th><th>Predicate</th><th>Target class</th><th>Note</th></tr></thead><tbody>
+<tr><td><code>Category→Dept</code></td><td><a href="#prop-mapsTo"><code>def:mapsTo</code></a></td><td><a href="#cls-VetDepartment"><code>def:VetDepartment</code></a></td><td></td></tr>
+<tr><td><code>Symptom→Disease</code></td><td><a href="#prop-indicatesDisease"><code>def:indicatesDisease</code></a></td><td><a href="#cls-Disease"><code>def:Disease</code></a></td><td></td></tr>
+<tr><td><code>Disease→Dept</code></td><td><a href="#prop-treatedByDept"><code>def:treatedByDept</code></a></td><td><a href="#cls-VetDepartment"><code>def:VetDepartment</code></a></td><td></td></tr>
+<tr><td><code>Dept→Category</code></td><td><a href="#prop-treatsSympCategory"><code>def:treatsSympCategory</code></a></td><td><a href="#cls-SymptomCategory"><code>def:SymptomCategory</code></a></td><td></td></tr>
+<tr><td><code>Dept→Hospital</code></td><td><a href="#prop-handledBy"><code>def:handledBy</code></a></td><td><a href="#cls-AnimalHospital"><code>def:AnimalHospital</code></a></td><td></td></tr>
+</tbody></table>
+<p><b>Notes</b><br>파생 데이터셋 — CSV 입력 없이 ds13/15/14의 코드 매핑 테이블을 합성.<br>증상 → 질병 → 진료과 → 병원의 5-hop 추론 체인 인스턴스화.<br></p>
+</section>
+</section>
+
+<section>
+<h2>3. Classes</h2>
+<table>
+  <thead><tr><th>Term</th><th>Label (ko)</th><th>Comment</th><th>Sources</th></tr></thead>
+  <tbody>
+<tr id="cls-AbandonedAnimal"><td><code>def:AbandonedAnimal</code></td><td>구조동물</td><td>ProcessState=&#x27;보호중&#x27; 인 유기·구조 동물</td><td><a href="#ds08"><code>ds08</code> 구조동물 (유기·구조)</a></td></tr>
+<tr id="cls-AnimalHospital"><td><code>def:AnimalHospital</code></td><td>동물병원</td><td>동물 진료를 제공하는 시설 rdfs:subClassOf <code>def:Facility</code></td><td><a href="#ds01"><code>ds01</code> 동물병원</a></td></tr>
+<tr id="cls-AnimalShelter"><td><code>def:AnimalShelter</code></td><td>동물보호센터</td><td></td><td><a href="#ds10"><code>ds10</code> 동물보호센터</a></td></tr>
+<tr id="cls-Boarding"><td><code>def:Boarding</code></td><td>동물위탁관리업</td><td>반려동물 위탁관리(보딩) 시설 rdfs:subClassOf <code>def:Facility</code></td><td><a href="#ds04"><code>ds04</code> 동물위탁관리업(보딩)</a></td></tr>
+<tr id="cls-Cat"><td><code>def:Cat</code></td><td>고양이</td><td> rdfs:subClassOf <code>def:AbandonedAnimal</code></td><td>—</td></tr>
+<tr id="cls-Cremation"><td><code>def:Cremation</code></td><td>동물장묘업</td><td> rdfs:subClassOf <code>def:Facility</code></td><td><a href="#ds05"><code>ds05</code> 동물장묘업</a></td></tr>
+<tr id="cls-CultureFacility"><td><code>def:CultureFacility</code></td><td>반려동물 동반 가능 문화시설</td><td></td><td><a href="#ds11"><code>ds11</code> 반려동물 동반 가능 문화시설</a></td></tr>
+<tr id="cls-Disease"><td><code>def:Disease</code></td><td>동물 질병</td><td></td><td><a href="#ds15"><code>ds15</code> 동물 질병 마스터</a></td></tr>
+<tr id="cls-Dog"><td><code>def:Dog</code></td><td>개</td><td> rdfs:subClassOf <code>def:AbandonedAnimal</code></td><td>—</td></tr>
+<tr id="cls-Grooming"><td><code>def:Grooming</code></td><td>동물미용업</td><td> rdfs:subClassOf <code>def:Facility</code></td><td><a href="#ds03"><code>ds03</code> 동물미용업</a></td></tr>
+<tr id="cls-LostAnimal"><td><code>def:LostAnimal</code></td><td>분실동물</td><td></td><td><a href="#ds09"><code>ds09</code> 분실동물</a></td></tr>
+<tr id="cls-Pharmacy"><td><code>def:Pharmacy</code></td><td>동물약국</td><td>동물용 의약품을 판매하는 약국 rdfs:subClassOf <code>def:Facility</code></td><td><a href="#ds02"><code>ds02</code> 동물약국</a></td></tr>
+<tr id="cls-Region"><td><code>def:Region</code></td><td>행정구역(시도/시군구)</td><td></td><td><a href="#ds08"><code>ds08</code> 구조동물 (유기·구조)</a><br><a href="#ds09"><code>ds09</code> 분실동물</a><br><a href="#ds10"><code>ds10</code> 동물보호센터</a><br><a href="#ds11"><code>ds11</code> 반려동물 동반 가능 문화시설</a></td></tr>
+<tr id="cls-RestArea"><td><code>def:RestArea</code></td><td>휴게소 반려동물 놀이터</td><td></td><td><a href="#ds12"><code>ds12</code> 휴게소 반려동물 놀이터</a></td></tr>
+<tr id="cls-Symptom"><td><code>def:Symptom</code></td><td>동물 질병 증상</td><td></td><td><a href="#ds13"><code>ds13</code> 동물질병 증상</a></td></tr>
+<tr id="cls-SymptomCategory"><td><code>def:SymptomCategory</code></td><td>증상 분류 (a..l)</td><td></td><td><a href="#ds13"><code>ds13</code> 동물질병 증상</a><br><a href="#ds16"><code>ds16</code> 추론 체인 (파생)</a></td></tr>
+<tr id="cls-TravelSpot"><td><code>def:TravelSpot</code></td><td>반려동물 동반여행 명소</td><td></td><td><a href="#ds07"><code>ds07</code> 반려동물 동반여행 명소 (관광 API)</a></td></tr>
+<tr id="cls-VetDepartment"><td><code>def:VetDepartment</code></td><td>진료과 (내과/외과/피부과/안과/치과)</td><td></td><td><a href="#ds16"><code>ds16</code> 추론 체인 (파생)</a></td></tr>
+<tr id="cls-VetQA"><td><code>def:VetQA</code></td><td>수의학 Q&amp;A 페어</td><td>AI Hub 반려동물 성장·질병 말뭉치에서 추출한 질문/답변 페어</td><td><a href="#ds14"><code>ds14</code> 수의학 Q&amp;A (AI Hub 반려동물)</a></td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>4. Properties</h2>
+<table>
+  <thead><tr><th>Term</th><th>Label (ko)</th><th>Kind</th><th>Domain</th><th>Range</th></tr></thead>
+  <tbody>
+<tr id="prop-address"><td><code>def:address</code></td><td>도로명 주소</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-adoptionCondition"><td><code>def:adoptionCondition</code></td><td>입양 조건</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-adoptionText"><td><code>def:adoptionText</code></td><td>입양공고 본문(200자 truncate)</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-adoptionTitle"><td><code>def:adoptionTitle</code></td><td>입양공고 제목</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-ageDetail"><td><code>def:ageDetail</code></td><td>나이 상세</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-allowedPetSize"><td><code>def:allowedPetSize</code></td><td>입장 가능 동물 크기</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-animalBreed"><td><code>def:animalBreed</code></td><td>품종명</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-answer"><td><code>def:answer</code></td><td>답변 본문</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-areaCode"><td><code>def:areaCode</code></td><td>관광 API 지역코드</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-birthYear"><td><code>def:birthYear</code></td><td>출생년도</td><td>data</td><td>—</td><td><code>xsd:gYear</code></td></tr>
+<tr id="prop-breedCount"><td><code>def:breedCount</code></td><td>사육실 수</td><td>data</td><td>—</td><td><code>xsd:integer</code></td></tr>
+<tr id="prop-businessStatus"><td><code>def:businessStatus</code></td><td>영업상태</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-businessStatusDetail"><td><code>def:businessStatusDetail</code></td><td>영업상태 상세</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-category"><td><code>def:category</code></td><td>분류</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-categoryOf"><td><code>def:categoryOf</code></td><td>증상이 속한 분류</td><td>object</td><td><code>def:Symptom</code></td><td><code>def:SymptomCategory</code></td></tr>
+<tr id="prop-causeClass"><td><code>def:causeClass</code></td><td>발병 원인 분류</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-closeDay"><td><code>def:closeDay</code></td><td>휴무일</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-closingDate"><td><code>def:closingDate</code></td><td>폐업일</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-colorCode"><td><code>def:colorCode</code></td><td>색상 코드</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-contactHash"><td><code>def:contactHash</code></td><td>연락처 해시(PII 보호)</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-department"><td><code>def:department</code></td><td>진료과(객체 링크)</td><td>object</td><td><code>def:VetQA</code></td><td><code>def:VetDepartment</code></td></tr>
+<tr id="prop-departmentLabel"><td><code>def:departmentLabel</code></td><td>진료과 한글 라벨</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-deptHint"><td><code>def:deptHint</code></td><td>진료과 매핑 힌트(한글 라벨)</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-desertionNo"><td><code>def:desertionNo</code></td><td>유기번호</td><td>data</td><td><code>def:AbandonedAnimal</code></td><td><code>xsd:string</code></td></tr>
+<tr id="prop-designatedDate"><td><code>def:designatedDate</code></td><td>지정일 (보호센터)</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-endReason"><td><code>def:endReason</code></td><td>종료 사유</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-entryFee"><td><code>def:entryFee</code></td><td>입장료</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-establishedYear"><td><code>def:establishedYear</code></td><td>설립 연도</td><td>data</td><td>—</td><td><code>xsd:gYear</code></td></tr>
+<tr id="prop-facilityType"><td><code>def:facilityType</code></td><td>시설 유형</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-feedCount"><td><code>def:feedCount</code></td><td>먹이공간 수</td><td>data</td><td>—</td><td><code>xsd:integer</code></td></tr>
+<tr id="prop-floorAreaSqm"><td><code>def:floorAreaSqm</code></td><td>영업장 면적(㎡)</td><td>data</td><td>—</td><td><code>xsd:decimal</code></td></tr>
+<tr id="prop-foundAt"><td><code>def:foundAt</code></td><td>발견 행정구역</td><td>object</td><td>—</td><td><code>def:Region</code></td></tr>
+<tr id="prop-handledBy"><td><code>def:handledBy</code></td><td>진료과를 운영하는 시설 클래스</td><td>object</td><td><code>def:VetDepartment</code></td><td><code>def:AnimalHospital</code></td></tr>
+<tr id="prop-happenDate"><td><code>def:happenDate</code></td><td>발견일자</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-happenPlace"><td><code>def:happenPlace</code></td><td>발견장소</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-hasSymptom"><td><code>def:hasSymptom</code></td><td>질병의 증상 (역방향)</td><td>object</td><td><code>def:Disease</code></td><td><code>def:Symptom</code></td></tr>
+<tr id="prop-healthChk"><td><code>def:healthChk</code></td><td>건강검진 여부</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-homepage"><td><code>def:homepage</code></td><td>홈페이지</td><td>data</td><td>—</td><td><code>xsd:anyURI</code></td></tr>
+<tr id="prop-imageList"><td><code>def:imageList</code></td><td>이미지 URL 목록(파이프 구분)</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-indicatesDisease"><td><code>def:indicatesDisease</code></td><td>증상 → 의심 질병</td><td>object</td><td><code>def:Symptom</code></td><td><code>def:Disease</code></td></tr>
+<tr id="prop-kindFullName"><td><code>def:kindFullName</code></td><td>품종 풀네임</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-licenseDate"><td><code>def:licenseDate</code></td><td>인허가일</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-locatedIn"><td><code>def:locatedIn</code></td><td>위치한 행정구역</td><td>object</td><td>—</td><td><code>def:Region</code></td></tr>
+<tr id="prop-mapsTo"><td><code>def:mapsTo</code></td><td>증상분류 → 진료과 매핑</td><td>object</td><td><code>def:SymptomCategory</code></td><td><code>def:VetDepartment</code></td></tr>
+<tr id="prop-matchingCandidate"><td><code>def:matchingCandidate</code></td><td>분실동물 매칭 후보</td><td>object</td><td><code>def:AbandonedAnimal</code></td><td><code>def:LostAnimal</code></td></tr>
+<tr id="prop-matchingGrade"><td><code>def:matchingGrade</code></td><td>매칭 등급</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-medicalCount"><td><code>def:medicalCount</code></td><td>의료실 수</td><td>data</td><td>—</td><td><code>xsd:integer</code></td></tr>
+<tr id="prop-neuterYn"><td><code>def:neuterYn</code></td><td>중성화 여부</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-noticeEDate"><td><code>def:noticeEDate</code></td><td>공고종료일</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-noticeNo"><td><code>def:noticeNo</code></td><td>공고번호</td><td>data</td><td><code>def:AbandonedAnimal</code></td><td><code>xsd:string</code></td></tr>
+<tr id="prop-noticeSDate"><td><code>def:noticeSDate</code></td><td>공고시작일</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-operatingHours"><td><code>def:operatingHours</code></td><td>운영시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-petPolicy"><td><code>def:petPolicy</code></td><td>반려동물 동반 가능 정보</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-petRestriction"><td><code>def:petRestriction</code></td><td>반려동물 제한사항</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-phone"><td><code>def:phone</code></td><td>전화번호</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-processState"><td><code>def:processState</code></td><td>보호상태</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-protectedBy"><td><code>def:protectedBy</code></td><td>보호 중인 보호센터</td><td>object</td><td><code>def:AbandonedAnimal</code></td><td><code>def:AnimalShelter</code></td></tr>
+<tr id="prop-quarantineCount"><td><code>def:quarantineCount</code></td><td>격리실 수</td><td>data</td><td>—</td><td><code>xsd:integer</code></td></tr>
+<tr id="prop-question"><td><code>def:question</code></td><td>질문 본문</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-remark"><td><code>def:remark</code></td><td>비고</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-reopenDate"><td><code>def:reopenDate</code></td><td>재개업일</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-rfidCode"><td><code>def:rfidCode</code></td><td>RFID 코드</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-sigunguCode"><td><code>def:sigunguCode</code></td><td>관광 API 시군구코드</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-specStaffCount"><td><code>def:specStaffCount</code></td><td>일반인력 수</td><td>data</td><td>—</td><td><code>xsd:integer</code></td></tr>
+<tr id="prop-specialMark"><td><code>def:specialMark</code></td><td>특이사항</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-suspensionEnd"><td><code>def:suspensionEnd</code></td><td>휴업 종료일</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-suspensionStart"><td><code>def:suspensionStart</code></td><td>휴업 시작일</td><td>data</td><td>—</td><td><code>xsd:date</code></td></tr>
+<tr id="prop-targetAnimal"><td><code>def:targetAnimal</code></td><td>보호 대상 동물</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-taskType"><td><code>def:taskType</code></td><td>위탁관리 업무 유형</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-transportCarCount"><td><code>def:transportCarCount</code></td><td>운반차량 수</td><td>data</td><td>—</td><td><code>xsd:integer</code></td></tr>
+<tr id="prop-treatedAt"><td><code>def:treatedAt</code></td><td>진료 가능 병원</td><td>object</td><td><code>def:Disease</code></td><td><code>def:AnimalHospital</code></td></tr>
+<tr id="prop-treatedByDept"><td><code>def:treatedByDept</code></td><td>담당 진료과</td><td>object</td><td><code>def:Disease</code></td><td><code>def:VetDepartment</code></td></tr>
+<tr id="prop-treatsSympCategory"><td><code>def:treatsSympCategory</code></td><td>진료과 → 증상분류 역매핑</td><td>object</td><td><code>def:VetDepartment</code></td><td><code>def:SymptomCategory</code></td></tr>
+<tr id="prop-unresolvedCareRegNo"><td><code>def:unresolvedCareRegNo</code></td><td>ds10 마스터 미존재 CareRegNo</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-vaccinationChk"><td><code>def:vaccinationChk</code></td><td>백신접종 여부</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-vetStaffCount"><td><code>def:vetStaffCount</code></td><td>수의사 수</td><td>data</td><td>—</td><td><code>xsd:integer</code></td></tr>
+<tr id="prop-weekdayCellCloseTime"><td><code>def:weekdayCellCloseTime</code></td><td>평일 분양 종료시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weekdayCellOpenTime"><td><code>def:weekdayCellOpenTime</code></td><td>평일 분양 시작시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weekdayCloseTime"><td><code>def:weekdayCloseTime</code></td><td>평일 운영 종료시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weekdayOpenTime"><td><code>def:weekdayOpenTime</code></td><td>평일 운영 시작시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weekendCellCloseTime"><td><code>def:weekendCellCloseTime</code></td><td>주말 분양 종료시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weekendCellOpenTime"><td><code>def:weekendCellOpenTime</code></td><td>주말 분양 시작시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weekendCloseTime"><td><code>def:weekendCloseTime</code></td><td>주말 운영 종료시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weekendOpenTime"><td><code>def:weekendOpenTime</code></td><td>주말 운영 시작시간</td><td>data</td><td>—</td><td><code>xsd:string</code></td></tr>
+<tr id="prop-weightKg"><td><code>def:weightKg</code></td><td>체중(Kg)</td><td>data</td><td>—</td><td><code>xsd:decimal</code></td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>5. Reasoning Patterns</h2>
+<pre><code>SymptomCategory --def:mapsTo→            VetDepartment
+Symptom         --def:indicatesDisease→  Disease    (역방향 def:hasSymptom)
+Disease         --def:treatedByDept→     VetDepartment
+VetDepartment   --def:treatsSympCategory→ SymptomCategory
+VetDepartment   --def:handledBy→         AnimalHospital
+</code></pre>
+
+<p>예시 SPARQL:</p>
+<pre><code>PREFIX def: &lt;https://knowledgemap.kr/koah/def/&gt;
+SELECT ?d ?dept WHERE {
+  ?sym a def:Symptom ; def:indicatesDisease ?d .
+  ?d   def:treatedByDept ?dept .
+} LIMIT 10
+</code></pre>
+</section>
+
+<section>
+<h2>6. URI Policy</h2>
+<p>전체 정책은 <a href="../URI_POLICY.md"><code>docs/URI_POLICY.md</code></a> 참조 (UK Public Sector URI 101).</p>
+</section>
+
+</body>
+</html>

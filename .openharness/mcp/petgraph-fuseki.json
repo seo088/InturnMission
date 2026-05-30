@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/HKUDS/OpenHarness/main/schemas/mcp-server.schema.json",
+  "name": "petgraph_fuseki",
+  "description": "로컬 Apache Jena Fuseki(http://localhost:3030/knowledgemap) HTTP 프록시 MCP. SPARQL query/update 및 graph store protocol 노출.",
+  "transport": "stdio",
+  "command": "python3",
+  "args": ["-m", "petgraph_mcp.fuseki_server"],
+  "env": {
+    "FUSEKI_ENDPOINT": "http://localhost:3031/knowledgemap",
+    "FUSEKI_USER": "admin",
+    "FUSEKI_ADMIN_PW_FILE": "ops/fuseki/.env",
+    "PYTHONPATH": "backend"
+  },
+  "permissions": {
+    "mode": "mixed",
+    "read_tools":  ["sparql_query", "graph_get", "list_graphs", "shacl_validate"],
+    "write_tools": ["sparql_update", "graph_put", "graph_delete"],
+    "write_requires_confirmation": true
+  },
+  "tools": [
+    { "name": "sparql_query",  "description": "SPARQL SELECT/ASK/CONSTRUCT/DESCRIBE 질의" },
+    { "name": "sparql_update", "description": "SPARQL UPDATE (사용자 확인 후)" },
+    { "name": "graph_put",     "description": "TTL 파일을 named graph 로 PUT (덮어쓰기)" },
+    { "name": "graph_get",     "description": "named graph 를 TTL 로 export" },
+    { "name": "graph_delete",  "description": "named graph 삭제 (관리자 확인)" },
+    { "name": "list_graphs",   "description": "현재 데이터셋의 named graph 목록" },
+    { "name": "shacl_validate","description": "shapes 그래프로 SHACL 검증" }
+  ],
+  "notes": [
+    "petgraph_mcp.fuseki_server 모듈은 P3 단계에서 backend/petgraph_mcp/ 에 신규 작성 (현재 스텁).",
+    "운영 NAS 이전 시 endpoint 만 교체하면 동일하게 동작."
+  ]
+}

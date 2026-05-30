@@ -1,0 +1,38 @@
+name: knowledgemap
+
+# 로컬 개발용 Apache Jena Fuseki + TDB2
+# 운영 NAS 이전 시 reverse-proxy(nginx) + TLS + 콘텐츠 협상 추가 (fuseki-deploy.md NAS 체크리스트 참조)
+
+services:
+  fuseki:
+    image: secoresearch/fuseki:5.0.0
+    container_name: knowledgemap_fuseki
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3031:3030"   # host 3031 (3030은 다른 프로젝트 점유)
+    environment:
+      ADMIN_PASSWORD: ${FUSEKI_ADMIN_PW:?set FUSEKI_ADMIN_PW in .env}
+      ENABLE_DATA_WRITE: "true"
+      ENABLE_UPDATE: "true"
+      ENABLE_UPLOAD: "true"
+      QUERY_TIMEOUT: "30000"
+      FUSEKI_DATASET_1: knowledgemap
+      JVM_ARGS: "-Xmx2g -Xms512m"
+    volumes:
+      - fuseki_data:/fuseki/databases
+      - ../../turtle:/staging/turtle:ro
+    networks:
+      - knowledgemap_net
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:3030/$$/ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  fuseki_data:
+    name: knowledgemap_fuseki_data
+
+networks:
+  knowledgemap_net:
+    name: knowledgemap_net

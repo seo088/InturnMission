@@ -1,0 +1,61 @@
+
+[01_hospital] ─────────────────────────────────
+  원본: 5,406행 × 19컬럼
+  DROP 컬럼(1개): ['closingdate']
+  → 저장: 01_hospital_clean.csv (5,382행)
+  → 제외: 01_hospital_missing.csv (24행)
+
+[02_pharmacy] ─────────────────────────────────
+  원본: 13,194행 × 28컬럼
+  DROP 컬럼(2개): ['lotpostalcode', 'licenserevokeddate']
+  → 저장: 02_pharmacy_clean.csv (13,072행)
+  → 제외: 02_pharmacy_missing.csv (122행)
+
+[03_grooming] ─────────────────────────────────
+  원본: 10,879행 × 29컬럼
+  DROP 컬럼(5개): ['lotpostalcode', 'licensewithdrawaldate', 'closingdate', 'tempclosingstart', 'tempclosingend']
+  → 저장: 03_grooming_clean.csv (10,833행)
+  → 제외: 03_grooming_missing.csv (46행)
+
+[04_boarding] ─────────────────────────────────
+  원본: 5,845행 × 19컬럼
+  DROP 컬럼(2개): ['tasktype', 'closingdate']
+  → 저장: 04_boarding_clean.csv (5,824행)
+  → 제외: 04_boarding_missing.csv (21행)
+
+[05_cremation] ─────────────────────────────────
+  원본: 86행 × 18컬럼
+  DROP 컬럼(1개): ['closingdate']
+  → 저장: 05_cremation_clean.csv (85행)
+  → 제외: 05_cremation_missing.csv (1행)
+
+[08] 구조동물 ─────────────────────────────────
+  DROP 컬럼(16개): ['etcbigo', 'adptntitle', 'adptnsdate', 'adptnedate', 'adptntxt', 'adptncondition', 'adptnimg', 'sprttitle', 'sprtsdate', 'sprtedate', 'sprttxt', 'srvctitle', 'srvctxt', 'evnttitle', 'evnttxt', 'evntimg']
+  → 저장: 08_rescue_dog_clean.csv (13,627행)
+  → 저장: 08_rescue_cat_clean.csv (1,504행)
+  → 저장: 08_rescue_all_clean.csv (15,240행)
+
+[09] 분실동물 ─────────────────────────────────
+  → 저장: 09_lost_animal_clean.csv (2,963행)
+
+[10] 보호센터 ─────────────────────────────────
+  → 저장: 10_shelter_clean.csv (330행)
+
+[11_culture.csv] ─────────────────────────────────
+  → 저장: 11_culture_clean.csv (68행)
+
+[12_restarea.csv] ─────────────────────────────────
+  → 저장: 12_restarea_clean.csv (20행)
+
+[13_symptoms.csv] ─────────────────────────────────
+  → 저장: 13_symptoms_clean.csv (516행)
+
+[14_disease_qa.csv] ─────────────────────────────────
+  → 저장: 14_disease_qa_clean.csv (25행)
+
+[15_diseases.csv] ─────────────────────────────────
+  → 저장: 15_diseases_clean.csv (116행)
+
+============================================================
+정제 완료: 2026-05-04 01:01:23
+============================================================

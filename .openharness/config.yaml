@@ -1,0 +1,96 @@
+# OpenHarness 프로젝트 설정 — Pet-Graph
+# 참고: https://github.com/HKUDS/OpenHarness
+#
+# 설치(사용자 직접 수행):
+#   curl -fsSL https://raw.githubusercontent.com/HKUDS/OpenHarness/main/scripts/install.sh | bash
+#   export ANTHROPIC_API_KEY=...   # 또는 사용 모델의 키
+#   cd /home/hong/petgraph && oh
+
+project:
+  name: petgraph
+  description: 전국 반려동물 지식그래프 풀스택 프로젝트
+  context_file: CLAUDE.md
+
+# 모델 (사용자 환경에 맞게 수정)
+model:
+  provider: anthropic        # anthropic | moonshot | vertex | bedrock
+  name: claude-opus-4-6
+  fast_name: claude-haiku-4-5-20251001
+
+# 권한 모드: 다단계
+# - read: 모든 경로 읽기 허용 (.ohignore 제외)
+# - write: 화이트리스트 경로만 쓰기 허용
+# - exec: 화이트리스트 명령만 실행 허용
+permissions:
+  default_mode: ask          # ask | auto | strict
+  read:
+    deny:
+      - postgres_data/**
+      - venv/**
+      - backend/venv/**
+      - backend/venv_backup/**
+      - frontend/node_modules/**
+      - download.tar
+      - .env
+      - .env.*
+  write:
+    allow:
+      - backend/app/**
+      - backend/kg/**
+      - backend/etl/**
+      - backend/petgraph_mcp/**
+      - frontend/src/**
+      - turtle/knowledgemap_*.ttl
+      - turtle/[0-9][0-9]_*.ttl
+      - turtle/def_*.ttl
+      - preprocessed_data/**
+      - .openharness/**
+      - ops/**
+      - docs/**
+      - reports/**
+      - CLAUDE.md
+      - README*.md
+    deny:
+      # 레거시·중복 (CLAUDE.md §1-1) — 사용자 명시 지시 없이 수정 금지
+      - main.py
+      - dashboard.py
+      - Dashboard.jsx
+      - rescue_to_turtle.py
+      - rescue_to_turtle1.py
+      - qa_to_turtle.py
+      - csv_data/**       # 원본 데이터 보호
+      - db/init.sql
+      - init.sql
+      - docker-compose.yml
+      - turtle/animalloo_*.ttl   # 레거시 네임스페이스 — 읽기전용
+  exec:
+    allow:
+      - "python3 *"
+      - "uvicorn *"
+      - "npm *"
+      - "node *"
+      - "pytest *"
+      - "ruff *"
+      - "psql *"
+    deny:
+      - "rm -rf *"
+      - "git push *"
+      - "docker *down*"
+      - "dropdb *"
+
+# MCP 서버 (스텁 — 사용 시 사용자가 직접 활성화)
+mcp_servers:
+  petgraph_pg:     .openharness/mcp/petgraph-pg.json
+  petgraph_sparql: .openharness/mcp/petgraph-sparql.json
+  petgraph_fuseki: .openharness/mcp/petgraph-fuseki.json
+  petgraph_uri:    .openharness/mcp/petgraph-uri.json
+
+# 스킬 디렉토리
+skills_dir: .openharness/skills
+
+# 컨텍스트 압축
+context:
+  auto_compact: true
+  preserve:
+    - CLAUDE.md
+    - .openharness/skills/INDEX.md
