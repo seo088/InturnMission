@@ -123,7 +123,11 @@ async def get_hospitals_map():
         for b in res["results"]["bindings"]
     ]
 @router.get("/map-facilities")
-async def get_map_facilities(category: str = "hospital"):
+async def get_map_facilities(
+    category: str = "hospital",
+    lat_min: float = 33.0, lat_max: float = 39.0,
+    lon_min: float = 124.0, lon_max: float = 132.0,
+):
     type_map = {
         "hospital":  "def:AnimalHospital",
         "pharmacy":  "def:Pharmacy",
@@ -147,6 +151,7 @@ async def get_map_facilities(category: str = "hospital"):
 
     res = await sparql_query(f"""
     {PREFIX}
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     SELECT ?s ?name ?address ?lat ?lon WHERE {{
       ?s a {rdf_type} ;
          rdfs:label ?name ;
@@ -154,8 +159,10 @@ async def get_map_facilities(category: str = "hospital"):
       ?geo schema:latitude ?lat ;
            schema:longitude ?lon .
       OPTIONAL {{ ?s def:address ?address }}
+      FILTER(xsd:decimal(?lat) >= {lat_min} && xsd:decimal(?lat) <= {lat_max} &&
+             xsd:decimal(?lon) >= {lon_min} && xsd:decimal(?lon) <= {lon_max})
     }}
-    LIMIT 300
+    LIMIT 500
     """)
 
     return [

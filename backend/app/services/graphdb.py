@@ -2,7 +2,7 @@ import httpx
 from fastapi import HTTPException
 from app.core.config import settings
 
-FUSEKI_URL = f"{settings.FUSEKI_URL}/sparql"
+FUSEKI_URL = settings.FUSEKI_URL
 
 async def sparql_query(query: str) -> dict:
     try:

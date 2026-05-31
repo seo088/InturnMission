@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
+import { useEffect, useState, useCallback, useRef } from 'react'
+import { MapContainer, TileLayer, CircleMarker, Popup, useMapEvents, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 
 const CATEGORIES = [
@@ -138,18 +138,41 @@ function SymptomTab() {
   )
 }
 
+function BoundsWatcher({ onBoundsChange }) {
+  const map = useMap()
+  useEffect(() => { onBoundsChange(map.getBounds()) }, [])
+  useMapEvents({
+    moveend: () => onBoundsChange(map.getBounds()),
+    zoomend: () => onBoundsChange(map.getBounds()),
+  })
+  return null
+}
+
 function MapTab() {
   const [category, setCategory] = useState('hospital')
   const [facilities, setFacilities] = useState([])
   const [loading, setLoading] = useState(false)
+  const [bounds, setBounds] = useState(null)
+  const abortRef = useRef(null)
 
-  useEffect(() => {
-    setLoading(true); setFacilities([])
-    fetch(`/api/scenario/map-facilities?category=${category}`)
+  const fetchFacilities = useCallback((cat, b) => {
+    if (!b) return
+    if (abortRef.current) abortRef.current.abort()
+    abortRef.current = new AbortController()
+    const sw = b.getSouthWest(), ne = b.getNorthEast()
+    setLoading(true)
+    fetch(
+      `/api/scenario/map-facilities?category=${cat}&lat_min=${sw.lat.toFixed(6)}&lat_max=${ne.lat.toFixed(6)}&lon_min=${sw.lng.toFixed(6)}&lon_max=${ne.lng.toFixed(6)}`,
+      { signal: abortRef.current.signal }
+    )
       .then(r => r.json())
       .then(data => { setFacilities(data); setLoading(false) })
-      .catch(() => setLoading(false))
-  }, [category])
+      .catch(e => { if (e.name !== 'AbortError') setLoading(false) })
+  }, [])
+
+  useEffect(() => { fetchFacilities(category, bounds) }, [category, bounds])
+
+  const handleBoundsChange = useCallback((b) => { setBounds(b) }, [])
 
   return (
     <div>
@@ -175,6 +198,7 @@ function MapTab() {
             attribution='&copy; OpenStreetMap contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <BoundsWatcher onBoundsChange={handleBoundsChange} />
           {facilities.map((f, i) => (
             <CircleMarker key={i} center={[f.lat, f.lon]} radius={6}
               fillColor={f.color} color={f.color} weight={1} fillOpacity={0.8}>
@@ -197,7 +221,7 @@ function MapTab() {
             {c.label}
           </div>
         ))}
-        <span style={{ marginLeft: 'auto', fontSize: 10, color: '#94a3b8' }}>OpenStreetMap · Fuseki 실좌표</span>
+        <span style={{ marginLeft: 'auto', fontSize: 10, color: '#94a3b8' }}>지도 이동 시 자동 로딩 · OpenStreetMap</span>
       </div>
     </div>
   )
