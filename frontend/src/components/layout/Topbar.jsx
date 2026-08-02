@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 const NAV = [
   { path: '/',         label: '📊 대시보드' },
-  { path: '/datasets', label: '🗂️ 데이터셋 (14개)' },
+  { path: '/datasets', label: '🗂️ 데이터셋 (16개)' },
   { path: '/kg',       label: '🕸️ 지식그래프' },
   { path: '/mapping',  label: '🔗 매핑테이블' },
 ]
@@ -35,7 +35,7 @@ export default function Topbar() {
         ))}
       </nav>
       <div className="ml-auto flex items-center gap-2">
-        {[['green','API 연동 11개'],['yellow','CSV 3개'],['red','실시간 2개']].map(([c,l]) => (
+        {[['green','공공 API 11개'],['yellow','CSV/파일 3개'],['red','AI허브 2개']].map(([c,l]) => (
           <Pill key={l} color={c} label={l} />
         ))}
         <span className="font-mono text-[11px]" style={{ color:'var(--muted)' }}>{time}</span>

@@ -1,0 +1,2 @@
+/* HealthCheck sits inside UserLayout, so only the shared header is shown. */
+.ar-user-shell .hc-header { display: none; }

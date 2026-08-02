@@ -1,0 +1,69 @@
+{
+  "schema_version": "cough-demo-v1",
+  "generated_at": "2026-07-28T09:45:00+09:00",
+  "representative_text": "강아지가 짖고 나면 쿨럭거리는 기침을 해요.",
+  "symptom": {
+    "code": "i012",
+    "label": "기침",
+    "category": "호흡기계 증상",
+    "confidence": "high",
+    "source": "DS13 전국 동물질병 증상 공공데이터 + DS14 승인 매핑",
+    "verification_status": "human_reviewed"
+  },
+  "diseases": [
+    {
+      "name": "기관허탈",
+      "uri": "http://knowledgemap.kr/id/animal/disease/qa-tracheal-collapse",
+      "department": "진료 문의 분야 미확정 — 병원에 증상 진료 가능 여부를 전화로 확인하세요.",
+      "display_priority": 1,
+      "confidence_status": "not_evaluated",
+      "reviewed_at": "2026-07-28T00:00:00+09:00",
+      "source": "DS27 질병-증상 관계 검수"
+    },
+    {
+      "name": "기관 협착",
+      "uri": "http://knowledgemap.kr/id/animal/disease/qa-tracheal-stenosis",
+      "department": "진료 문의 분야 미확정 — 병원에 증상 진료 가능 여부를 전화로 확인하세요.",
+      "display_priority": 2,
+      "confidence_status": "not_evaluated",
+      "reviewed_at": "2026-07-28T00:00:00+09:00",
+      "source": "DS27 질병-증상 관계 검수"
+    },
+    {
+      "name": "만성 기관지염",
+      "uri": "http://knowledgemap.kr/id/animal/disease/qa-chronic-bronchitis",
+      "department": "진료 문의 분야 미확정 — 병원에 증상 진료 가능 여부를 전화로 확인하세요.",
+      "display_priority": 3,
+      "confidence_status": "not_evaluated",
+      "reviewed_at": "2026-07-28T00:00:00+09:00",
+      "source": "DS27 질병-증상 관계 검수"
+    }
+  ],
+  "hospitals": [
+    {
+      "facility_id": "467100001020070001",
+      "name": "군산24시 제일동물병원",
+      "phone": "063-461-5079",
+      "phone_verified_at": "2026-07-28T09:00:17+09:00"
+    },
+    {
+      "facility_id": "467100001020170002",
+      "name": "도담동물병원",
+      "phone": "063-452-6700",
+      "phone_verified_at": "2026-07-28T09:00:17+09:00"
+    },
+    {
+      "facility_id": "467100001020110001",
+      "name": "수송반려동물병원",
+      "phone": "063-463-5575",
+      "phone_verified_at": "2026-07-28T09:00:17+09:00"
+    }
+  ],
+  "capability_defaults": {
+    "24h_operation": "unknown",
+    "emergency_care": "unknown",
+    "specialty_care": "unknown",
+    "current_availability": "unknown"
+  },
+  "medical_disclaimer": "이 결과는 진단이나 질병 발생 확률이 아닙니다. 공공데이터와 사람 검수 관계를 이용한 가능성 후보이며 방문 전 반드시 병원에 전화로 확인하세요."
+}

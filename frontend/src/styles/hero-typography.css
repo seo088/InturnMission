@@ -1,0 +1,10 @@
+/* Keep the landing message actionable rather than poster-like. */
+.ar-home .ar-hero h1 { max-width: 620px; font-size: clamp(40px, 4.15vw, 58px); line-height: 1.26; letter-spacing: -.052em; }
+.ar-home .ar-hero h1 em::after { height: 6px; bottom: -2px; opacity: .72; }
+.ar-home .ar-hero-description { max-width: 570px; margin-top: 20px; font-size: 16px; line-height: 1.75; }
+.ar-home .ar-hero-actions { margin-top: 25px; }
+@media (max-width: 640px) {
+  .ar-home .ar-hero h1 { font-size: clamp(31px, 9vw, 39px); line-height: 1.3; }
+  .ar-home .ar-hero-description { margin-top: 17px; font-size: 15px; }
+  .ar-home .ar-hero-actions { margin-top: 22px; }
+}
