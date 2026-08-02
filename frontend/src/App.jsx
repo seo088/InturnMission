@@ -18,6 +18,7 @@ import UserDashboard from './pages/UserDashboard'
 import Account from './pages/Account'
 import HealthRecords from './pages/HealthRecords'
 import CareSchedule from './pages/CareSchedule'
+import SavedPlaces from './pages/SavedPlaces'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/my" element={<UserDashboard />} />
           <Route path="/my/records" element={<HealthRecords />} />
           <Route path="/my/schedule" element={<CareSchedule />} />
+          <Route path="/my/saved" element={<SavedPlaces />} />
           <Route path="/account" element={<Account />} />
         </Route>
         <Route element={<AdminLayout />}>

@@ -8,3 +8,11 @@ export const DEMO_HEALTH_RECORDS = [
 ]
 
 export function getDemoHealthRecords(petId) { return DEMO_HEALTH_RECORDS.filter((record) => record.petId === petId) }
+
+export const DEMO_SAVED_PLACES = [
+  { id: 'hospital-sun', kind: 'hospital', name: '햇살 동물병원', area: '군산시', distance: '2.1km', tags: ['야간 진료'], note: '방문 전 전화로 진료 가능 여부를 확인해 주세요.' },
+  { id: 'hospital-love', kind: 'hospital', name: '사랑 동물병원', area: '군산시', distance: '1.6km', tags: ['응급 진료'], note: '방문 전 전화로 진료 가능 여부를 확인해 주세요.' },
+  { id: 'facility-play', kind: 'facility', name: '군산 휴게소 반려동물 놀이터', area: '군산시 성산면', distance: '군산 예시', tags: ['24시간', '반려동물 놀이터'], status: '동반 가능 확인 시설', note: '이용 전 운영 상태와 동반 규칙을 확인해 주세요.' },
+  { id: 'facility-rail', kind: 'facility', name: '경암동 철길마을', area: '군산시 경촌4길', distance: '군산 예시', tags: ['관광 참고'], status: '산책 참고 장소', note: '반려동물 동반 가능 여부를 방문 전 확인해 주세요.' },
+  { id: 'facility-wetland', kind: 'facility', name: '금강습지생태공원', area: '군산시 성산면', distance: '군산 예시', tags: ['야외 공간'], status: '산책 참고 장소', note: '반려동물 동반 가능 여부를 방문 전 확인해 주세요.' },
+]
