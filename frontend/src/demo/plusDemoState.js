@@ -1,5 +1,5 @@
 export const DEMO_HEALTH_RECORDS = [
-  { id: 'record-ruby-01', petId: 'pet-demo-ruby', date: '2026.08.02', status: 'general', input: '기침을 하고 평소보다 밥을 적게 먹는 것 같아요.', summary: '기침과 식욕 감소', symptoms: ['기침', '식욕 감소'], guidance: '기침이 이어지거나 식욕 저하가 심해지면 가까운 동물병원에 문의해 주세요.', hospital: '햇살 동물병원 · 군산시 · 2.1km' },
+  { id: 'record-ruby-01', petId: 'pet-demo-ruby', facilityId: 'hospital-sun', date: '2026.08.02', status: 'general', input: '기침을 하고 평소보다 밥을 적게 먹는 것 같아요.', summary: '기침과 식욕 감소', symptoms: ['기침', '식욕 감소'], guidance: '기침이 이어지거나 식욕 저하가 심해지면 가까운 동물병원에 문의해 주세요.', hospital: '햇살 동물병원 · 군산시 · 2.1km' },
   { id: 'record-ruby-02', petId: 'pet-demo-ruby', date: '2026.04.03', status: 'general', input: '피부를 자주 긁고 귀 주변을 신경 쓰는 모습이에요.', summary: '피부 가려움', symptoms: ['피부 가려움', '귀 주변 불편'], guidance: '긁는 횟수와 피부 변화를 관찰해 병원 문의 시 함께 알려주세요.', hospital: '햇살 동물병원 · 군산시 · 2.1km' },
   { id: 'record-ruby-03', petId: 'pet-demo-ruby', date: '2026.02.17', status: 'general', input: '평소보다 산책 후 피곤해 보였지만 휴식 후에는 괜찮아졌어요.', summary: '활동량 변화 확인', symptoms: ['활동량 변화'], guidance: '증상이 반복되면 지속 시간과 함께 병원에 문의해 주세요.', hospital: '방문 전 전화 확인이 필요해요.' },
   { id: 'record-maru-01', petId: 'pet-demo-maru', date: '2026.06.11', status: 'urgent', input: '구토를 했고 기운이 없어 보여요.', summary: '구토와 기력 저하', symptoms: ['구토', '기력 저하'], guidance: '응급 신호를 우선 안내했던 기록이에요. 상태가 이어지면 가까운 동물병원에 연락하세요.', hospital: '사랑 동물병원 · 군산시 · 1.6km' },
@@ -30,6 +30,11 @@ export const DEMO_CARE_NOTES = [
 export const DEMO_CARE_SCHEDULES = [
   { id: 'schedule-ruby-20260810-01', petId: 'pet-demo-ruby', sourceType: 'visit', sourceId: 'visit-ruby-20260803-01', type: 'follow-up', title: '경과 다시 확인하기', scheduledOn: '2026.08.10', reminderSetting: '3-days', status: 'planned', guardianNote: '', source: 'competition-demo' },
 ]
+
+export function getDemoVisitByRouteId(healthRouteId) { return DEMO_MEDICAL_VISITS.find((visit) => visit.healthRouteId === healthRouteId) ?? null }
+export function getDemoReceiptByVisitId(visitId) { return DEMO_RECEIPTS.find((receipt) => receipt.visitId === visitId) ?? null }
+export function getDemoCareNoteByVisitId(visitId) { return DEMO_CARE_NOTES.find((note) => note.visitId === visitId) ?? null }
+export function getDemoScheduleBySourceId(sourceId) { return DEMO_CARE_SCHEDULES.find((schedule) => schedule.sourceId === sourceId) ?? null }
 
 export function getDemoFacility(id) { return DEMO_SAVED_PLACES.find((place) => place.id === id) ?? null }
 export function getDemoMedicalTimeline(petId) {
