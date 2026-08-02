@@ -1,0 +1,5 @@
+const KEY = 'animal-route.plus-demo-access.v1'
+const base = { mode: 'demo-free', subscription: { status: 'not_connected', notice: '본선 데모 · 실제 결제와 구독은 연결되지 않았습니다.' }, entitlements: { healthHistoryFull: false, careSchedules: false, savedPlacesFull: false, symptomSummaryExport: false, multiPetManagement: false, medicalRecords: false, receiptStorage: false, careNotes: false, careCostInsights: false } }
+export function getDemoAccess(){try{return {...base,...JSON.parse(localStorage.getItem(KEY)||'null')}}catch{return base}}
+export function setDemoPlus(enabled){const next={...base,mode:enabled?'demo-plus':'demo-free',subscription:{...base.subscription,status:enabled?'demo_active':'not_connected'},entitlements:Object.fromEntries(Object.keys(base.entitlements).map(k=>[k,enabled]))};localStorage.setItem(KEY,JSON.stringify(next));window.dispatchEvent(new CustomEvent('animal-route:plus-demo-updated',{detail:next}));return next}
+export function canUse(feature){return getDemoAccess().entitlements[feature]===true}

@@ -16,3 +16,29 @@ export const DEMO_SAVED_PLACES = [
   { id: 'facility-rail', kind: 'facility', name: '경암동 철길마을', area: '군산시 경촌4길', distance: '군산 예시', tags: ['관광 참고'], status: '산책 참고 장소', note: '반려동물 동반 가능 여부를 방문 전 확인해 주세요.' },
   { id: 'facility-wetland', kind: 'facility', name: '금강습지생태공원', area: '군산시 성산면', distance: '군산 예시', tags: ['야외 공간'], status: '산책 참고 장소', note: '반려동물 동반 가능 여부를 방문 전 확인해 주세요.' },
 ]
+
+// 본선 데모 전용 개인 기록 fixture입니다. 실제 영수증·처방 원본과 자동 의료 판단은 포함하지 않습니다.
+export const DEMO_MEDICAL_VISITS = [
+  { id: 'visit-ruby-20260803-01', petId: 'pet-demo-ruby', healthRouteId: 'record-ruby-01', facilityId: 'hospital-sun', occurredOn: '2026.08.03', status: 'guardian-reported', source: 'competition-demo', guardianMemo: '병원 방문 후 다음에 확인할 내용을 보호자 메모로 남긴 예시입니다.' },
+]
+export const DEMO_RECEIPTS = [
+  { id: 'receipt-ruby-20260803-01', petId: 'pet-demo-ruby', visitId: 'visit-ruby-20260803-01', issuedOn: '2026.08.03', facilityId: 'hospital-sun', totalAmount: 48000, itemLabels: ['진찰', '검사'], attachmentRef: 'demo-receipt-preview', entryStatus: 'demo', source: 'competition-demo' },
+]
+export const DEMO_CARE_NOTES = [
+  { id: 'care-note-ruby-20260803-01', petId: 'pet-demo-ruby', visitId: 'visit-ruby-20260803-01', recordedOn: '2026.08.03', source: 'competition-demo', text: '병원에서 들은 다음 확인 사항을 보호자가 직접 옮겨 적은 데모 메모입니다.' },
+]
+export const DEMO_CARE_SCHEDULES = [
+  { id: 'schedule-ruby-20260810-01', petId: 'pet-demo-ruby', sourceType: 'visit', sourceId: 'visit-ruby-20260803-01', type: 'follow-up', title: '경과 다시 확인하기', scheduledOn: '2026.08.10', reminderSetting: '3-days', status: 'planned', guardianNote: '', source: 'competition-demo' },
+]
+
+export function getDemoFacility(id) { return DEMO_SAVED_PLACES.find((place) => place.id === id) ?? null }
+export function getDemoMedicalTimeline(petId) {
+  const events = [
+    ...getDemoHealthRecords(petId).map((route) => ({ eventId: `health-route:${route.id}`, kind: 'health-route', petId, eventOn: route.date, title: '건강 경로를 확인했어요', subtitle: `보호자 입력: ${route.summary}`, badge: route.status === 'urgent' ? { label: '응급 우선 안내', tone: 'urgent' } : { label: '표준 증상 확인', tone: 'general' }, sourceLabel: '보호자 입력 · 본선 데모', isDemo: true })),
+    ...DEMO_MEDICAL_VISITS.filter((visit) => visit.petId === petId).map((visit) => ({ eventId: `visit:${visit.id}`, kind: 'visit', petId, eventOn: visit.occurredOn, title: '병원 방문 메모를 남겼어요', subtitle: '보호자가 직접 남긴 방문 기록', badge: { label: '방문 기록 예시', tone: 'general' }, sourceLabel: '본선 데모', isDemo: true, visitId: visit.id })),
+    ...DEMO_RECEIPTS.filter((receipt) => receipt.petId === petId).map((receipt) => ({ eventId: `receipt:${receipt.id}`, kind: 'receipt', petId, eventOn: receipt.issuedOn, title: '진료비 영수증을 보관했어요', subtitle: `개인 기록 ${receipt.totalAmount.toLocaleString('ko-KR')}원 · 데모`, badge: { label: '영수증 예시', tone: 'general' }, sourceLabel: '본선 데모', isDemo: true, visitId: receipt.visitId })),
+    ...DEMO_CARE_NOTES.filter((note) => note.petId === petId).map((note) => ({ eventId: `care-note:${note.id}`, kind: 'care-note', petId, eventOn: note.recordedOn, title: '병원 안내 메모를 적었어요', subtitle: '보호자가 직접 입력한 메모', badge: { label: '보호자 메모', tone: 'general' }, sourceLabel: '본선 데모', isDemo: true, visitId: note.visitId })),
+    ...DEMO_CARE_SCHEDULES.filter((schedule) => schedule.petId === petId).map((schedule) => ({ eventId: `schedule:${schedule.id}`, kind: 'schedule', petId, eventOn: schedule.scheduledOn, title: '다음 확인 일정을 등록했어요', subtitle: `${schedule.scheduledOn} · ${schedule.title}`, badge: { label: '일정 예시', tone: 'general' }, sourceLabel: '본선 데모', isDemo: true, sourceId: schedule.sourceId })),
+  ]
+  return events.sort((a, b) => a.eventOn.localeCompare(b.eventOn) || a.eventId.localeCompare(b.eventId))
+}
