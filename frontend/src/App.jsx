@@ -17,6 +17,7 @@ import UserLayout from './layouts/UserLayout'
 import UserDashboard from './pages/UserDashboard'
 import Account from './pages/Account'
 import HealthRecords from './pages/HealthRecords'
+import CareSchedule from './pages/CareSchedule'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/pet-care" element={<PetCare />} />
           <Route path="/my" element={<UserDashboard />} />
           <Route path="/my/records" element={<HealthRecords />} />
+          <Route path="/my/schedule" element={<CareSchedule />} />
           <Route path="/account" element={<Account />} />
         </Route>
         <Route element={<AdminLayout />}>
